@@ -20,15 +20,12 @@ __pycache__/
 venv/
 
 # Environment
-.env
 .env.example
-.env.local
 .env.*.local
 .env.docker
 
 # IDE
 .idea/
-.vscode/
 *.swp
 *.swo
 *~
@@ -145,3 +142,4 @@ r*-collab-*.png
 r*-followup-*.md
 r*-formats-*.md
 r*-bulk-tc-report.md
+config.bat
