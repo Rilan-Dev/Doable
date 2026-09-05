@@ -20,6 +20,7 @@ import { sql } from "../db/index.js";
 import { authMiddleware, type AuthEnv } from "../middleware/auth.js";
 import { ENCRYPTION_KEY } from "../lib/secrets.js";
 import { featureFlagQueries } from "@doable/db";
+import { oauthApps } from "../integrations/credential-vault.js";
 import {
   getEmailQueueStats,
   reloadEmailProvider,
@@ -316,14 +317,43 @@ adminEmailRoutes.delete("/queue", async (c) => {
 });
 
 // ─── Gmail OAuth Connect Flow ──────────────────────────────
+// Credentials resolve DB-first, exactly like integrations/oauth2.ts: an
+// operator who registered the Google app under Admin -> Integrations should
+// not ALSO have to duplicate it into the environment. oauthApps.get() reads
+// the global oauth_apps row (decrypting client_secret) and falls back to env
+// itself; the extra GOOGLE_* fallbacks below preserve the original behaviour
+// for installs that only ever set environment variables.
+async function resolveGoogleOAuthApp(): Promise<{
+  clientId: string | undefined;
+  clientSecret: string | undefined;
+}> {
+  let app: { client_id?: string; clientSecret?: string } | null = null;
+  try {
+    app = (await oauthApps.get("gmail")) as typeof app;
+  } catch {
+    // A vault/decrypt failure must not mask the env-var path.
+    app = null;
+  }
+  return {
+    clientId: app?.client_id || process.env.GOOGLE_CLIENT_ID,
+    clientSecret: app?.clientSecret || process.env.GOOGLE_CLIENT_SECRET,
+  };
+}
+
 // Step 1: Generate Google OAuth URL
 adminEmailRoutes.get("/google/auth-url", async (c) => {
-  const clientId = process.env.GOOGLE_CLIENT_ID;
+  const { clientId } = await resolveGoogleOAuthApp();
   if (!clientId) {
-    return c.json({ error: "GOOGLE_CLIENT_ID not configured in environment" }, 400);
+    return c.json({
+      error:
+        "Google OAuth client not configured — add it under Admin → Integrations (gmail), or set GOOGLE_CLIENT_ID in the environment.",
+    }, 400);
   }
 
-  const apiUrl = process.env.API_URL ?? process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:4000";
+  // PUBLIC url first: API_URL is the in-cluster address (http://api:4000 in
+  // the docker stack), which Google can neither reach nor accept as a
+  // redirect_uri. Matches the ordering used in tool-callbacks.ts et al.
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? process.env.API_URL ?? "http://localhost:4000";
   const redirectUri = `${apiUrl}/admin/email/google/callback`;
 
   const params = new URLSearchParams({
@@ -353,13 +383,18 @@ adminEmailRoutes.get("/google/callback", async (c) => {
     return c.json({ error: "Missing authorization code" }, 400);
   }
 
-  const clientId = process.env.GOOGLE_CLIENT_ID;
-  const clientSecret = process.env.GOOGLE_CLIENT_SECRET;
+  const { clientId, clientSecret } = await resolveGoogleOAuthApp();
   if (!clientId || !clientSecret) {
-    return c.json({ error: "Google OAuth not configured (missing GOOGLE_CLIENT_ID or GOOGLE_CLIENT_SECRET)" }, 500);
+    return c.json({
+      error:
+        "Google OAuth not configured — add the client ID and secret under Admin → Integrations (gmail), or set GOOGLE_CLIENT_ID / GOOGLE_CLIENT_SECRET.",
+    }, 500);
   }
 
-  const apiUrl = process.env.API_URL ?? process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:4000";
+  // PUBLIC url first: API_URL is the in-cluster address (http://api:4000 in
+  // the docker stack), which Google can neither reach nor accept as a
+  // redirect_uri. Matches the ordering used in tool-callbacks.ts et al.
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? process.env.API_URL ?? "http://localhost:4000";
   const redirectUri = `${apiUrl}/admin/email/google/callback`;
 
   // Exchange code for tokens
