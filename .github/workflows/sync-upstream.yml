@@ -1,0 +1,71 @@
+name: Sync fork with upstream
+
+# Keeps this fork current with doable-me/Doable.
+#
+#   main    - pristine mirror of upstream. Fast-forwarded only; never commit here.
+#   develop - our work. Upstream changes arrive via a PR this workflow opens,
+#             so a conflicting upstream change is reviewed rather than
+#             silently merged into a running deployment.
+
+on:
+  schedule:
+    - cron: "0 3 * * *"   # daily, 03:00 UTC
+  workflow_dispatch:       # or run it on demand from the Actions tab
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Configure git
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Fast-forward main from upstream
+        id: ff
+        run: |
+          git remote add upstream https://github.com/doable-me/Doable.git
+          git fetch upstream main --tags
+          before="$(git rev-parse HEAD)"
+          # --ff-only: if main ever diverges, fail loudly instead of creating a
+          # merge commit on the mirror branch.
+          git merge --ff-only upstream/main
+          after="$(git rev-parse HEAD)"
+          if [ "$before" = "$after" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "main already up to date at $after"
+          else
+            git push origin main
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "main fast-forwarded $before -> $after"
+          fi
+
+      - name: Open a PR to bring upstream changes into develop
+        if: steps.ff.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Reuse the open PR if one already exists, so repeated runs don't
+          # pile up duplicates.
+          existing="$(gh pr list --base develop --head main --state open --json number --jq '.[0].number')"
+          if [ -n "$existing" ]; then
+            echo "PR #$existing already open for main -> develop"
+            exit 0
+          fi
+          gh pr create \
+            --base develop --head main \
+            --title "Merge upstream changes into develop" \
+            --body "Automated by \`.github/workflows/sync-upstream.yml\`.
+
+\`main\` was fast-forwarded to the latest \`doable-me/Doable\`. Review and merge
+to bring those changes into \`develop\`, resolving conflicts with our
+self-hosting patches as needed."
