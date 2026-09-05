@@ -19,6 +19,7 @@ export const blogTemplate: TemplateDefinition = {
     "tsconfig.json": blankTemplate.codeFiles["tsconfig.json"]!,
     "index.html": blankTemplate.codeFiles["index.html"]!,
     "public/robots.txt": blankTemplate.codeFiles["public/robots.txt"]!,
+    "public/og-image.svg": blankTemplate.codeFiles["public/og-image.svg"]!,
     "src/main.tsx": blankTemplate.codeFiles["src/main.tsx"]!,
     "src/index.css": blankTemplate.codeFiles["src/index.css"]!,
     "src/lib/utils.ts": blankTemplate.codeFiles["src/lib/utils.ts"]!,

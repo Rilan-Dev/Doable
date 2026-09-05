@@ -202,6 +202,18 @@ declare global {
 export {};
 `,
 
+    "public/og-image.svg": `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="App preview">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <text x="600" y="330" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="56" font-weight="600" fill="#f8fafc">Built with Doable</text>
+</svg>
+`,
+
     "public/robots.txt": `# Published Doable apps are public by default.
 User-agent: *
 Allow: /
@@ -225,11 +237,11 @@ Allow: /
     <meta property="og:type" content="website" />
     <meta property="og:title" content="My App" />
     <meta property="og:description" content="An app built with Doable." />
-    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:image" content="/og-image.svg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="My App" />
     <meta name="twitter:description" content="An app built with Doable." />
-    <meta name="twitter:image" content="/og-image.png" />
+    <meta name="twitter:image" content="/og-image.svg" />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/favicon.svg" />

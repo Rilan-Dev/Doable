@@ -17,6 +17,7 @@ import {
 import { GeneralTab, IntegrationsPanelWrapper } from "./project-settings-general";
 import { ContextFilesTab } from "./project-settings-context";
 import { DomainTab } from "./project-settings-domain";
+import { SeoTab } from "./project-settings-seo";
 import { EnvironmentsTab, DangerTab } from "./project-settings-tabs";
 import { RateLimitingTab } from "./project-settings-ratelimit";
 import { SecurityTab } from "./project-settings-security";
@@ -34,7 +35,7 @@ export function ProjectSettings({ projectId }: ProjectSettingsProps) {
     if (typeof window === "undefined") return "general";
     const params = new URLSearchParams(window.location.search);
     const tab = params.get("tab");
-    const validTabs: Tab[] = ["general", "integrations", "mcp", "skills", "context", "doable-ai", "security", "domain", "environments", "database", "danger"];
+    const validTabs: Tab[] = ["general", "integrations", "mcp", "skills", "context", "doable-ai", "security", "seo", "domain", "environments", "database", "danger"];
     return validTabs.includes(tab as Tab) ? (tab as Tab) : "general";
   });
   const [project, setProject] = useState<ApiProject | null>(null);
@@ -141,6 +142,10 @@ export function ProjectSettings({ projectId }: ProjectSettingsProps) {
       {activeTab === "security" && (
         <SecurityTab projectId={projectId} addToast={addToast} />
       )}
+      {activeTab === "seo" && (
+        <SeoTab project={project} addToast={addToast} />
+      )}
+
       {activeTab === "domain" && (
         <DomainTab project={project} addToast={addToast} />
       )}
