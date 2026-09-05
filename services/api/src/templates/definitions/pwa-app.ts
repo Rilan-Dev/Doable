@@ -202,6 +202,11 @@ declare global {
 export {};
 `,
 
+    "public/robots.txt": `# Published Doable apps are public by default.
+User-agent: *
+Allow: /
+`,
+
     "index.html": `<!doctype html>
 <html lang="en">
   <head>
@@ -211,6 +216,21 @@ export {};
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="My App" />
+
+    <!-- SEO: replace title/description with real copy for THIS app, and
+         keep the og:/twitter: copies in sync with them. -->
+    <meta name="description" content="An app built with Doable." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="My App" />
+    <meta property="og:description" content="An app built with Doable." />
+    <meta property="og:image" content="/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="My App" />
+    <meta name="twitter:description" content="An app built with Doable." />
+    <meta name="twitter:image" content="/og-image.png" />
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />

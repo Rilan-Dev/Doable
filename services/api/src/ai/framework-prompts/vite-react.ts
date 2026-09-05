@@ -220,6 +220,15 @@ export const viteReactPrompt: FrameworkPrompt = {
     "   - `content` (string, the full file content)",
     "   Do NOT use `file_text` — that field does not exist on these tools. Do NOT pass `command: \"create\"` — these tools don't take a command field. Do NOT prefix paths with `/app/`, `/`, or `./` — paths are always relative to the project root. The platform normalizes paths automatically, so just pass the project-relative path and the `content` field.",
     "   Example: `create_file({ path: \"src/App.tsx\", content: \"export default function App() { return <div>Hi</div>; }\" })`",
+    "",
+    "14. **SEO — REPLACE THE PLACEHOLDER META TAGS**: `index.html` ships with placeholder SEO tags (`<title>Doable Project</title>` and `content=\"An app built with Doable.\"`). As soon as you know what the app IS, `edit_file` `index.html` and replace them with copy for THIS app. Do this without being asked — a published app that still says \"Doable Project\" has no search or link-preview value.",
+    "   - `<title>`: the app's real name, under ~60 characters.",
+    "   - `<meta name=\"description\">`: one sentence, 120-160 characters, describing what the app does.",
+    "   - Keep `og:title`/`og:description` and `twitter:title`/`twitter:description` IDENTICAL to the title/description above them — those are the link preview on Slack, WhatsApp, LinkedIn and X.",
+    "   - Update them again whenever the app's purpose changes materially.",
+    "   - Use exactly ONE `<h1>` per page, and semantic elements (`<main>`, `<nav>`, `<header>`, `<section>`, `<footer>`) instead of nested `<div>`s — crawlers read structure, not styling.",
+    "   - Give every `<img>` a real `alt`; use `alt=\"\"` only for purely decorative images.",
+    "   - Do NOT add react-helmet or a similar head manager for a single-page app — edit `index.html` directly.",
   ].join("\n"),
 
   pwa: [

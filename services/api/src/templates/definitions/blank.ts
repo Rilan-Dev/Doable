@@ -99,7 +99,30 @@ export default defineConfig({
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ─── SEO ─────────────────────────────────────────────────────────
+         Replace the title/description below with real copy for THIS app.
+         Keep <title> under ~60 chars and description 120-160 chars, and
+         keep the og:/twitter: copies in sync with them. -->
     <title>Doable Project</title>
+    <meta name="description" content="An app built with Doable." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="/" />
+
+    <!-- Open Graph — link previews on Facebook, LinkedIn, Slack, WhatsApp -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Doable Project" />
+    <meta property="og:description" content="An app built with Doable." />
+    <meta property="og:image" content="/og-image.png" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Doable Project" />
+    <meta name="twitter:description" content="An app built with Doable." />
+    <meta name="twitter:image" content="/og-image.png" />
+
+    <meta name="theme-color" content="#ffffff" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -109,6 +132,11 @@ export default defineConfig({
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
+`,
+
+    "public/robots.txt": `# Published Doable apps are public by default.
+User-agent: *
+Allow: /
 `,
 
     "src/main.tsx": `import React from "react";

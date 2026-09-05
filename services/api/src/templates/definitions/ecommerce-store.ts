@@ -18,6 +18,7 @@ export const ecommerceStoreTemplate: TemplateDefinition = {
     "vite.config.ts": blankTemplate.codeFiles["vite.config.ts"]!,
     "tsconfig.json": blankTemplate.codeFiles["tsconfig.json"]!,
     "index.html": blankTemplate.codeFiles["index.html"]!,
+    "public/robots.txt": blankTemplate.codeFiles["public/robots.txt"]!,
     "src/main.tsx": blankTemplate.codeFiles["src/main.tsx"]!,
     "src/index.css": blankTemplate.codeFiles["src/index.css"]!,
     "src/lib/utils.ts": blankTemplate.codeFiles["src/lib/utils.ts"]!,
