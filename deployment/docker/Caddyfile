@@ -83,6 +83,17 @@
                 reverse_proxy api:4000
         }
 
+        # ─── GitHub OAuth landing paths ─────────────────────────────────────
+        # routes.ts 308-redirects /oauth/github/{flow}/callback to
+        # /github/{flow}/callback, and that redirect is followed by the
+        # BROWSER — so the bare /github/* prefix has to reach the api too, or
+        # the catch-all below serves it from web and the OAuth code is lost
+        # (Next.js 404). Also covers GitHub Apps configured to call
+        # /github/repo/callback directly. The web app has no /github/* page.
+        handle /github/* {
+                reverse_proxy api:4000
+        }
+
         # ─── Preview iframes for AI-built apps ──────────────────────────────
         # api spawns per-project vite dev servers and proxies /preview/<id>/
         # to them, preserving paths so vite's relative URLs resolve.
@@ -148,3 +159,35 @@
         # on static-asset 404s served before reaching the app.
         header X-Content-Type-Options nosniff
 }
+
+# ─── Keep the app host's plain-HTTP behaviour ────────────────────────────────
+# The wildcard block below also matches DOABLE_SITE on :80 and would try to
+# serve it from /srv/sites/<label>/live (404). An explicit site block is more
+# specific than the wildcard, so this restores the normal HTTP->HTTPS redirect
+# for the app itself.
+http://{$DOABLE_SITE:localhost} {
+        redir https://{host}{uri} 308
+}
+
+# ─── Published apps on wildcard subdomains ───────────────────────────────────
+# deploy/topology.ts auto-selects "subdomain" topology when wildcard infra
+# exists, and the doable-cloud adapter writes builds to
+# <SITES_DIR>/<slug>/live/. Without a site block matching those hostnames the
+# published app is unreachable even though the files exist on disk.
+#
+# Plain http:// on purpose: cloudflared connects over loopback, so the hop is
+# never on the wire, and this sidesteps SNI/cert selection entirely (Caddy's
+# internal CA only holds a cert for DOABLE_SITE). Cloudflare still terminates
+# real TLS for the browser via its wildcard edge cert.
+#
+# {labels.2} is the left-most label of a 3-label host
+# (saas-dashboard-edldf.ostechnologies.in -> "saas-dashboard-edldf"). The
+# specific DOABLE_SITE block above wins for the app's own hostname because
+# Caddy prefers the more specific site match.
+http://*.{$DOABLE_PUBLISH_DOMAIN:invalid.localhost} {
+        root * /srv/sites/{labels.2}/live
+        try_files {path} /index.html
+        file_server
+        header X-Content-Type-Options nosniff
+}
+
