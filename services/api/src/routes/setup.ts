@@ -845,6 +845,33 @@ setupRoutes.get("/cloudflare/status", async (c) => {
   const skipChoice = await getConfig("setup.cloudflare_skip");
   const skipped = skipChoice === true || skipChoice === "true";
 
+  // The three probes above read the filesystem of whatever runs THIS process.
+  // In the Docker deployment that is the api container, which never has
+  // cloudflared, /etc/cloudflared, or a systemd to query — cloudflared runs
+  // as a sibling container or a host service. Those installs would report
+  // "not configured" forever, so fall back to two out-of-process signals:
+  //
+  //   1. cf-ray on this very request. Cloudflare's edge sets it and strips
+  //      any client-supplied copy, so its presence proves the request really
+  //      arrived through Cloudflare. Same trust model rate-limit.ts already
+  //      applies to cf-connecting-ip.
+  //   2. DOABLE_CLOUDFLARE_TUNNEL=1 — an explicit operator declaration, for
+  //      headless installs where the wizard is reached over a private path.
+  const viaCloudflare = Boolean(c.req.header("cf-ray"));
+  const declaredTunnel =
+    process.env.DOABLE_CLOUDFLARE_TUNNEL === "1" ||
+    process.env.DOABLE_CLOUDFLARE_TUNNEL === "true";
+  const hostServiceReady = binaryInstalled && configExists && serviceActive;
+  const tunnelActive = hostServiceReady || viaCloudflare || declaredTunnel;
+
+  const detectionMethod = hostServiceReady
+    ? "host_service"
+    : viaCloudflare
+    ? "edge_headers"
+    : declaredTunnel
+    ? "env_override"
+    : null;
+
   return c.json({
     binaryInstalled,
     serviceActive,
@@ -852,13 +879,14 @@ setupRoutes.get("/cloudflare/status", async (c) => {
     tunnelId,
     tunnelHostname,
     skipped,
-    nextAction: !binaryInstalled
+    detectionMethod,
+    nextAction: tunnelActive
+      ? "configured"
+      : !binaryInstalled
       ? "install_cloudflared"
       : !configExists
       ? "login_to_cloudflare"
-      : !serviceActive
-      ? "start_cloudflared_service"
-      : "configured",
+      : "start_cloudflared_service",
     loginUrl: "https://dash.cloudflare.com/?to=/:account/networks/tunnels",
   });
 });

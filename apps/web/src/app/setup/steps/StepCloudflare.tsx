@@ -18,6 +18,7 @@ interface CloudflareStatus {
   tunnelId: string | null;
   tunnelHostname: string | null;
   skipped: boolean;
+  detectionMethod: "host_service" | "edge_headers" | "env_override" | null;
   nextAction: "install_cloudflared" | "login_to_cloudflare" | "start_cloudflared_service" | "configured";
   loginUrl: string;
 }
@@ -94,6 +95,19 @@ export function StepCloudflare({ onNext, onBack, onSkip }: StepProps) {
           </span>
         </div>
 
+        {status?.detectionMethod === "edge_headers" ? (
+          <p className="text-xs text-muted-foreground pl-7">
+            Detected from live traffic: this page reached the server through
+            Cloudflare&apos;s edge. cloudflared runs outside this process (a
+            sibling container or a host systemd service), so the local
+            binary/config/service probes do not apply here.
+          </p>
+        ) : status?.detectionMethod === "env_override" ? (
+          <p className="text-xs text-muted-foreground pl-7">
+            Tunnel posture declared by the operator via{" "}
+            <code className="font-mono">DOABLE_CLOUDFLARE_TUNNEL=1</code>.
+          </p>
+        ) : (
         <ul className="text-xs text-muted-foreground space-y-1.5 pl-7 list-disc">
           <li className={status?.binaryInstalled ? "text-foreground" : ""}>
             cloudflared binary: {status?.binaryInstalled ? "installed" : "not installed"}
@@ -110,6 +124,7 @@ export function StepCloudflare({ onNext, onBack, onSkip }: StepProps) {
             </li>
           )}
         </ul>
+        )}
       </div>
 
       {/* Action panel */}
@@ -119,9 +134,13 @@ export function StepCloudflare({ onNext, onBack, onSkip }: StepProps) {
           <ol className="text-xs text-muted-foreground space-y-2 list-decimal pl-5">
             {!status?.binaryInstalled && (
               <li>
-                Install cloudflared on the server:
+                Install cloudflared on the server — Debian/Ubuntu:
                 <code className="block mt-1 rounded bg-background px-2 py-1.5 font-mono text-foreground">
                   curl -L https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb -o cf.deb && sudo dpkg -i cf.deb
+                </code>
+                RHEL/Alma/Rocky/Fedora:
+                <code className="block mt-1 rounded bg-background px-2 py-1.5 font-mono text-foreground">
+                  curl -L https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-x86_64.rpm -o cf.rpm && sudo dnf install -y ./cf.rpm
                 </code>
               </li>
             )}
