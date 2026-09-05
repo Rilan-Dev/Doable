@@ -161,6 +161,23 @@ services:
       # doable.data builtin MCP server). The worker runs as a plain child inside this
       # already-isolated container (no bwrap needed). Key caps are tunable; defaults
       # match chapter 07 and suit a single 8GB box.
+      # ─── Cloudflare DNS / publishing ────────────────────────────────
+      # Required by deploy/adapters/doable-cloud.ts for per-publish CNAMEs
+      # and wildcard management, and by lib/cloudflare-zone-info.ts for the
+      # admin DNS panel. DOABLE_DOMAIN defaults to "doable.me" upstream, so
+      # it MUST be set or published sites get the wrong hostname.
+      # CF_API_TOKEN is optional here — the admin panel stores an operator
+      # token in platform_settings (KEK-encrypted), which takes precedence.
+      CF_ZONE_ID: ${CF_ZONE_ID:-}
+      CF_API_TOKEN: ${CF_API_TOKEN:-}
+      CLOUDFLARED_TUNNEL_ID: ${CLOUDFLARED_TUNNEL_ID:-}
+      DOABLE_DOMAIN: ${DOABLE_DOMAIN:-}
+      PUBLISH_SUBDOMAIN_PREFIX: ${PUBLISH_SUBDOMAIN_PREFIX:-}
+
+      # Declares tunnel posture to the setup wizard. cloudflared runs outside
+      # this container (host systemd service), so the wizard's binary/config/
+      # systemd probes can never see it from in here.
+      DOABLE_CLOUDFLARE_TUNNEL: ${DOABLE_CLOUDFLARE_TUNNEL:-0}
       DOABLE_APP_DB_ENABLED: ${DOABLE_APP_DB_ENABLED:-1}
       DOABLE_APP_DB_MEMORY_MB: ${DOABLE_APP_DB_MEMORY_MB:-128}
       DOABLE_APP_DB_MAX_WORKERS: ${DOABLE_APP_DB_MAX_WORKERS:-32}
@@ -316,6 +333,9 @@ services:
       NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:4000}
       NEXT_PUBLIC_WS_URL: ${NEXT_PUBLIC_WS_URL:-ws://localhost:4001}
       NEXT_PUBLIC_APP_URL: ${NEXT_PUBLIC_APP_URL:-http://localhost:3000}
+      # Apex domain published apps are served from (<slug>.<domain>). Without
+      # it the settings UI hardcodes doable.me on self-hosted installs.
+      NEXT_PUBLIC_PUBLISH_DOMAIN: ${DOABLE_DOMAIN:-doable.me}
       HOSTNAME: 0.0.0.0
       PORT: 3000
       NODE_ENV: ${NODE_ENV:-production}
@@ -346,6 +366,9 @@ services:
       # zero-config local installs. setup.sh sets this to the public
       # hostname for DOMAIN mode, or a LAN IP for HOST mode.
       DOABLE_SITE: ${DOABLE_SITE:-localhost}
+      # Apex domain published apps live under (<slug>.<domain>). Drives the
+      # wildcard site block that serves /srv/sites/<slug>/live/.
+      DOABLE_PUBLISH_DOMAIN: ${DOABLE_DOMAIN:-invalid.localhost}
       # TLS source: "internal" = Caddy's self-signed (not browser-trusted),
       # "/certs/cert.pem /certs/key.pem" = mkcert-issued (browser-trusted),
       # or an email = automatic Let's Encrypt for DOMAIN mode.

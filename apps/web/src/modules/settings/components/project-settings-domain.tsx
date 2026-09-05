@@ -25,6 +25,7 @@ import {
   type ApiCustomDomain,
 } from "@/lib/api";
 import { SectionCard } from "./project-settings-shared";
+import { PUBLISH_DOMAIN, projectHostname } from "@/lib/publish-domain";
 
 // ═══════════════════════════════════════════════════════════════
 // CUSTOM DOMAIN TAB
@@ -174,16 +175,16 @@ export function DomainTab({
   return (
     <div className="space-y-6">
       {/* Default Domain */}
-      <SectionCard title="Default Domain" description="Your project is always accessible at its .doable.me subdomain.">
+      <SectionCard title="Default Domain" description={`Your project is always accessible at its .${PUBLISH_DOMAIN} subdomain.`}>
         <div className="flex items-center justify-between rounded-lg bg-muted/30 p-4">
           <div>
             <p className="text-sm font-medium">Default URL</p>
             <p className="mt-0.5 font-mono text-sm text-muted-foreground">
-              {project.slug}.doable.me
+              {projectHostname(project.slug)}
             </p>
           </div>
           <a
-            href={`https://${project.slug}.doable.me`}
+            href={`https://${projectHostname(project.slug)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 rounded-md border px-3 py-1.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"

@@ -15,6 +15,7 @@ import {
   type ApiProject,
 } from "@/lib/api";
 import { SectionCard } from "./project-settings-shared";
+import { projectHostname, previewHostname } from "@/lib/publish-domain";
 
 // ═══════════════════════════════════════════════════════════════
 // ENVIRONMENTS TAB
@@ -55,14 +56,14 @@ export function EnvironmentsTab({ project }: { project: ApiProject }) {
     {
       name: "Production",
       status: "active" as const,
-      url: `${project.slug}.doable.me`,
+      url: projectHostname(project.slug),
       description: "Live site accessible to all visitors",
       lastDeployed: project.updated_at,
     },
     {
       name: "Preview",
       status: "active" as const,
-      url: `preview-${project.slug}.doable.me`,
+      url: previewHostname(project.slug),
       description: "Test changes before publishing to production",
       lastDeployed: null,
     },

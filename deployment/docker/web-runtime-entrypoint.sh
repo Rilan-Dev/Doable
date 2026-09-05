@@ -17,10 +17,17 @@ set -e
 API_URL="${NEXT_PUBLIC_API_URL:-http://localhost:4000}"
 WS_URL="${NEXT_PUBLIC_WS_URL:-ws://localhost:4001}"
 APP_URL="${NEXT_PUBLIC_APP_URL:-http://localhost:3000}"
+PUBLISH_DOMAIN="${NEXT_PUBLIC_PUBLISH_DOMAIN:-doable.me}"
 
 # Only touch JS/HTML/JSON in the standalone bundle + static assets — the
 # only files where NEXT_PUBLIC_* values end up after `next build`.
-TARGET_DIRS="/app/apps/web/.next/standalone /app/apps/web/.next/static"
+# NOTE: the Dockerfile copies the CONTENTS of .next/standalone into /app, so
+# at runtime the server bundle is /app/apps/web/.next/server — the historical
+# ".next/standalone" entry below never matches and is skipped by the -d guard.
+# Without .next/server the SSR chunks keep their build-time placeholders while
+# the client chunks get real values, so server-rendered markup disagreed with
+# the hydrated DOM. Kept standalone in the list for non-docker callers.
+TARGET_DIRS="/app/apps/web/.next/standalone /app/apps/web/.next/server /app/apps/web/.next/static"
 
 # Use find -exec instead of xargs to handle no-match gracefully; redirect
 # 2>/dev/null to swallow "Permission denied" on files the node user can't
@@ -31,7 +38,8 @@ for d in $TARGET_DIRS; do
     -exec sed -i \
       -e "s|__DOABLE_API_URL__|${API_URL}|g" \
       -e "s|__DOABLE_WS_URL__|${WS_URL}|g" \
-      -e "s|__DOABLE_APP_URL__|${APP_URL}|g" {} + 2>/dev/null || true
+      -e "s|__DOABLE_APP_URL__|${APP_URL}|g" \
+      -e "s|__DOABLE_PUBLISH_DOMAIN__|${PUBLISH_DOMAIN}|g" {} + 2>/dev/null || true
 done
 
 exec "$@"

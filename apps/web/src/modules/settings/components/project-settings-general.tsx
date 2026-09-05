@@ -22,6 +22,7 @@ import { GitHubSettings } from "@/modules/settings/components/github-settings";
 import { useAuth } from "@/hooks/use-auth";
 import { getGitHubConnectUrl, getStoredTokens } from "@/lib/api";
 import { SectionCard, InfoItem } from "./project-settings-shared";
+import { projectHostname } from "@/lib/publish-domain";
 
 // ═══════════════════════════════════════════════════════════════
 // GENERAL TAB
@@ -189,7 +190,7 @@ export function GeneralTab({
           <InfoItem
             icon={Link2}
             label="Project URL"
-            value={`${project.slug}.doable.me`}
+            value={projectHostname(project.slug)}
             mono
           />
           <InfoItem
