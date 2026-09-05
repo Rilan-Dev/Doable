@@ -134,6 +134,14 @@ interface PanelSizes {
 }
 
 // ─── Store ──────────────────────────────────────────────────
+/** A NotebookLM tool result shown over the preview pane. */
+export interface NotebooklmPreview {
+  /** Self-contained HTML document, rendered into a sandboxed iframe. */
+  html: string;
+  /** Tool that produced it, shown in the overlay header when known. */
+  toolName?: string;
+}
+
 interface EditorState {
   // Project
   projectId: string | null;
@@ -168,6 +176,12 @@ interface EditorState {
   previewUrl: string;
   previewLoading: boolean;
   toolResultVersion: number;
+  /**
+   * NotebookLM tool result rendered as an overlay over the preview pane.
+   * Transient: deliberately absent from `partialize` so a stale result does
+   * not reappear over the app after a reload.
+   */
+  notebooklmPreview: NotebooklmPreview | null;
 
   // Sidebar
   activeSidebarTab: "pages" | "files" | "history" | "knowledge" | "skills";
@@ -219,6 +233,8 @@ interface EditorState {
   setPreviewUrl: (url: string) => void;
   setPreviewLoading: (loading: boolean) => void;
   bumpToolResultVersion: () => void;
+  setNotebooklmPreview: (preview: NotebooklmPreview | null) => void;
+  clearNotebooklmPreview: () => void;
 
   // Actions - Sidebar
   setActiveSidebarTab: (tab: EditorState["activeSidebarTab"]) => void;
@@ -248,6 +264,7 @@ export const useEditorStore = create<EditorState>()(
       previewUrl: "",
       previewLoading: false,
       toolResultVersion: 0,
+      notebooklmPreview: null,
       activeSidebarTab: "files",
 
       // Project
@@ -397,6 +414,8 @@ export const useEditorStore = create<EditorState>()(
       setPreviewUrl: (url) => set({ previewUrl: url }),
       setPreviewLoading: (loading) => set({ previewLoading: loading }),
       bumpToolResultVersion: () => set((s) => ({ toolResultVersion: s.toolResultVersion + 1 })),
+      setNotebooklmPreview: (preview) => set({ notebooklmPreview: preview }),
+      clearNotebooklmPreview: () => set({ notebooklmPreview: null }),
 
       // Sidebar
       setActiveSidebarTab: (tab) => set({ activeSidebarTab: tab }),
