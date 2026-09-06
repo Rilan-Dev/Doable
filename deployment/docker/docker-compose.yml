@@ -161,6 +161,12 @@ services:
       # doable.data builtin MCP server). The worker runs as a plain child inside this
       # already-isolated container (no bwrap needed). Key caps are tunable; defaults
       # match chapter 07 and suit a single 8GB box.
+      # Framework adapters to register at boot. init.ts defaults to
+      # "vite-react" ALONE, so a project whose framework_id is anything else
+      # fails at dev-server start with `No framework registered with id ...`.
+      # nextjs-app ships a full adapter, prompt and templates, so enable it.
+      DOABLE_ENABLED_FRAMEWORKS: ${DOABLE_ENABLED_FRAMEWORKS:-vite-react,nextjs-app}
+
       # ─── Cloudflare DNS / publishing ────────────────────────────────
       # Required by deploy/adapters/doable-cloud.ts for per-publish CNAMEs
       # and wildcard management, and by lib/cloudflare-zone-info.ts for the
