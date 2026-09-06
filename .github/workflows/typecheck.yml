@@ -1,0 +1,37 @@
+name: Typecheck
+
+# apps/web reached a clean `tsc --noEmit` in cfa4a9d; this keeps it there.
+# The notebooklm bug it fixed - UI reading store fields that were never
+# written - compiled fine as JS and only surfaced under the type checker,
+# so a build-only gate would not have caught it.
+
+on:
+  push:
+    branches: [develop, main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  web:
+    name: apps/web
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      # --frozen-lockfile on purpose: a lockfile that has drifted from
+      # package.json is itself a defect worth failing on. That exact drift
+      # (945dba4) made every source build fail.
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: tsc --noEmit
+        run: pnpm --filter @doable/web exec tsc --noEmit -p tsconfig.json
