@@ -323,13 +323,18 @@ adminEmailRoutes.delete("/queue", async (c) => {
 // the global oauth_apps row (decrypting client_secret) and falls back to env
 // itself; the extra GOOGLE_* fallbacks below preserve the original behaviour
 // for installs that only ever set environment variables.
+type GoogleOAuthApp = { client_id?: string; clientSecret?: string };
+
 async function resolveGoogleOAuthApp(): Promise<{
   clientId: string | undefined;
   clientSecret: string | undefined;
 }> {
-  let app: { client_id?: string; clientSecret?: string } | null = null;
+  let app: GoogleOAuthApp | null = null;
   try {
-    app = (await oauthApps.get("gmail")) as typeof app;
+    // Cast to the named type, not `typeof app`: inside the try, `app` is
+    // narrowed to its initializer `null`, so `typeof app` would be `null`
+    // and every later property read would sit on `never`.
+    app = (await oauthApps.get("gmail")) as GoogleOAuthApp | null;
   } catch {
     // A vault/decrypt failure must not mask the env-var path.
     app = null;
