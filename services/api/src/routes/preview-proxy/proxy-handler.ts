@@ -1,4 +1,5 @@
 import { Hono } from "hono";
+import type { Context } from "hono";
 import {
   getDevServerInternalUrl,
   getDevServerInternalUrlWhenReady,
@@ -428,7 +429,12 @@ function renderInstallingDepHTML(pkg: string): string {
  * See BUG-2026-07-15-lovable-ai-chat.
  */
 export async function handleLovableChatBridge(
-  c: Parameters<Parameters<typeof previewRoutes.all>[1]>[0],
+  // Hono's Context directly. The previous
+  // `Parameters<Parameters<typeof previewRoutes.all>[1]>[0]` resolved to
+  // `never`: `Parameters<typeof previewRoutes.all>` is the tuple
+  // `[path: string]`, which has no index 1, so the inner lookup produced
+  // `undefined` and every `c.req` / `c.text` below it failed to typecheck.
+  c: Context,
   projectId: string,
 ): Promise<Response> {
   const [row] = await sql<{ workspace_id: string }[]>`
