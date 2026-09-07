@@ -1,6 +1,7 @@
 name: Typecheck
 
-# apps/web reached a clean `tsc --noEmit` in cfa4a9d; this keeps it there.
+# apps/web and services/api both reach a clean `tsc --noEmit`; this keeps
+# them there.
 # The notebooklm bug it fixed - UI reading store fields that were never
 # written - compiled fine as JS and only surfaced under the type checker,
 # so a build-only gate would not have caught it.
@@ -12,8 +13,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  web:
-    name: apps/web
+  typecheck:
+    name: apps/web + services/api
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -33,5 +34,13 @@ jobs:
       - name: Install
         run: pnpm install --frozen-lockfile
 
-      - name: tsc --noEmit
+      - name: tsc --noEmit (apps/web)
         run: pnpm --filter @doable/web exec tsc --noEmit -p tsconfig.json
+
+      # services/api reached zero errors in the same pass that added this
+      # step. It is checked in the same job so one lockfile install covers
+      # both workspaces. `if: always()` so a failure in web still reports
+      # the api result rather than masking it.
+      - name: tsc --noEmit (services/api)
+        if: always()
+        run: pnpm --filter @doable/api exec tsc --noEmit -p tsconfig.json
