@@ -34,6 +34,18 @@ jobs:
       - name: Install
         run: pnpm install --frozen-lockfile
 
+      # services/api imports `docore` and `dovault` by package name. Both
+      # emit their .d.ts via `tsc`, so without building them first every
+      # such import is TS2307 and each use degrades to an implicit any.
+      # The Dockerfile builds them for the same reason; unlike the
+      # Dockerfile this does not swallow failures, since both compile
+      # clean and a genuine break should be reported as itself rather
+      # than as a wall of missing-module errors downstream.
+      - name: Build workspace type deps
+        run: |
+          pnpm --filter=docore run build
+          pnpm --filter=dovault run build
+
       - name: tsc --noEmit (apps/web)
         run: pnpm --filter @doable/web exec tsc --noEmit -p tsconfig.json
 
