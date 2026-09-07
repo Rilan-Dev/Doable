@@ -61,11 +61,17 @@ jobs:
             echo "PR #$existing already open for main -> develop"
             exit 0
           fi
+          # printf, not a heredoc: a heredoc terminator must sit at column 0,
+          # which is impossible inside an indented YAML block scalar (<<- only
+          # strips tabs). Single quotes keep the backticks literal.
+          printf '%s\n' \
+            'Automated by `.github/workflows/sync-upstream.yml`.' \
+            '' \
+            '`main` was fast-forwarded to the latest `doable-me/Doable`.' \
+            'Review and merge to bring those changes into `develop`,' \
+            'resolving conflicts with our self-hosting patches as needed.' \
+            > /tmp/pr-body.md
           gh pr create \
             --base develop --head main \
             --title "Merge upstream changes into develop" \
-            --body "Automated by \`.github/workflows/sync-upstream.yml\`.
-
-\`main\` was fast-forwarded to the latest \`doable-me/Doable\`. Review and merge
-to bring those changes into \`develop\`, resolving conflicts with our
-self-hosting patches as needed."
+            --body-file /tmp/pr-body.md
