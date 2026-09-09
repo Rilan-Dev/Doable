@@ -30,16 +30,44 @@
  */
 
 import { Hono } from "hono";
+import { createHmac, timingSafeEqual } from "node:crypto";
+import { INTERNAL_SECRET } from "../lib/secrets.js";
 
 export const compatProxyRoutes = new Hono({ strict: false });
 
-/** Upstream base is base64url-encoded into the path so one route serves any provider. */
-export function encodeUpstream(baseUrl: string): string {
-  return Buffer.from(baseUrl, "utf8").toString("base64url");
+/**
+ * The upstream is carried in the path, so it MUST NOT be attacker-choosable:
+ * this route forwards the caller's Authorization header, and the api process
+ * can reach the docker network, the host, and any cloud metadata endpoint.
+ * An unsigned token would make this a straightforward SSRF plus a credential
+ * exfiltration primitive — and it is reachable from the internet, because
+ * Caddy maps /api/* onto this server.
+ *
+ * The token is therefore HMAC-signed with INTERNAL_SECRET. Only this process
+ * can mint one, so the destination is always a provider the server itself
+ * resolved; a forged or edited token is rejected before any fetch happens.
+ */
+function sign(value: string): string {
+  return createHmac("sha256", INTERNAL_SECRET).update(value).digest("base64url");
 }
+
+export function encodeUpstream(baseUrl: string): string {
+  const payload = Buffer.from(baseUrl, "utf8").toString("base64url");
+  return `${payload}.${sign(payload)}`;
+}
+
 function decodeUpstream(token: string): string | null {
+  const dot = token.lastIndexOf(".");
+  if (dot <= 0) return null;
+  const payload = token.slice(0, dot);
+  const provided = token.slice(dot + 1);
+  const expected = sign(payload);
+  // Constant-time compare; Buffer lengths must match first.
+  const a = Buffer.from(provided);
+  const b = Buffer.from(expected);
+  if (a.length !== b.length || !timingSafeEqual(a, b)) return null;
   try {
-    const url = Buffer.from(token, "base64url").toString("utf8");
+    const url = Buffer.from(payload, "base64url").toString("utf8");
     const parsed = new URL(url);
     if (parsed.protocol !== "http:" && parsed.protocol !== "https:") return null;
     return url.replace(/\/$/, "");
@@ -129,7 +157,23 @@ function filterKeepalives(body: ReadableStream<Uint8Array>): ReadableStream<Uint
   );
 }
 
+/**
+ * Only the Copilot CLI running inside this container is a legitimate caller,
+ * and it dials 127.0.0.1 directly. Anything arriving through Caddy carries a
+ * docker-network source address, so a loopback check cheaply excludes the
+ * whole internet even if a signed token ever leaked.
+ */
+function isLoopbackCaller(c: { env?: unknown }): boolean {
+  const env = c.env as { incoming?: { socket?: { remoteAddress?: string } } } | undefined;
+  const addr = env?.incoming?.socket?.remoteAddress;
+  if (!addr) return false; // unknown origin -> refuse
+  return addr === "127.0.0.1" || addr === "::1" || addr === "::ffff:127.0.0.1";
+}
+
 compatProxyRoutes.all("/:upstream/*", async (c) => {
+  if (!isLoopbackCaller(c)) {
+    return c.json({ error: { message: "Not found", type: "proxy_error" } }, 404);
+  }
   const token = c.req.param("upstream");
   const upstream = decodeUpstream(token);
   if (!upstream) return c.json({ error: { message: "Invalid upstream", type: "proxy_error" } }, 400);
@@ -145,7 +189,9 @@ compatProxyRoutes.all("/:upstream/*", async (c) => {
   }
 
   const method = c.req.method;
-  const init: RequestInit = { method, headers };
+  // manual: a redirect would be followed with the Authorization header
+  // attached, to a host the signature never covered.
+  const init: RequestInit = { method, headers, redirect: "manual" };
   if (method !== "GET" && method !== "HEAD") {
     init.body = await c.req.text();
   }
