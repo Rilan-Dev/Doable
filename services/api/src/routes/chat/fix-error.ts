@@ -72,7 +72,24 @@ export function registerFixErrorRoute(app: Hono<AuthEnv>) {
             }
 
             sessionId = await manager.withAutoRetry(projectId, aiConfig.githubToken, async (eng) => {
-              return eng.resumeSession(dbRow.copilot_session_id, { tools: sessionTools, onPermissionRequest: createPermissionHandler(userId, projectPath), skillDirectories });
+              // BUG-RESUME-PROVIDER: resume MUST carry the same model +
+              // provider as the create path — docore re-issues session.create
+              // on resume. Without them a BYOK session resumes with no
+              // credentials at all and the CLI fails with "No authentication
+              // info available"; the turn then produces no content and no
+              // tool calls. GitHub Copilot happens to survive this because
+              // its auth rides on the githubToken above, which is why the bug
+              // only ever showed up on self-hosted / BYOK providers.
+              // session-manager.ts:196 already does this for the main chat
+              // path; this route was missed.
+              return eng.resumeSession(dbRow.copilot_session_id, {
+                model: aiConfig.model,
+                provider: aiConfig.provider,
+                tools: sessionTools,
+                workingDirectory: projectPath,
+                onPermissionRequest: createPermissionHandler(userId, projectPath),
+                skillDirectories,
+              });
             });
             if (sessionId) {
               projectSessions.set(projectId, sessionId);
