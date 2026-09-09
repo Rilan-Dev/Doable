@@ -10,6 +10,7 @@ import { aiSettingsQueries, platformAiDefaultsQueries } from "@doable/db";
 import type { ByokProviderConfig } from "./providers/copilot.js";
 import { ENCRYPTION_KEY } from "../lib/secrets.js";
 import { applyPlatformAiDefault } from "../routes/auth/platform-ai-bootstrap.js";
+import { encodeUpstream } from "../routes/compat-proxy.js";
 
 const aiSettingsDb = aiSettingsQueries(sql, ENCRYPTION_KEY);
 const platformDefaults = platformAiDefaultsQueries(sql);
@@ -217,6 +218,14 @@ export async function resolveAiEngine(
   // proxy that strips those unsupported fields before forwarding to Google.
   if (resolvedProvider && isGeminiProvider(resolvedProvider.baseUrl)) {
     resolvedProvider = rewriteGeminiBaseUrl(resolvedProvider);
+  } else if (resolvedProvider) {
+    // Every other BYOK provider goes through the compat proxy, which only
+    // normalizes the RESPONSE stream (it drops information-free keepalive
+    // chunks that break the Copilot CLI's per-completion finish_reason
+    // check). The request is forwarded byte-for-byte, so a well-behaved
+    // provider sees no difference. Gemini keeps its own proxy above because
+    // that one also has to rewrite the request body.
+    resolvedProvider = rewriteCompatBaseUrl(resolvedProvider);
   }
 
   if (selectedCopilotAccountId) {
@@ -251,6 +260,24 @@ function isGeminiProvider(baseUrl: string): boolean {
  * Example: `https://generativelanguage.googleapis.com/v1beta/openai/`
  *       → `http://127.0.0.1:${PORT}/__gemini-proxy/v1beta/openai/`
  */
+/**
+ * Route a provider through the local compat proxy, preserving its own base
+ * path. The upstream origin+path is base64url-encoded into the proxy path so
+ * a single route serves every provider.
+ *
+ * `https://gw.example/v1` -> `http://127.0.0.1:4000/__compat-proxy/<token>`
+ */
+function rewriteCompatBaseUrl(provider: ByokProviderConfig): ByokProviderConfig {
+  try {
+    const port = process.env.PORT ?? "4000";
+    const token = encodeUpstream(provider.baseUrl.replace(/\/$/, ""));
+    return { ...provider, baseUrl: `http://127.0.0.1:${port}/__compat-proxy/${token}` };
+  } catch {
+    // Never let proxy wiring break a working provider.
+    return provider;
+  }
+}
+
 function rewriteGeminiBaseUrl(provider: ByokProviderConfig): ByokProviderConfig {
   const port = process.env.PORT ?? "4000";
   const url = new URL(provider.baseUrl);
