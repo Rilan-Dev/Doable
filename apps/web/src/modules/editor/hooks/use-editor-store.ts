@@ -125,7 +125,7 @@ export interface ChatMessage {
 
 export type EditorMode = "agent" | "plan";
 
-export type ViewMode = "split" | "code" | "preview";
+export type ViewMode = "split" | "code" | "preview" | "runtime";
 
 interface PanelSizes {
   sidebar: number;

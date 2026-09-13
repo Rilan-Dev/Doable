@@ -60,6 +60,7 @@ import {
   MoreHorizontal,
   Wrench,
   Bookmark,
+  Zap,
   BookmarkCheck,
   Clock,
   PanelLeftClose,
@@ -149,6 +150,7 @@ const MonacoEditorWrapper = dynamic<MonacoEditorWrapperProps>(
 
 // ─── Dynamic panel imports ──────────────────────────────────
 const CodePanel = dynamic(() => import("@/modules/editor/panels/code-panel").then(m => ({ default: m.CodePanel })), { ssr: false });
+const RuntimePreviewPanel = dynamic(() => import("@/modules/editor/preview/runtime-preview-panel").then(m => ({ default: m.RuntimePreviewPanel })), { ssr: false });
 const DesignPanel = dynamic(() => import("@/modules/editor/panels/design-panel").then(m => ({ default: m.DesignPanel })), { ssr: false });
 const FilesPanel = dynamic(() => import("@/modules/editor/panels/files-panel").then(m => ({ default: m.FilesPanel })), { ssr: false });
 const CloudPanel = dynamic(() => import("@/modules/editor/panels/cloud-panel").then(m => ({ default: m.CloudPanel })), { ssr: false });
@@ -179,7 +181,7 @@ function extractErrorMessage(data: unknown): string {
 }
 
 // ─── Types ──────────────────────────────────────────────────
-type ActiveTab = "chat" | "code" | "preview" | "history" | "design" | "cloud" | "analytics" | "files" | "security" | "speed" | "team" | "environment" | "skills" | "build";
+type ActiveTab = "chat" | "code" | "preview" | "runtime" | "history" | "design" | "cloud" | "analytics" | "files" | "security" | "speed" | "team" | "environment" | "skills" | "build";
 type ChatMode = "agent" | "plan" | "visual-edit";
 type DeviceMode = "desktop" | "tablet" | "mobile";
 
@@ -4810,6 +4812,7 @@ function EditorPageInner() {
   const showChat = showSidebar && (activeTab === "chat" || activeTab === "preview" || isPanelView || isDesignMode);
   const showCode = activeTab === "code";
   const showPreview = ((activeTab === "preview" || activeTab === "chat") && !isPanelView) || isDesignMode;
+  const showRuntime = activeTab === "runtime";
 
   // ─── Scaffold loading overlay ─────────────────────────────
   const renderScaffoldOverlay = () => {
@@ -5220,6 +5223,7 @@ function EditorPageInner() {
             { key: "chat" as ActiveTab, icon: PanelLeftClose, label: "Toggle sidebar", isToggle: true },
             { key: "preview" as ActiveTab, icon: Globe, label: "Preview", isToggle: false },
             { key: "code" as ActiveTab, icon: Code2, label: "Code", isToggle: false },
+            { key: "runtime" as ActiveTab, icon: Zap, label: "Runtime", isToggle: false },
           ]).map(({ key, icon: Icon, label, isToggle }, idx) => {
             const isActive = !isToggle && activeTab === key;
             return (
@@ -6825,8 +6829,15 @@ function EditorPageInner() {
           </div>
         )}
 
+        {/* ─── Runtime Preview Panel (in-browser TSX transpilation) ─── */}
+        {showRuntime && (
+          <div className="flex flex-1 flex-col overflow-hidden bg-card">
+            <RuntimePreviewPanel />
+          </div>
+        )}
+
         {/* ─── Preview Panel ────────────────────────────────── */}
-        {showPreview && !showCode && (
+        {showPreview && !showCode && !showRuntime && (
           <div className="flex flex-1 flex-col overflow-hidden bg-card">
             {/* Preview iframe or loading state */}
             <div className="relative flex flex-1 items-center justify-center overflow-hidden bg-background p-2">
