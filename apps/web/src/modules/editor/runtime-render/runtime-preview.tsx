@@ -7,13 +7,15 @@
  * This component is the ad-hoc integration point for Doable's editor —
  * it provides instant preview without a dev server.
  *
+ * NOTE: transpileComponent is now async (lazy-loads @babel/standalone).
+ *
  * Usage:
  *   <RuntimePreview source={tsxSource} />
  */
 
-import React, { Component, type ErrorInfo, type ReactNode, useState } from "react";
+import React, { Component, type ErrorInfo, type ReactNode, useEffect, useState } from "react";
 import { AlertCircle, Cpu, Loader2, Sparkles } from "lucide-react";
-import { useRuntimeComponent } from "./runtime-engine";
+import { transpileComponent, type TranspileResult } from "./runtime-engine";
 import { cn } from "@/lib/utils";
 
 // Extract a friendly component name from source.
@@ -30,17 +32,6 @@ function extractComponentName(source: string): string | null {
     if (m && m[1]) return m[1];
   }
   return null;
-}
-
-// Track whether the engine has not yet returned a result for the latest source.
-function useTranspileStatus(source: string, result: ReturnType<typeof useRuntimeComponent>) {
-  const [appliedSource, setAppliedSource] = useState(source);
-  const [lastResult, setLastResult] = useState(result);
-  if (result !== lastResult) {
-    setLastResult(result);
-    setAppliedSource(source);
-  }
-  return source !== appliedSource;
 }
 
 // ErrorBoundary so a runtime crash inside the user's component does not nuke the page.
@@ -80,6 +71,34 @@ class RuntimeBoundary extends Component<
   }
 }
 
+// Hook that calls the async transpileComponent with debouncing.
+function useRuntimeComponent(source: string, debounceMs = 350) {
+  const [result, setResult] = useState<TranspileResult>({
+    Component: null,
+    error: null,
+    durationMs: 0,
+  })
+  const [isStale, setIsStale] = useState(false)
+
+  useEffect(() => {
+    let cancelled = false
+    setIsStale(true)
+    const handle = setTimeout(async () => {
+      const r = await transpileComponent(source)
+      if (!cancelled) {
+        setResult(r)
+        setIsStale(false)
+      }
+    }, debounceMs)
+    return () => {
+      cancelled = true
+      clearTimeout(handle)
+    }
+  }, [source, debounceMs])
+
+  return { ...result, isStale }
+}
+
 export interface RuntimePreviewProps {
   source: string;
   /** Hide chrome (badges, header) — useful for small previews. */
@@ -89,12 +108,11 @@ export interface RuntimePreviewProps {
 
 export function RuntimePreview({ source, bare = false, className }: RuntimePreviewProps) {
   const result = useRuntimeComponent(source);
-  const isStale = useTranspileStatus(source, result);
   const name = extractComponentName(source);
   const Comp = result.Component;
 
   const resetKey = `${name || "anon"}:${source.length}:${result.durationMs}:${result.error ? "err" : "ok"}`;
-  const showTranspiling = isStale && !result.error && !Comp;
+  const showTranspiling = result.isStale && !result.error && !Comp;
 
   return (
     <div
@@ -162,7 +180,7 @@ export function RuntimePreview({ source, bare = false, className }: RuntimePrevi
         ) : (
           <div className="flex h-full min-h-[160px] items-center justify-center text-sm text-muted-foreground">
             <Loader2 className="mr-2 size-4 animate-spin" />
-            Transpiling…
+            {result.isStale ? "Transpiling…" : "Loading runtime engine…"}
           </div>
         )}
       </div>
