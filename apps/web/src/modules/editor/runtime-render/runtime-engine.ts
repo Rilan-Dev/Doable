@@ -1,12 +1,15 @@
 /**
  * Runtime TSX Engine — ported from Dynamic UI Render.
  *
- * This is the core engine that transpiles TSX/JSX source strings in-browser
- * via @babel/standalone and renders them as live React components.
+ * Transpiles TSX/JSX source strings in-browser via @babel/standalone and
+ * renders them as live React components.
  *
- * IMPORTANT: @babel/standalone and recharts are loaded LAZILY (dynamic import)
- * so they don't need to be installed for the app to boot. They're only loaded
- * when the user actually clicks the "Runtime" tab.
+ * IMPORTANT: @babel/standalone is loaded from CDN (unpkg) via a dynamic
+ * <script> tag — it is NOT an npm dependency. This means:
+ *   - No package.json changes needed
+ *   - No pnpm-lock.yaml update needed
+ *   - Docker build works as-is
+ *   - The package loads on demand when the user clicks the "Runtime" tab
  *
  * Flow:
  *   TSX source string
@@ -25,36 +28,74 @@ import * as ClsxLib from 'clsx'
 import * as TailwindMergeLib from 'tailwind-merge'
 import * as CvaLib from 'class-variance-authority'
 
-// ─── Lazy-loaded modules ──────────────────────────────────────
-// @babel/standalone and recharts are loaded dynamically only when
-// transpileComponent() is first called. This prevents build-time
-// import errors when these packages aren't installed yet.
+// ─── CDN loading of @babel/standalone ─────────────────────────
+// We load @babel/standalone from unpkg CDN via a <script> tag so it
+// doesn't need to be an npm dependency. This keeps the Docker image
+// small and avoids lockfile issues.
 
-let _babel: typeof import('@babel/standalone') | null = null
-let _recharts: typeof import('recharts') | null = null
+let _babelLoaded = false
+let _babelLoadPromise: Promise<any> | null = null
 
-async function ensureBabel() {
-  if (!_babel) {
-    _babel = await import('@babel/standalone')
+function loadBabelFromCDN(): Promise<any> {
+  if (_babelLoaded && (window as any).Babel) {
+    return Promise.resolve((window as any).Babel)
   }
-  return _babel
-}
+  if (_babelLoadPromise) return _babelLoadPromise
 
-async function ensureRecharts() {
-  if (!_recharts) {
-    try {
-      _recharts = await import('recharts')
-    } catch {
-      _recharts = {} as any
+  _babelLoadPromise = new Promise((resolve, reject) => {
+    const script = document.createElement('script')
+    script.src = 'https://unpkg.com/@babel/standalone@7.25.6/babel.min.js'
+    script.async = true
+    script.onload = () => {
+      _babelLoaded = true
+      const babel = (window as any).Babel
+      if (babel) {
+        resolve(babel)
+      } else {
+        reject(new Error('Babel loaded but not found on window'))
+      }
     }
-  }
-  return _recharts
+    script.onerror = () => {
+      _babelLoadPromise = null
+      reject(new Error('Failed to load @babel/standalone from CDN. Check your internet connection.'))
+    }
+    document.head.appendChild(script)
+  })
+
+  return _babelLoadPromise
 }
 
 // ─── Module Registry ──────────────────────────────────────────
-// Maps require() names to host module values. This is what makes the
-// transpiled code able to import React, lucide icons, recharts, etc.
-// Built dynamically so lazy-loaded modules are included once loaded.
+// Maps require() names to host module values. recharts is loaded lazily
+// from CDN too (optional — if it fails, the registry just has an empty object).
+
+let _rechartsLoaded = false
+let _rechartsLoadPromise: Promise<any> | null = null
+
+function loadRechartsFromCDN(): Promise<any> {
+  if (_rechartsLoaded) {
+    return Promise.resolve((window as any).Recharts || {})
+  }
+  if (_rechartsLoadPromise) return _rechartsLoadPromise
+
+  _rechartsLoadPromise = new Promise((resolve) => {
+    const script = document.createElement('script')
+    script.src = 'https://unpkg.com/recharts@2.15.0/dist/recharts.min.js'
+    script.async = true
+    script.onload = () => {
+      _rechartsLoaded = true
+      resolve((window as any).Recharts || {})
+    }
+    script.onerror = () => {
+      // recharts is optional — resolve with empty object if it fails.
+      _rechartsLoaded = true
+      resolve({})
+    }
+    document.head.appendChild(script)
+  })
+
+  return _rechartsLoadPromise
+}
 
 function buildModuleRegistry(babel: any, recharts: any): Record<string, unknown> {
   return {
@@ -79,17 +120,16 @@ export interface TranspileResult {
 }
 
 export function listAvailableModules(): string[] {
-  const modules = [
+  return [
     'react', 'react-dom', 'react-dom/client', 'react/jsx-runtime',
     '@babel/standalone', 'lucide-react', 'recharts',
     'clsx', 'tailwind-merge', 'class-variance-authority',
-  ]
-  return modules.sort()
+  ].sort()
 }
 
 /**
  * Transpile a TSX/JSX source string into a live React component.
- * This is async because it lazy-loads @babel/standalone on first call.
+ * Async because it lazy-loads @babel/standalone from CDN on first call.
  */
 export async function transpileComponent(
   source: string,
@@ -100,8 +140,11 @@ export async function transpileComponent(
     return { Component: null, error: 'Source is empty.', durationMs: 0 }
   }
   try {
-    // Lazy-load babel + recharts on first use.
-    const [babel, recharts] = await Promise.all([ensureBabel(), ensureRecharts()])
+    // Lazy-load babel + recharts from CDN.
+    const [babel, recharts] = await Promise.all([
+      loadBabelFromCDN(),
+      loadRechartsFromCDN(),
+    ])
     const registry = buildModuleRegistry(babel, recharts)
 
     const { code } = babel.transform(source, {
