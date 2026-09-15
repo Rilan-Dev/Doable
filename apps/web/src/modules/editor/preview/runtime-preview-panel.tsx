@@ -3,11 +3,9 @@
 /**
  * RuntimePreviewPanel — Doable integration wrapper.
  *
- * Reads the active file's source from the editor store and renders it live
- * using the RuntimePreview (in-browser TSX transpilation via @babel/standalone).
- *
- * This panel replaces the iframe-based dev-server preview with an instant
- * in-browser render — no build step required. Useful for:
+ * Reads the active file from the editor store and renders it live in the
+ * isolated runtime sandbox — no dev server or build step. Local imports
+ * (`@/…`, `./…`) are followed and shipped along. Useful for:
  *   - Quick TSX component previews without spinning up a dev server
  *   - Runtime UI rendering when the dev server is unavailable
  *   - Sharing live component previews
@@ -19,8 +17,11 @@ import { RuntimePreview } from "../runtime-render";
 import { Code2, Info } from "lucide-react";
 
 export function RuntimePreviewPanel() {
+  const projectId = useEditorStore((s) => s.projectId);
   const activeFilePath = useEditorStore((s) => s.activeFilePath);
   const activeFileContent = useEditorStore((s) => s.activeFileContent);
+  // Bumped whenever the AI applies tool results — other files may have changed.
+  const toolResultVersion = useEditorStore((s) => s.toolResultVersion);
 
   // Get the source of the active file.
   const source = useMemo(() => {
@@ -32,6 +33,8 @@ export function RuntimePreviewPanel() {
     if (!activeFilePath) return false;
     return /\.(tsx|jsx)$/i.test(activeFilePath);
   }, [activeFilePath]);
+
+  if (!projectId) return null;
 
   if (!activeFilePath) {
     return (
@@ -69,7 +72,13 @@ export function RuntimePreviewPanel() {
 
   return (
     <div className="h-full p-4 overflow-auto">
-      <RuntimePreview source={source} className="h-full" />
+      <RuntimePreview
+        projectId={projectId}
+        entry={activeFilePath}
+        source={source}
+        refreshKey={toolResultVersion}
+        className="h-full"
+      />
     </div>
   );
 }

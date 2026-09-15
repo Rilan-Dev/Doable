@@ -4,8 +4,8 @@
   "license": "MIT",
   "packageManager": "pnpm@9.15.4",
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
+    "build": "node api.js && turbo run build",
+    "dev": "node api.js && turbo run dev",
     "dev:web": "turbo run dev --filter=@doable/web",
     "dev:api": "turbo run dev --filter=@doable/api",
     "dev:ws": "turbo run dev --filter=@doable/ws",

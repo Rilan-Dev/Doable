@@ -1,13 +1,11 @@
 /**
- * Runtime Render Module — ad-hoc feature ported from Dynamic UI Render.
+ * Runtime Render — live preview of a project file without a dev server.
  *
- * Enables in-browser TSX transpilation and live preview within Doable's editor.
- *
- * IMPORTANT: transpileComponent is async (lazy-loads @babel/standalone + recharts).
- * The packages must be installed (pnpm install) for the runtime preview to work,
- * but the app boots fine without them — they're only loaded when the user clicks
- * the "Runtime" tab.
+ * Rendering happens in an opaque-origin sandbox iframe (see
+ * runtime-preview.tsx); the in-iframe runtime is bundled separately into
+ * public/runtime-sandbox.js by scripts/build-runtime-sandbox.mjs.
  */
 
-export { transpileComponent, listAvailableModules, type TranspileResult } from "./runtime-engine";
 export { RuntimePreview, type RuntimePreviewProps } from "./runtime-preview";
+export { collectModules, type CollectedModules } from "./collect-modules";
+export { extractImports, isLocalSpecifier, resolveImport } from "./resolve-import";
