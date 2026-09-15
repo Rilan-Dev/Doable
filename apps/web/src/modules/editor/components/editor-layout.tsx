@@ -15,7 +15,6 @@ interface EditorLayoutProps {
   center: ReactNode;
   preview: ReactNode;
   toolbar: ReactNode;
-  runtime?: ReactNode;
 }
 
 export function EditorLayout({
@@ -23,7 +22,6 @@ export function EditorLayout({
   center,
   preview,
   toolbar,
-  runtime,
 }: EditorLayoutProps) {
   const {
     panelSizes,
@@ -80,9 +78,8 @@ export function EditorLayout({
     };
   }, [dragging, setPanelSizes]);
 
-  const showCenter = viewMode !== "preview" && viewMode !== "runtime";
-  const showPreview = viewMode !== "code" && viewMode !== "runtime";
-  const showRuntime = viewMode === "runtime";
+  const showCenter = viewMode !== "preview";
+  const showPreview = viewMode !== "code";
 
   return (
     <div className="flex h-screen flex-col overflow-hidden bg-background">
@@ -154,13 +151,6 @@ export function EditorLayout({
         {showPreview && (
           <div className="flex flex-1 min-w-0 overflow-hidden">
             {preview}
-          </div>
-        )}
-
-        {/* Runtime preview panel (in-browser TSX transpilation, no dev server) */}
-        {showRuntime && runtime && (
-          <div className="flex flex-1 min-w-0 overflow-hidden">
-            {runtime}
           </div>
         )}
       </div>
