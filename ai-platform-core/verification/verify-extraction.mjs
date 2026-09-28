@@ -67,6 +67,7 @@ const requiredFiles = [
   "UI_CAPABILITY_MATRIX.md",
   "ADAPTER_ARCHITECTURE.md",
   "verification/source-and-ui-manifest.json",
+  "verification/immutable-source-manifest.json",
   "verification/verify-extraction.mjs",
   "external-dependencies/external-dependencies.json",
   "external-dependencies/generate-external-dependencies.mjs",
@@ -100,6 +101,45 @@ function gitRevParse(spec) {
 
 function gitAvailable() {
   return Boolean(gitRevParse("HEAD"));
+}
+
+function sha1(data) { return crypto.createHash("sha1").update(data).digest("hex"); }
+
+function gitTreeSha(absDir) {
+  const entries = fs.readdirSync(absDir, { withFileTypes: true }).map((entry) => {
+    const abs = path.join(absDir, entry.name);
+    if (entry.isDirectory()) return { name: entry.name, mode: "40000", sha: gitTreeSha(abs) };
+    const stat = fs.lstatSync(abs);
+    const mode = (stat.mode & 0o111) ? "100755" : "100644";
+    return { name: entry.name, mode, sha: gitBlobSha(path.relative(root, abs)) };
+  }).sort((a, b) => Buffer.from(a.name).compare(Buffer.from(b.name)));
+  const body = Buffer.concat(entries.map((e) => Buffer.concat([
+    Buffer.from(`${e.mode} ${e.name}\0`),
+    Buffer.from(e.sha, "hex")
+  ])));
+  return sha1(Buffer.concat([Buffer.from(`tree ${body.length}\0`), body]));
+}
+
+function listFilesystemFiles(relRoot) {
+  const absRoot = path.join(root, relRoot);
+  const out = [];
+  function walk(dir, rel) {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const childRel = path.join(rel, entry.name).split(path.sep).join("/");
+      const childAbs = path.join(dir, entry.name);
+      if (entry.isDirectory()) walk(childAbs, childRel);
+      else out.push(childRel);
+    }
+  }
+  if (fs.existsSync(absRoot)) walk(absRoot, relRoot);
+  return out.sort();
+}
+
+function gitListFiles(relRoot) {
+  try {
+    return execFileSync("git", ["ls-tree", "-r", "--name-only", "HEAD", "--", `ai-platform-core/${relRoot}`], { encoding: "utf8" })
+      .split("\n").map(x => x.trim()).filter(Boolean).map(x => x.replace(/^ai-platform-core\//, "")).sort();
+  } catch { return []; }
 }
 
 function gitBlobSha(file) {
@@ -170,6 +210,47 @@ if (fs.existsSync(sourceManifest)) {
     pass: uiFiles.every((p) => exists(`ui-reference/${p}`))
   };
   report.pass &&= report.checks.uiReferenceFiles.pass;
+}
+
+const immutableManifestPath = path.join(root, "verification/immutable-source-manifest.json");
+if (fs.existsSync(immutableManifestPath)) {
+  const m = JSON.parse(fs.readFileSync(immutableManifestPath, "utf8"));
+  const fileResults = [];
+  const expectedByRoot = new Map();
+  for (const f of m.files || []) {
+    const rel = `${f.root}/${f.path}`;
+    expectedByRoot.set(rel, f);
+    const actualSha = gitAvailable() ? gitRevParse(`HEAD:ai-platform-core/${rel}`) : gitBlobSha(rel);
+    fileResults.push({ path: rel, expected: f.sha, actual: actualSha, pass: actualSha === f.sha });
+  }
+  const rootSetResults = {};
+  for (const [rel, expected] of Object.entries(m.capturedRootTrees || {})) {
+    const actual = gitAvailable()
+      ? gitRevParse(`HEAD:ai-platform-core/${rel}`)
+      : (exists(rel) ? gitTreeSha(path.join(root, rel)) : null);
+    rootSetResults[rel] = { expected, actual, pass: actual === expected };
+  }
+  const inventory = {};
+  for (const root of new Set((m.files || []).map(f => f.root))) {
+    const expected = (m.files || []).filter(f => f.root === root).map(f => `${root}/${f.path}`).sort();
+    const actual = gitAvailable() ? gitListFiles(root) : listFilesystemFiles(root);
+    const missing = expected.filter(x => !actual.includes(x));
+    const extra = actual.filter(x => !expected.includes(x));
+    inventory[root] = { expected: expected.length, actual: actual.length, missing, extra, pass: missing.length === 0 && extra.length === 0 };
+  }
+  report.checks.immutableSource = {
+    sourceCommit: m.source?.commit,
+    totalFiles: fileResults.length,
+    verifiedFiles: fileResults.filter(x => x.pass).length,
+    fileFailures: fileResults.filter(x => !x.pass),
+    rootTrees: rootSetResults,
+    rootTreesPass: Object.values(rootSetResults).every(x => x.pass),
+    inventory,
+    inventoryPass: Object.values(inventory).every(x => x.pass),
+    filesPass: fileResults.every(x => x.pass),
+    pass: fileResults.every(x => x.pass) && Object.values(rootSetResults).every(x => x.pass) && Object.values(inventory).every(x => x.pass)
+  };
+  report.pass &&= report.checks.immutableSource.pass;
 }
 
 for (const name of [
