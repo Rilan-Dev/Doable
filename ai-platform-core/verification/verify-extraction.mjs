@@ -213,7 +213,9 @@ if (fs.existsSync(hardeningPath)) {
   const immutablePass = h.immutable?.sourceRoots === 12
     && h.immutable?.dependencyClosureRoots === 9
     && h.immutable?.uiReferenceRoots === 6
-    && h.immutable?.capturedDirectoryTrees === 99
+    && h.immutable?.capturedDirectoryTrees === 72
+    && h.immutable?.capturedRootTrees === 27
+    && h.immutable?.capturedTrees === 99
     && h.immutable?.immutableFiles === 747;
   const targetPass = h.targetVerification?.requiredBeforeHostAdapters === true
     && h.targetVerification?.command === "node ai-platform-core/verification/verify-extraction.mjs";
