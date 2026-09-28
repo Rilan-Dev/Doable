@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T22:58:28.478Z",
+  "generatedAt": "2026-09-28T23:00:39.565Z",
   "source": {
     "repository": "Rilan-Dev/Doable",
     "ref": "develop",
@@ -8,8 +8,19 @@
   "extractionBranch": "ai-platform-core-extraction",
   "currentVerification": {
     "sourceTreeIntegrity": {
-      "extractionBranchComparedWithImmutableSnapshot": "0 source-file changes relative to immutable snapshot; extraction branch is 52 commits ahead and 0 behind",
-      "originalSourceOutsideExtraction": "0 changed files outside ai-platform-core/"
+      "extractionBranchComparedWithImmutableSnapshot": "0 source-file changes relative to immutable snapshot; extraction branch is 57 commits ahead and 0 behind",
+      "originalSourceOutsideExtraction": "0 changed files outside ai-platform-core/",
+      "immutableFiles": {
+        "expected": 747,
+        "verified": 747,
+        "failures": 0,
+        "missingBaseline": 0
+      },
+      "immutableTrees": {
+        "expected": 99,
+        "verified": 99,
+        "failures": 0
+      }
     },
     "keyBackendBlobs": {
       "checked": 15,
@@ -29,8 +40,8 @@
       "missingBaseline": 0
     },
     "immutableTrees": {
-      "expected": 27,
-      "verified": 27,
+      "expected": 99,
+      "verified": 99,
       "failures": 0
     },
     "dependencyInventory": {
