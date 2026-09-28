@@ -67,6 +67,7 @@ const requiredFiles = [
   "UI_CAPABILITY_MATRIX.md",
   "ADAPTER_ARCHITECTURE.md",
   "verification/source-and-ui-manifest.json",
+  "verification/capability-closure.json",
   "verification/immutable-source-manifest.json",
   "verification/verify-extraction.mjs",
   "verification/package-hardening.json",
@@ -228,6 +229,30 @@ if (fs.existsSync(hardeningPath)) {
   report.pass &&= report.checks.packageHardening.pass;
 }
  
+const capabilityClosurePath = path.join(root, "verification/capability-closure.json");
+if (fs.existsSync(capabilityClosurePath)) {
+  const c = JSON.parse(fs.readFileSync(capabilityClosurePath, "utf8"));
+  const expected = ["multi-provider","agents","tools","integrations","mcp","skills","chat","context-memory","workspace-sandbox","ui"];
+  const capabilities = c.capabilities || {};
+  const missing = expected.filter((name) => !capabilities[name] || capabilities[name].manifest !== `capabilities/${name}/MANIFEST.md`);
+  const invalidRefs = [];
+  for (const [name, spec] of Object.entries(capabilities)) {
+    for (const group of ["runtime","dependencies","ui","reference"]) {
+      for (const ref of spec[group] || []) {
+        if (!exists(ref)) invalidRefs.push({ capability: name, group, ref });
+      }
+    }
+  }
+  report.checks.capabilityClosure = {
+    expected: expected.length,
+    present: Object.keys(capabilities).length,
+    missing,
+    invalidRefs,
+    pass: missing.length === 0 && invalidRefs.length === 0
+  };
+  report.pass &&= report.checks.capabilityClosure.pass;
+}
+
 const dependencyVerifierPath = path.join(root, "external-dependencies/verify-external-dependencies.mjs");
 if (fs.existsSync(dependencyVerifierPath)) {
   let dependencyCheck = null;
