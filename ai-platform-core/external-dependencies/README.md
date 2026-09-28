@@ -71,3 +71,12 @@ Codex must distinguish:
 **"source is present"** from **"host dependency is installed/configured."**
 
 The former is satisfied by this extraction. The latter must be explicitly completed in the target project.
+
+## Machine-checkable inventory verification
+
+The extraction verifier also runs:
+
+`node ai-platform-core/external-dependencies/verify-external-dependencies.mjs`
+
+That verifier recomputes the dependency buckets from every captured package manifest and fails if the checked-in inventory is stale or incomplete. It does not rewrite the inventory.
+
