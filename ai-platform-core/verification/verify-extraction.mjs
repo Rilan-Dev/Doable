@@ -223,12 +223,17 @@ if (fs.existsSync(immutableManifestPath)) {
     const actualSha = gitAvailable() ? gitRevParse(`HEAD:ai-platform-core/${rel}`) : gitBlobSha(rel);
     fileResults.push({ path: rel, expected: f.sha, actual: actualSha, pass: actualSha === f.sha });
   }
-  const rootSetResults = {};
-  for (const [rel, expected] of Object.entries(m.capturedRootTrees || {})) {
+  const treeResults = {};
+  const allTreeEntries = [
+    ...Object.entries(m.capturedRootTrees || {}).map(([path, sha]) => ({ path, sha, kind: "captured-root" })),
+    ...(m.directoryTrees || []).map((entry) => ({ path: entry.path, sha: entry.sha, kind: "directory" }))
+  ];
+  for (const entry of allTreeEntries) {
+    const rel = entry.path;
     const actual = gitAvailable()
       ? gitRevParse(`HEAD:ai-platform-core/${rel}`)
       : (exists(rel) ? gitTreeSha(path.join(root, rel)) : null);
-    rootSetResults[rel] = { expected, actual, pass: actual === expected };
+    treeResults[rel] = { expected: entry.sha, actual, kind: entry.kind, pass: actual === entry.sha };
   }
   const inventory = {};
   for (const root of new Set((m.files || []).map(f => f.root))) {
@@ -243,12 +248,15 @@ if (fs.existsSync(immutableManifestPath)) {
     totalFiles: fileResults.length,
     verifiedFiles: fileResults.filter(x => x.pass).length,
     fileFailures: fileResults.filter(x => !x.pass),
-    rootTrees: rootSetResults,
-    rootTreesPass: Object.values(rootSetResults).every(x => x.pass),
+    trees: treeResults,
+    treesExpected: allTreeEntries.length,
+    treesVerified: Object.values(treeResults).filter(x => x.pass).length,
+    treeFailures: Object.entries(treeResults).filter(([, x]) => !x.pass).map(([path, x]) => ({ path, expected: x.expected, actual: x.actual })),
+    treesPass: Object.values(treeResults).every(x => x.pass),
     inventory,
     inventoryPass: Object.values(inventory).every(x => x.pass),
     filesPass: fileResults.every(x => x.pass),
-    pass: fileResults.every(x => x.pass) && Object.values(rootSetResults).every(x => x.pass) && Object.values(inventory).every(x => x.pass)
+    pass: fileResults.every(x => x.pass) && Object.values(treeResults).every(x => x.pass) && Object.values(inventory).every(x => x.pass)
   };
   report.pass &&= report.checks.immutableSource.pass;
 }
