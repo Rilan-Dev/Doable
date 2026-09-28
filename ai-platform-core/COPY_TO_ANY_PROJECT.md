@@ -73,4 +73,12 @@ Run the extraction verifier before using the core:
 node ai-platform-core/verification/verify-extraction.mjs
 ```
 
+The verifier includes the dependency-inventory gate. The dependency inventory can also be checked directly without rewriting it:
+
+```bash
+node ai-platform-core/external-dependencies/verify-external-dependencies.mjs
+```
+
+Do not begin host adapter implementation until the extraction verifier passes. A passing extraction gate proves source/package structure and immutable provenance; it does not claim that the target project's runtime build, database, credentials, providers or end-to-end integrations are already configured.
+
 The verifier checks required structure, key entrypoints, manifest consistency and the immutable source boundary. When run inside the original Git checkout it also verifies the captured Git tree SHAs.
