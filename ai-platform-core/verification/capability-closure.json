@@ -28,7 +28,7 @@
       "ui": [
         "ui-reference/apps/web/src/modules/ai-settings/",
         "ui-reference/apps/web/src/app/(dashboard)/ai-settings/",
-        "ui-reference/apps/web/src/app/setup/steps/Step2AIProvider.tsx"
+        "ui-reference/apps/web/src/modules/ai-settings/"
       ]
     },
     "agents": {
@@ -69,8 +69,7 @@
         "doable-source/services/api/src/routes/integrations-oauth.ts"
       ],
       "ui": [
-        "ui-reference/apps/web/src/modules/integrations/",
-        "ui-reference/apps/web/src/app/setup/"
+        "ui-reference/apps/web/src/modules/integrations/"
       ]
     },
     "mcp": {
