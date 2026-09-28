@@ -93,3 +93,15 @@ Codex must follow imports/dependencies recursively and implement the feature thr
 - `verification/source-and-ui-manifest.json`
 
 The verifier can run in the original Git checkout for Git tree/blob identity checks or after copying into another repository for filesystem/key-blob/structure checks.
+
+## Package-hardening status
+
+The extraction is now pinned by a complete immutable provenance manifest at `verification/immutable-source-manifest.json`.
+
+- **747/747 immutable files** have expected Doable baseline blob SHAs and modes recorded.
+- **27/27 captured source/UI/dependency tree roots** match their baseline Git tree SHAs.
+- The current extraction contains **0 blob mismatches** and **0 missing baseline files** against Doable commit `a6036d1fd6dca83c08ee5affa141e5c85e45f5af`.
+- `verification/verify-extraction.mjs` validates the complete file inventory, every immutable blob, captured tree roots, required manifests, and feature manifests.
+- `external-dependencies/external-dependencies.json` now inventories package dependencies across the captured package manifests, including **559 external npm packages**, **526 Activepieces packages**, **6 workspace packages**, peer dependencies, package overrides, and build-time packages.
+- Runtime installation/build verification remains a target-project responsibility after copying the core into the host repository.
+
