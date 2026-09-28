@@ -34,7 +34,8 @@
     "ui-reference/apps/web/src/modules/skills": "0223ba3433bd135dc4f769c4bd75874ac8ff6035",
     "ui-reference/apps/web/src/modules/settings": "6fd532bc01a61fe79b49b2c2b4e90c80df1cb7db",
     "ui-reference/apps/web/src/app/(dashboard)/workspace-settings": "75043d2045f565cf8909121b4c13ffd34e15e542",
-    "ui-reference/apps/web/src/app/(dashboard)/ai-settings": "1e879c7e3c8a04d8a903f836c3e5b4c1bc12346e"
+    "ui-reference/apps/web/src/app/(dashboard)/ai-settings": "1e879c7e3c8a04d8a903f836c3e5b4c1bc12346e",
+    "doable-source/packages/marketplace-bundle": "8b89b1727b6a710bec1796bc1d4b9c52522d6638"
   },
   "directoryTrees": [
     {
@@ -539,6 +540,20 @@
       "destinationPath": "ui-reference/apps/web/src/app/(dashboard)/ai-settings/callback",
       "sourcePath": "apps/web/src/app/(dashboard)/ai-settings/callback",
       "sha": "b1bb766d0d950d7d6e229f452e7333d254118a67",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/packages/marketplace-bundle/src",
+      "sourcePath": "packages/marketplace-bundle/src",
+      "sha": "a940da67267092cc3b76924beb9cdfe9a03f01fb",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/packages/marketplace-bundle/src/codecs",
+      "sourcePath": "packages/marketplace-bundle/src/codecs",
+      "sha": "bd509ccaf48d20c10b98ea3609ec6ddab9d21d77",
       "mode": "040000"
     }
   ],
@@ -5771,6 +5786,48 @@
       "sha": "bc60f4b1d9a492d851c45ec7af0182ebdab8f313",
       "mode": "100644",
       "size": 4025
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/packages/marketplace-bundle/package.json",
+      "sourcePath": "packages/marketplace-bundle/package.json",
+      "sha": "ee29c2021fe047645e2b24f6d1f4785321cd3290",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/packages/marketplace-bundle/src/index.ts",
+      "sourcePath": "packages/marketplace-bundle/src/index.ts",
+      "sha": "2362ca39701e1acf9d7e8dcbc5b55d06c7b2d57d",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/packages/marketplace-bundle/src/manifest.ts",
+      "sourcePath": "packages/marketplace-bundle/src/manifest.ts",
+      "sha": "63457ad811616b013f7e351c7f12cdf5cc809b13",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/packages/marketplace-bundle/src/permissions.ts",
+      "sourcePath": "packages/marketplace-bundle/src/permissions.ts",
+      "sha": "8e3c3b14cda120890d8df9d1aa6b1ee96f4f992a",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/packages/marketplace-bundle/src/codecs/json-v1.ts",
+      "sourcePath": "packages/marketplace-bundle/src/codecs/json-v1.ts",
+      "sha": "ffa4b4610a15377b88cea14e1de1e40923ba149a",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/packages/marketplace-bundle/src/codecs/standards-zip.ts",
+      "sourcePath": "packages/marketplace-bundle/src/codecs/standards-zip.ts",
+      "sha": "11afe38109e66061b579d34862d624d60673b12d",
+      "mode": "100644"
     }
   ],
   "counts": {
