@@ -1,4 +1,4 @@
-export type UIArea = "providers"|"integrations"|"mcp"|"skills"|"workspace"|"project"|"setup"|"dialogs";
+export type UIArea = "providers"|"agents"|"chat"|"tools"|"integrations"|"mcp"|"skills"|"workspace"|"project"|"setup"|"dialogs";
 export type UIState = "loading"|"populated"|"empty"|"validation"|"saving"|"success"|"error"|"restricted"|"disconnected"|"confirmation"|"retry"|"disabled";
 export interface UIReferenceScreen {
   id:string;
@@ -35,4 +35,10 @@ export const UI_REFERENCE_INVENTORY: readonly UIReferenceScreen[] = [
 {id:"dashboard-move-folder-dialog",area:"dialogs",sourcePath:"apps/web/src/app/(dashboard)/dashboard/dashboard-dialogs.tsx",surface:"dialog",capability:"workspace",states:["populated","empty"],interactionPatterns:["folder-selection","root-option"]},
 {id:"dashboard-template-preview",area:"dialogs",sourcePath:"apps/web/src/app/(dashboard)/dashboard/dashboard-dialogs.tsx",surface:"modal",capability:"workspace",states:["populated","loading","error"],interactionPatterns:["preview","use-template","remix"]},
 {id:"dashboard-github-import",area:"dialogs",sourcePath:"apps/web/src/app/(dashboard)/dashboard/dashboard-dialogs.tsx",surface:"dialog",capability:"workspace",states:["loading","validation","success","error"],interactionPatterns:["import","authentication","progress"]},
+{id:"editor-chat-panel",area:"chat",sourcePath:"apps/web/src/modules/editor/chat/chat-panel.tsx",surface:"page",capability:"agents/chat",states:["loading","populated","empty","error","saving","retry","disabled"],interactionPatterns:["conversation","streaming","tool-events","attachments","stop-retry","context"]},
+{id:"editor-chat-message",area:"chat",sourcePath:"apps/web/src/modules/editor/chat/chat-message.tsx",surface:"inline-form",capability:"chat/streaming",states:["populated","error","loading"],interactionPatterns:["streaming-text","thinking","tool-results","artifacts","copy","retry"]},
+{id:"editor-tool-call-card",area:"tools",sourcePath:"apps/web/src/modules/editor/chat/tool-call-card.tsx",surface:"inline-form",capability:"tools",states:["loading","populated","success","error","retry"],interactionPatterns:["tool-call","arguments","result","status","expand-collapse"]},
+{id:"editor-user-input-card",area:"agents",sourcePath:"apps/web/src/modules/editor/chat/user-input-card.tsx",surface:"modal",capability:"agent/user-input",states:["populated","saving","success","error"],interactionPatterns:["blocking-question","choice","submit","resume-turn"]},
+{id:"editor-state-store",area:"chat",sourcePath:"apps/web/src/modules/editor/hooks/use-editor-store.ts",surface:"inline-form",capability:"chat/editor-state",states:["loading","populated","saving","error"],interactionPatterns:["active-session","stream-state","tool-state","preview-state"]},
+{id:"dashboard-voice-input",area:"chat",sourcePath:"apps/web/src/app/(dashboard)/dashboard/dashboard-chat-input.tsx",surface:"inline-form",capability:"chat/voice-input",states:["disabled","error","populated"],interactionPatterns:["microphone","permission-error","speech-input","send"]},
 ];
