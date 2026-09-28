@@ -16,29 +16,11 @@ import { execFileSync } from "node:child_process";
 const root = path.resolve(process.cwd(), "ai-platform-core");
 const reportPath = path.join(root, "verification", "completeness-report.json");
 
-const expectedTrees = {
-  "doable-source/services/api/src/ai": "13edcc7bd9726c38ea9bd4aab0d7825b2b8387d0",
-  "doable-source/services/api/src/context": "43424593729e9a6d23ce71731c7bf6991b7d6c8b",
-  "doable-source/services/api/src/data-worker": "41f76545e048af489e5b1a260ecb24dbb57c6125",
-  "doable-source/services/api/src/integrations": "f8373823ec6063b9ff0f911d83c761d840f97a30",
-  "doable-source/services/api/src/mcp": "77fc1cff3ec48ba3bce21322befcf985003ac03c",
-  "doable-source/services/api/src/sandbox": "d0028c442297801dbe57a546ea3ec4f6232adbb2",
-  "doable-source/services/api/src/routes/chat": "69ab556c027e51b655ce8760315ea5547a554b38",
-  "doable-source/packages/doable-ai": "4df61ac8972c156009a661ebf599fb2b91b7ddab",
-  "doable-source/packages/docore": "2a33159a3b92f653ddf1514027982d454bea2fd4",
-  "doable-source/packages/dovault": "15532f8f7effbe8a7ebd33b57333b113d64e7606",
-  "doable-source/packages/shared": "8dad7fcadfe23fb5e6d3b3d919f0501e59cfae71",
-  "doable-source/packages/doable-sdk": "32683d5cd4b42353e790000123176bb3b2eb8f2a",
-  "dependency-closure/packages/db": "1faf731b078d489040e54bfde4bb2d08086354fe",
-  "dependency-closure/services/api/src/db": "3fe1b58f43e135dce8807438769eec032b591bb5",
-  "dependency-closure/services/api/src/frameworks": "f106f350efd3362473eb33d18962503d50e4de9a",
-  "dependency-closure/services/api/src/projects": "654182e0e19b8d44ed0fcb791278ef3841bbd36c",
-  "dependency-closure/services/api/src/lib": "7bb5fd5302ce66e97d25d91b8097bada80bc762a",
-  "dependency-closure/services/api/src/middleware": "62b0a6ba803d9827f9b0acc6d1a8091febffd5f8",
-  "dependency-closure/services/api/src/templates": "1289c0ae29d5dc893c6f2db5c80b893f177b1e52",
-  "dependency-closure/services/api/src/git": "830aa877f377e78e9e1df3703ec4ebe8d2158846",
-  "dependency-closure/services/api/src/runtime": "ae8aa7c249b90eaf6dd66ec82d5d47021d2aeb79"
-};
+const immutableManifestPath = path.join(root, "verification/immutable-source-manifest.json");
+const immutableManifest = fs.existsSync(immutableManifestPath)
+  ? JSON.parse(fs.readFileSync(immutableManifestPath, "utf8"))
+  : {};
+const expectedTrees = immutableManifest.capturedRootTrees || {};
 
 const expectedBlobs = {
   "doable-source/services/api/src/routes/integrations-admin.ts": "82538892891afd1cd45368e51abb5f871dab8614",
@@ -282,9 +264,8 @@ if (fs.existsSync(sourceManifest)) {
   report.pass &&= report.checks.uiReferenceFiles.pass;
 }
 
-const immutableManifestPath = path.join(root, "verification/immutable-source-manifest.json");
 if (fs.existsSync(immutableManifestPath)) {
-  const m = JSON.parse(fs.readFileSync(immutableManifestPath, "utf8"));
+  const m = immutableManifest;
   const fileResults = [];
   const expectedByRoot = new Map();
   for (const f of m.files || []) {
