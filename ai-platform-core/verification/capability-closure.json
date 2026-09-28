@@ -144,6 +144,24 @@
         "ui-reference/apps/web/src/app/(dashboard)/ai-settings/",
         "ui-reference/apps/web/src/modules/editor/chat/"
       ]
+    },
+    "marketplace": {
+      "manifest": "capabilities/marketplace/MANIFEST.md",
+      "runtime": [
+        "doable-source/packages/marketplace-bundle/"
+      ],
+      "dependencies": [
+        "doable-source/packages/shared/"
+      ],
+      "uiReference": [],
+      "hostBoundaries": [
+        "marketplace persistence",
+        "publisher/tenant identity",
+        "credential provisioning",
+        "listing/moderation",
+        "object storage/CDN",
+        "marketplace UI/theme"
+      ]
     }
   },
   "acceptance": {
