@@ -38,583 +38,507 @@
   },
   "directoryTrees": [
     {
-      "path": "apps",
-      "sha": "ce1b58814c053659a91349a5abe31c5854287850",
-      "mode": "040000"
-    },
-    {
-      "path": "apps/web",
-      "sha": "183ee61f545eaaf5933cb53972cf545b0985aa57",
-      "mode": "040000"
-    },
-    {
-      "path": "apps/web/src",
-      "sha": "416061d6978cbe69212b6cac5d5eed9ef2819ec1",
-      "mode": "040000"
-    },
-    {
-      "path": "apps/web/src/app",
-      "sha": "0579fa427f7726c47c53410edce497eaa8402ca9",
-      "mode": "040000"
-    },
-    {
-      "path": "apps/web/src/app/(dashboard)",
-      "sha": "878c0776fa6c106c340a7531cd55d5eeafbaf0fc",
-      "mode": "040000"
-    },
-    {
-      "path": "apps/web/src/app/(dashboard)/ai-settings",
-      "sha": "1e879c7e3c8a04d8a903f836c3e5b4c1bc12346e",
-      "mode": "040000"
-    },
-    {
-      "path": "apps/web/src/app/(dashboard)/ai-settings/callback",
-      "sha": "b1bb766d0d950d7d6e229f452e7333d254118a67",
-      "mode": "040000"
-    },
-    {
-      "path": "apps/web/src/app/(dashboard)/dashboard",
-      "sha": "5a3010eb90c31e72842a9a85da593a92a87e6288",
-      "mode": "040000"
-    },
-    {
-      "path": "apps/web/src/app/(dashboard)/workspace-settings",
-      "sha": "75043d2045f565cf8909121b4c13ffd34e15e542",
-      "mode": "040000"
-    },
-    {
-      "path": "apps/web/src/modules",
-      "sha": "4b264629eb509ce5f496406385db29ade77cdcb7",
-      "mode": "040000"
-    },
-    {
-      "path": "apps/web/src/modules/ai-settings",
-      "sha": "4a571e02559125ade83bb79718786f7c2e14e12f",
-      "mode": "040000"
-    },
-    {
-      "path": "apps/web/src/modules/ai-settings/components",
-      "sha": "968c4e850394be8eabb3a6ddadc2b7667e4e1036",
-      "mode": "040000"
-    },
-    {
-      "path": "apps/web/src/modules/ai-settings/hooks",
-      "sha": "83a20bd58e9490c3d2e68f6068348c91d0847d44",
-      "mode": "040000"
-    },
-    {
-      "path": "apps/web/src/modules/ai-settings/utils",
-      "sha": "5e4d001b4624ac3702c8abe817e777ada4df3051",
-      "mode": "040000"
-    },
-    {
-      "path": "apps/web/src/modules/editor",
-      "sha": "1aa3f73bd180370aae4bdfa43c832b29b28cf078",
-      "mode": "040000"
-    },
-    {
-      "path": "apps/web/src/modules/editor/chat",
-      "sha": "9fc3a8b5fffd73ec930eb45cd8c627d3cc286f36",
-      "mode": "040000"
-    },
-    {
-      "path": "apps/web/src/modules/editor/hooks",
-      "sha": "2401d3c4e9d3d4443bc2815e4361ca4608aefc26",
-      "mode": "040000"
-    },
-    {
-      "path": "apps/web/src/modules/integrations",
-      "sha": "aa86f44ed28e2d99dcef5f080490bde5c10cc178",
-      "mode": "040000"
-    },
-    {
-      "path": "apps/web/src/modules/settings",
-      "sha": "6fd532bc01a61fe79b49b2c2b4e90c80df1cb7db",
-      "mode": "040000"
-    },
-    {
-      "path": "apps/web/src/modules/settings/components",
-      "sha": "9e20b9a7e075c6fb18ad48a0fd3b658f96afa50d",
-      "mode": "040000"
-    },
-    {
-      "path": "apps/web/src/modules/settings/database",
-      "sha": "7f0780d50de789549fa255f9700240686dad2fc5",
-      "mode": "040000"
-    },
-    {
-      "path": "apps/web/src/modules/settings/database/hooks",
-      "sha": "d14d35dc2c43f1aedf41ec2e2c1edd53a1375c06",
-      "mode": "040000"
-    },
-    {
-      "path": "apps/web/src/modules/settings/database/panes",
-      "sha": "72c064f01b965cf9c09573ae6dd1ad58f7a3c26c",
-      "mode": "040000"
-    },
-    {
-      "path": "apps/web/src/modules/settings/hooks",
-      "sha": "a7bfd3c56fedab1e2cac9a4f5884be61a32be0f3",
-      "mode": "040000"
-    },
-    {
-      "path": "apps/web/src/modules/skills",
-      "sha": "0223ba3433bd135dc4f769c4bd75874ac8ff6035",
-      "mode": "040000"
-    },
-    {
-      "path": "packages",
-      "sha": "d6e6f38c16f3b231f7bad6cf0fdbdb528fa6e4a6",
-      "mode": "040000"
-    },
-    {
-      "path": "packages/db",
-      "sha": "1faf731b078d489040e54bfde4bb2d08086354fe",
-      "mode": "040000"
-    },
-    {
-      "path": "packages/db/migrations",
-      "sha": "8523d0c333e46135702830f3bcc6f53afdb86bc9",
-      "mode": "040000"
-    },
-    {
-      "path": "packages/db/src",
-      "sha": "d3b3cfb599ee2e2152a84a825a12e35513a6f6e5",
-      "mode": "040000"
-    },
-    {
-      "path": "packages/db/src/queries",
-      "sha": "8fd2ce7c7c8e20dc5317121d7b7cb461339396df",
-      "mode": "040000"
-    },
-    {
-      "path": "packages/doable-ai",
-      "sha": "4df61ac8972c156009a661ebf599fb2b91b7ddab",
-      "mode": "040000"
-    },
-    {
-      "path": "packages/doable-ai/src",
-      "sha": "c4e81f89d9a4e98597b8a63250bcd90cd28b4400",
-      "mode": "040000"
-    },
-    {
-      "path": "packages/doable-sdk",
-      "sha": "32683d5cd4b42353e790000123176bb3b2eb8f2a",
-      "mode": "040000"
-    },
-    {
-      "path": "packages/doable-sdk/src",
-      "sha": "ee7de2142be5859716e0c6266bba43ef29813b01",
-      "mode": "040000"
-    },
-    {
-      "path": "packages/docore",
-      "sha": "2a33159a3b92f653ddf1514027982d454bea2fd4",
-      "mode": "040000"
-    },
-    {
-      "path": "packages/docore/src",
-      "sha": "05dc0777ac300b15d425122f94d19d60639718a4",
-      "mode": "040000"
-    },
-    {
-      "path": "packages/docore/src/backends",
-      "sha": "124d62070bfe0e626e36c9f1882ee9b4a28be31f",
-      "mode": "040000"
-    },
-    {
-      "path": "packages/docore/src/policy",
-      "sha": "deaefcc615e8f754d716e179b1e44a8f1aa026f7",
-      "mode": "040000"
-    },
-    {
-      "path": "packages/dovault",
-      "sha": "15532f8f7effbe8a7ebd33b57333b113d64e7606",
-      "mode": "040000"
-    },
-    {
-      "path": "packages/dovault/src",
-      "sha": "f33ec5c48d5df02a3d209ae6353d14c0611aab66",
-      "mode": "040000"
-    },
-    {
-      "path": "packages/dovault/src/backends",
-      "sha": "9f605f0f95fcdd022413241bc8d0f270fb4249af",
-      "mode": "040000"
-    },
-    {
-      "path": "packages/dovault/src/backends/__tests__",
-      "sha": "ced580dd0de330eb4045408d1bd38618d11128a9",
-      "mode": "040000"
-    },
-    {
-      "path": "packages/dovault/src/composers",
-      "sha": "a3bf6f3676598b07ccffd496a1021fc3ac496d4b",
-      "mode": "040000"
-    },
-    {
-      "path": "packages/shared",
-      "sha": "8dad7fcadfe23fb5e6d3b3d919f0501e59cfae71",
-      "mode": "040000"
-    },
-    {
-      "path": "packages/shared/src",
-      "sha": "d1a5f157525c1415a96de8039c7ca849debefdd1",
-      "mode": "040000"
-    },
-    {
-      "path": "packages/shared/src/ai",
-      "sha": "ff81639b20f989c7a171712e1fcf270dbf9e3fcc",
-      "mode": "040000"
-    },
-    {
-      "path": "packages/shared/src/security",
-      "sha": "9a22ffdb358e751cf32203ddafc2e5081ddf72a2",
-      "mode": "040000"
-    },
-    {
-      "path": "packages/shared/src/types",
-      "sha": "5fdb692f3e4fbdc1fcb8523efb2d847a44eda9ad",
-      "mode": "040000"
-    },
-    {
-      "path": "services",
-      "sha": "6066d6f1fc0c09e2b1d854c0c41513281ffed5dd",
-      "mode": "040000"
-    },
-    {
-      "path": "services/api",
-      "sha": "e7706792dac8b5666cb91f7ac6e4ccd778951f54",
-      "mode": "040000"
-    },
-    {
-      "path": "services/api/src",
-      "sha": "6d6ae2509d40bb40760e053484f78b567b3b26e5",
-      "mode": "040000"
-    },
-    {
-      "path": "services/api/src/ai",
-      "sha": "13edcc7bd9726c38ea9bd4aab0d7825b2b8387d0",
-      "mode": "040000"
-    },
-    {
-      "path": "services/api/src/ai/__fixtures__",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/ai/__fixtures__",
+      "sourcePath": "services/api/src/ai/__fixtures__",
       "sha": "e54150239f1a4f7e6bae9be6855f2196073a8295",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/ai/__fixtures__/per-app-db",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/ai/__fixtures__/per-app-db",
+      "sourcePath": "services/api/src/ai/__fixtures__/per-app-db",
       "sha": "72a16d8ea70c193ec46ed909316b9380314c00e1",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/ai/__tests__",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/ai/__tests__",
+      "sourcePath": "services/api/src/ai/__tests__",
       "sha": "37a127792148502e8fc1811b82e884cdc3163886",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/ai/context",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/ai/context",
+      "sourcePath": "services/api/src/ai/context",
       "sha": "86d1469a9ef1119bad4573849537399a982cc97d",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/ai/framework-prompts",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/ai/framework-prompts",
+      "sourcePath": "services/api/src/ai/framework-prompts",
       "sha": "97d6bb35f52e9a436694d25e4b7de0ae0fb6ec2a",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/ai/modes",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/ai/modes",
+      "sourcePath": "services/api/src/ai/modes",
       "sha": "328d4ff8d2151f0cfd907bbb709b92895713e3c0",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/ai/prompts",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/ai/prompts",
+      "sourcePath": "services/api/src/ai/prompts",
       "sha": "fccd3cc3ad5a152ff048707b7e35b7b564029c9a",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/ai/providers",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/ai/providers",
+      "sourcePath": "services/api/src/ai/providers",
       "sha": "2a79608f12e95525406348038f74a135b708a494",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/ai/skills",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/ai/skills",
+      "sourcePath": "services/api/src/ai/skills",
       "sha": "9784b6b253e2e5bcc0f88e27c05f4fe030c4096a",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/ai/skills/_system",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/ai/skills/_system",
+      "sourcePath": "services/api/src/ai/skills/_system",
       "sha": "a2229e78cbe5a2ec06d886635331256dfb6945fe",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/ai/skills/_system/ai-testing",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/ai/skills/_system/ai-testing",
+      "sourcePath": "services/api/src/ai/skills/_system/ai-testing",
       "sha": "4d86cc35209cbb8eba28f7e7e0d623f4e6c4f112",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/ai/skills/_system/business-card-maker",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/ai/skills/_system/business-card-maker",
+      "sourcePath": "services/api/src/ai/skills/_system/business-card-maker",
       "sha": "e647ead88c1ff4ea875f6bf10f682866d0fa0b56",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/ai/skills/_system/competitor-analysis",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/ai/skills/_system/competitor-analysis",
+      "sourcePath": "services/api/src/ai/skills/_system/competitor-analysis",
       "sha": "de6657d7e8376a3edb3303bbda49820c6d53ad5f",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/ai/skills/_system/ecommerce-website",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/ai/skills/_system/ecommerce-website",
+      "sourcePath": "services/api/src/ai/skills/_system/ecommerce-website",
       "sha": "7fa2b62cd5c2cac7147d241b0efa81c1f561fe4b",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/ai/skills/_system/event-invite-maker",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/ai/skills/_system/event-invite-maker",
+      "sourcePath": "services/api/src/ai/skills/_system/event-invite-maker",
       "sha": "7de2de0a639377cb66fb4da95ef486fa0581a456",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/ai/skills/_system/greeting-card",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/ai/skills/_system/greeting-card",
+      "sourcePath": "services/api/src/ai/skills/_system/greeting-card",
       "sha": "9a65c15c78c9ccd71067b61e858eccc646f0ff9b",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/ai/skills/_system/inbuilt-database",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/ai/skills/_system/inbuilt-database",
+      "sourcePath": "services/api/src/ai/skills/_system/inbuilt-database",
       "sha": "c3aad089f42636f036bce0532dace02d20a7d023",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/ai/skills/_system/magazine-flipbook",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/ai/skills/_system/magazine-flipbook",
+      "sourcePath": "services/api/src/ai/skills/_system/magazine-flipbook",
       "sha": "51cc77428a09749b19c4a32083ec01b3e9dacae9",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/ai/skills/_system/newsletter-template",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/ai/skills/_system/newsletter-template",
+      "sourcePath": "services/api/src/ai/skills/_system/newsletter-template",
       "sha": "f39b152fa6c92a02e52538500b671c0ea54bd172",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/ai/skills/_system/remotion-video-creation",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/ai/skills/_system/remotion-video-creation",
+      "sourcePath": "services/api/src/ai/skills/_system/remotion-video-creation",
       "sha": "1131c06b31dde452530881a0d5028a91430238c5",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/ai/skills/_system/remotion-video-creation/references",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/ai/skills/_system/remotion-video-creation/references",
+      "sourcePath": "services/api/src/ai/skills/_system/remotion-video-creation/references",
       "sha": "d24f178b9900df439dcd18c43e30653ae99c02dd",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/ai/skills/_system/resume-cv",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/ai/skills/_system/resume-cv",
+      "sourcePath": "services/api/src/ai/skills/_system/resume-cv",
       "sha": "d68a6aa5bd70555c8ab26f4fe1c8f704bd48dd1d",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/ai/skills/nextjs-app",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/ai/skills/nextjs-app",
+      "sourcePath": "services/api/src/ai/skills/nextjs-app",
       "sha": "da5892e44e94d2f33615584586a5035998df57f6",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/ai/skills/vite-react",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/ai/skills/vite-react",
+      "sourcePath": "services/api/src/ai/skills/vite-react",
       "sha": "c5e7c9dc80866f03c19c10109ca53f00133dd9e3",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/ai/tools",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/ai/tools",
+      "sourcePath": "services/api/src/ai/tools",
       "sha": "46f41518dca34c83e50739947f0c6ad955cecdb5",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/context",
-      "sha": "43424593729e9a6d23ce71731c7bf6991b7d6c8b",
-      "mode": "040000"
-    },
-    {
-      "path": "services/api/src/data-worker",
-      "sha": "41f76545e048af489e5b1a260ecb24dbb57c6125",
-      "mode": "040000"
-    },
-    {
-      "path": "services/api/src/data-worker/__tests__",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/data-worker/__tests__",
+      "sourcePath": "services/api/src/data-worker/__tests__",
       "sha": "ec51c9117e81631780f9cd129f171d903842d56a",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/data-worker/__tests__/integration",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/data-worker/__tests__/integration",
+      "sourcePath": "services/api/src/data-worker/__tests__/integration",
       "sha": "7819be384e483651ffd07acd203871e6d0415abe",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/db",
-      "sha": "3fe1b58f43e135dce8807438769eec032b591bb5",
-      "mode": "040000"
-    },
-    {
-      "path": "services/api/src/db/migrations",
-      "sha": "a1b39b1e179e70a865118b7dc7d54b0cffba2142",
-      "mode": "040000"
-    },
-    {
-      "path": "services/api/src/frameworks",
-      "sha": "f106f350efd3362473eb33d18962503d50e4de9a",
-      "mode": "040000"
-    },
-    {
-      "path": "services/api/src/frameworks/adapters",
-      "sha": "81da979e90fe2def5a155682d1a20269ea3028c1",
-      "mode": "040000"
-    },
-    {
-      "path": "services/api/src/git",
-      "sha": "830aa877f377e78e9e1df3703ec4ebe8d2158846",
-      "mode": "040000"
-    },
-    {
-      "path": "services/api/src/integrations",
-      "sha": "f8373823ec6063b9ff0f911d83c761d840f97a30",
-      "mode": "040000"
-    },
-    {
-      "path": "services/api/src/integrations/enhanced-auth",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/integrations/enhanced-auth",
+      "sourcePath": "services/api/src/integrations/enhanced-auth",
       "sha": "46dbb9b2f9a27c78152493fa07e9062efd406203",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/integrations/registry",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/integrations/registry",
+      "sourcePath": "services/api/src/integrations/registry",
       "sha": "ca1d2522b65737b8af78b30e6ddecbd8749711db",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/integrations/supabase",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/integrations/supabase",
+      "sourcePath": "services/api/src/integrations/supabase",
       "sha": "06d1602ad58b578ded83bb4475f92a892326e231",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/lib",
-      "sha": "7bb5fd5302ce66e97d25d91b8097bada80bc762a",
-      "mode": "040000"
-    },
-    {
-      "path": "services/api/src/lib/email",
-      "sha": "9dd15bdd345ccb2b02144b1f3eb44544877ce81a",
-      "mode": "040000"
-    },
-    {
-      "path": "services/api/src/mcp",
-      "sha": "77fc1cff3ec48ba3bce21322befcf985003ac03c",
-      "mode": "040000"
-    },
-    {
-      "path": "services/api/src/mcp/__tests__",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/mcp/__tests__",
+      "sourcePath": "services/api/src/mcp/__tests__",
       "sha": "f840ba98c23e119177e4f210fd979e53038523b6",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/mcp/builtin",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/mcp/builtin",
+      "sourcePath": "services/api/src/mcp/builtin",
       "sha": "650381857ffe41d48cd74e6d866645c08db0a285",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/mcp/builtin/data",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/mcp/builtin/data",
+      "sourcePath": "services/api/src/mcp/builtin/data",
       "sha": "6d2224ad641bb6917511ee137dc437102b10947b",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/mcp/builtin/data/__tests__",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/mcp/builtin/data/__tests__",
+      "sourcePath": "services/api/src/mcp/builtin/data/__tests__",
       "sha": "7905487485ec886290a8d6811fdf1407f04163e0",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/mcp/builtin/data/__tests__/integration",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/mcp/builtin/data/__tests__/integration",
+      "sourcePath": "services/api/src/mcp/builtin/data/__tests__/integration",
       "sha": "e8ac0deb9ca412fc5969d2dfe831edf43b790aca",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/mcp/builtin/data/ui",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/mcp/builtin/data/ui",
+      "sourcePath": "services/api/src/mcp/builtin/data/ui",
       "sha": "ffba58b1898b4e835a0b065b69b283a0ee51504e",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/mcp/builtin/data/ui/__tests__",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/mcp/builtin/data/ui/__tests__",
+      "sourcePath": "services/api/src/mcp/builtin/data/ui/__tests__",
       "sha": "440b2aabdc605b06e04c1e51e65b4b6d9986e601",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/mcp/builtin/data/ui/shared",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/mcp/builtin/data/ui/shared",
+      "sourcePath": "services/api/src/mcp/builtin/data/ui/shared",
       "sha": "c7943d98cc38d8f8f66930d1ad75fffa90dfe644",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/mcp/presets",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/mcp/presets",
+      "sourcePath": "services/api/src/mcp/presets",
       "sha": "efc8246ea65dd56bf284889cd4f48d1365524c9e",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/middleware",
-      "sha": "62b0a6ba803d9827f9b0acc6d1a8091febffd5f8",
-      "mode": "040000"
-    },
-    {
-      "path": "services/api/src/projects",
-      "sha": "654182e0e19b8d44ed0fcb791278ef3841bbd36c",
-      "mode": "040000"
-    },
-    {
-      "path": "services/api/src/projects/__tests__",
-      "sha": "fdf611eb91e9f6ff392c5cf2c744ebb3d898388c",
-      "mode": "040000"
-    },
-    {
-      "path": "services/api/src/routes",
-      "sha": "cd5c22d0229e24617a8293b6961c2294418cf3e9",
-      "mode": "040000"
-    },
-    {
-      "path": "services/api/src/routes/auth",
-      "sha": "f820166052b78aed33bd387f7cf3ebbde20c9674",
-      "mode": "040000"
-    },
-    {
-      "path": "services/api/src/routes/chat",
-      "sha": "69ab556c027e51b655ce8760315ea5547a554b38",
-      "mode": "040000"
-    },
-    {
-      "path": "services/api/src/routes/workspaces",
-      "sha": "124f7d101f1a0efeb0ebfdb5064e14e0723fe5a1",
-      "mode": "040000"
-    },
-    {
-      "path": "services/api/src/runtime",
-      "sha": "ae8aa7c249b90eaf6dd66ec82d5d47021d2aeb79",
-      "mode": "040000"
-    },
-    {
-      "path": "services/api/src/runtime/adapters",
-      "sha": "5c479183276886c3b167efb26b177b82089d21ae",
-      "mode": "040000"
-    },
-    {
-      "path": "services/api/src/sandbox",
-      "sha": "d0028c442297801dbe57a546ea3ec4f6232adbb2",
-      "mode": "040000"
-    },
-    {
-      "path": "services/api/src/sandbox/__tests__",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/sandbox/__tests__",
+      "sourcePath": "services/api/src/sandbox/__tests__",
       "sha": "79d712053fdda484f99377ee432a13267e723114",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/sandbox/profiles",
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/sandbox/profiles",
+      "sourcePath": "services/api/src/sandbox/profiles",
       "sha": "58d94fe50f798f992bdc4567f561f30494603f42",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/templates",
-      "sha": "1289c0ae29d5dc893c6f2db5c80b893f177b1e52",
+      "root": "doable-source",
+      "destinationPath": "doable-source/packages/doable-ai/src",
+      "sourcePath": "packages/doable-ai/src",
+      "sha": "c4e81f89d9a4e98597b8a63250bcd90cd28b4400",
       "mode": "040000"
     },
     {
-      "path": "services/api/src/templates/definitions",
+      "root": "doable-source",
+      "destinationPath": "doable-source/packages/docore/src",
+      "sourcePath": "packages/docore/src",
+      "sha": "05dc0777ac300b15d425122f94d19d60639718a4",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/packages/docore/src/backends",
+      "sourcePath": "packages/docore/src/backends",
+      "sha": "124d62070bfe0e626e36c9f1882ee9b4a28be31f",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/packages/docore/src/policy",
+      "sourcePath": "packages/docore/src/policy",
+      "sha": "deaefcc615e8f754d716e179b1e44a8f1aa026f7",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/packages/dovault/src",
+      "sourcePath": "packages/dovault/src",
+      "sha": "f33ec5c48d5df02a3d209ae6353d14c0611aab66",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/packages/dovault/src/backends",
+      "sourcePath": "packages/dovault/src/backends",
+      "sha": "9f605f0f95fcdd022413241bc8d0f270fb4249af",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/packages/dovault/src/backends/__tests__",
+      "sourcePath": "packages/dovault/src/backends/__tests__",
+      "sha": "ced580dd0de330eb4045408d1bd38618d11128a9",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/packages/dovault/src/composers",
+      "sourcePath": "packages/dovault/src/composers",
+      "sha": "a3bf6f3676598b07ccffd496a1021fc3ac496d4b",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/packages/shared/src",
+      "sourcePath": "packages/shared/src",
+      "sha": "d1a5f157525c1415a96de8039c7ca849debefdd1",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/packages/shared/src/ai",
+      "sourcePath": "packages/shared/src/ai",
+      "sha": "ff81639b20f989c7a171712e1fcf270dbf9e3fcc",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/packages/shared/src/security",
+      "sourcePath": "packages/shared/src/security",
+      "sha": "9a22ffdb358e751cf32203ddafc2e5081ddf72a2",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/packages/shared/src/types",
+      "sourcePath": "packages/shared/src/types",
+      "sha": "5fdb692f3e4fbdc1fcb8523efb2d847a44eda9ad",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/packages/doable-sdk/src",
+      "sourcePath": "packages/doable-sdk/src",
+      "sha": "ee7de2142be5859716e0c6266bba43ef29813b01",
+      "mode": "040000"
+    },
+    {
+      "root": "dependency-closure",
+      "destinationPath": "dependency-closure/packages/db/migrations",
+      "sourcePath": "packages/db/migrations",
+      "sha": "8523d0c333e46135702830f3bcc6f53afdb86bc9",
+      "mode": "040000"
+    },
+    {
+      "root": "dependency-closure",
+      "destinationPath": "dependency-closure/packages/db/src",
+      "sourcePath": "packages/db/src",
+      "sha": "d3b3cfb599ee2e2152a84a825a12e35513a6f6e5",
+      "mode": "040000"
+    },
+    {
+      "root": "dependency-closure",
+      "destinationPath": "dependency-closure/packages/db/src/queries",
+      "sourcePath": "packages/db/src/queries",
+      "sha": "8fd2ce7c7c8e20dc5317121d7b7cb461339396df",
+      "mode": "040000"
+    },
+    {
+      "root": "dependency-closure",
+      "destinationPath": "dependency-closure/services/api/src/db/migrations",
+      "sourcePath": "services/api/src/db/migrations",
+      "sha": "a1b39b1e179e70a865118b7dc7d54b0cffba2142",
+      "mode": "040000"
+    },
+    {
+      "root": "dependency-closure",
+      "destinationPath": "dependency-closure/services/api/src/frameworks/adapters",
+      "sourcePath": "services/api/src/frameworks/adapters",
+      "sha": "81da979e90fe2def5a155682d1a20269ea3028c1",
+      "mode": "040000"
+    },
+    {
+      "root": "dependency-closure",
+      "destinationPath": "dependency-closure/services/api/src/projects/__tests__",
+      "sourcePath": "services/api/src/projects/__tests__",
+      "sha": "fdf611eb91e9f6ff392c5cf2c744ebb3d898388c",
+      "mode": "040000"
+    },
+    {
+      "root": "dependency-closure",
+      "destinationPath": "dependency-closure/services/api/src/lib/email",
+      "sourcePath": "services/api/src/lib/email",
+      "sha": "9dd15bdd345ccb2b02144b1f3eb44544877ce81a",
+      "mode": "040000"
+    },
+    {
+      "root": "dependency-closure",
+      "destinationPath": "dependency-closure/services/api/src/templates/definitions",
+      "sourcePath": "services/api/src/templates/definitions",
       "sha": "d503a3c5f2fdaaa5726cb6807734336d420173d9",
+      "mode": "040000"
+    },
+    {
+      "root": "dependency-closure",
+      "destinationPath": "dependency-closure/services/api/src/runtime/adapters",
+      "sourcePath": "services/api/src/runtime/adapters",
+      "sha": "5c479183276886c3b167efb26b177b82089d21ae",
+      "mode": "040000"
+    },
+    {
+      "root": "ui-reference",
+      "destinationPath": "ui-reference/apps/web/src/modules/ai-settings/components",
+      "sourcePath": "apps/web/src/modules/ai-settings/components",
+      "sha": "968c4e850394be8eabb3a6ddadc2b7667e4e1036",
+      "mode": "040000"
+    },
+    {
+      "root": "ui-reference",
+      "destinationPath": "ui-reference/apps/web/src/modules/ai-settings/hooks",
+      "sourcePath": "apps/web/src/modules/ai-settings/hooks",
+      "sha": "83a20bd58e9490c3d2e68f6068348c91d0847d44",
+      "mode": "040000"
+    },
+    {
+      "root": "ui-reference",
+      "destinationPath": "ui-reference/apps/web/src/modules/ai-settings/utils",
+      "sourcePath": "apps/web/src/modules/ai-settings/utils",
+      "sha": "5e4d001b4624ac3702c8abe817e777ada4df3051",
+      "mode": "040000"
+    },
+    {
+      "root": "ui-reference",
+      "destinationPath": "ui-reference/apps/web/src/modules/settings/components",
+      "sourcePath": "apps/web/src/modules/settings/components",
+      "sha": "9e20b9a7e075c6fb18ad48a0fd3b658f96afa50d",
+      "mode": "040000"
+    },
+    {
+      "root": "ui-reference",
+      "destinationPath": "ui-reference/apps/web/src/modules/settings/database",
+      "sourcePath": "apps/web/src/modules/settings/database",
+      "sha": "7f0780d50de789549fa255f9700240686dad2fc5",
+      "mode": "040000"
+    },
+    {
+      "root": "ui-reference",
+      "destinationPath": "ui-reference/apps/web/src/modules/settings/database/hooks",
+      "sourcePath": "apps/web/src/modules/settings/database/hooks",
+      "sha": "d14d35dc2c43f1aedf41ec2e2c1edd53a1375c06",
+      "mode": "040000"
+    },
+    {
+      "root": "ui-reference",
+      "destinationPath": "ui-reference/apps/web/src/modules/settings/database/panes",
+      "sourcePath": "apps/web/src/modules/settings/database/panes",
+      "sha": "72c064f01b965cf9c09573ae6dd1ad58f7a3c26c",
+      "mode": "040000"
+    },
+    {
+      "root": "ui-reference",
+      "destinationPath": "ui-reference/apps/web/src/modules/settings/hooks",
+      "sourcePath": "apps/web/src/modules/settings/hooks",
+      "sha": "a7bfd3c56fedab1e2cac9a4f5884be61a32be0f3",
+      "mode": "040000"
+    },
+    {
+      "root": "ui-reference",
+      "destinationPath": "ui-reference/apps/web/src/app/(dashboard)/ai-settings/callback",
+      "sourcePath": "apps/web/src/app/(dashboard)/ai-settings/callback",
+      "sha": "b1bb766d0d950d7d6e229f452e7333d254118a67",
       "mode": "040000"
     }
   ],
@@ -5851,6 +5775,8 @@
   ],
   "counts": {
     "files": 747,
-    "directories": 116
+    "directoryTrees": 72,
+    "capturedRootTrees": 27,
+    "totalTrees": 99
   }
 }
