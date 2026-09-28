@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29",
+  "generatedAt": "2026-09-28T22:58:28.478Z",
   "source": {
     "repository": "Rilan-Dev/Doable",
     "ref": "develop",
@@ -8,8 +8,8 @@
   "extractionBranch": "ai-platform-core-extraction",
   "currentVerification": {
     "sourceTreeIntegrity": {
-      "extractionBranchComparedWithImmutableSnapshot": "0 changes under ai-platform-core/doable-source/",
-      "originalSourceOutsideExtraction": "0 files changed outside ai-platform-core/"
+      "extractionBranchComparedWithImmutableSnapshot": "0 source-file changes relative to immutable snapshot; extraction branch is 52 commits ahead and 0 behind",
+      "originalSourceOutsideExtraction": "0 changed files outside ai-platform-core/"
     },
     "keyBackendBlobs": {
       "checked": 15,
@@ -21,7 +21,24 @@
     },
     "dependencyManifestsCaptured": true,
     "featureManifestsCaptured": true,
-    "machineVerifierCaptured": true
+    "machineVerifierCaptured": true,
+    "immutableFiles": {
+      "expected": 747,
+      "verified": 747,
+      "failures": 0,
+      "missingBaseline": 0
+    },
+    "immutableTrees": {
+      "expected": 27,
+      "verified": 27,
+      "failures": 0
+    },
+    "dependencyInventory": {
+      "externalNpmPackages": 559,
+      "activepiecesPackages": 526,
+      "workspacePackages": 6,
+      "peerDependencies": 1
+    }
   },
   "treeFingerprints": {
     "services/api/src/ai": "13edcc7bd9726c38ea9bd4aab0d7825b2b8387d0",
@@ -51,7 +68,8 @@
     "codexInstruction": "COPY_TO_ANY_PROJECT.md",
     "featureManifests": "capabilities/*/MANIFEST.md",
     "externalDependencyInventory": "external-dependencies/external-dependencies.json",
-    "verificationCommand": "node ai-platform-core/verification/verify-extraction.mjs"
+    "verificationCommand": "node ai-platform-core/verification/verify-extraction.mjs",
+    "immutableProvenanceManifest": "verification/immutable-source-manifest.json"
   },
-  "status": "PASS_FOR_SOURCE_INTEGRITY_AND_COPY-READY_STRUCTURE; RUNTIME_BUILD MUST BE VERIFIED AFTER COPYING INTO A TARGET PROJECT"
+  "status": "PASS_FOR_COMPLETE_IMMUTABLE_FILE_BLOB_AND_CAPTURED_TREE_INTEGRITY; PASS_FOR_COPY-READY_STRUCTURE; RUNTIME BUILD MUST BE VERIFIED AFTER COPYING INTO A TARGET PROJECT"
 }
