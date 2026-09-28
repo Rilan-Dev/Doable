@@ -1,18 +1,38 @@
-export interface UIReferenceScreen { id:string; area:"providers"|"integrations"|"mcp"|"skills"|"workspace"|"project"|"setup"|"dialogs"; sourcePath:string; interactionPatterns:readonly string[]; }
+export type UIArea = "providers"|"integrations"|"mcp"|"skills"|"workspace"|"project"|"setup"|"dialogs";
+export type UIState = "loading"|"populated"|"empty"|"validation"|"saving"|"success"|"error"|"restricted"|"disconnected"|"confirmation"|"retry"|"disabled";
+export interface UIReferenceScreen {
+  id:string;
+  area:UIArea;
+  sourcePath:string;
+  surface:"page"|"tab"|"dialog"|"drawer"|"popover"|"inline-form"|"wizard"|"modal";
+  capability:string;
+  states:readonly UIState[];
+  interactionPatterns:readonly string[];
+}
 export const UI_REFERENCE_INVENTORY: readonly UIReferenceScreen[] = [
-{id:"provider-settings",area:"providers",sourcePath:"apps/web/src/modules/ai-settings/components/ai-settings-page.tsx",interactionPatterns:["tabs","cards","status","configuration","validation"]},
-{id:"provider-wizard",area:"providers",sourcePath:"apps/web/src/modules/ai-settings/components/provider-wizard.tsx",interactionPatterns:["stepper","credentials","model-selection","validation","success-error"]},
-{id:"provider-card",area:"providers",sourcePath:"apps/web/src/modules/ai-settings/components/provider-card.tsx",interactionPatterns:["connection-state","actions","health-status"]},
-{id:"integration-catalog",area:"integrations",sourcePath:"apps/web/src/modules/integrations/integration-catalog.tsx",interactionPatterns:["search","catalog","categories","cards","empty-state"]},
-{id:"integration-connect",area:"integrations",sourcePath:"apps/web/src/modules/integrations/integration-connect-dialog.tsx",interactionPatterns:["dialog","oauth","credentials","permissions","validation"]},
-{id:"integration-detail",area:"integrations",sourcePath:"apps/web/src/modules/integrations/integration-detail-sheet.tsx",interactionPatterns:["sheet","details","actions","connection-status"]},
-{id:"mcp-panel",area:"mcp",sourcePath:"apps/web/src/modules/settings/components/mcp-panel.tsx",interactionPatterns:["list","status","enable-disable","reconnect","remove"]},
-{id:"mcp-add-server",area:"mcp",sourcePath:"apps/web/src/modules/settings/components/mcp-add-server-form.tsx",interactionPatterns:["form","http-stdio","authentication","validation"]},
-{id:"skills-panel",area:"skills",sourcePath:"apps/web/src/modules/skills/skills-panel.tsx",interactionPatterns:["list","scope","enable-disable","management"]},
-{id:"skill-picker",area:"skills",sourcePath:"apps/web/src/modules/skills/skill-picker.tsx",interactionPatterns:["picker","search","selection"]},
-{id:"skills-rules",area:"skills",sourcePath:"apps/web/src/modules/settings/components/skills-rules-panel.tsx",interactionPatterns:["rules","configuration","scope"]},
-{id:"workspace-knowledge",area:"workspace",sourcePath:"apps/web/src/app/(dashboard)/workspace-settings/workspace-knowledge.tsx",interactionPatterns:["knowledge-list","editor","empty-state","save"]},
-{id:"project-settings",area:"project",sourcePath:"apps/web/src/modules/settings/components/project-settings.tsx",interactionPatterns:["tabs","configuration","danger-zone","status"]},
-{id:"setup-integrations",area:"setup",sourcePath:"apps/web/src/app/setup/steps/Step4Integrations.tsx",interactionPatterns:["wizard","selection","connection","progress"]},
-{id:"setup-ai-provider",area:"setup",sourcePath:"apps/web/src/app/setup/steps/Step2AIProvider.tsx",interactionPatterns:["wizard","provider-selection","configuration"]},
-{id:"dashboard-dialogs",area:"dialogs",sourcePath:"apps/web/src/app/(dashboard)/dashboard/dashboard-dialogs.tsx",interactionPatterns:["modal","confirmation","create","destructive-action"]}];
+{id:"ai-settings-shell",area:"providers",sourcePath:"apps/web/src/modules/ai-settings/components/ai-settings-page.tsx",surface:"page",capability:"providers",states:["loading","populated","restricted"],interactionPatterns:["workspace-selector","tabs","role-gating","access-restricted"]},
+{id:"ai-connections-tab",area:"providers",sourcePath:"apps/web/src/modules/ai-settings/components/connections-tab.tsx",surface:"tab",capability:"providers/secrets",states:["loading","populated","empty","validation","saving","success","error"],interactionPatterns:["personal-vs-workspace-scope","oauth","token-form","validate","remove"]},
+{id:"ai-model-config",area:"providers",sourcePath:"apps/web/src/modules/ai-settings/components/model-config-tab.tsx",surface:"tab",capability:"providers",states:["loading","populated","saving","success","error"],interactionPatterns:["source-selection","model-selection","workspace-defaults","user-overrides"]},
+{id:"ai-access-control",area:"providers",sourcePath:"apps/web/src/modules/ai-settings/components/access-control-tab.tsx",surface:"tab",capability:"providers/identity",states:["loading","populated","saving","success","error"],interactionPatterns:["enforce-ai","source-selection","model-visibility"]},
+{id:"ai-doable-settings",area:"providers",sourcePath:"apps/web/src/modules/ai-settings/components/doable-ai-tab.tsx",surface:"tab",capability:"agents/providers",states:["loading","populated","saving","success","error","disabled"],interactionPatterns:["feature-config","admin-gating","persistence"]},
+{id:"provider-wizard",area:"providers",sourcePath:"apps/web/src/modules/ai-settings/components/provider-wizard.tsx",surface:"wizard",capability:"providers/secrets",states:["loading","populated","validation","saving","success","error","retry"],interactionPatterns:["choose","configure","validate","models","search","scope","credential-entry","reset-on-close"]},
+{id:"provider-card",area:"providers",sourcePath:"apps/web/src/modules/ai-settings/components/provider-card.tsx",surface:"inline-form",capability:"providers",states:["populated","validation","success","error","disconnected"],interactionPatterns:["health-status","test","actions"]},
+{id:"integration-catalog",area:"integrations",sourcePath:"apps/web/src/modules/integrations/integration-catalog.tsx",surface:"page",capability:"integrations",states:["loading","populated","empty","error"],interactionPatterns:["search","categories","pagination","connected-vs-available","refresh"]},
+{id:"integration-card",area:"integrations",sourcePath:"apps/web/src/modules/integrations/integration-card.tsx",surface:"inline-form",capability:"integrations",states:["populated","disconnected","saving","success","error"],interactionPatterns:["connect","disconnect","status","actions"]},
+{id:"integration-connect-flow",area:"integrations",sourcePath:"apps/web/src/modules/integrations/connect-flow.tsx",surface:"wizard",capability:"integrations/secrets",states:["loading","validation","saving","success","error","retry"],interactionPatterns:["oauth","manual-credentials","enhanced-auth","permissions","resource-selection"]},
+{id:"integration-detail-sheet",area:"integrations",sourcePath:"apps/web/src/modules/integrations/integration-detail-sheet.tsx",surface:"drawer",capability:"integrations",states:["loading","populated","disconnected","error"],interactionPatterns:["details","status","actions","close"]},
+{id:"mcp-panel",area:"mcp",sourcePath:"apps/web/src/modules/settings/components/mcp-panel.tsx",surface:"page",capability:"mcp",states:["loading","populated","empty","error","disconnected","retry","confirmation"],interactionPatterns:["refresh","active-inactive","test","reconnect","delete"]},
+{id:"mcp-add-server",area:"mcp",sourcePath:"apps/web/src/modules/settings/components/mcp-add-server-form.tsx",surface:"inline-form",capability:"mcp/secrets",states:["validation","saving","success","error","retry"],interactionPatterns:["http-stdio","authentication","discovery","oauth-popup","cancel"]},
+{id:"skills-rules-panel",area:"skills",sourcePath:"apps/web/src/modules/skills/skills-panel.tsx",surface:"page",capability:"skills/tools",states:["loading","populated","empty","error","saving","success","confirmation"],interactionPatterns:["scope","expand-collapse","create","edit","delete","refresh"]},
+{id:"skill-picker",area:"skills",sourcePath:"apps/web/src/modules/skills/skill-picker.tsx",surface:"popover",capability:"skills",states:["populated","empty","error","disabled"],interactionPatterns:["search","manual-vs-auto","outside-click","portal"]},
+{id:"skills-rules-settings",area:"skills",sourcePath:"apps/web/src/modules/settings/components/skills-rules-panel.tsx",surface:"inline-form",capability:"skills",states:["loading","populated","empty","saving","success","error","confirmation"],interactionPatterns:["rule-scope","file-patterns","edit-delete"]},
+{id:"workspace-knowledge",area:"workspace",sourcePath:"apps/web/src/app/(dashboard)/workspace-settings/workspace-knowledge.tsx",surface:"page",capability:"context/rag",states:["loading","populated","empty","saving","success","error","confirmation"],interactionPatterns:["knowledge-list","editor","create-update-delete"]},
+{id:"project-settings",area:"project",sourcePath:"apps/web/src/modules/settings/components/project-settings.tsx",surface:"page",capability:"workspace/sandbox",states:["loading","populated","saving","success","error","confirmation","disabled"],interactionPatterns:["configuration","status","danger-zone"]},
+{id:"setup-ai-provider",area:"setup",sourcePath:"apps/web/src/app/setup/steps/Step2AIProvider.tsx",surface:"wizard",capability:"providers",states:["populated","validation","saving","success","error"],interactionPatterns:["provider-selection","oauth","credentials","model-selection","skip"]},
+{id:"setup-integrations",area:"setup",sourcePath:"apps/web/src/app/setup/steps/Step4Integrations.tsx",surface:"page",capability:"integrations",states:["populated","saving","success","error","disabled"],interactionPatterns:["collapsible-billing","secret-visibility","plan-defaults","signup-policy"]},
+{id:"dashboard-delete-confirmation",area:"dialogs",sourcePath:"apps/web/src/app/(dashboard)/dashboard/dashboard-dialogs.tsx",surface:"confirmation",capability:"workspace",states:["confirmation"],interactionPatterns:["single-delete","bulk-delete","cancel"]},
+{id:"dashboard-rename-dialog",area:"dialogs",sourcePath:"apps/web/src/app/(dashboard)/dashboard/dashboard-dialogs.tsx",surface:"dialog",capability:"workspace",states:["validation","saving","error"],interactionPatterns:["inline-input","enter-to-submit","cancel"]},
+{id:"dashboard-move-folder-dialog",area:"dialogs",sourcePath:"apps/web/src/app/(dashboard)/dashboard/dashboard-dialogs.tsx",surface:"dialog",capability:"workspace",states:["populated","empty"],interactionPatterns:["folder-selection","root-option"]},
+{id:"dashboard-template-preview",area:"dialogs",sourcePath:"apps/web/src/app/(dashboard)/dashboard/dashboard-dialogs.tsx",surface:"modal",capability:"workspace",states:["populated","loading","error"],interactionPatterns:["preview","use-template","remix"]},
+{id:"dashboard-github-import",area:"dialogs",sourcePath:"apps/web/src/app/(dashboard)/dashboard/dashboard-dialogs.tsx",surface:"dialog",capability:"workspace",states:["loading","validation","success","error"],interactionPatterns:["import","authentication","progress"]},
+];
