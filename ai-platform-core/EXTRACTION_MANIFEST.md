@@ -1,6 +1,6 @@
 # AI Platform Core Extraction
 
-Status: Phase 2 — dependency-closure snapshot
+Status: Phase 2 — second-order dependency audit complete
 Source repository: Rilan-Dev/Doable
 Source ref: develop
 Extraction branch: ai-platform-core-extraction
@@ -32,6 +32,12 @@ Do not edit, format, rename, optimize, refactor, bug-fix, or alter these copied 
 These contain the requested agent, provider, tool, MCP, integration, sandbox, file, planning, chat and AI infrastructure.
 
 ### B — Required infrastructure / compatibility dependencies
+
+Second-order closure additions (copied exactly by original Git tree identity):
+- `services/api/src/templates` — tree `1289c0ae29d5dc893c6f2db5c80b893f177b1e52` (Doable-only scaffold/template dependency).
+- `services/api/src/git` — tree `830aa877f377e78e9e1df3703ec4ebe8d2158846` (Git CLI/project versioning host dependency).
+- `services/api/src/runtime` — tree `ae8aa7c249b90eaf6dd66ec82d5d47021d2aeb79` (process, ports, dev-server and sandbox runtime dependency).
+
 Copied exactly under `dependency-closure/`:
 - `packages/db` — complete DB query/type/migration package required by the AI runtime and chat/integration/MCP configuration.
 - `services/api/src/db` — API SQL runtime.
@@ -61,6 +67,14 @@ The closure does NOT justify extracting Doable's entire product UI, billing, edi
 ## RAG boundary
 
 Doable's AI runtime and embedding/provider abstractions can be reused, but Clara's Qdrant knowledge base must remain a host adapter. The extraction does not replace Clara's existing RAG store with Doable's application DB.
+
+## Second-order audit result
+
+The closure is now source-complete for the inspected file-manager/project-runtime path. Remaining dependencies are primarily external packages and host capabilities rather than missing Doable source. The detailed classification is recorded in `ai-platform-core/SECOND_ORDER_DEPENDENCY_AUDIT.md`.
+
+Key boundaries: GitHub Copilot CLI/SDK, PostgreSQL/Doable schema, filesystem/project roots, subprocess execution, OS sandbox primitives, identity/tenant context, secret/key material, MCP network/process execution, third-party integration packages, and host RAG/vector storage.
+
+Redis/RabbitMQ were not found as direct dependencies in the inspected `services/api/package.json`; they are not being added speculatively.
 
 ## Next phase
 
