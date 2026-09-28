@@ -226,7 +226,7 @@ if (fs.existsSync(immutableManifestPath)) {
   const treeResults = {};
   const allTreeEntries = [
     ...Object.entries(m.capturedRootTrees || {}).map(([path, sha]) => ({ path, sha, kind: "captured-root" })),
-    ...(m.directoryTrees || []).map((entry) => ({ path: entry.path, sha: entry.sha, kind: "directory" }))
+    ...(m.directoryTrees || []).map((entry) => ({ path: entry.destinationPath || entry.path, sha: entry.sha, kind: "directory" }))
   ];
   for (const entry of allTreeEntries) {
     const rel = entry.path;
