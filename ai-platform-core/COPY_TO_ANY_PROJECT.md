@@ -82,3 +82,8 @@ node ai-platform-core/external-dependencies/verify-external-dependencies.mjs
 Do not begin host adapter implementation until the extraction verifier passes. A passing extraction gate proves source/package structure and immutable provenance; it does not claim that the target project's runtime build, database, credentials, providers or end-to-end integrations are already configured.
 
 The verifier checks required structure, key entrypoints, manifest consistency and the immutable source boundary. When run inside the original Git checkout it also verifies the captured Git tree SHAs.
+
+### Marketplace / AI asset portability
+
+For projects that need reusable AI assets to be importable/exportable, use `capabilities/marketplace/MANIFEST.md` and the immutable `doable-source/packages/marketplace-bundle/` implementation. Implement the host marketplace/install lifecycle around the preserved bundle schema; do not replace it with an ad-hoc skills export format. Credentials must remain outside bundles and be collected/provisioned at install time.
+
