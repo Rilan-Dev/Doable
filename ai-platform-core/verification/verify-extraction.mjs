@@ -148,7 +148,7 @@ function gitBlobSha(file) {
   const abs = path.join(root, file);
   if (!fs.existsSync(abs)) return null;
   const data = fs.readFileSync(abs);
-  const header = Buffer.from(\`blob \${data.length}\0\`);
+  const header = Buffer.from(`blob ${data.length}\0`);
   return crypto.createHash("sha1").update(Buffer.concat([header, data])).digest("hex");
 }
 
