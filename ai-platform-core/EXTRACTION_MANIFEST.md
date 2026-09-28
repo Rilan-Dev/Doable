@@ -63,3 +63,33 @@ No host project should be treated as the next implementation target until the re
 ## Verification boundary
 
 The original Doable source ref remains untouched. All extraction and reference additions are under `ai-platform-core/`. Host implementations belong in their own repositories.
+
+
+## Copy-ready feature implementation contract
+
+The extraction is intentionally usable as a source library for Codex.
+
+A target project may copy the entire `ai-platform-core/` directory and request one capability using the corresponding manifest under `capabilities/`. The manifest identifies the complete source boundaries that must be inspected; it is not a code snippet.
+
+Examples:
+- complete multi-provider AI → `capabilities/multi-provider/MANIFEST.md`
+- complete integrations → `capabilities/integrations/MANIFEST.md`
+- agents → `capabilities/agents/MANIFEST.md`
+- tools/tool calling → `capabilities/tools/MANIFEST.md`
+- MCP → `capabilities/mcp/MANIFEST.md`
+- skills → `capabilities/skills/MANIFEST.md`
+- AI chat → `capabilities/chat/MANIFEST.md`
+
+Codex must follow imports/dependencies recursively and implement the feature through host adapters rather than modifying the immutable source. This is what makes the folder a reusable AI core rather than a documentation-only reference.
+
+## Package-hardening artifacts
+
+- `COPY_TO_ANY_PROJECT.md`
+- `external-dependencies/source-manifests/`
+- `external-dependencies/external-dependencies.json`
+- `external-dependencies/generate-external-dependencies.mjs`
+- `verification/verify-extraction.mjs`
+- `verification/completeness-report.json`
+- `verification/source-and-ui-manifest.json`
+
+The verifier can run in the original Git checkout for Git tree/blob identity checks or after copying into another repository for filesystem/key-blob/structure checks.
