@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "repository": "Rilan-Dev/Doable",
+    "ref": "develop",
+    "commit": "a6036d1fd6dca83c08ee5affa141e5c85e45f5af"
+  },
+  "copyRoot": "ai-platform-core",
+  "rule": "Each capability is implemented by the complete referenced source/dependency/UI closure; manifests are navigation and acceptance contracts, not substitutes for source.",
+  "capabilities": {
+    "multi-provider": {
+      "manifest": "capabilities/multi-provider/MANIFEST.md",
+      "runtime": [
+        "doable-source/services/api/src/ai/",
+        "doable-source/packages/shared/src/ai/",
+        "doable-source/packages/doable-ai/",
+        "doable-source/services/api/src/routes/provider-bridge.ts",
+        "doable-source/services/api/src/routes/provider-catalog.ts",
+        "doable-source/services/api/src/routes/auth/platform-ai-bootstrap.ts"
+      ],
+      "dependencies": [
+        "dependency-closure/services/api/src/db/",
+        "dependency-closure/services/api/src/middleware/",
+        "dependency-closure/packages/db/",
+        "doable-source/packages/docore/",
+        "doable-source/packages/dovault/"
+      ],
+      "ui": [
+        "ui-reference/apps/web/src/modules/ai-settings/",
+        "ui-reference/apps/web/src/app/(dashboard)/ai-settings/",
+        "ui-reference/apps/web/src/app/setup/steps/Step2AIProvider.tsx"
+      ]
+    },
+    "agents": {
+      "manifest": "capabilities/agents/MANIFEST.md",
+      "runtime": [
+        "doable-source/services/api/src/ai/",
+        "doable-source/services/api/src/context/",
+        "doable-source/services/api/src/mcp/",
+        "doable-source/services/api/src/integrations/"
+      ],
+      "ui": [
+        "ui-reference/apps/web/src/modules/editor/chat/",
+        "ui-reference/apps/web/src/modules/skills/"
+      ]
+    },
+    "tools": {
+      "manifest": "capabilities/tools/MANIFEST.md",
+      "runtime": [
+        "doable-source/services/api/src/ai/tools/",
+        "doable-source/services/api/src/ai/",
+        "doable-source/services/api/src/mcp/tool-bridge.ts",
+        "doable-source/services/api/src/integrations/tool-bridge.ts"
+      ],
+      "ui": [
+        "ui-reference/apps/web/src/modules/editor/chat/tool-call-card.tsx",
+        "ui-reference/apps/web/src/modules/editor/chat/chat-message.tsx",
+        "ui-reference/apps/web/src/modules/editor/chat/user-input-card.tsx"
+      ]
+    },
+    "integrations": {
+      "manifest": "capabilities/integrations/MANIFEST.md",
+      "runtime": [
+        "doable-source/services/api/src/integrations/",
+        "doable-source/services/api/src/routes/integrations.ts",
+        "doable-source/services/api/src/routes/integrations-admin.ts",
+        "doable-source/services/api/src/routes/integrations-catalog.ts",
+        "doable-source/services/api/src/routes/integrations-connections.ts",
+        "doable-source/services/api/src/routes/integrations-oauth.ts"
+      ],
+      "ui": [
+        "ui-reference/apps/web/src/modules/integrations/",
+        "ui-reference/apps/web/src/app/setup/"
+      ]
+    },
+    "mcp": {
+      "manifest": "capabilities/mcp/MANIFEST.md",
+      "runtime": [
+        "doable-source/services/api/src/mcp/",
+        "doable-source/services/api/src/routes/mcp-apps-data.ts"
+      ],
+      "ui": [
+        "ui-reference/apps/web/src/modules/settings/"
+      ]
+    },
+    "skills": {
+      "manifest": "capabilities/skills/MANIFEST.md",
+      "runtime": [
+        "doable-source/services/api/src/ai/",
+        "doable-source/services/api/src/routes/skills.ts",
+        "doable-source/services/api/src/context/"
+      ],
+      "ui": [
+        "ui-reference/apps/web/src/modules/skills/"
+      ]
+    },
+    "chat": {
+      "manifest": "capabilities/chat/MANIFEST.md",
+      "runtime": [
+        "doable-source/services/api/src/routes/chat/",
+        "doable-source/services/api/src/ai/",
+        "doable-source/packages/doable-ai/",
+        "doable-source/packages/doable-sdk/"
+      ],
+      "ui": [
+        "ui-reference/apps/web/src/modules/editor/chat/",
+        "ui-reference/apps/web/src/app/(dashboard)/dashboard/dashboard-chat-input.tsx"
+      ]
+    },
+    "context-memory": {
+      "manifest": "capabilities/context-memory/MANIFEST.md",
+      "runtime": [
+        "doable-source/services/api/src/context/",
+        "doable-source/services/api/src/routes/context.ts"
+      ],
+      "hostBoundary": [
+        "RAG/vector store",
+        "tenant/user context persistence"
+      ]
+    },
+    "workspace-sandbox": {
+      "manifest": "capabilities/workspace-sandbox/MANIFEST.md",
+      "runtime": [
+        "doable-source/services/api/src/sandbox/"
+      ],
+      "dependencies": [
+        "dependency-closure/services/api/src/projects/",
+        "dependency-closure/services/api/src/runtime/",
+        "dependency-closure/services/api/src/frameworks/",
+        "dependency-closure/services/api/src/git/",
+        "dependency-closure/services/api/src/db/",
+        "dependency-closure/packages/db/",
+        "doable-source/packages/docore/",
+        "doable-source/packages/dovault/"
+      ]
+    },
+    "ui": {
+      "manifest": "capabilities/ui/MANIFEST.md",
+      "reference": [
+        "ui-reference/apps/web/src/modules/ai-settings/",
+        "ui-reference/apps/web/src/modules/integrations/",
+        "ui-reference/apps/web/src/modules/skills/",
+        "ui-reference/apps/web/src/modules/settings/",
+        "ui-reference/apps/web/src/app/(dashboard)/workspace-settings/",
+        "ui-reference/apps/web/src/app/(dashboard)/ai-settings/",
+        "ui-reference/apps/web/src/modules/editor/chat/"
+      ]
+    }
+  },
+  "acceptance": {
+    "extraction": "node ai-platform-core/verification/verify-extraction.mjs",
+    "dependencies": "node ai-platform-core/external-dependencies/verify-external-dependencies.mjs",
+    "targetRuntime": "Must be run after copying into each host; extraction integrity does not imply runtime compatibility."
+  }
+}
