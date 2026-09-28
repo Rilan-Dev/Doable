@@ -73,6 +73,7 @@ const requiredFiles = [
   "PACKAGE_HARDENING.md",
   "external-dependencies/external-dependencies.json",
   "external-dependencies/generate-external-dependencies.mjs",
+  "external-dependencies/verify-external-dependencies.mjs",
   "external-dependencies/README.md",
   "external-dependencies/source-manifests/services-api.package.json",
   "external-dependencies/source-manifests/root.package.json",
@@ -227,6 +228,23 @@ if (fs.existsSync(hardeningPath)) {
   report.pass &&= report.checks.packageHardening.pass;
 }
  
+const dependencyVerifierPath = path.join(root, "external-dependencies/verify-external-dependencies.mjs");
+if (fs.existsSync(dependencyVerifierPath)) {
+  let dependencyCheck = null;
+  try {
+    const raw = execFileSync(process.execPath, [dependencyVerifierPath], {
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "pipe"]
+    });
+    dependencyCheck = JSON.parse(raw);
+  } catch (error) {
+    try { dependencyCheck = JSON.parse(error.stdout?.toString() || "{}"); } catch {}
+    dependencyCheck ||= { pass: false, error: String(error.message || error) };
+  }
+  report.checks.externalDependencyInventory = dependencyCheck;
+  report.pass &&= dependencyCheck?.pass === true;
+}
+
 const sourceManifest = path.join(root, "verification/source-and-ui-manifest.json");
 if (fs.existsSync(sourceManifest)) {
   const m = JSON.parse(fs.readFileSync(sourceManifest, "utf8"));
