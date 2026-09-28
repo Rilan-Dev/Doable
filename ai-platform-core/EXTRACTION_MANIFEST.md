@@ -4,51 +4,62 @@
 
 The Doable source snapshot and copied UI reference trees are immutable reference material. Do not edit, reformat, rename, refactor, optimize, or fix copied Doable source. Host-specific behavior belongs in adapters and compatibility layers.
 
-## Captured Doable source
+## Captured source baseline
 
-Source branch/ref: develop
-Source commit: a6036d1fd6dca83c08ee5affa141e5c85e45f5af
+- Source repository: `Rilan-Dev/Doable`
+- Source ref: `develop`
+- Captured source commit: `a6036d1fd6dca83c08ee5affa141e5c85e45f5af`
+- Extraction branch: `ai-platform-core-extraction`
 
-## Extraction layers
+## Requested reusable AI-platform capabilities
 
-1. doable-source/ — immutable AI/runtime source snapshot.
-2. dependency-closure/ — required second-order runtime dependencies.
-3. contracts/ — host-neutral capability contracts.
-4. adapters/ — runtime compatibility and adapter implementations.
-5. ui-reference/ — immutable Doable UX reference source.
-6. UI_CAPABILITY_MATRIX.md — screen/state/capability inventory.
-7. ADAPTER_ARCHITECTURE.md — concrete binding architecture.
+| Capability | Exact extracted source boundary | Status |
+|---|---|---|
+| AI provider abstractions and provider implementations | `doable-source/services/api/src/ai` + `doable-source/packages/shared/src/ai` + `doable-source/packages/doable-ai` | captured |
+| Provider catalog/model metadata/discovery/validation | `doable-source/services/api/src/ai/provider-discovery*`, provider routes, shared provider catalog/data | captured |
+| Agent engine and agent modes | `doable-source/services/api/src/ai/engine.ts`, `ai/modes/*`, provider/Copilot engine files | captured |
+| Tool registry, definitions, execution and tool-calling loop | `doable-source/services/api/src/ai/tools`, `ai/modes/agent.ts`, Copilot tool loader/bridge | captured |
+| Planning / plan execution / clarification | `doable-source/services/api/src/ai/modes/plan.ts`, plan tools/routes and context dependencies | captured |
+| MCP protocol, transports, clients, connectors, discovery and tool bridge | `doable-source/services/api/src/mcp` + MCP routes | captured |
+| Native integrations, catalog, connections, OAuth, enhanced auth, credential vault and tool bridge | `doable-source/services/api/src/integrations` + integration routes | captured |
+| Skills, rules, scopes, progressive loading and materialization | `doable-source/services/api/src/ai/skills*`, context/skill dependencies and skills routes | captured |
+| AI chat/session/streaming/events/tool callbacks/recovery | `doable-source/services/api/src/routes/chat` + AI streaming/session dependencies | captured |
+| Context/memory/injection/budgeting | `doable-source/services/api/src/context` + context routes | captured |
+| Workspace/project file operations and build/search/install tools | AI tools + projects/runtime/framework/git dependency closure | captured |
+| Sandbox/isolation/process execution | `doable-source/services/api/src/sandbox`, runtime/git/framework/project closure | captured |
+| SDK/client-side AI chat, embeddings and MCP agent helper | `doable-source/packages/doable-ai` and `doable-source/packages/doable-sdk` | captured |
+| Shared AI types/catalogs | `doable-source/packages/shared` | captured |
+| Core utility/secret packages | `doable-source/packages/docore`, `dovault`, shared/lib closure | captured |
+| Required DB/auth/config compatibility dependencies | `dependency-closure/*` | captured as host-bound dependencies |
+| AI/provider/settings/integration/MCP/skills/workspace UI | `ui-reference/apps/web/src/modules/*` and setup/workspace pages | captured |
+| Agent/chat/tool-call UI and streaming interaction model | `ui-reference/apps/web/src/modules/editor/chat/*` plus editor state store and dashboard chat input | captured |
+| Voice/realtime UI | Doable has no single native realtime voice UI equivalent; host voice UI remains an adapter concern | intentionally host-bound |
 
-## Practical adapters implemented
+## Important distinction: reusable code vs host bindings
 
-doable-runtime-adapters.ts implements the complete adapter set through explicit dependency injection:
+The extraction is not a new standalone product implementation. It is a **portable source library/reference** plus contracts and adapters.
 
-Agent Runtime → Providers/Resolver → Tools → MCP → Integrations → Context → Workspace → Processes → Sandbox → RAG → Chat Transport → Voice → Secrets → Identity.
+- `doable-source/` is exact Doable source.
+- `dependency-closure/` contains exact source required by that runtime but coupled to DB/filesystem/process/security infrastructure.
+- `ui-reference/` contains exact Doable UI source used as the interaction-model reference.
+- `contracts/` defines the host-neutral seam.
+- `adapters/` translates a host into that seam.
 
-adapter-validation.ts verifies that the runtime adapter set is complete and reports UI coverage gaps separately from headless capabilities.
+A future host must not edit copied source to make it fit. It binds identity, tenancy, credentials, providers, RAG, persistence, filesystem, process execution, sandboxing and transport through adapters.
 
-## UI/UX extraction
+## Completeness rule
 
-The UI reference layer now covers verified Doable AI-platform surfaces including:
+No host project should be treated as the next implementation target until the requested AI-platform source and UX domains above are present and the verification record confirms:
 
-- AI Settings shell, Connections, Model Configuration, Access Control and Doable AI.
-- Provider wizard/card.
-- Integration catalog, cards, connect flow and detail drawer.
-- MCP panel and add-server form.
-- Skills & Rules panel, skill picker and rules settings.
-- Workspace Knowledge and Project Settings.
-- Setup AI Provider and Setup Integrations/Billing.
-- Dashboard delete/bulk-delete, rename, move-folder, template preview/remix and GitHub import dialogs.
+1. exact source commit is recorded;
+2. immutable backend trees are present;
+3. dependency closure is present;
+4. provider catalog + provider implementations are present;
+5. agent/tool/MCP/integration/skills/chat code is present;
+6. relevant UI reference source is present;
+7. capability matrix maps UI surfaces to runtime capabilities;
+8. no copied source is modified by host integration work.
 
-The capability matrix explicitly models loading, populated, empty, validation, saving, success, error, restricted, disconnected, retry, disabled and destructive-confirmation states where applicable.
+## Verification boundary
 
-## Runtime coupling classifications
-
-- Portable: agent/provider/tool/MCP/integration concepts and normalized streaming contracts.
-- Host-specific: identity/tenant, database, filesystem, process execution, sandbox security, secret storage, RAG backend, transport and realtime voice.
-- Infrastructure: PostgreSQL, Git, subprocesses, OS sandbox primitives, package/build runtimes and object storage.
-- Doable-specific integrations: Activepieces ecosystem and Doable credential/storage mechanisms stay behind adapters.
-
-## Verification
-
-The extraction branch remains ahead of the immutable snapshot without modifying the original Doable source tree. Changes in this phase are confined to ai-platform-core/.
+The original Doable source ref remains untouched. All extraction and reference additions are under `ai-platform-core/`. Host implementations belong in their own repositories.
