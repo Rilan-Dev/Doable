@@ -69,6 +69,8 @@ const requiredFiles = [
   "verification/source-and-ui-manifest.json",
   "verification/immutable-source-manifest.json",
   "verification/verify-extraction.mjs",
+  "verification/package-hardening.json",
+  "PACKAGE_HARDENING.md",
   "external-dependencies/external-dependencies.json",
   "external-dependencies/generate-external-dependencies.mjs",
   "external-dependencies/README.md",
@@ -200,6 +202,29 @@ if (gitAvailable()) {
   report.pass &&= report.checks.filesystemKeyBlobsPass;
 }
 
+const hardeningPath = path.join(root, "verification/package-hardening.json");
+if (fs.existsSync(hardeningPath)) {
+  const h = JSON.parse(fs.readFileSync(hardeningPath, "utf8"));
+  const expectedCapabilities = ["multi-provider","agents","tools","integrations","mcp","skills","chat","context-memory","workspace-sandbox","ui"];
+  const capabilityPass = expectedCapabilities.every((name) => (h.capabilities || []).includes(name));
+  const sourcePass = h.source?.repository === "Rilan-Dev/Doable"
+    && h.source?.ref === "develop"
+    && h.source?.commit === "a6036d1fd6dca83c08ee5affa141e5c85e45f5af";
+  const immutablePass = h.immutable?.sourceRoots === 12
+    && h.immutable?.dependencyClosureRoots === 9
+    && h.immutable?.uiReferenceRoots === 6
+    && h.immutable?.capturedDirectoryTrees === 99
+    && h.immutable?.immutableFiles === 747;
+  const targetPass = h.targetVerification?.requiredBeforeHostAdapters === true
+    && h.targetVerification?.command === "node ai-platform-core/verification/verify-extraction.mjs";
+  report.checks.packageHardening = {
+    sourcePass, immutablePass, capabilityPass, targetPass,
+    externalDependencyManifest: h.externalDependencies?.manifest,
+    pass: sourcePass && immutablePass && capabilityPass && targetPass
+  };
+  report.pass &&= report.checks.packageHardening.pass;
+}
+ 
 const sourceManifest = path.join(root, "verification/source-and-ui-manifest.json");
 if (fs.existsSync(sourceManifest)) {
   const m = JSON.parse(fs.readFileSync(sourceManifest, "utf8"));
