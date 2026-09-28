@@ -37,14 +37,14 @@
     "apps/web/src/app/(dashboard)/workspace-settings": "75043d2045f565cf8909121b4c13ffd34e15e542",
     "apps/web/src/app/(dashboard)/ai-settings": "1e879c7e3c8a04d8a903f836c3e5b4c1bc12346e"
   },
-  "uiReferenceAdditionalFiles": [
-    "apps/web/src/modules/editor/chat/chat-panel.tsx",
-    "apps/web/src/modules/editor/chat/chat-message.tsx",
-    "apps/web/src/modules/editor/chat/tool-call-card.tsx",
-    "apps/web/src/modules/editor/chat/user-input-card.tsx",
-    "apps/web/src/modules/editor/hooks/use-editor-store.ts",
-    "apps/web/src/app/(dashboard)/dashboard/dashboard-chat-input.tsx"
-  ],
+  "uiReferenceAdditionalFiles": {
+    "apps/web/src/modules/editor/chat/chat-panel.tsx": "63b19e87f852b26ea2700bb335ea3be723c2f9f8",
+    "apps/web/src/modules/editor/chat/chat-message.tsx": "4a340da9884f8f48f4a7c06a03341c44164f1fba",
+    "apps/web/src/modules/editor/chat/tool-call-card.tsx": "3307fc3d819352e6885367f4044577f29b079afe",
+    "apps/web/src/modules/editor/chat/user-input-card.tsx": "9f228307b0ffbfb3e7526a7e73cf77dc030d3731",
+    "apps/web/src/modules/editor/hooks/use-editor-store.ts": "bd9dbf50a062946cb5c5c87ae4945472862629ff",
+    "apps/web/src/app/(dashboard)/dashboard/dashboard-chat-input.tsx": "fbc9508676f7cd6b482810688892063d91771671"
+  },
   "notes": [
     "Copied Doable source is immutable.",
     "Third-party integration pieces and separate MCP server packages are external dependencies, not silently vendored.",
