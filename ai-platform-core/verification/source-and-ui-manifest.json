@@ -14,7 +14,7 @@
     "services/api/src/routes/chat": "69ab556c027e51b655ce8760315ea5547a554b38",
     "packages/doable-ai": "4df61ac8972c156009a661ebf599fb2b91b7ddab",
     "packages/docore": "2a33159a3b92f653ddf1514027982d454bea2fd4",
-    "packages/dovault": "15532f8f7effbe8a7eb33b57333b113d64e7606",
+    "packages/dovault": "15532f8f7effbe8a7ebd33b57333b113d64e7606",
     "packages/shared": "8dad7fcadfe23fb5e6d3b3d919f0501e59cfae71",
     "packages/doable-sdk": "32683d5cd4b42353e790000123176bb3b2eb8f2a"
   },
@@ -22,7 +22,7 @@
     "packages/db": "1faf731b078d489040e54bfde4bb2d08086354fe",
     "services/api/src/db": "3fe1b58f43e135dce8807438769eec032b591bb5",
     "services/api/src/frameworks": "f106f350efd3362473eb33d18962503d50e4de9a",
-    "services/api/src/projects": "654182e0e19b8d44ed0fcb791278ef3841bb36c",
+    "services/api/src/projects": "654182e0e19b8d44ed0fcb791278ef3841bbd36c",
     "services/api/src/lib": "7bb5fd5302ce66e97d25d91b8097bada80bc762a",
     "services/api/src/middleware": "62b0a6ba803d9827f9b0acc6d1a8091febffd5f8",
     "services/api/src/templates": "1289c0ae29d5dc893c6f2db5c80b893f177b1e52",
