@@ -188,3 +188,12 @@ The next phase should be verification/package-hardening, not host wiring:
 6. only after those checks pass, resume Clara/Dynamic UI/NexaHub adapters.
 
 This audit deliberately does **not** claim that third-party integration piece source or host-specific realtime voice implementations are part of Doable's own immutable source. Those remain explicit external/host boundaries.
+
+## Newly promoted reusable capability: Marketplace / AI asset distribution
+
+The extraction also includes the immutable `@doable/marketplace-bundle` package at `doable-source/packages/marketplace-bundle/`. It provides the canonical bundle manifest plus JSON and Standards ZIP codecs, permission classification, moderation signaling, skills/rules/instructions/knowledge packaging, and MCP connector declarations.
+
+This is important for downstream AI projects because reusable AI behavior is not limited to runtime inference: projects can package and move skills, rules, knowledge, instructions, and connector declarations between environments without copying credentials.
+
+See `capabilities/marketplace/MANIFEST.md`.
+
