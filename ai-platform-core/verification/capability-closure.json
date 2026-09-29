@@ -386,6 +386,25 @@
         "Activepieces packages",
         "object storage"
       ]
+    },
+    "ai-security": {
+      "manifest": "capabilities/ai-security/MANIFEST.md",
+      "runtime": [
+        "doable-source/services/api/src/security/",
+        "doable-source/services/api/src/routes/security.ts"
+      ],
+      "dependencies": [
+        "dependency-closure/packages/db/src/queries/security.ts",
+        "dependency-closure/packages/db/src/types.ts",
+        "dependency-closure/packages/db/"
+      ],
+      "hostBoundaries": [
+        "project path/filesystem",
+        "Node/npm process execution",
+        "database/persistence",
+        "authentication/authorization",
+        "deployment policy"
+      ]
     }
   },
   "acceptance": {
