@@ -214,3 +214,13 @@ See `capabilities/realtime-collaboration/MANIFEST.md`. This extension is intenti
 ## AI document-generation extensions
 
 Doable also contains standalone MCP Apps for PDF, presentations, spreadsheets and Markdown. Their complete source is preserved under `doable-source/mcp-servers/{pdf-builder,presentation-builder,spreadsheet-builder,markdown-builder}/` plus `doable-source/mcp-servers/_shared/ui.mjs`. These are separate from the generic MCP runtime because they implement concrete AI content-generation products.
+
+## Realtime AI collaboration and visual editing
+
+The extraction now includes Doable's standalone realtime service and the corresponding UI/reference implementation:
+- `doable-source/services/ws/`
+- `ui-reference/apps/web/src/modules/collaboration/`
+- `ui-reference/apps/web/src/modules/editor/visual-edit/`
+
+This covers AI stream/tool-event propagation over WebSocket, project rooms, presence, Yjs/CRDT synchronization, collaborative AI chat, preview synchronization, visual editing property panels, iframe bridging, and design comments/sticky-note workflows.
+
