@@ -37,6 +37,10 @@
     {
       "path": "ai-platform-core/external-dependencies/source-manifests/services-api.package.json",
       "packageName": "@doable/api"
+    },
+    {
+      "path": "ai-platform-core/external-dependencies/source-manifests/notebooklm-mcp-server.package.json",
+      "packageName": "notebooklm-mcp-server"
     }
   ],
   "workspacePackages": {
@@ -606,7 +610,22 @@
     "stripe": "^20.4.1",
     "ts-morph": "^27.0.2",
     "yjs": "^13.6.30",
-    "zod": "^3.24.1"
+    "zod": "^3.22.0",
+    "@modelcontextprotocol/ext-apps": "^1.0.1",
+    "@modelcontextprotocol/sdk": "^1.25.3",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/ws": "^8.18.1",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "node-fetch": "^3.3.0",
+    "playwright": "^1.40.0",
+    "sharp": "^0.33.0",
+    "ws": "^8.19.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0",
+    "vite": "^7.3.1",
+    "vite-plugin-singlefile": "^2.3.0"
   },
   "peerDependencies": {
     "react": ">=18.0.0"
