@@ -46,3 +46,4 @@ Nothing in this matrix should be recreated from memory in a target project. The 
 - UI: exact/reference interaction source is preserved.
 - Adapter: host-specific integration is required.
 - External dependency: package is intentionally not vendored and must be installed/selected by the host.
+| AI security scanning | doable-source/services/api/src/security/, doable-source/services/api/src/routes/security.ts, dependency-closure/packages/db/src/queries/security.ts + migrations | Source + adapter |
