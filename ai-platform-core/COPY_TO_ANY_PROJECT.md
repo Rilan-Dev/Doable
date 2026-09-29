@@ -120,3 +120,8 @@ Do not cherry-pick individual files without following the manifest and dependenc
 ### Full requested reusable-platform coverage
 
 Use SOURCE_COVERAGE_MATRIX.md as the canonical checklist. It maps every requested AI, editor, collaboration, platform, persistence and infrastructure capability to the exact preserved source boundary and identifies what the host must adapt.
+
+
+### AI security scanner
+
+For AI coding/project-generation products that need security checks around generated or modified code, use `capabilities/ai-security/MANIFEST.md`. Reuse the complete immutable scanner and route source plus the referenced database closure. The scanner covers dependency audit, secret detection and code/security anti-patterns. Adapt project-path resolution, process execution, persistence, authorization and deployment policy at the host boundary. Do not modify the immutable source copy.
