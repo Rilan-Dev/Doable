@@ -6,7 +6,7 @@
     "ref": "develop",
     "commit": "a6036d1fd6dca83c08ee5affa141e5c85e45f5af"
   },
-  "currentExtractionCommit": "7cfd54956ef66f17d5eba6524491b649038ff9f9",
+  "currentExtractionCommit": "5b638685fa7c80b0298c833eedf33fac1c533190",
   "capturedRootTrees": {
     "doable-source/services/api/src/ai": "13edcc7bd9726c38ea9bd4aab0d7825b2b8387d0",
     "doable-source/services/api/src/context": "43424593729e9a6d23ce71731c7bf6991b7d6c8b",
@@ -99,7 +99,8 @@
     "doable-source-extensions/usage/api": "ab0e6176553895df479320d6c654a5e3a0346656",
     "doable-source-extensions/version-control/api": "bc226a466ddcaf9e3b6e3d10d4f392c554a78ab3",
     "doable-source-extensions/workspace-settings/web": "75043d2045f565cf8909121b4c13ffd34e15e542",
-    "doable-source-extensions/security": "32964d46ad17027ff6264fa52404751b853f42f9"
+    "doable-source-extensions/security": "32964d46ad17027ff6264fa52404751b853f42f9",
+    "doable-source/services/api/src/security": "ff0b91ebf767edbac1829ae71a8fdde88a7cafa0"
   },
   "directoryTrees": [
     {
@@ -951,2407 +952,6 @@
     }
   ],
   "files": [
-    {
-      "root": "doable-source",
-      "path": "packages/doable-ai/package.json",
-      "sha": "df55abb7b599fceae2d5a88d85e39997aae94cc3",
-      "mode": "100644",
-      "size": 440
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/doable-ai/src/index.test.ts",
-      "sha": "6b540ecb325c27e6182b23a5ba810ec75743257f",
-      "mode": "100644",
-      "size": 8114
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/doable-ai/src/index.ts",
-      "sha": "44c559c1815b3b123a4e09abee2c2b96634b7ba6",
-      "mode": "100644",
-      "size": 23333
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/doable-ai/src/mcp-agent.test.ts",
-      "sha": "e01cd93c976760a3059f8bd112568f3d08a0cf27",
-      "mode": "100644",
-      "size": 5374
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/doable-ai/src/thinking.test.ts",
-      "sha": "5e290026df8c47d19436fe12b1e4d54a12b408db",
-      "mode": "100644",
-      "size": 7929
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/doable-ai/src/thinking.ts",
-      "sha": "19c93b11648b7f6a9311ed37e1e31ce68defcf91",
-      "mode": "100644",
-      "size": 11815
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/doable-ai/tsconfig.json",
-      "sha": "31147d0d6e935984d668e5432ce7b372e603592e",
-      "mode": "100644",
-      "size": 377
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/doable-sdk/package.json",
-      "sha": "5d59763b5e596127a0b47da1b1338e0f914f6647",
-      "mode": "100644",
-      "size": 632
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/doable-sdk/src/index.ts",
-      "sha": "64cff023fb8650ebc81987a7e851aeb08114fc42",
-      "mode": "100644",
-      "size": 28703
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/doable-sdk/src/react.ts",
-      "sha": "c9354071875c12dddc7d50a172dfdee7cf9c5559",
-      "mode": "100644",
-      "size": 5048
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/doable-sdk/src/server.ts",
-      "sha": "ba126e19b93cee66f0fb3fa87d751e762f5b6916",
-      "mode": "100644",
-      "size": 7308
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/doable-sdk/tsconfig.json",
-      "sha": "b4359a14fb5409ca8de418fa7b618a1c1dad8b11",
-      "mode": "100644",
-      "size": 388
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/docore/.gitignore",
-      "sha": "dbc703e307a98f0cac48b8e930de4f2b906141b2",
-      "mode": "100644",
-      "size": 403
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/docore/package.json",
-      "sha": "4477a4ac06be9c076cd4cda0b31efb82a9ced2bc",
-      "mode": "100644",
-      "size": 819
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/docore/src/backends/direct.ts",
-      "sha": "d81c2d8a1c9bcee12a387b554bce817330140910",
-      "mode": "100644",
-      "size": 1394
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/docore/src/backends/index.ts",
-      "sha": "7350c0ca810c949aca0ad26acc2408df5651a8de",
-      "mode": "100644",
-      "size": 391
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/docore/src/backends/jobobject.ts",
-      "sha": "267eb2b910a0934312cc5bca5d97fde0ebf84595",
-      "mode": "100644",
-      "size": 6030
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/docore/src/backends/nsjail.ts",
-      "sha": "4b90ae1fa54944718424852b6f9f352b256f218a",
-      "mode": "100644",
-      "size": 4531
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/docore/src/backends/systemd.ts",
-      "sha": "1bfbe34d33b90ba496a7bfde628af95d0ac4f8d6",
-      "mode": "100644",
-      "size": 2278
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/docore/src/backends/types.ts",
-      "sha": "1aee50a79c8f3f29dc1c5057829e13430b68167a",
-      "mode": "100644",
-      "size": 1744
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/docore/src/backends/unshare.ts",
-      "sha": "9180b888fee9a2821d574e1e25896502975d7a48",
-      "mode": "100644",
-      "size": 4805
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/docore/src/cli.ts",
-      "sha": "2618aa3b22e989d1a3857aa94181b24c9fc6e751",
-      "mode": "100644",
-      "size": 15855
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/docore/src/docore-server.ts",
-      "sha": "47882e7da86ede2a382a36484e66f1cd325aa74c",
-      "mode": "100644",
-      "size": 5185
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/docore/src/engine.ts",
-      "sha": "9c4d92f7dcec76b456be7261bcf91e7cb9d0d361",
-      "mode": "100644",
-      "size": 15931
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/docore/src/event-bus.ts",
-      "sha": "eb03d4e82310820dd7072ee3390d305f199bf7dc",
-      "mode": "100644",
-      "size": 1763
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/docore/src/event-mapper.ts",
-      "sha": "e1fbb0b409c65be698bcc278a55c220d2614ea11",
-      "mode": "100644",
-      "size": 21049
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/docore/src/events.ts",
-      "sha": "420c80505fceaab99ddc800717dcd11adfa71166",
-      "mode": "100644",
-      "size": 21269
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/docore/src/index.ts",
-      "sha": "b7c6910573859fe5056f3a1934f2010810080d4d",
-      "mode": "100644",
-      "size": 4979
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/docore/src/isolator.ts",
-      "sha": "46dfc3dfb64dbae662f07a08b4366cb88450301c",
-      "mode": "100644",
-      "size": 15116
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/docore/src/policy/admin.ts",
-      "sha": "0dbb8cdd2eb5f3809eaab06d1c36781bf4c17e79",
-      "mode": "100644",
-      "size": 10551
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/docore/src/policy/defaults.ts",
-      "sha": "bd2c3a7c06de68508af66fbfea4a275285b8171b",
-      "mode": "100644",
-      "size": 4613
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/docore/src/policy/index.ts",
-      "sha": "e173dfa6fac8ff030ef933b360e11b7accea9ff8",
-      "mode": "100644",
-      "size": 679
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/docore/src/policy/merge.ts",
-      "sha": "8d5fa89c3c22611d006f8bb3fcdb508a6ffb82d5",
-      "mode": "100644",
-      "size": 2439
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/docore/src/policy/persistence.ts",
-      "sha": "87a1dabf3bdd498aa1ebbf1ded0d52e6577ff0f5",
-      "mode": "100644",
-      "size": 2203
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/docore/src/policy/store.ts",
-      "sha": "c4b74f24cea8401c9ca4a0e8e5359b68a76a92bc",
-      "mode": "100644",
-      "size": 7797
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/docore/src/policy/types.ts",
-      "sha": "7454593e6ef392b06b6900cc9faec7499c5813d8",
-      "mode": "100644",
-      "size": 5446
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/docore/src/pool.ts",
-      "sha": "97d0ff336818b7a58592004624958310201057da",
-      "mode": "100644",
-      "size": 6194
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/docore/src/sandbox.ts",
-      "sha": "98a1944cb5045fa38409659034dbac1ffbaa30d3",
-      "mode": "100644",
-      "size": 19136
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/docore/src/tracer.ts",
-      "sha": "cf23cc49c847f1e84d7f58f291cd8801c947ed9a",
-      "mode": "100644",
-      "size": 3695
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/docore/src/user-manager.ts",
-      "sha": "da224070138705a6df05cdfcfe7404c47f2200c9",
-      "mode": "100644",
-      "size": 13503
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/docore/src/worker-pool.ts",
-      "sha": "2ca8bf9399cb23a12a9aef8b9943172dba631fd2",
-      "mode": "100644",
-      "size": 14126
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/docore/tsconfig.json",
-      "sha": "00d877beecbbcfae746fd976a0240c73613b183a",
-      "mode": "100644",
-      "size": 490
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/.gitignore",
-      "sha": "f4e2c6d6b88c7ae6274995debbd9393e3444c5d9",
-      "mode": "100644",
-      "size": 34
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/package-lock.json",
-      "sha": "c5e54d6233c0e196f395e9514544c04dcca6ee04",
-      "mode": "100644",
-      "size": 1425
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/package.json",
-      "sha": "8bf0b27989716d09daf24b7a7b5546b1070a170b",
-      "mode": "100644",
-      "size": 823
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/backends/__tests__/backends.test.ts",
-      "sha": "e76e1d2ac23e81d6f77fc5842482957c51c89a86",
-      "mode": "100644",
-      "size": 6594
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/backends/apple-container.ts",
-      "sha": "260fde89c16b99bad04547c4710bd4d46b30f4fa",
-      "mode": "100644",
-      "size": 3426
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/backends/bubblewrap-v2.ts",
-      "sha": "c183e0b56ff9bdea01938e637bdb32f2801f46a5",
-      "mode": "100644",
-      "size": 13688
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/backends/bubblewrap.ts",
-      "sha": "aba463ab8c442fd61385786bdc060708d945965b",
-      "mode": "100644",
-      "size": 6901
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/backends/direct.ts",
-      "sha": "8183137368615b31ddbb1638ea83cfabd30ff3e5",
-      "mode": "100644",
-      "size": 560
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/backends/gvisor.ts",
-      "sha": "acca84262b03f1f6fc0c7ea556d457220e162f13",
-      "mode": "100644",
-      "size": 2222
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/backends/psroot-v2.ts",
-      "sha": "49a5f0a418b2db2a6479eee8a36800112ce75416",
-      "mode": "100644",
-      "size": 6475
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/backends/psroot.ts",
-      "sha": "1b9ee317dc31fbc4a23d022689a0e6dbfbbc4133",
-      "mode": "100644",
-      "size": 4779
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/backends/sandbox-backend.ts",
-      "sha": "fa319435bddbcab74466ee370c34d4f76998d114",
-      "mode": "100644",
-      "size": 10352
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/backends/sandbox-exec-v2.ts",
-      "sha": "1a1ce342bac78f847d4d8c437d0702601011dfd5",
-      "mode": "100644",
-      "size": 3320
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/backends/sandbox-exec.ts",
-      "sha": "ecd8b84a59a4a4d1b15218b512d044037bfa400b",
-      "mode": "100644",
-      "size": 3246
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/backends/systemd-v2.ts",
-      "sha": "95bf494c8b12d97814929170ffb1d293617fd870",
-      "mode": "100644",
-      "size": 3756
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/backends/systemd.ts",
-      "sha": "1f6201488a7a8300b47fe6a86889d2ef94ddb734",
-      "mode": "100644",
-      "size": 7705
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/backends/types.ts",
-      "sha": "eeb73e6cdb91f7b9a9fcc29c2ca290b2adb39abf",
-      "mode": "100644",
-      "size": 1731
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/backends/win-heap.ts",
-      "sha": "c29bf3d6bf57f0821c67b16c3010f51a66e5d17c",
-      "mode": "100644",
-      "size": 1728
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/backends/windows.ts",
-      "sha": "881977fcd6bfd8cc510de1b99514bbec15aaaee2",
-      "mode": "100644",
-      "size": 14949
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/composers/cgroup-cap.ts",
-      "sha": "711c8dee0ee46fe8ca848efcce05e59d5386fca2",
-      "mode": "100644",
-      "size": 3144
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/composers/etc-synth.ts",
-      "sha": "0d1c9cb3bd5a9c177de52632e495dd697ab76159",
-      "mode": "100644",
-      "size": 4284
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/composers/index.ts",
-      "sha": "5ed0a48181775add597dcf7473354aa036a4253e",
-      "mode": "100644",
-      "size": 1388
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/composers/landlock.ts",
-      "sha": "2390dcde8b8f886c47b0a7cdf517e38dfb4456e8",
-      "mode": "100644",
-      "size": 1629
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/composers/mac-profile.ts",
-      "sha": "2f056649f29e89d0f4de43beacc3f0792bba8ca6",
-      "mode": "100644",
-      "size": 3600
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/composers/mount-helper.ts",
-      "sha": "8a019c728982e1113f99aae6295966f6a3919674",
-      "mode": "100644",
-      "size": 2853
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/composers/nft-egress.ts",
-      "sha": "a184b33ba9fe44beee68adb88357a69e7d4f05de",
-      "mode": "100644",
-      "size": 3403
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/composers/proc-mask.ts",
-      "sha": "5c21b438ebb479abf96906858fd1a7e50dffde72",
-      "mode": "100644",
-      "size": 4680
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/composers/seccomp-bpf.ts",
-      "sha": "08418fd9857ad50076239e2dc71ce45962e8725d",
-      "mode": "100644",
-      "size": 1276
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/composers/types.ts",
-      "sha": "f3ee22f3f33538475d7a0eac6934253c7ced4984",
-      "mode": "100644",
-      "size": 570
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/config-guard.ts",
-      "sha": "730db0533a25ae76c083491aa0365f325927e5dd",
-      "mode": "100644",
-      "size": 11868
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/index.ts",
-      "sha": "72796504e10a554af8b7fd0ccf087cd9b015ae65",
-      "mode": "100644",
-      "size": 3468
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/process-jail.ts",
-      "sha": "0cabb36abc9460ff0c1dcc66854bce575a95bf4d",
-      "mode": "100644",
-      "size": 6330
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/profile.ts",
-      "sha": "551c520035d51f383ca416ee409b7159194fb91e",
-      "mode": "100644",
-      "size": 10995
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/resource-limiter.ts",
-      "sha": "0d84bee1a84d7c591c4fb25fbda88bade58467a4",
-      "mode": "100644",
-      "size": 7177
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/sandbox-registry.ts",
-      "sha": "a05a04891c206d58fb1778dd0f0565de9887a244",
-      "mode": "100644",
-      "size": 1156
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/tracer.ts",
-      "sha": "982d0180ac3e5cea7a63106ac8f005a2838f87cb",
-      "mode": "100644",
-      "size": 3684
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/types.ts",
-      "sha": "c7b2a3ac459dc38fadfba4fb6525d022367cf24b",
-      "mode": "100644",
-      "size": 9286
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/src/vault.ts",
-      "sha": "b721db5f5de465b0425b46c1a147994c76b5ac9d",
-      "mode": "100644",
-      "size": 10367
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/dovault/tsconfig.json",
-      "sha": "4d50c852abb54ea71b8e93e74b473238a60d71ab",
-      "mode": "100644",
-      "size": 484
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/shared/package.json",
-      "sha": "b538b0e3d67102236773b9dca23ed9424f1fc80a",
-      "mode": "100644",
-      "size": 524
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/shared/src/ai/index.ts",
-      "sha": "82c902b981bfd70aeb5315840d1d9308b176d52d",
-      "mode": "100644",
-      "size": 70
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/shared/src/ai/provider-catalog.ts",
-      "sha": "8eb12eb20c5bc210ebd895c5cda6ef3821521563",
-      "mode": "100644",
-      "size": 2056
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/shared/src/ai/provider-data-cloud-major.ts",
-      "sha": "aeb18be01b4f0fcd80ba39f27f68c4024d2a75db",
-      "mode": "100644",
-      "size": 14271
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/shared/src/ai/provider-data-cloud-regional.ts",
-      "sha": "a6c4eb5b31e5df7fe3c829b951cd9ed4e7e04937",
-      "mode": "100644",
-      "size": 13205
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/shared/src/ai/provider-data-cloud-special.ts",
-      "sha": "cc277d3d3efed5cb6abbfb7732d45a61fae407dc",
-      "mode": "100644",
-      "size": 7786
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/shared/src/ai/provider-data-local.ts",
-      "sha": "a1e463448ce5297a6f8810114737e0b91de07b74",
-      "mode": "100644",
-      "size": 11738
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/shared/src/ai/provider-types.ts",
-      "sha": "93cd93e748002d4064141c7dddc1777041b2d2bb",
-      "mode": "100644",
-      "size": 1823
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/shared/src/constants.ts",
-      "sha": "2d8da93ec1144d729680ec06552b3bac14bae6da",
-      "mode": "100644",
-      "size": 4501
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/shared/src/index.ts",
-      "sha": "0cfa87107cbf2af31b57dd3544bfc9d45f42f7b8",
-      "mode": "100644",
-      "size": 202
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/shared/src/kv-store.ts",
-      "sha": "18593aa790bea64fa363bb833bed4a6e8ec9f733",
-      "mode": "100644",
-      "size": 4891
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/shared/src/security/env-perms-check.ts",
-      "sha": "13a99c99993e961c484309af102481c845f02d1b",
-      "mode": "100644",
-      "size": 1149
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/shared/src/security/secret-resolver.ts",
-      "sha": "f35883c01351177d9f7f477da3fcd791c8d364eb",
-      "mode": "100644",
-      "size": 9027
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/shared/src/types/ai.ts",
-      "sha": "f1f2418ce7d1f5d812a969181f0b799a845590a5",
-      "mode": "100644",
-      "size": 5578
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/shared/src/types/api.ts",
-      "sha": "a96690c792f17d5f4ea4dd85f860ca017bf05ec8",
-      "mode": "100644",
-      "size": 4756
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/shared/src/types/index.ts",
-      "sha": "004219ff0c1fa9a37fa1bffcb2c1ecbe5a86ad29",
-      "mode": "100644",
-      "size": 7424
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/shared/src/types/mcp.ts",
-      "sha": "ca61af362ebafc9ff1f0f3297d573b2a910ed8a7",
-      "mode": "100644",
-      "size": 1008
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/shared/src/types/ws.ts",
-      "sha": "e7023b3c1ba2381e497f4fa9297b176b1e9fbbf6",
-      "mode": "100644",
-      "size": 4346
-    },
-    {
-      "root": "doable-source",
-      "path": "packages/shared/tsconfig.json",
-      "sha": "7925af491d1eae46b3f34ab7f3a979eb19c444e4",
-      "mode": "100644",
-      "size": 231
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/__fixtures__/per-app-db/db-aware-app.json",
-      "sha": "2f715f670cada2dd68a7aca3dcdd1d4c419571b8",
-      "mode": "100644",
-      "size": 204
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/__tests__/app-ai-prompt.test.ts",
-      "sha": "b7640379abda9f6d31c0c80e0751fc2387c0bbb2",
-      "mode": "100644",
-      "size": 2884
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/__tests__/app-db-prompt.test.ts",
-      "sha": "bf6d3adb3a42b96e1b57343d49ad2878abccf898",
-      "mode": "100644",
-      "size": 3507
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/__tests__/system-skills.test.ts",
-      "sha": "dfe48b1c2b167edd1e9c08c7c0a2cacf66dd18a6",
-      "mode": "100644",
-      "size": 6578
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/app-ai-prompt.ts",
-      "sha": "366dde9a36acfa0a74851f181281ca74babf1ac5",
-      "mode": "100644",
-      "size": 9080
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/app-db-prompt.ts",
-      "sha": "765dfcb92f3962a560ec5478b29178e8952d7dff",
-      "mode": "100644",
-      "size": 10111
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/attachments.ts",
-      "sha": "8b6b8bc43cfe56984f1827e34c14df7b8c894458",
-      "mode": "100644",
-      "size": 14640
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/build.ts",
-      "sha": "2c227410be79c11f15f092a56a038d09465db3ad",
-      "mode": "100644",
-      "size": 7388
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/context-builder.ts",
-      "sha": "704c7cbedc06d9f7970e11c6b3848c0ceef12b39",
-      "mode": "100644",
-      "size": 13109
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/context/defaults.ts",
-      "sha": "e736cde7bbb0b6f0aeea8509349cc66aa01c4f7a",
-      "mode": "100644",
-      "size": 4348
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/context/index.ts",
-      "sha": "e837b9903e29da8c9cd5ac489b44d9c369802011",
-      "mode": "100644",
-      "size": 2754
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/context/injector.ts",
-      "sha": "f4a769ce8d805bed731ca54e9b0c15e51d4e6da2",
-      "mode": "100644",
-      "size": 4738
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/docore-bridge.ts",
-      "sha": "ab8debcf2b0a5a62b7e4e6963986c88f67d7bd98",
-      "mode": "100644",
-      "size": 5362
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/embedding-resolver.ts",
-      "sha": "44a0918fdbca92060943523342d37ea5cde2fcc3",
-      "mode": "100644",
-      "size": 5705
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/engine-resolver.ts",
-      "sha": "9702bb55c8ef385ad648f957849a18642af48665",
-      "mode": "100644",
-      "size": 12471
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/engine-types.ts",
-      "sha": "a8f00d43541b6f72852ee736935dbe13ac7b8725",
-      "mode": "100644",
-      "size": 2678
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/engine.ts",
-      "sha": "3989bd817d2e013b80cf3bf5fc6a495477187d0a",
-      "mode": "100644",
-      "size": 6609
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/framework-prompts/index.ts",
-      "sha": "a659ffb77a9c9e408e62a5f9baf04cc7bc9b2d8f",
-      "mode": "100644",
-      "size": 1341
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/framework-prompts/nextjs-app.ts",
-      "sha": "afd8a1114f0ba42203fee51739945175e5db5e83",
-      "mode": "100644",
-      "size": 17276
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/framework-prompts/vite-react.ts",
-      "sha": "80aadc857582a6bd6216fdf4b7497cc63165835d",
-      "mode": "100644",
-      "size": 33581
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/modes/agent.ts",
-      "sha": "8fa6bb4ef20b3ec8f7f13f4df4d07f505e4446bf",
-      "mode": "100644",
-      "size": 5056
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/modes/plan.ts",
-      "sha": "8af75461d2f7270a93f91bfeae4ec0f9bec5deb0",
-      "mode": "100644",
-      "size": 9969
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/plan-parser.ts",
-      "sha": "6579f1eeee7703d62a4e567643232e4eef0d7e92",
-      "mode": "100644",
-      "size": 3864
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/preview-errors.ts",
-      "sha": "95ef9701e9355c355e5f6d10df9bb99a3bf266f8",
-      "mode": "100644",
-      "size": 22457
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/project-files.ts",
-      "sha": "ece636d83bbae1e7b667e43f5930590c95f3e26b",
-      "mode": "100644",
-      "size": 13704
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/prompts/system.ts",
-      "sha": "605e8835f0d6d47856c8a246a67db9033d9063af",
-      "mode": "100644",
-      "size": 3073
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/provider-discovery-helpers.ts",
-      "sha": "034eb189e8f0e5e37b17d9cd58823d12e077ed8d",
-      "mode": "100644",
-      "size": 6330
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/provider-discovery.ts",
-      "sha": "1b97d69b1d9528d7d192760f894f2bb812b43dad",
-      "mode": "100644",
-      "size": 9688
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/provider.ts",
-      "sha": "04d3ce8094416737d16260124a1737676993c114",
-      "mode": "100644",
-      "size": 3144
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/providers/anthropic-helpers.ts",
-      "sha": "238ae812a6b5e97566c1288cf179fe58d12020e8",
-      "mode": "100644",
-      "size": 3031
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/providers/anthropic-types.ts",
-      "sha": "573075fd87253bb5d79b2304a9c73b9961bf321b",
-      "mode": "100644",
-      "size": 931
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/providers/anthropic.ts",
-      "sha": "b7871d937686b5611425dcdceebd7a629a83f422",
-      "mode": "100644",
-      "size": 9514
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/providers/copilot-engine.ts",
-      "sha": "7b74db6c5b7897dbd9af897b1547d68d17318f1e",
-      "mode": "100644",
-      "size": 30903
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/providers/copilot-manager.ts",
-      "sha": "a8e46c221c4758cac0181b815f283c5a93e3af27",
-      "mode": "100644",
-      "size": 8986
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/providers/copilot-tool-loader.ts",
-      "sha": "fea49f4e2bc77a06d5bed9049cabafc7a3a75610",
-      "mode": "100644",
-      "size": 11734
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/providers/copilot-tools.ts",
-      "sha": "3f363a28ba1f3653f53bb53aae7a35c2677c1b42",
-      "mode": "100644",
-      "size": 29925
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/providers/copilot.ts",
-      "sha": "6d6b7f846325b464275aa774261f422dac2978d1",
-      "mode": "100644",
-      "size": 743
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/rate-limit-state.ts",
-      "sha": "e8d68fc3282f42833739d842a9ad34df85ba28ed",
-      "mode": "100644",
-      "size": 1145
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/runtime-config.ts",
-      "sha": "14582c5515b8322c97d10165ee9c6f336d52ff54",
-      "mode": "100644",
-      "size": 2260
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/skills-materializer.ts",
-      "sha": "a96df360e93854407e702b9bf569279bfeb057a4",
-      "mode": "100644",
-      "size": 8531
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/skills/_system/README.md",
-      "sha": "ebb19bb04a0dfda2fdfa2832bb25cab16133b6e2",
-      "mode": "100644",
-      "size": 5396
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/skills/_system/ai-testing/SKILL.md",
-      "sha": "8973cd5e1f827dfbfd6d040e5035b084173a863b",
-      "mode": "100644",
-      "size": 62962
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/skills/_system/business-card-maker/SKILL.md",
-      "sha": "b1567ff8576d3500548be1e60dfd8bcc1be4b712",
-      "mode": "100644",
-      "size": 37861
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/skills/_system/competitor-analysis/SKILL.md",
-      "sha": "bd4b0c2b328c4b44ab82fae0f42cd81b5f4eed0c",
-      "mode": "100644",
-      "size": 13129
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/skills/_system/ecommerce-website/SKILL.md",
-      "sha": "59465ef99b73d59aeaf72835d524cea53bf7b4d2",
-      "mode": "100644",
-      "size": 101556
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/skills/_system/event-invite-maker/SKILL.md",
-      "sha": "c79351677b32cf02588ffeccaf1610a81e31c0f4",
-      "mode": "100644",
-      "size": 39580
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/skills/_system/greeting-card/SKILL.md",
-      "sha": "e9962d63a3eb898026864892cdbca296b13731aa",
-      "mode": "100644",
-      "size": 37269
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/skills/_system/inbuilt-database/SKILL.md",
-      "sha": "78374ff859d397166bb33d5663311085bd0fb107",
-      "mode": "100644",
-      "size": 7064
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/skills/_system/magazine-flipbook/SKILL.md",
-      "sha": "b67bf0aba7b3dbec33a2395e7af6c3c80887c5c3",
-      "mode": "100644",
-      "size": 39606
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/skills/_system/newsletter-template/SKILL.md",
-      "sha": "959974c01ce516de57b62de9d67e665e9cddaa15",
-      "mode": "100644",
-      "size": 10212
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/skills/_system/remotion-video-creation/SKILL.md",
-      "sha": "9047a7e34028b24f5a7526aa2a3e244bd212fc4a",
-      "mode": "100644",
-      "size": 25640
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/skills/_system/remotion-video-creation/references/advanced-integrations.md",
-      "sha": "628b4ebffdb73871265f179829eba3348318bf8d",
-      "mode": "100644",
-      "size": 5696
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/skills/_system/remotion-video-creation/references/data-and-social.md",
-      "sha": "447e2c3a0faafad0258f8ec34b44dc2616327dfa",
-      "mode": "100644",
-      "size": 7637
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/skills/_system/remotion-video-creation/references/programmatic-video.md",
-      "sha": "ad4a1ca7563e5974b88b5fdfbd01805ed10ca067",
-      "mode": "100644",
-      "size": 6262
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/skills/_system/remotion-video-creation/references/rendering-deployment.md",
-      "sha": "efe0bd5d8aa2870b89aaa6c8bb26c113876c761b",
-      "mode": "100644",
-      "size": 5522
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/skills/_system/remotion-video-creation/references/video-types.md",
-      "sha": "b69879f2de64b513ef073a1d8bf9e2930c530c83",
-      "mode": "100644",
-      "size": 5384
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/skills/_system/resume-cv/SKILL.md",
-      "sha": "417301f62ec63b478b5e2d9fd0f55e1a72551ba1",
-      "mode": "100644",
-      "size": 92043
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/skills/nextjs-app/connector-fetch.md",
-      "sha": "9d9e838070dd425d33ee3613516b99cfae9510ba",
-      "mode": "100644",
-      "size": 3369
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/skills/nextjs-app/env-conventions.md",
-      "sha": "678ebb5fa74a2a16b84969cfa52959afde0a93d4",
-      "mode": "100644",
-      "size": 2696
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/skills/nextjs-app/route-handlers.md",
-      "sha": "34e8df075a08a4a2cb76a39dcac605e205a362ec",
-      "mode": "100644",
-      "size": 2715
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/skills/nextjs-app/server-actions.md",
-      "sha": "1a8d49b50314ca1ac41150e29c97fb94a19f8436",
-      "mode": "100644",
-      "size": 2803
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/skills/vite-react/connector-proxy-fetch.md",
-      "sha": "f7e3049783cf8a3c1f42a1a1c6cae28360a8ce9e",
-      "mode": "100644",
-      "size": 2929
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/skills/vite-react/mcp-tools.md",
-      "sha": "d014c49a8627e9bdbdba6ddd3cec17799980b3ad",
-      "mode": "100644",
-      "size": 6128
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/skills/vite-react/pwa-builder.md",
-      "sha": "2f817d16d28254618f6d9550d557efe27a88e843",
-      "mode": "100644",
-      "size": 15211
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/sse-mapper.ts",
-      "sha": "219a5e52f7070e15e2980c71da0ad4de412d3513",
-      "mode": "100644",
-      "size": 14723
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/streaming.ts",
-      "sha": "96f49e46a7a6d0c15c259f93e0ec2d55836a27bb",
-      "mode": "100644",
-      "size": 2795
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/system-skills.ts",
-      "sha": "71460dd3cde87759e6f04775dc854d91914c7b36",
-      "mode": "100644",
-      "size": 6280
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/thumbnail.ts",
-      "sha": "680c1a2b96d83e92bb736a68346d21d1f6d741b5",
-      "mode": "100644",
-      "size": 4582
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/tool-messages.ts",
-      "sha": "1a90d49c923249bc41e7e3bbbc43d7161db45913",
-      "mode": "100644",
-      "size": 16438
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/tools/bash.ts",
-      "sha": "b8cab4ad15e6d74185f9338f4407799e05e4f76d",
-      "mode": "100644",
-      "size": 4719
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/tools/create-file.ts",
-      "sha": "ae077d47901723cd9d025ae908ce96c719224540",
-      "mode": "100644",
-      "size": 1889
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/tools/delete-file.ts",
-      "sha": "240c858804cf0341f8a463ae3220e2341b7fbbe7",
-      "mode": "100644",
-      "size": 638
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/tools/edit-file.ts",
-      "sha": "d47fe625dc279e23ac7282efdae1d2bdffa621c5",
-      "mode": "100644",
-      "size": 3720
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/tools/index.ts",
-      "sha": "d5bd2097528fd90623f6e5e11fcb07a4eda0cd4a",
-      "mode": "100644",
-      "size": 3242
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/tools/install-package.ts",
-      "sha": "2bd5bfab8fc2deb1700040f54eecd577fabd9e33",
-      "mode": "100644",
-      "size": 11615
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/tools/list-files.ts",
-      "sha": "6087424cb84322f3a9b4601d942ccbde77566eee",
-      "mode": "100644",
-      "size": 1255
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/tools/plan-tools.ts",
-      "sha": "3c95d396afdfddf906f610a92cbc547775e91267",
-      "mode": "100644",
-      "size": 6897
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/tools/read-file.ts",
-      "sha": "2ecf228286d2d5753180eceb003cca17f85adf22",
-      "mode": "100644",
-      "size": 1520
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/tools/run-build.ts",
-      "sha": "3e7234bb2921b729ff9ff2821b6a5104d2201a9f",
-      "mode": "100644",
-      "size": 1406
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/tools/search-files.ts",
-      "sha": "f7e30a9c552a32920502e00136913d487c85dbc1",
-      "mode": "100644",
-      "size": 4070
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/tools/validate-syntax.ts",
-      "sha": "bdb84682290610f6f1981a2396e5f19ab8be761f",
-      "mode": "100644",
-      "size": 3921
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/trace-collector.ts",
-      "sha": "d11779268f18af7b8f3d9fb8e6be754f1f3dd57f",
-      "mode": "100644",
-      "size": 647
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/trace-factory.ts",
-      "sha": "c28c74e2b4a9dec55ce06df4b5411aabf297c582",
-      "mode": "100644",
-      "size": 19635
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/trace-infra.ts",
-      "sha": "beacac4ff24af5cbfa5f4db3b7c8f2cf8b01a51f",
-      "mode": "100644",
-      "size": 15429
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/trace-types.ts",
-      "sha": "870ddde8811d753ed00e1bb3b51306a4aec1ff6a",
-      "mode": "100644",
-      "size": 3054
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/usage-collector.ts",
-      "sha": "d20c5e1074238be7750347566b060b3e796ba591",
-      "mode": "100644",
-      "size": 15392
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/ai/yjs-bridge.ts",
-      "sha": "884772a72b86622059dc04c61240a42bfc791f5e",
-      "mode": "100644",
-      "size": 3565
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/context/defaults-core.ts",
-      "sha": "d9cae9c8e097aba093f63bb912be85872253bde6",
-      "mode": "100644",
-      "size": 6707
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/context/defaults-extended.ts",
-      "sha": "d4ca87407cf713d7de563ab4a9726e6cdf1b0b11",
-      "mode": "100644",
-      "size": 5353
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/context/defaults.ts",
-      "sha": "ed0f76aa0e224fc8d9407bcdb8a88e9dfebdcc65",
-      "mode": "100644",
-      "size": 1047
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/context/injector.ts",
-      "sha": "2a8a639aa854a980ea6bf855494b3d0e4d706aa3",
-      "mode": "100644",
-      "size": 9312
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/context/manager.ts",
-      "sha": "29610c74d8271dbb51d627b5540d641884ea5202",
-      "mode": "100644",
-      "size": 9890
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/data-worker/__tests__/config.test.ts",
-      "sha": "087b960d7b888a2a3d5be3d36c004d940994216d",
-      "mode": "100644",
-      "size": 4060
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/data-worker/__tests__/integration/worker-pool.test.ts",
-      "sha": "e5b2f11ba612343b365e9247c363c71649c9d1af",
-      "mode": "100644",
-      "size": 6442
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/data-worker/__tests__/ipc.test.ts",
-      "sha": "83410214f4d11ae1a464f35c273d427906668204",
-      "mode": "100644",
-      "size": 5454
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/data-worker/__tests__/sandbox-args.test.ts",
-      "sha": "7a51be2c49f16a55d5f060ac91cb3dd1078c5a81",
-      "mode": "100644",
-      "size": 6813
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/data-worker/__tests__/sql-classifier.test.ts",
-      "sha": "b73d16b034a4f7b41609737826bdf33fef588d5e",
-      "mode": "100644",
-      "size": 18869
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/data-worker/__tests__/telemetry.test.ts",
-      "sha": "82b27d3deef0b2008f390605a8961ba2e24e6936",
-      "mode": "100644",
-      "size": 5660
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/data-worker/config.ts",
-      "sha": "f6b31817a0b2c4e2d0592d920deff9efb2eb0032",
-      "mode": "100644",
-      "size": 5888
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/data-worker/index.ts",
-      "sha": "8ac7b8697f0e051f6d96cdd70a65e2888aa7089e",
-      "mode": "100644",
-      "size": 18540
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/data-worker/ipc.ts",
-      "sha": "d537987709c94dfb7d77f3b21d675d4908ef3de6",
-      "mode": "100644",
-      "size": 2672
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/data-worker/migrate.ts",
-      "sha": "165ff2f0c47a945cdca051027a03bf0c95a3de29",
-      "mode": "100644",
-      "size": 3538
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/data-worker/pool.ts",
-      "sha": "38584da907113ae53512c65000b347b4bc6fe199",
-      "mode": "100644",
-      "size": 21705
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/data-worker/sandbox-args.ts",
-      "sha": "8f9ea700acdcdd1909b1ec9469a12d014ed3d484",
-      "mode": "100644",
-      "size": 9322
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/data-worker/schema.ts",
-      "sha": "82d5705ed4fd077867e7d944cf0322339d6cbc67",
-      "mode": "100644",
-      "size": 5046
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/data-worker/sql-classifier.ts",
-      "sha": "05f5fbecffdee4dde7dda509dc22d6a83f4e050a",
-      "mode": "100644",
-      "size": 19204
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/data-worker/telemetry.ts",
-      "sha": "5cc3e0a8713b31be59b2bd49599980e88ca00df4",
-      "mode": "100644",
-      "size": 5917
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/data-worker/types.ts",
-      "sha": "7806b307146d9265d2ea258e60a5dc996fe01340",
-      "mode": "100644",
-      "size": 3278
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/connections-manager.ts",
-      "sha": "b91a4bac462f20433713e7305e7e13233b3348ed",
-      "mode": "100644",
-      "size": 659
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/context-builder.ts",
-      "sha": "5b4c37c2d992f8895cbaee16681ea4a01f19643a",
-      "mode": "100644",
-      "size": 1975
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/credential-vault.ts",
-      "sha": "90d013c5e3ab86e801fc58cb50fcdeda7e41a5d4",
-      "mode": "100644",
-      "size": 19865
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/enhanced-auth/index.ts",
-      "sha": "c5f24227d472e25c68d754cfc50a692209052fa5",
-      "mode": "100644",
-      "size": 1860
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/enhanced-auth/supabase.ts",
-      "sha": "e383bb31d98507166cbc0542ce9a8cd7b92e329b",
-      "mode": "100644",
-      "size": 3409
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/enhanced-auth/types.ts",
-      "sha": "1666b30fe36f8abe9f0f9bad4b07349a7b9bd0dd",
-      "mode": "100644",
-      "size": 1386
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/files-service.ts",
-      "sha": "aab5246a37851808260fbbe6f1746eac66b92162",
-      "mode": "100644",
-      "size": 946
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/index.ts",
-      "sha": "92453feb377008c9c53c4e78d599befa6faca661",
-      "mode": "100644",
-      "size": 138
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/oauth2.ts",
-      "sha": "45da41119610132e903daee35b5ced4c06b4c767",
-      "mode": "100644",
-      "size": 15128
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/platform-credentials.contract.test.ts",
-      "sha": "f4238fef74860838c12e32bc2649a3c36cba327a",
-      "mode": "100644",
-      "size": 3846
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/prompt-manifest.ts",
-      "sha": "a211ebaf01ba85ee57d02996bf9084c92b18c23a",
-      "mode": "100644",
-      "size": 17727
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/registry.ts",
-      "sha": "ac5baf0477fc998d934b7ee955e21b4ed32845e0",
-      "mode": "100644",
-      "size": 5307
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/registry/ai-ml-part1.ts",
-      "sha": "f86cfc498702525c869a0ec600d577f174e92299",
-      "mode": "100644",
-      "size": 13320
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/registry/ai-ml-part2.ts",
-      "sha": "bd45d04354a369618bb3fa8026c0f48aee37025a",
-      "mode": "100644",
-      "size": 10655
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/registry/ai-ml.ts",
-      "sha": "ffe1397b427ea02b3cf6d455efbc059f1c7188f0",
-      "mode": "100644",
-      "size": 269
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/registry/communication.ts",
-      "sha": "df2a58060c1eec72da11f074ad064ff67141d14e",
-      "mode": "100644",
-      "size": 13305
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/registry/crm-marketing-social-part1.ts",
-      "sha": "db2e3dcfe00139cf080c3d70c765624716b4454e",
-      "mode": "100644",
-      "size": 12347
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/registry/crm-marketing-social-part2.ts",
-      "sha": "c5715c053e4607e9d41e070767409be3b3c83545",
-      "mode": "100644",
-      "size": 13446
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/registry/crm-marketing-social.ts",
-      "sha": "de71e6013768a05a77efc1a58384913edd2f9d8e",
-      "mode": "100644",
-      "size": 374
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/registry/developer-tools-part1.ts",
-      "sha": "e808dda6063f7683b97fccae370993f2ecd6d6a1",
-      "mode": "100644",
-      "size": 12651
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/registry/developer-tools-part2.ts",
-      "sha": "00d75ca1029d11ae5fec005ce47107bd11e5cccb",
-      "mode": "100644",
-      "size": 11258
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/registry/developer-tools.ts",
-      "sha": "996f5b7957908d1bea1744e0b39a4a6e83408559",
-      "mode": "100644",
-      "size": 339
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/registry/finance-ecommerce-part1.ts",
-      "sha": "6dbe01c00941661a98689c8a5a1c503972368fb3",
-      "mode": "100644",
-      "size": 9319
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/registry/finance-ecommerce-part2.ts",
-      "sha": "f444f202fe986650edc50f03172b8eec26e9c2ef",
-      "mode": "100644",
-      "size": 7852
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/registry/finance-ecommerce-part3.ts",
-      "sha": "a26201034cfba3efdd23f7e6220afe67a2032ad0",
-      "mode": "100644",
-      "size": 9058
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/registry/finance-ecommerce-part4.ts",
-      "sha": "79b712776811167f2c0aaee03effe26f5ec1e23f",
-      "mode": "100644",
-      "size": 9992
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/registry/finance-ecommerce.ts",
-      "sha": "3e5da54563599e0355f60335099d5d4e56568c21",
-      "mode": "100644",
-      "size": 557
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/registry/generated.ts",
-      "sha": "7e4df323ccdc0c59a156365ebdb579c387083f03",
-      "mode": "100644",
-      "size": 337
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/registry/index.ts",
-      "sha": "334cb6595c43d649918544b5a0d61f8b6dee10c0",
-      "mode": "100644",
-      "size": 5288
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/registry/productivity-part1.ts",
-      "sha": "2b8b06c4a3073e9659e844a2e1135640bfa0ce46",
-      "mode": "100644",
-      "size": 8807
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/registry/productivity-part2.ts",
-      "sha": "3b3ce3c96cd6dd03b2bae1a0fa0aedf01acb2c56",
-      "mode": "100644",
-      "size": 8736
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/registry/productivity.ts",
-      "sha": "b1c3696f64409ecaf97eb00d84b77df523605e81",
-      "mode": "100644",
-      "size": 318
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/runner-core.ts",
-      "sha": "f3379d26dfd4ca7033878dc03c9197d78810f8ff",
-      "mode": "100644",
-      "size": 13470
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/runner-fetch.ts",
-      "sha": "29b3b79410f888b616c55767c1b252ecd974310b",
-      "mode": "100644",
-      "size": 5956
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/runner-helpers.ts",
-      "sha": "4979d425360011ae7e04d63d99cba087b91db91e",
-      "mode": "100644",
-      "size": 17300
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/runner.ts",
-      "sha": "626a58ae1530b51605884f49a4e016c6ed277093",
-      "mode": "100644",
-      "size": 223
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/store.ts",
-      "sha": "48ecc5645dda283a424579b79f8f1daefe582ec7",
-      "mode": "100644",
-      "size": 1490
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/supabase/edge-functions.ts",
-      "sha": "660e2f22957700f662975c1068deb58e312eb5f7",
-      "mode": "100644",
-      "size": 4497
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/supabase/migrate.ts",
-      "sha": "14dcf2c91489c2760e076fffd0b1a5190846abf1",
-      "mode": "100644",
-      "size": 2377
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/supabase/provisioner.ts",
-      "sha": "a2ea6ea8950a01f4d0615cd76575924fa42cd3c5",
-      "mode": "100644",
-      "size": 5325
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/tool-bridge.ts",
-      "sha": "b0042956cbd4b91b13b0c720ae319119819ff527",
-      "mode": "100644",
-      "size": 9514
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/types.ts",
-      "sha": "69018bf45b02da2d4c7fc3fa0f8c05f6c587375b",
-      "mode": "100644",
-      "size": 7783
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/xray-audit.ts",
-      "sha": "ac84f8bc4ca852dfb851d18daaa2fe0413cd6eab",
-      "mode": "100644",
-      "size": 3737
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/xray-engine.ts",
-      "sha": "1707fe36768823d3853669142bc18d035ffa1f7e",
-      "mode": "100644",
-      "size": 11497
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/xray-types.ts",
-      "sha": "26c22737a45bc7adf821ee36a51fc09616c35acf",
-      "mode": "100644",
-      "size": 3518
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/integrations/xray.ts",
-      "sha": "f605aafa01b57d33cc409f12b73fa120397be913",
-      "mode": "100644",
-      "size": 399
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/mcp/__tests__/cache-warmer-shape.test.ts",
-      "sha": "a6d48f0e84fd8887978be97e821ef6cd3da156ed",
-      "mode": "100644",
-      "size": 8247
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/mcp/apps-resource.ts",
-      "sha": "321babbd035e010185f5a161401e1740c745a357",
-      "mode": "100644",
-      "size": 3600
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/mcp/builtin-connectors.ts",
-      "sha": "4034a57eb2c5f4615f780f3ecdbc77c56f15d892",
-      "mode": "100644",
-      "size": 10069
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/mcp/builtin/data/__tests__/integration/mcp-data.integration.test.ts",
-      "sha": "6dc60a595ef12134df028fe31348b037eec0ad49",
-      "mode": "100644",
-      "size": 4823
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/mcp/builtin/data/__tests__/register.test.ts",
-      "sha": "7fafb3baf59c28ab188eb5bedb4d15093f536a83",
-      "mode": "100644",
-      "size": 6331
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/mcp/builtin/data/__tests__/transport.test.ts",
-      "sha": "bf36ea13404961ad9a57f484d0606e2724c052ae",
-      "mode": "100644",
-      "size": 4813
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/mcp/builtin/data/connector-spec.ts",
-      "sha": "5e2a66c0079e843bfe7186160fb54bd394d9302f",
-      "mode": "100644",
-      "size": 525
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/mcp/builtin/data/register.ts",
-      "sha": "8c7a31241358c25b9eff68f9c41e277f5d6ce305",
-      "mode": "100644",
-      "size": 2653
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/mcp/builtin/data/transport.ts",
-      "sha": "cf7fec9f7199d9a8369e047f70365eb97b7e4155",
-      "mode": "100644",
-      "size": 10728
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/mcp/builtin/data/ui/__tests__/mcp-apps-data.test.ts",
-      "sha": "4965be2c50ba7975294d077ce98197ee28a58e04",
-      "mode": "100644",
-      "size": 5530
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/mcp/builtin/data/ui/schema-inspector.html",
-      "sha": "9c02984bbf134f295019904a2a86e495857403de",
-      "mode": "100644",
-      "size": 547
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/mcp/builtin/data/ui/schema-inspector.js",
-      "sha": "18a1863c5b950e5e8e30076823d982b14f639cb2",
-      "mode": "100644",
-      "size": 3841
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/mcp/builtin/data/ui/shared/host-bridge.js",
-      "sha": "ca3de37bb8e3fe9447a02a121c33b47e8ae8132b",
-      "mode": "100644",
-      "size": 3696
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/mcp/builtin/data/ui/shared/styles.css",
-      "sha": "d4aa46ce05e8731aed7048e0e8d186bebd437c47",
-      "mode": "100644",
-      "size": 1764
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/mcp/builtin/data/ui/table-inspector.html",
-      "sha": "fde74ea85ce2a6ea8666cf6310f4419465729aa2",
-      "mode": "100644",
-      "size": 798
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/mcp/builtin/data/ui/table-inspector.js",
-      "sha": "7caeca0cabc12ad3a1c10795f9e426080eca5976",
-      "mode": "100644",
-      "size": 4373
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/mcp/builtin/index.ts",
-      "sha": "942a39c3ba6c88e1b2b95abccb5a2707d4b6270a",
-      "mode": "100644",
-      "size": 952
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/mcp/cache-warmer.ts",
-      "sha": "04c311638de4b30fc5ea326185c39e10f400fe5b",
-      "mode": "100644",
-      "size": 27134
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/mcp/client.ts",
-      "sha": "407ab30f8d50d1c1a069d4037ff1440997b726b4",
-      "mode": "100644",
-      "size": 2981
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/mcp/connector-manager.ts",
-      "sha": "b48a05d1eed18c46922d423cdd99ddd22930e1aa",
-      "mode": "100644",
-      "size": 19686
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/mcp/discovery.ts",
-      "sha": "8a26a33c9db7e3ef7f64cbcbb8b4cc3a4fccb86b",
-      "mode": "100644",
-      "size": 17652
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/mcp/generated-image-persist.ts",
-      "sha": "07db60c873f330cd5c3b7038e44abffebec62ab9",
-      "mode": "100644",
-      "size": 4330
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/mcp/index.ts",
-      "sha": "081048a0baaa88f1115af81d6ce0088116be6abc",
-      "mode": "100644",
-      "size": 195
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/mcp/infographic-persist.ts",
-      "sha": "0b9289790bc338ec0f9f07b8c542e553c52a387d",
-      "mode": "100644",
-      "size": 5086
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/mcp/oauth.ts",
-      "sha": "3e70942998d72fc6d0733f7e4cec3be345a75de0",
-      "mode": "100644",
-      "size": 11782
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/mcp/presets/index.ts",
-      "sha": "fd8b1784c9dc86db5e13eefd2f5c7c307cb56cf4",
-      "mode": "100644",
-      "size": 3162
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/mcp/presets/supabase.ts",
-      "sha": "d69b423824f4b5b5c7c34a44b7208b8d9eba64fe",
-      "mode": "100644",
-      "size": 9994
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/mcp/ssrf-guard.ts",
-      "sha": "9e904416bf12b3587be77b03f5aa745b09af1a57",
-      "mode": "100644",
-      "size": 2665
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/mcp/tool-bridge.ts",
-      "sha": "6cf6ddbc88bc77656aed2fd445f7cf2dd08c4a50",
-      "mode": "100644",
-      "size": 21033
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/mcp/transport-http.ts",
-      "sha": "197ca4d9ebe462b6eac3a9ed15c4a69f2a1097ae",
-      "mode": "100644",
-      "size": 9338
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/mcp/transport-stdio.ts",
-      "sha": "f266b3059856aecb6ed2a5ec3b31764e0f48b10c",
-      "mode": "100644",
-      "size": 11025
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/mcp/transport.ts",
-      "sha": "7d1a78cc6d60f06d067d57a5bad496da9e9384f4",
-      "mode": "100644",
-      "size": 2066
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/mcp/types.ts",
-      "sha": "186908ebc47448ce770923725e96cef17e15b233",
-      "mode": "100644",
-      "size": 3193
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/auth/platform-ai-bootstrap.ts",
-      "sha": "f318372e194b6f1104cb45c2f74ade5337094fe2",
-      "mode": "100644",
-      "size": 11341
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/chat/artifact-stash.ts",
-      "sha": "5354a2a9e51611738ead3d58231913029b67d0d2",
-      "mode": "100644",
-      "size": 1891
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/chat/event-processor.ts",
-      "sha": "c2009f2adedb7759ac8047d74cc7314b0ed550cb",
-      "mode": "100644",
-      "size": 22805
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/chat/fix-error.ts",
-      "sha": "a1cc4e4b79db1f50ede8eeb63fdf6190351728ef",
-      "mode": "100644",
-      "size": 9890
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/chat/index.ts",
-      "sha": "254fe7ffcce6c4fc9e2d6a57fecf277c464e1360",
-      "mode": "100644",
-      "size": 7629
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/chat/mcp-call.ts",
-      "sha": "952fc555594093f9e3b3db866dd64e4bbbfb8f29",
-      "mode": "100644",
-      "size": 6794
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/chat/message-persistence.ts",
-      "sha": "b6e788413ba91bb6def49221d5559235927e5eaa",
-      "mode": "100644",
-      "size": 5719
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/chat/misc-routes.ts",
-      "sha": "7db168e4d907bac3267e0e2fec4ece17a2cda5df",
-      "mode": "100644",
-      "size": 16490
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/chat/post-processing.ts",
-      "sha": "1146a2451515eb69b8e9824abf37d9dcc5af1c6f",
-      "mode": "100644",
-      "size": 10825
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/chat/queue.ts",
-      "sha": "44ad0d62a69244fee4213277b906829c77732cb3",
-      "mode": "100644",
-      "size": 3796
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/chat/send-handler.ts",
-      "sha": "13067c7d10df1337ba7bee9f8afe56b76a8787d4",
-      "mode": "100644",
-      "size": 52078
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/chat/send-helpers.ts",
-      "sha": "de5a5abebbfc059a4511cd6caa21ba1e0a0aa372",
-      "mode": "100644",
-      "size": 12120
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/chat/session-manager.ts",
-      "sha": "b69856d3f8622718647a7a12d015e82f80a5cf80",
-      "mode": "100644",
-      "size": 13748
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/chat/session-state.ts",
-      "sha": "e176f71f8753a02e8969503d0594c0d53f240a66",
-      "mode": "100644",
-      "size": 3118
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/chat/stream-buffer.ts",
-      "sha": "0d9eba1e11a97b3213832f25d611b67bb86c043c",
-      "mode": "100644",
-      "size": 2452
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/chat/stream-recovery.supabase-gate.test.ts",
-      "sha": "f02fdebe6b97da3b697d7ee038f56c7f728f3bbe",
-      "mode": "100644",
-      "size": 4771
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/chat/stream-recovery.ts",
-      "sha": "33555178de98674a92e2c67bf5024b667afc5cd8",
-      "mode": "100644",
-      "size": 20908
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/chat/suggestions.ts",
-      "sha": "816b6d3c1f3d20224a8f2a5648bc1897a9e014b7",
-      "mode": "100644",
-      "size": 10365
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/chat/system-prompts.ts",
-      "sha": "1c3abd535350ee1bef0c230c52c50079c02d54f6",
-      "mode": "100644",
-      "size": 35226
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/chat/tool-callbacks.test.ts",
-      "sha": "a3b710a4e4a4b5ab9808556bd480cfd35910b320",
-      "mode": "100644",
-      "size": 7267
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/chat/tool-callbacks.ts",
-      "sha": "736e97bcf8735993ba049426d8aaf708cd50d17c",
-      "mode": "100644",
-      "size": 38044
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/chat/tool-event-bookkeeping.ts",
-      "sha": "f8b13f4b927aea44525dcace56a809276c813f16",
-      "mode": "100644",
-      "size": 3502
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/chat/traces.ts",
-      "sha": "1335de0b657ba1048e7d7ef9ba57ad063109d9d7",
-      "mode": "100644",
-      "size": 3902
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/chat/types.ts",
-      "sha": "8c76d00d120e091817d0cbdf3bef221c6de278b0",
-      "mode": "100644",
-      "size": 5113
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/chat/user-input-registry.ts",
-      "sha": "6f4109347ac30e1357a22427040ca7b11080e312",
-      "mode": "100644",
-      "size": 7760
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/compat-proxy.ts",
-      "sha": "751590170921d9eb2fe83b4497c7b1a6ef23f427",
-      "mode": "100644",
-      "size": 8897
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/context.ts",
-      "sha": "552ef7c4251d1cb464cb61730097159fe4ed349b",
-      "mode": "100644",
-      "size": 8668
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/integrations-admin.ts",
-      "sha": "82538892891afd1cd45368e51abb5f871dab8614",
-      "mode": "100644",
-      "size": 27316
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/integrations-catalog.ts",
-      "sha": "ce092eae3e0f2ac96a3725f32a6b83893d9136d9",
-      "mode": "100644",
-      "size": 6657
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/integrations-connections.ts",
-      "sha": "748fe5d8afef2e4d2531ae93adba8747f129218a",
-      "mode": "100644",
-      "size": 13313
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/integrations-oauth.ts",
-      "sha": "c158bb799e86e658a9cff553db9c8519b02fdb7b",
-      "mode": "100644",
-      "size": 8809
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/integrations.ts",
-      "sha": "eb1e5297a630b80aef98c10cbae9bf55b3cff040",
-      "mode": "100644",
-      "size": 800
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/mcp-apps-data.ts",
-      "sha": "f01b197f66b9520eeb8b5417c4ca1cb1d88e0a3f",
-      "mode": "100644",
-      "size": 2440
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/plan.ts",
-      "sha": "85ffcc681be6f19b61c32a8c480d4651c7624b26",
-      "mode": "100644",
-      "size": 8237
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/provider-bridge.ts",
-      "sha": "0906f6c10213c6224969ac45d10b06785e64d6e7",
-      "mode": "100644",
-      "size": 6027
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/provider-catalog.ts",
-      "sha": "ae7f2cc8e456627226466495a348261453c12713",
-      "mode": "100644",
-      "size": 4079
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/sandbox-rules.ts",
-      "sha": "267324003df3131c5d76da36d260f5acd9cd7d8d",
-      "mode": "100644",
-      "size": 6472
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/skills.ts",
-      "sha": "6f93fedd37dc3a8b079c96d9ed57581c9de3baba",
-      "mode": "100644",
-      "size": 13754
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/routes/workspaces/sandbox.ts",
-      "sha": "51b2515a0c931b02e1ce9caea3aceccbd15f9644",
-      "mode": "100644",
-      "size": 7175
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/sandbox/__tests__/orchestrator.test.ts",
-      "sha": "48e4e02199e03b82014a8b538806c67d94ed7bcf",
-      "mode": "100644",
-      "size": 7332
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/sandbox/__tests__/profile-shapes.test.ts",
-      "sha": "e97468d150625ca733f0c92be45e56d0e15aa76b",
-      "mode": "100644",
-      "size": 4512
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/sandbox/audit.ts",
-      "sha": "b4c5335944ffb8cd2d10e65ee33800eefdcaa977",
-      "mode": "100644",
-      "size": 2697
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/sandbox/backend-resolver.ts",
-      "sha": "1e4b79f2405231f9114175abbdf22ba6e43a70ea",
-      "mode": "100644",
-      "size": 2603
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/sandbox/boot-probe.ts",
-      "sha": "7e177bb5709344a4e783e73b1ba277f33161a030",
-      "mode": "100644",
-      "size": 2465
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/sandbox/orchestrator.ts",
-      "sha": "8579b6e0aaf48c7508589d4af3f24bd3a831949f",
-      "mode": "100644",
-      "size": 10549
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/sandbox/profile-resolver.ts",
-      "sha": "e5057478daa60c2fe374646daee295b2f650071a",
-      "mode": "100644",
-      "size": 2908
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/sandbox/profiles/ai-bash.ts",
-      "sha": "e0c800bfc38726209d82ce1a4ee125ed53e9176c",
-      "mode": "100644",
-      "size": 3466
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/sandbox/profiles/build.ts",
-      "sha": "ab3d6f7d16ce46a04f706671db0e7d97a950d293",
-      "mode": "100644",
-      "size": 5487
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/sandbox/profiles/constants.ts",
-      "sha": "898fc663fc2a9e73d484972a92f1f046d4f62894",
-      "mode": "100644",
-      "size": 534
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/sandbox/profiles/index.ts",
-      "sha": "68fd29390dfd46797400f8edf6c426e2080461a9",
-      "mode": "100644",
-      "size": 1222
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/sandbox/profiles/install.ts",
-      "sha": "4a9b3320b0750c9158c5faa731174324c1b33859",
-      "mode": "100644",
-      "size": 3182
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/sandbox/profiles/vite-preview.ts",
-      "sha": "71412ca684aa8e1d2124d8008f6d8b1564df17b5",
-      "mode": "100644",
-      "size": 4346
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/sandbox/queries.ts",
-      "sha": "cbc409bf300c9dd4f6366ae20eb0d7967ae9d5ab",
-      "mode": "100644",
-      "size": 4779
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/sandbox/rule-matcher.ts",
-      "sha": "84abfbebbc18698a2301bb06e66f9eaaa6467c5b",
-      "mode": "100644",
-      "size": 3856
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/sandbox/system-rules.ts",
-      "sha": "ea532809a73ec59644a00597d7984a8a1dc2b55e",
-      "mode": "100644",
-      "size": 6510
-    },
-    {
-      "root": "doable-source",
-      "path": "services/api/src/sandbox/workspace-rules.ts",
-      "sha": "cfadf8006f0cc97b17e03c85b084b02f012b29f0",
-      "mode": "100644",
-      "size": 5386
-    },
     {
       "root": "dependency-closure",
       "path": "packages/db/migrations/004_analytics.sql",
@@ -5502,6 +3102,2746 @@
       "size": 9155
     },
     {
+      "root": "doable-source-extensions",
+      "path": "security/api-route.ts",
+      "sha": "33ed8a258e21b434309a9b352ca0042ee4c36c0c",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "sha": "b0d5840984b166bac567e3bf303a6bf946b41ebc",
+      "mode": "100644",
+      "path": "mcp-servers/_shared/ui.mjs"
+    },
+    {
+      "root": "doable-source",
+      "sha": "6edd9c34f9df4cc2d6e437f5c410bee96af5c745",
+      "mode": "100644",
+      "path": "mcp-servers/markdown-builder/index.mjs"
+    },
+    {
+      "root": "doable-source",
+      "sha": "7fb9a096961bfa795694bfcc2f967798a2a137da",
+      "mode": "100644",
+      "path": "mcp-servers/markdown-builder/package.json"
+    },
+    {
+      "root": "doable-source",
+      "sha": "9fd4f6ba6ce4d69ff3347b1f3f7c2ec45faf1585",
+      "mode": "100644",
+      "path": "mcp-servers/markdown-builder/README.md"
+    },
+    {
+      "root": "doable-source",
+      "sha": "bf4d0e3262906bb5b8443663a05273b8ee3c57e1",
+      "mode": "100644",
+      "path": "mcp-servers/markdown-builder/skills/SKILL.md"
+    },
+    {
+      "root": "doable-source",
+      "sha": "459cb509af15ba92ff4719f0866d6f686954c963",
+      "mode": "100644",
+      "path": "mcp-servers/notebooklm/server/package.json"
+    },
+    {
+      "root": "doable-source",
+      "sha": "29c487704e3d39c222baa2a78f566470047617af",
+      "mode": "100644",
+      "path": "mcp-servers/notebooklm/server/public/infographic-viewer.html"
+    },
+    {
+      "root": "doable-source",
+      "sha": "939f1d5b06dd7b879baa7f12f90aa74465ee65ec",
+      "mode": "100644",
+      "path": "mcp-servers/notebooklm/server/src/mcp-app.html"
+    },
+    {
+      "root": "doable-source",
+      "sha": "18317b38ffb87a780f2d7530ea88e658dceb04ba",
+      "mode": "100644",
+      "path": "mcp-servers/notebooklm/server/src/mcp-app.ts"
+    },
+    {
+      "root": "doable-source",
+      "sha": "3db96ec8cd054f1b1952e22ac5031635359fb243",
+      "mode": "100644",
+      "path": "mcp-servers/notebooklm/server/src/native_fetch_client.ts"
+    },
+    {
+      "root": "doable-source",
+      "sha": "8bd32b188323b53cc9e42ec35566ad32bee7210e",
+      "mode": "100644",
+      "path": "mcp-servers/notebooklm/server/src/notebooklm_client.ts"
+    },
+    {
+      "root": "doable-source",
+      "sha": "723be75908b666b1a2562de876b3cc3b63357ae1",
+      "mode": "100644",
+      "path": "mcp-servers/notebooklm/server/src/playwright_transport.ts"
+    },
+    {
+      "root": "doable-source",
+      "sha": "b7f1238e06b628ff15da6747e2ccc533482f7d89",
+      "mode": "100644",
+      "path": "mcp-servers/notebooklm/server/src/server.ts"
+    },
+    {
+      "root": "doable-source",
+      "sha": "2dfd8e884c018abcc9666affa87a6e719a5469a3",
+      "mode": "100644",
+      "path": "mcp-servers/notebooklm/server/src/setup_auth.ts"
+    },
+    {
+      "root": "doable-source",
+      "sha": "993a78ca85934d9b462538e01d737b495c625746",
+      "mode": "100644",
+      "path": "mcp-servers/notebooklm/server/src/test_summary.ts"
+    },
+    {
+      "root": "doable-source",
+      "sha": "b13480401f5ba24b68fa658dc55302ebf9ad5830",
+      "mode": "100644",
+      "path": "mcp-servers/notebooklm/server/src/user-manager.ts"
+    },
+    {
+      "root": "doable-source",
+      "sha": "587bbad309e6211dedd880b56f65a020a6df4cb4",
+      "mode": "100644",
+      "path": "mcp-servers/notebooklm/server/src/ws_transport.ts"
+    },
+    {
+      "root": "doable-source",
+      "sha": "28d57cc8f93d1dc954f77315ded61db2e44ada79",
+      "mode": "100644",
+      "path": "mcp-servers/notebooklm/server/tsconfig.json"
+    },
+    {
+      "root": "doable-source",
+      "sha": "acdefda47ec88a117891f4fea0ac5eed1ce6a988",
+      "mode": "100644",
+      "path": "mcp-servers/notebooklm/server/vite.config.ts"
+    },
+    {
+      "root": "doable-source",
+      "sha": "8ea5b98eae281b50d55d3d9fcd6c10203656ed49",
+      "mode": "100644",
+      "path": "mcp-servers/pdf-builder/index.mjs"
+    },
+    {
+      "root": "doable-source",
+      "sha": "cbdd53dd794c6f869ca8bbafaa7ca3ec4b25093c",
+      "mode": "100644",
+      "path": "mcp-servers/pdf-builder/package.json"
+    },
+    {
+      "root": "doable-source",
+      "sha": "305bc101db4ed7331525ed6f08a918d2935f8920",
+      "mode": "100644",
+      "path": "mcp-servers/pdf-builder/README.md"
+    },
+    {
+      "root": "doable-source",
+      "sha": "bc97c73a0d723d73862e881a8d390d4fa71f676a",
+      "mode": "100644",
+      "path": "mcp-servers/pdf-builder/skills/SKILL.md"
+    },
+    {
+      "root": "doable-source",
+      "sha": "3671503c24af1a7c97544dd34c23d91ae5a03f03",
+      "mode": "100644",
+      "path": "mcp-servers/presentation-builder/index.mjs"
+    },
+    {
+      "root": "doable-source",
+      "sha": "a621c030769fcc67c9dfe9defed2e45fd4562d75",
+      "mode": "100644",
+      "path": "mcp-servers/presentation-builder/package.json"
+    },
+    {
+      "root": "doable-source",
+      "sha": "fb6f5996bd39db4fb6bf0d38dac7d90272a7f5f1",
+      "mode": "100644",
+      "path": "mcp-servers/presentation-builder/presentation-engine.mjs"
+    },
+    {
+      "root": "doable-source",
+      "sha": "fb340e2891dc8d311fed1bf8996bf7f52a1126e9",
+      "mode": "100644",
+      "path": "mcp-servers/presentation-builder/README.md"
+    },
+    {
+      "root": "doable-source",
+      "sha": "d17823b14d6b0eb3a7b17417d889e9b285dac863",
+      "mode": "100644",
+      "path": "mcp-servers/spreadsheet-builder/index.mjs"
+    },
+    {
+      "root": "doable-source",
+      "sha": "36fe726719b90c5bf4d628f1ee7a7218a18b33c1",
+      "mode": "100644",
+      "path": "mcp-servers/spreadsheet-builder/package.json"
+    },
+    {
+      "root": "doable-source",
+      "sha": "6347c239cdf9ebf49ca64f147acd83421202c643",
+      "mode": "100644",
+      "path": "mcp-servers/spreadsheet-builder/README.md"
+    },
+    {
+      "root": "doable-source",
+      "sha": "8a0b0374cd1b63375bd44b74356077892f4b128a",
+      "mode": "100644",
+      "path": "mcp-servers/spreadsheet-builder/skills/SKILL.md"
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/doable-ai/package.json",
+      "sha": "df55abb7b599fceae2d5a88d85e39997aae94cc3",
+      "mode": "100644",
+      "size": 440
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/doable-ai/src/index.test.ts",
+      "sha": "6b540ecb325c27e6182b23a5ba810ec75743257f",
+      "mode": "100644",
+      "size": 8114
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/doable-ai/src/index.ts",
+      "sha": "44c559c1815b3b123a4e09abee2c2b96634b7ba6",
+      "mode": "100644",
+      "size": 23333
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/doable-ai/src/mcp-agent.test.ts",
+      "sha": "e01cd93c976760a3059f8bd112568f3d08a0cf27",
+      "mode": "100644",
+      "size": 5374
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/doable-ai/src/thinking.test.ts",
+      "sha": "5e290026df8c47d19436fe12b1e4d54a12b408db",
+      "mode": "100644",
+      "size": 7929
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/doable-ai/src/thinking.ts",
+      "sha": "19c93b11648b7f6a9311ed37e1e31ce68defcf91",
+      "mode": "100644",
+      "size": 11815
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/doable-ai/tsconfig.json",
+      "sha": "31147d0d6e935984d668e5432ce7b372e603592e",
+      "mode": "100644",
+      "size": 377
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/doable-sdk/package.json",
+      "sha": "5d59763b5e596127a0b47da1b1338e0f914f6647",
+      "mode": "100644",
+      "size": 632
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/doable-sdk/src/index.ts",
+      "sha": "64cff023fb8650ebc81987a7e851aeb08114fc42",
+      "mode": "100644",
+      "size": 28703
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/doable-sdk/src/react.ts",
+      "sha": "c9354071875c12dddc7d50a172dfdee7cf9c5559",
+      "mode": "100644",
+      "size": 5048
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/doable-sdk/src/server.ts",
+      "sha": "ba126e19b93cee66f0fb3fa87d751e762f5b6916",
+      "mode": "100644",
+      "size": 7308
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/doable-sdk/tsconfig.json",
+      "sha": "b4359a14fb5409ca8de418fa7b618a1c1dad8b11",
+      "mode": "100644",
+      "size": 388
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/docore/.gitignore",
+      "sha": "dbc703e307a98f0cac48b8e930de4f2b906141b2",
+      "mode": "100644",
+      "size": 403
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/docore/package.json",
+      "sha": "4477a4ac06be9c076cd4cda0b31efb82a9ced2bc",
+      "mode": "100644",
+      "size": 819
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/docore/src/backends/direct.ts",
+      "sha": "d81c2d8a1c9bcee12a387b554bce817330140910",
+      "mode": "100644",
+      "size": 1394
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/docore/src/backends/index.ts",
+      "sha": "7350c0ca810c949aca0ad26acc2408df5651a8de",
+      "mode": "100644",
+      "size": 391
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/docore/src/backends/jobobject.ts",
+      "sha": "267eb2b910a0934312cc5bca5d97fde0ebf84595",
+      "mode": "100644",
+      "size": 6030
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/docore/src/backends/nsjail.ts",
+      "sha": "4b90ae1fa54944718424852b6f9f352b256f218a",
+      "mode": "100644",
+      "size": 4531
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/docore/src/backends/systemd.ts",
+      "sha": "1bfbe34d33b90ba496a7bfde628af95d0ac4f8d6",
+      "mode": "100644",
+      "size": 2278
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/docore/src/backends/types.ts",
+      "sha": "1aee50a79c8f3f29dc1c5057829e13430b68167a",
+      "mode": "100644",
+      "size": 1744
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/docore/src/backends/unshare.ts",
+      "sha": "9180b888fee9a2821d574e1e25896502975d7a48",
+      "mode": "100644",
+      "size": 4805
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/docore/src/cli.ts",
+      "sha": "2618aa3b22e989d1a3857aa94181b24c9fc6e751",
+      "mode": "100644",
+      "size": 15855
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/docore/src/docore-server.ts",
+      "sha": "47882e7da86ede2a382a36484e66f1cd325aa74c",
+      "mode": "100644",
+      "size": 5185
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/docore/src/engine.ts",
+      "sha": "9c4d92f7dcec76b456be7261bcf91e7cb9d0d361",
+      "mode": "100644",
+      "size": 15931
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/docore/src/event-bus.ts",
+      "sha": "eb03d4e82310820dd7072ee3390d305f199bf7dc",
+      "mode": "100644",
+      "size": 1763
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/docore/src/event-mapper.ts",
+      "sha": "e1fbb0b409c65be698bcc278a55c220d2614ea11",
+      "mode": "100644",
+      "size": 21049
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/docore/src/events.ts",
+      "sha": "420c80505fceaab99ddc800717dcd11adfa71166",
+      "mode": "100644",
+      "size": 21269
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/docore/src/index.ts",
+      "sha": "b7c6910573859fe5056f3a1934f2010810080d4d",
+      "mode": "100644",
+      "size": 4979
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/docore/src/isolator.ts",
+      "sha": "46dfc3dfb64dbae662f07a08b4366cb88450301c",
+      "mode": "100644",
+      "size": 15116
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/docore/src/policy/admin.ts",
+      "sha": "0dbb8cdd2eb5f3809eaab06d1c36781bf4c17e79",
+      "mode": "100644",
+      "size": 10551
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/docore/src/policy/defaults.ts",
+      "sha": "bd2c3a7c06de68508af66fbfea4a275285b8171b",
+      "mode": "100644",
+      "size": 4613
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/docore/src/policy/index.ts",
+      "sha": "e173dfa6fac8ff030ef933b360e11b7accea9ff8",
+      "mode": "100644",
+      "size": 679
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/docore/src/policy/merge.ts",
+      "sha": "8d5fa89c3c22611d006f8bb3fcdb508a6ffb82d5",
+      "mode": "100644",
+      "size": 2439
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/docore/src/policy/persistence.ts",
+      "sha": "87a1dabf3bdd498aa1ebbf1ded0d52e6577ff0f5",
+      "mode": "100644",
+      "size": 2203
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/docore/src/policy/store.ts",
+      "sha": "c4b74f24cea8401c9ca4a0e8e5359b68a76a92bc",
+      "mode": "100644",
+      "size": 7797
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/docore/src/policy/types.ts",
+      "sha": "7454593e6ef392b06b6900cc9faec7499c5813d8",
+      "mode": "100644",
+      "size": 5446
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/docore/src/pool.ts",
+      "sha": "97d0ff336818b7a58592004624958310201057da",
+      "mode": "100644",
+      "size": 6194
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/docore/src/sandbox.ts",
+      "sha": "98a1944cb5045fa38409659034dbac1ffbaa30d3",
+      "mode": "100644",
+      "size": 19136
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/docore/src/tracer.ts",
+      "sha": "cf23cc49c847f1e84d7f58f291cd8801c947ed9a",
+      "mode": "100644",
+      "size": 3695
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/docore/src/user-manager.ts",
+      "sha": "da224070138705a6df05cdfcfe7404c47f2200c9",
+      "mode": "100644",
+      "size": 13503
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/docore/src/worker-pool.ts",
+      "sha": "2ca8bf9399cb23a12a9aef8b9943172dba631fd2",
+      "mode": "100644",
+      "size": 14126
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/docore/tsconfig.json",
+      "sha": "00d877beecbbcfae746fd976a0240c73613b183a",
+      "mode": "100644",
+      "size": 490
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/.gitignore",
+      "sha": "f4e2c6d6b88c7ae6274995debbd9393e3444c5d9",
+      "mode": "100644",
+      "size": 34
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/package-lock.json",
+      "sha": "c5e54d6233c0e196f395e9514544c04dcca6ee04",
+      "mode": "100644",
+      "size": 1425
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/package.json",
+      "sha": "8bf0b27989716d09daf24b7a7b5546b1070a170b",
+      "mode": "100644",
+      "size": 823
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/backends/__tests__/backends.test.ts",
+      "sha": "e76e1d2ac23e81d6f77fc5842482957c51c89a86",
+      "mode": "100644",
+      "size": 6594
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/backends/apple-container.ts",
+      "sha": "260fde89c16b99bad04547c4710bd4d46b30f4fa",
+      "mode": "100644",
+      "size": 3426
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/backends/bubblewrap-v2.ts",
+      "sha": "c183e0b56ff9bdea01938e637bdb32f2801f46a5",
+      "mode": "100644",
+      "size": 13688
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/backends/bubblewrap.ts",
+      "sha": "aba463ab8c442fd61385786bdc060708d945965b",
+      "mode": "100644",
+      "size": 6901
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/backends/direct.ts",
+      "sha": "8183137368615b31ddbb1638ea83cfabd30ff3e5",
+      "mode": "100644",
+      "size": 560
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/backends/gvisor.ts",
+      "sha": "acca84262b03f1f6fc0c7ea556d457220e162f13",
+      "mode": "100644",
+      "size": 2222
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/backends/psroot-v2.ts",
+      "sha": "49a5f0a418b2db2a6479eee8a36800112ce75416",
+      "mode": "100644",
+      "size": 6475
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/backends/psroot.ts",
+      "sha": "1b9ee317dc31fbc4a23d022689a0e6dbfbbc4133",
+      "mode": "100644",
+      "size": 4779
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/backends/sandbox-backend.ts",
+      "sha": "fa319435bddbcab74466ee370c34d4f76998d114",
+      "mode": "100644",
+      "size": 10352
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/backends/sandbox-exec-v2.ts",
+      "sha": "1a1ce342bac78f847d4d8c437d0702601011dfd5",
+      "mode": "100644",
+      "size": 3320
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/backends/sandbox-exec.ts",
+      "sha": "ecd8b84a59a4a4d1b15218b512d044037bfa400b",
+      "mode": "100644",
+      "size": 3246
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/backends/systemd-v2.ts",
+      "sha": "95bf494c8b12d97814929170ffb1d293617fd870",
+      "mode": "100644",
+      "size": 3756
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/backends/systemd.ts",
+      "sha": "1f6201488a7a8300b47fe6a86889d2ef94ddb734",
+      "mode": "100644",
+      "size": 7705
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/backends/types.ts",
+      "sha": "eeb73e6cdb91f7b9a9fcc29c2ca290b2adb39abf",
+      "mode": "100644",
+      "size": 1731
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/backends/win-heap.ts",
+      "sha": "c29bf3d6bf57f0821c67b16c3010f51a66e5d17c",
+      "mode": "100644",
+      "size": 1728
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/backends/windows.ts",
+      "sha": "881977fcd6bfd8cc510de1b99514bbec15aaaee2",
+      "mode": "100644",
+      "size": 14949
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/composers/cgroup-cap.ts",
+      "sha": "711c8dee0ee46fe8ca848efcce05e59d5386fca2",
+      "mode": "100644",
+      "size": 3144
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/composers/etc-synth.ts",
+      "sha": "0d1c9cb3bd5a9c177de52632e495dd697ab76159",
+      "mode": "100644",
+      "size": 4284
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/composers/index.ts",
+      "sha": "5ed0a48181775add597dcf7473354aa036a4253e",
+      "mode": "100644",
+      "size": 1388
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/composers/landlock.ts",
+      "sha": "2390dcde8b8f886c47b0a7cdf517e38dfb4456e8",
+      "mode": "100644",
+      "size": 1629
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/composers/mac-profile.ts",
+      "sha": "2f056649f29e89d0f4de43beacc3f0792bba8ca6",
+      "mode": "100644",
+      "size": 3600
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/composers/mount-helper.ts",
+      "sha": "8a019c728982e1113f99aae6295966f6a3919674",
+      "mode": "100644",
+      "size": 2853
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/composers/nft-egress.ts",
+      "sha": "a184b33ba9fe44beee68adb88357a69e7d4f05de",
+      "mode": "100644",
+      "size": 3403
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/composers/proc-mask.ts",
+      "sha": "5c21b438ebb479abf96906858fd1a7e50dffde72",
+      "mode": "100644",
+      "size": 4680
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/composers/seccomp-bpf.ts",
+      "sha": "08418fd9857ad50076239e2dc71ce45962e8725d",
+      "mode": "100644",
+      "size": 1276
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/composers/types.ts",
+      "sha": "f3ee22f3f33538475d7a0eac6934253c7ced4984",
+      "mode": "100644",
+      "size": 570
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/config-guard.ts",
+      "sha": "730db0533a25ae76c083491aa0365f325927e5dd",
+      "mode": "100644",
+      "size": 11868
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/index.ts",
+      "sha": "72796504e10a554af8b7fd0ccf087cd9b015ae65",
+      "mode": "100644",
+      "size": 3468
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/process-jail.ts",
+      "sha": "0cabb36abc9460ff0c1dcc66854bce575a95bf4d",
+      "mode": "100644",
+      "size": 6330
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/profile.ts",
+      "sha": "551c520035d51f383ca416ee409b7159194fb91e",
+      "mode": "100644",
+      "size": 10995
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/resource-limiter.ts",
+      "sha": "0d84bee1a84d7c591c4fb25fbda88bade58467a4",
+      "mode": "100644",
+      "size": 7177
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/sandbox-registry.ts",
+      "sha": "a05a04891c206d58fb1778dd0f0565de9887a244",
+      "mode": "100644",
+      "size": 1156
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/tracer.ts",
+      "sha": "982d0180ac3e5cea7a63106ac8f005a2838f87cb",
+      "mode": "100644",
+      "size": 3684
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/types.ts",
+      "sha": "c7b2a3ac459dc38fadfba4fb6525d022367cf24b",
+      "mode": "100644",
+      "size": 9286
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/src/vault.ts",
+      "sha": "b721db5f5de465b0425b46c1a147994c76b5ac9d",
+      "mode": "100644",
+      "size": 10367
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/dovault/tsconfig.json",
+      "sha": "4d50c852abb54ea71b8e93e74b473238a60d71ab",
+      "mode": "100644",
+      "size": 484
+    },
+    {
+      "root": "doable-source",
+      "sha": "ee29c2021fe047645e2b24f6d1f4785321cd3290",
+      "mode": "100644",
+      "path": "packages/marketplace-bundle/package.json"
+    },
+    {
+      "root": "doable-source",
+      "sha": "ffa4b4610a15377b88cea14e1de1e40923ba149a",
+      "mode": "100644",
+      "path": "packages/marketplace-bundle/src/codecs/json-v1.ts"
+    },
+    {
+      "root": "doable-source",
+      "sha": "11afe38109e66061b579d34862d624d60673b12d",
+      "mode": "100644",
+      "path": "packages/marketplace-bundle/src/codecs/standards-zip.ts"
+    },
+    {
+      "root": "doable-source",
+      "sha": "2362ca39701e1acf9d7e8dcbc5b55d06c7b2d57d",
+      "mode": "100644",
+      "path": "packages/marketplace-bundle/src/index.ts"
+    },
+    {
+      "root": "doable-source",
+      "sha": "63457ad811616b013f7e351c7f12cdf5cc809b13",
+      "mode": "100644",
+      "path": "packages/marketplace-bundle/src/manifest.ts"
+    },
+    {
+      "root": "doable-source",
+      "sha": "8e3c3b14cda120890d8df9d1aa6b1ee96f4f992a",
+      "mode": "100644",
+      "path": "packages/marketplace-bundle/src/permissions.ts"
+    },
+    {
+      "root": "doable-source",
+      "sha": "19fd0131012e6c35d203a87dd6cd3520f5072c37",
+      "mode": "100644",
+      "path": "packages/marketplace-bundle/tsconfig.json"
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/shared/package.json",
+      "sha": "b538b0e3d67102236773b9dca23ed9424f1fc80a",
+      "mode": "100644",
+      "size": 524
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/shared/src/ai/index.ts",
+      "sha": "82c902b981bfd70aeb5315840d1d9308b176d52d",
+      "mode": "100644",
+      "size": 70
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/shared/src/ai/provider-catalog.ts",
+      "sha": "8eb12eb20c5bc210ebd895c5cda6ef3821521563",
+      "mode": "100644",
+      "size": 2056
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/shared/src/ai/provider-data-cloud-major.ts",
+      "sha": "aeb18be01b4f0fcd80ba39f27f68c4024d2a75db",
+      "mode": "100644",
+      "size": 14271
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/shared/src/ai/provider-data-cloud-regional.ts",
+      "sha": "a6c4eb5b31e5df7fe3c829b951cd9ed4e7e04937",
+      "mode": "100644",
+      "size": 13205
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/shared/src/ai/provider-data-cloud-special.ts",
+      "sha": "cc277d3d3efed5cb6abbfb7732d45a61fae407dc",
+      "mode": "100644",
+      "size": 7786
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/shared/src/ai/provider-data-local.ts",
+      "sha": "a1e463448ce5297a6f8810114737e0b91de07b74",
+      "mode": "100644",
+      "size": 11738
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/shared/src/ai/provider-types.ts",
+      "sha": "93cd93e748002d4064141c7dddc1777041b2d2bb",
+      "mode": "100644",
+      "size": 1823
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/shared/src/constants.ts",
+      "sha": "2d8da93ec1144d729680ec06552b3bac14bae6da",
+      "mode": "100644",
+      "size": 4501
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/shared/src/index.ts",
+      "sha": "0cfa87107cbf2af31b57dd3544bfc9d45f42f7b8",
+      "mode": "100644",
+      "size": 202
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/shared/src/kv-store.ts",
+      "sha": "18593aa790bea64fa363bb833bed4a6e8ec9f733",
+      "mode": "100644",
+      "size": 4891
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/shared/src/security/env-perms-check.ts",
+      "sha": "13a99c99993e961c484309af102481c845f02d1b",
+      "mode": "100644",
+      "size": 1149
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/shared/src/security/secret-resolver.ts",
+      "sha": "f35883c01351177d9f7f477da3fcd791c8d364eb",
+      "mode": "100644",
+      "size": 9027
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/shared/src/types/ai.ts",
+      "sha": "f1f2418ce7d1f5d812a969181f0b799a845590a5",
+      "mode": "100644",
+      "size": 5578
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/shared/src/types/api.ts",
+      "sha": "a96690c792f17d5f4ea4dd85f860ca017bf05ec8",
+      "mode": "100644",
+      "size": 4756
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/shared/src/types/index.ts",
+      "sha": "004219ff0c1fa9a37fa1bffcb2c1ecbe5a86ad29",
+      "mode": "100644",
+      "size": 7424
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/shared/src/types/mcp.ts",
+      "sha": "ca61af362ebafc9ff1f0f3297d573b2a910ed8a7",
+      "mode": "100644",
+      "size": 1008
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/shared/src/types/ws.ts",
+      "sha": "e7023b3c1ba2381e497f4fa9297b176b1e9fbbf6",
+      "mode": "100644",
+      "size": 4346
+    },
+    {
+      "root": "doable-source",
+      "path": "packages/shared/tsconfig.json",
+      "sha": "7925af491d1eae46b3f34ab7f3a979eb19c444e4",
+      "mode": "100644",
+      "size": 231
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/__fixtures__/per-app-db/db-aware-app.json",
+      "sha": "2f715f670cada2dd68a7aca3dcdd1d4c419571b8",
+      "mode": "100644",
+      "size": 204
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/__tests__/app-ai-prompt.test.ts",
+      "sha": "b7640379abda9f6d31c0c80e0751fc2387c0bbb2",
+      "mode": "100644",
+      "size": 2884
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/__tests__/app-db-prompt.test.ts",
+      "sha": "bf6d3adb3a42b96e1b57343d49ad2878abccf898",
+      "mode": "100644",
+      "size": 3507
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/__tests__/system-skills.test.ts",
+      "sha": "dfe48b1c2b167edd1e9c08c7c0a2cacf66dd18a6",
+      "mode": "100644",
+      "size": 6578
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/app-ai-prompt.ts",
+      "sha": "366dde9a36acfa0a74851f181281ca74babf1ac5",
+      "mode": "100644",
+      "size": 9080
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/app-db-prompt.ts",
+      "sha": "765dfcb92f3962a560ec5478b29178e8952d7dff",
+      "mode": "100644",
+      "size": 10111
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/attachments.ts",
+      "sha": "8b6b8bc43cfe56984f1827e34c14df7b8c894458",
+      "mode": "100644",
+      "size": 14640
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/build.ts",
+      "sha": "2c227410be79c11f15f092a56a038d09465db3ad",
+      "mode": "100644",
+      "size": 7388
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/context-builder.ts",
+      "sha": "704c7cbedc06d9f7970e11c6b3848c0ceef12b39",
+      "mode": "100644",
+      "size": 13109
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/context/defaults.ts",
+      "sha": "e736cde7bbb0b6f0aeea8509349cc66aa01c4f7a",
+      "mode": "100644",
+      "size": 4348
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/context/index.ts",
+      "sha": "e837b9903e29da8c9cd5ac489b44d9c369802011",
+      "mode": "100644",
+      "size": 2754
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/context/injector.ts",
+      "sha": "f4a769ce8d805bed731ca54e9b0c15e51d4e6da2",
+      "mode": "100644",
+      "size": 4738
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/docore-bridge.ts",
+      "sha": "ab8debcf2b0a5a62b7e4e6963986c88f67d7bd98",
+      "mode": "100644",
+      "size": 5362
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/embedding-resolver.ts",
+      "sha": "44a0918fdbca92060943523342d37ea5cde2fcc3",
+      "mode": "100644",
+      "size": 5705
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/engine-resolver.ts",
+      "sha": "9702bb55c8ef385ad648f957849a18642af48665",
+      "mode": "100644",
+      "size": 12471
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/engine-types.ts",
+      "sha": "a8f00d43541b6f72852ee736935dbe13ac7b8725",
+      "mode": "100644",
+      "size": 2678
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/engine.ts",
+      "sha": "3989bd817d2e013b80cf3bf5fc6a495477187d0a",
+      "mode": "100644",
+      "size": 6609
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/framework-prompts/index.ts",
+      "sha": "a659ffb77a9c9e408e62a5f9baf04cc7bc9b2d8f",
+      "mode": "100644",
+      "size": 1341
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/framework-prompts/nextjs-app.ts",
+      "sha": "afd8a1114f0ba42203fee51739945175e5db5e83",
+      "mode": "100644",
+      "size": 17276
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/framework-prompts/vite-react.ts",
+      "sha": "80aadc857582a6bd6216fdf4b7497cc63165835d",
+      "mode": "100644",
+      "size": 33581
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/modes/agent.ts",
+      "sha": "8fa6bb4ef20b3ec8f7f13f4df4d07f505e4446bf",
+      "mode": "100644",
+      "size": 5056
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/modes/plan.ts",
+      "sha": "8af75461d2f7270a93f91bfeae4ec0f9bec5deb0",
+      "mode": "100644",
+      "size": 9969
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/plan-parser.ts",
+      "sha": "6579f1eeee7703d62a4e567643232e4eef0d7e92",
+      "mode": "100644",
+      "size": 3864
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/preview-errors.ts",
+      "sha": "95ef9701e9355c355e5f6d10df9bb99a3bf266f8",
+      "mode": "100644",
+      "size": 22457
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/project-files.ts",
+      "sha": "ece636d83bbae1e7b667e43f5930590c95f3e26b",
+      "mode": "100644",
+      "size": 13704
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/prompts/system.ts",
+      "sha": "605e8835f0d6d47856c8a246a67db9033d9063af",
+      "mode": "100644",
+      "size": 3073
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/provider-discovery-helpers.ts",
+      "sha": "034eb189e8f0e5e37b17d9cd58823d12e077ed8d",
+      "mode": "100644",
+      "size": 6330
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/provider-discovery.ts",
+      "sha": "1b97d69b1d9528d7d192760f894f2bb812b43dad",
+      "mode": "100644",
+      "size": 9688
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/provider.ts",
+      "sha": "04d3ce8094416737d16260124a1737676993c114",
+      "mode": "100644",
+      "size": 3144
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/providers/anthropic-helpers.ts",
+      "sha": "238ae812a6b5e97566c1288cf179fe58d12020e8",
+      "mode": "100644",
+      "size": 3031
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/providers/anthropic-types.ts",
+      "sha": "573075fd87253bb5d79b2304a9c73b9961bf321b",
+      "mode": "100644",
+      "size": 931
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/providers/anthropic.ts",
+      "sha": "b7871d937686b5611425dcdceebd7a629a83f422",
+      "mode": "100644",
+      "size": 9514
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/providers/copilot-engine.ts",
+      "sha": "7b74db6c5b7897dbd9af897b1547d68d17318f1e",
+      "mode": "100644",
+      "size": 30903
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/providers/copilot-manager.ts",
+      "sha": "a8e46c221c4758cac0181b815f283c5a93e3af27",
+      "mode": "100644",
+      "size": 8986
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/providers/copilot-tool-loader.ts",
+      "sha": "fea49f4e2bc77a06d5bed9049cabafc7a3a75610",
+      "mode": "100644",
+      "size": 11734
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/providers/copilot-tools.ts",
+      "sha": "3f363a28ba1f3653f53bb53aae7a35c2677c1b42",
+      "mode": "100644",
+      "size": 29925
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/providers/copilot.ts",
+      "sha": "6d6b7f846325b464275aa774261f422dac2978d1",
+      "mode": "100644",
+      "size": 743
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/rate-limit-state.ts",
+      "sha": "e8d68fc3282f42833739d842a9ad34df85ba28ed",
+      "mode": "100644",
+      "size": 1145
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/runtime-config.ts",
+      "sha": "14582c5515b8322c97d10165ee9c6f336d52ff54",
+      "mode": "100644",
+      "size": 2260
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/skills-materializer.ts",
+      "sha": "a96df360e93854407e702b9bf569279bfeb057a4",
+      "mode": "100644",
+      "size": 8531
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/skills/_system/ai-testing/SKILL.md",
+      "sha": "8973cd5e1f827dfbfd6d040e5035b084173a863b",
+      "mode": "100644",
+      "size": 62962
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/skills/_system/business-card-maker/SKILL.md",
+      "sha": "b1567ff8576d3500548be1e60dfd8bcc1be4b712",
+      "mode": "100644",
+      "size": 37861
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/skills/_system/competitor-analysis/SKILL.md",
+      "sha": "bd4b0c2b328c4b44ab82fae0f42cd81b5f4eed0c",
+      "mode": "100644",
+      "size": 13129
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/skills/_system/ecommerce-website/SKILL.md",
+      "sha": "59465ef99b73d59aeaf72835d524cea53bf7b4d2",
+      "mode": "100644",
+      "size": 101556
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/skills/_system/event-invite-maker/SKILL.md",
+      "sha": "c79351677b32cf02588ffeccaf1610a81e31c0f4",
+      "mode": "100644",
+      "size": 39580
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/skills/_system/greeting-card/SKILL.md",
+      "sha": "e9962d63a3eb898026864892cdbca296b13731aa",
+      "mode": "100644",
+      "size": 37269
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/skills/_system/inbuilt-database/SKILL.md",
+      "sha": "78374ff859d397166bb33d5663311085bd0fb107",
+      "mode": "100644",
+      "size": 7064
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/skills/_system/magazine-flipbook/SKILL.md",
+      "sha": "b67bf0aba7b3dbec33a2395e7af6c3c80887c5c3",
+      "mode": "100644",
+      "size": 39606
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/skills/_system/newsletter-template/SKILL.md",
+      "sha": "959974c01ce516de57b62de9d67e665e9cddaa15",
+      "mode": "100644",
+      "size": 10212
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/skills/_system/README.md",
+      "sha": "ebb19bb04a0dfda2fdfa2832bb25cab16133b6e2",
+      "mode": "100644",
+      "size": 5396
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/skills/_system/remotion-video-creation/references/advanced-integrations.md",
+      "sha": "628b4ebffdb73871265f179829eba3348318bf8d",
+      "mode": "100644",
+      "size": 5696
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/skills/_system/remotion-video-creation/references/data-and-social.md",
+      "sha": "447e2c3a0faafad0258f8ec34b44dc2616327dfa",
+      "mode": "100644",
+      "size": 7637
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/skills/_system/remotion-video-creation/references/programmatic-video.md",
+      "sha": "ad4a1ca7563e5974b88b5fdfbd01805ed10ca067",
+      "mode": "100644",
+      "size": 6262
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/skills/_system/remotion-video-creation/references/rendering-deployment.md",
+      "sha": "efe0bd5d8aa2870b89aaa6c8bb26c113876c761b",
+      "mode": "100644",
+      "size": 5522
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/skills/_system/remotion-video-creation/references/video-types.md",
+      "sha": "b69879f2de64b513ef073a1d8bf9e2930c530c83",
+      "mode": "100644",
+      "size": 5384
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/skills/_system/remotion-video-creation/SKILL.md",
+      "sha": "9047a7e34028b24f5a7526aa2a3e244bd212fc4a",
+      "mode": "100644",
+      "size": 25640
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/skills/_system/resume-cv/SKILL.md",
+      "sha": "417301f62ec63b478b5e2d9fd0f55e1a72551ba1",
+      "mode": "100644",
+      "size": 92043
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/skills/nextjs-app/connector-fetch.md",
+      "sha": "9d9e838070dd425d33ee3613516b99cfae9510ba",
+      "mode": "100644",
+      "size": 3369
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/skills/nextjs-app/env-conventions.md",
+      "sha": "678ebb5fa74a2a16b84969cfa52959afde0a93d4",
+      "mode": "100644",
+      "size": 2696
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/skills/nextjs-app/route-handlers.md",
+      "sha": "34e8df075a08a4a2cb76a39dcac605e205a362ec",
+      "mode": "100644",
+      "size": 2715
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/skills/nextjs-app/server-actions.md",
+      "sha": "1a8d49b50314ca1ac41150e29c97fb94a19f8436",
+      "mode": "100644",
+      "size": 2803
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/skills/vite-react/connector-proxy-fetch.md",
+      "sha": "f7e3049783cf8a3c1f42a1a1c6cae28360a8ce9e",
+      "mode": "100644",
+      "size": 2929
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/skills/vite-react/mcp-tools.md",
+      "sha": "d014c49a8627e9bdbdba6ddd3cec17799980b3ad",
+      "mode": "100644",
+      "size": 6128
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/skills/vite-react/pwa-builder.md",
+      "sha": "2f817d16d28254618f6d9550d557efe27a88e843",
+      "mode": "100644",
+      "size": 15211
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/sse-mapper.ts",
+      "sha": "219a5e52f7070e15e2980c71da0ad4de412d3513",
+      "mode": "100644",
+      "size": 14723
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/streaming.ts",
+      "sha": "96f49e46a7a6d0c15c259f93e0ec2d55836a27bb",
+      "mode": "100644",
+      "size": 2795
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/system-skills.ts",
+      "sha": "71460dd3cde87759e6f04775dc854d91914c7b36",
+      "mode": "100644",
+      "size": 6280
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/thumbnail.ts",
+      "sha": "680c1a2b96d83e92bb736a68346d21d1f6d741b5",
+      "mode": "100644",
+      "size": 4582
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/tool-messages.ts",
+      "sha": "1a90d49c923249bc41e7e3bbbc43d7161db45913",
+      "mode": "100644",
+      "size": 16438
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/tools/bash.ts",
+      "sha": "b8cab4ad15e6d74185f9338f4407799e05e4f76d",
+      "mode": "100644",
+      "size": 4719
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/tools/create-file.ts",
+      "sha": "ae077d47901723cd9d025ae908ce96c719224540",
+      "mode": "100644",
+      "size": 1889
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/tools/delete-file.ts",
+      "sha": "240c858804cf0341f8a463ae3220e2341b7fbbe7",
+      "mode": "100644",
+      "size": 638
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/tools/edit-file.ts",
+      "sha": "d47fe625dc279e23ac7282efdae1d2bdffa621c5",
+      "mode": "100644",
+      "size": 3720
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/tools/index.ts",
+      "sha": "d5bd2097528fd90623f6e5e11fcb07a4eda0cd4a",
+      "mode": "100644",
+      "size": 3242
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/tools/install-package.ts",
+      "sha": "2bd5bfab8fc2deb1700040f54eecd577fabd9e33",
+      "mode": "100644",
+      "size": 11615
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/tools/list-files.ts",
+      "sha": "6087424cb84322f3a9b4601d942ccbde77566eee",
+      "mode": "100644",
+      "size": 1255
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/tools/plan-tools.ts",
+      "sha": "3c95d396afdfddf906f610a92cbc547775e91267",
+      "mode": "100644",
+      "size": 6897
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/tools/read-file.ts",
+      "sha": "2ecf228286d2d5753180eceb003cca17f85adf22",
+      "mode": "100644",
+      "size": 1520
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/tools/run-build.ts",
+      "sha": "3e7234bb2921b729ff9ff2821b6a5104d2201a9f",
+      "mode": "100644",
+      "size": 1406
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/tools/search-files.ts",
+      "sha": "f7e30a9c552a32920502e00136913d487c85dbc1",
+      "mode": "100644",
+      "size": 4070
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/tools/validate-syntax.ts",
+      "sha": "bdb84682290610f6f1981a2396e5f19ab8be761f",
+      "mode": "100644",
+      "size": 3921
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/trace-collector.ts",
+      "sha": "d11779268f18af7b8f3d9fb8e6be754f1f3dd57f",
+      "mode": "100644",
+      "size": 647
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/trace-factory.ts",
+      "sha": "c28c74e2b4a9dec55ce06df4b5411aabf297c582",
+      "mode": "100644",
+      "size": 19635
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/trace-infra.ts",
+      "sha": "beacac4ff24af5cbfa5f4db3b7c8f2cf8b01a51f",
+      "mode": "100644",
+      "size": 15429
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/trace-types.ts",
+      "sha": "870ddde8811d753ed00e1bb3b51306a4aec1ff6a",
+      "mode": "100644",
+      "size": 3054
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/usage-collector.ts",
+      "sha": "d20c5e1074238be7750347566b060b3e796ba591",
+      "mode": "100644",
+      "size": 15392
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/ai/yjs-bridge.ts",
+      "sha": "884772a72b86622059dc04c61240a42bfc791f5e",
+      "mode": "100644",
+      "size": 3565
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/context/defaults-core.ts",
+      "sha": "d9cae9c8e097aba093f63bb912be85872253bde6",
+      "mode": "100644",
+      "size": 6707
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/context/defaults-extended.ts",
+      "sha": "d4ca87407cf713d7de563ab4a9726e6cdf1b0b11",
+      "mode": "100644",
+      "size": 5353
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/context/defaults.ts",
+      "sha": "ed0f76aa0e224fc8d9407bcdb8a88e9dfebdcc65",
+      "mode": "100644",
+      "size": 1047
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/context/injector.ts",
+      "sha": "2a8a639aa854a980ea6bf855494b3d0e4d706aa3",
+      "mode": "100644",
+      "size": 9312
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/context/manager.ts",
+      "sha": "29610c74d8271dbb51d627b5540d641884ea5202",
+      "mode": "100644",
+      "size": 9890
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/data-worker/__tests__/config.test.ts",
+      "sha": "087b960d7b888a2a3d5be3d36c004d940994216d",
+      "mode": "100644",
+      "size": 4060
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/data-worker/__tests__/integration/worker-pool.test.ts",
+      "sha": "e5b2f11ba612343b365e9247c363c71649c9d1af",
+      "mode": "100644",
+      "size": 6442
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/data-worker/__tests__/ipc.test.ts",
+      "sha": "83410214f4d11ae1a464f35c273d427906668204",
+      "mode": "100644",
+      "size": 5454
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/data-worker/__tests__/sandbox-args.test.ts",
+      "sha": "7a51be2c49f16a55d5f060ac91cb3dd1078c5a81",
+      "mode": "100644",
+      "size": 6813
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/data-worker/__tests__/sql-classifier.test.ts",
+      "sha": "b73d16b034a4f7b41609737826bdf33fef588d5e",
+      "mode": "100644",
+      "size": 18869
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/data-worker/__tests__/telemetry.test.ts",
+      "sha": "82b27d3deef0b2008f390605a8961ba2e24e6936",
+      "mode": "100644",
+      "size": 5660
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/data-worker/config.ts",
+      "sha": "f6b31817a0b2c4e2d0592d920deff9efb2eb0032",
+      "mode": "100644",
+      "size": 5888
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/data-worker/index.ts",
+      "sha": "8ac7b8697f0e051f6d96cdd70a65e2888aa7089e",
+      "mode": "100644",
+      "size": 18540
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/data-worker/ipc.ts",
+      "sha": "d537987709c94dfb7d77f3b21d675d4908ef3de6",
+      "mode": "100644",
+      "size": 2672
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/data-worker/migrate.ts",
+      "sha": "165ff2f0c47a945cdca051027a03bf0c95a3de29",
+      "mode": "100644",
+      "size": 3538
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/data-worker/pool.ts",
+      "sha": "38584da907113ae53512c65000b347b4bc6fe199",
+      "mode": "100644",
+      "size": 21705
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/data-worker/sandbox-args.ts",
+      "sha": "8f9ea700acdcdd1909b1ec9469a12d014ed3d484",
+      "mode": "100644",
+      "size": 9322
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/data-worker/schema.ts",
+      "sha": "82d5705ed4fd077867e7d944cf0322339d6cbc67",
+      "mode": "100644",
+      "size": 5046
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/data-worker/sql-classifier.ts",
+      "sha": "05f5fbecffdee4dde7dda509dc22d6a83f4e050a",
+      "mode": "100644",
+      "size": 19204
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/data-worker/telemetry.ts",
+      "sha": "5cc3e0a8713b31be59b2bd49599980e88ca00df4",
+      "mode": "100644",
+      "size": 5917
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/data-worker/types.ts",
+      "sha": "7806b307146d9265d2ea258e60a5dc996fe01340",
+      "mode": "100644",
+      "size": 3278
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/connections-manager.ts",
+      "sha": "b91a4bac462f20433713e7305e7e13233b3348ed",
+      "mode": "100644",
+      "size": 659
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/context-builder.ts",
+      "sha": "5b4c37c2d992f8895cbaee16681ea4a01f19643a",
+      "mode": "100644",
+      "size": 1975
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/credential-vault.ts",
+      "sha": "90d013c5e3ab86e801fc58cb50fcdeda7e41a5d4",
+      "mode": "100644",
+      "size": 19865
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/enhanced-auth/index.ts",
+      "sha": "c5f24227d472e25c68d754cfc50a692209052fa5",
+      "mode": "100644",
+      "size": 1860
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/enhanced-auth/supabase.ts",
+      "sha": "e383bb31d98507166cbc0542ce9a8cd7b92e329b",
+      "mode": "100644",
+      "size": 3409
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/enhanced-auth/types.ts",
+      "sha": "1666b30fe36f8abe9f0f9bad4b07349a7b9bd0dd",
+      "mode": "100644",
+      "size": 1386
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/files-service.ts",
+      "sha": "aab5246a37851808260fbbe6f1746eac66b92162",
+      "mode": "100644",
+      "size": 946
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/index.ts",
+      "sha": "92453feb377008c9c53c4e78d599befa6faca661",
+      "mode": "100644",
+      "size": 138
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/oauth2.ts",
+      "sha": "45da41119610132e903daee35b5ced4c06b4c767",
+      "mode": "100644",
+      "size": 15128
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/platform-credentials.contract.test.ts",
+      "sha": "f4238fef74860838c12e32bc2649a3c36cba327a",
+      "mode": "100644",
+      "size": 3846
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/prompt-manifest.ts",
+      "sha": "a211ebaf01ba85ee57d02996bf9084c92b18c23a",
+      "mode": "100644",
+      "size": 17727
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/registry.ts",
+      "sha": "ac5baf0477fc998d934b7ee955e21b4ed32845e0",
+      "mode": "100644",
+      "size": 5307
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/registry/ai-ml-part1.ts",
+      "sha": "f86cfc498702525c869a0ec600d577f174e92299",
+      "mode": "100644",
+      "size": 13320
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/registry/ai-ml-part2.ts",
+      "sha": "bd45d04354a369618bb3fa8026c0f48aee37025a",
+      "mode": "100644",
+      "size": 10655
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/registry/ai-ml.ts",
+      "sha": "ffe1397b427ea02b3cf6d455efbc059f1c7188f0",
+      "mode": "100644",
+      "size": 269
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/registry/communication.ts",
+      "sha": "df2a58060c1eec72da11f074ad064ff67141d14e",
+      "mode": "100644",
+      "size": 13305
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/registry/crm-marketing-social-part1.ts",
+      "sha": "db2e3dcfe00139cf080c3d70c765624716b4454e",
+      "mode": "100644",
+      "size": 12347
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/registry/crm-marketing-social-part2.ts",
+      "sha": "c5715c053e4607e9d41e070767409be3b3c83545",
+      "mode": "100644",
+      "size": 13446
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/registry/crm-marketing-social.ts",
+      "sha": "de71e6013768a05a77efc1a58384913edd2f9d8e",
+      "mode": "100644",
+      "size": 374
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/registry/developer-tools-part1.ts",
+      "sha": "e808dda6063f7683b97fccae370993f2ecd6d6a1",
+      "mode": "100644",
+      "size": 12651
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/registry/developer-tools-part2.ts",
+      "sha": "00d75ca1029d11ae5fec005ce47107bd11e5cccb",
+      "mode": "100644",
+      "size": 11258
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/registry/developer-tools.ts",
+      "sha": "996f5b7957908d1bea1744e0b39a4a6e83408559",
+      "mode": "100644",
+      "size": 339
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/registry/finance-ecommerce-part1.ts",
+      "sha": "6dbe01c00941661a98689c8a5a1c503972368fb3",
+      "mode": "100644",
+      "size": 9319
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/registry/finance-ecommerce-part2.ts",
+      "sha": "f444f202fe986650edc50f03172b8eec26e9c2ef",
+      "mode": "100644",
+      "size": 7852
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/registry/finance-ecommerce-part3.ts",
+      "sha": "a26201034cfba3efdd23f7e6220afe67a2032ad0",
+      "mode": "100644",
+      "size": 9058
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/registry/finance-ecommerce-part4.ts",
+      "sha": "79b712776811167f2c0aaee03effe26f5ec1e23f",
+      "mode": "100644",
+      "size": 9992
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/registry/finance-ecommerce.ts",
+      "sha": "3e5da54563599e0355f60335099d5d4e56568c21",
+      "mode": "100644",
+      "size": 557
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/registry/generated.ts",
+      "sha": "7e4df323ccdc0c59a156365ebdb579c387083f03",
+      "mode": "100644",
+      "size": 337
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/registry/index.ts",
+      "sha": "334cb6595c43d649918544b5a0d61f8b6dee10c0",
+      "mode": "100644",
+      "size": 5288
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/registry/productivity-part1.ts",
+      "sha": "2b8b06c4a3073e9659e844a2e1135640bfa0ce46",
+      "mode": "100644",
+      "size": 8807
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/registry/productivity-part2.ts",
+      "sha": "3b3ce3c96cd6dd03b2bae1a0fa0aedf01acb2c56",
+      "mode": "100644",
+      "size": 8736
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/registry/productivity.ts",
+      "sha": "b1c3696f64409ecaf97eb00d84b77df523605e81",
+      "mode": "100644",
+      "size": 318
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/runner-core.ts",
+      "sha": "f3379d26dfd4ca7033878dc03c9197d78810f8ff",
+      "mode": "100644",
+      "size": 13470
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/runner-fetch.ts",
+      "sha": "29b3b79410f888b616c55767c1b252ecd974310b",
+      "mode": "100644",
+      "size": 5956
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/runner-helpers.ts",
+      "sha": "4979d425360011ae7e04d63d99cba087b91db91e",
+      "mode": "100644",
+      "size": 17300
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/runner.ts",
+      "sha": "626a58ae1530b51605884f49a4e016c6ed277093",
+      "mode": "100644",
+      "size": 223
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/store.ts",
+      "sha": "48ecc5645dda283a424579b79f8f1daefe582ec7",
+      "mode": "100644",
+      "size": 1490
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/supabase/edge-functions.ts",
+      "sha": "660e2f22957700f662975c1068deb58e312eb5f7",
+      "mode": "100644",
+      "size": 4497
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/supabase/migrate.ts",
+      "sha": "14dcf2c91489c2760e076fffd0b1a5190846abf1",
+      "mode": "100644",
+      "size": 2377
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/supabase/provisioner.ts",
+      "sha": "a2ea6ea8950a01f4d0615cd76575924fa42cd3c5",
+      "mode": "100644",
+      "size": 5325
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/tool-bridge.ts",
+      "sha": "b0042956cbd4b91b13b0c720ae319119819ff527",
+      "mode": "100644",
+      "size": 9514
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/types.ts",
+      "sha": "69018bf45b02da2d4c7fc3fa0f8c05f6c587375b",
+      "mode": "100644",
+      "size": 7783
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/xray-audit.ts",
+      "sha": "ac84f8bc4ca852dfb851d18daaa2fe0413cd6eab",
+      "mode": "100644",
+      "size": 3737
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/xray-engine.ts",
+      "sha": "1707fe36768823d3853669142bc18d035ffa1f7e",
+      "mode": "100644",
+      "size": 11497
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/xray-types.ts",
+      "sha": "26c22737a45bc7adf821ee36a51fc09616c35acf",
+      "mode": "100644",
+      "size": 3518
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/integrations/xray.ts",
+      "sha": "f605aafa01b57d33cc409f12b73fa120397be913",
+      "mode": "100644",
+      "size": 399
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/mcp/__tests__/cache-warmer-shape.test.ts",
+      "sha": "a6d48f0e84fd8887978be97e821ef6cd3da156ed",
+      "mode": "100644",
+      "size": 8247
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/mcp/apps-resource.ts",
+      "sha": "321babbd035e010185f5a161401e1740c745a357",
+      "mode": "100644",
+      "size": 3600
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/mcp/builtin-connectors.ts",
+      "sha": "4034a57eb2c5f4615f780f3ecdbc77c56f15d892",
+      "mode": "100644",
+      "size": 10069
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/mcp/builtin/data/__tests__/integration/mcp-data.integration.test.ts",
+      "sha": "6dc60a595ef12134df028fe31348b037eec0ad49",
+      "mode": "100644",
+      "size": 4823
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/mcp/builtin/data/__tests__/register.test.ts",
+      "sha": "7fafb3baf59c28ab188eb5bedb4d15093f536a83",
+      "mode": "100644",
+      "size": 6331
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/mcp/builtin/data/__tests__/transport.test.ts",
+      "sha": "bf36ea13404961ad9a57f484d0606e2724c052ae",
+      "mode": "100644",
+      "size": 4813
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/mcp/builtin/data/connector-spec.ts",
+      "sha": "5e2a66c0079e843bfe7186160fb54bd394d9302f",
+      "mode": "100644",
+      "size": 525
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/mcp/builtin/data/register.ts",
+      "sha": "8c7a31241358c25b9eff68f9c41e277f5d6ce305",
+      "mode": "100644",
+      "size": 2653
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/mcp/builtin/data/transport.ts",
+      "sha": "cf7fec9f7199d9a8369e047f70365eb97b7e4155",
+      "mode": "100644",
+      "size": 10728
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/mcp/builtin/data/ui/__tests__/mcp-apps-data.test.ts",
+      "sha": "4965be2c50ba7975294d077ce98197ee28a58e04",
+      "mode": "100644",
+      "size": 5530
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/mcp/builtin/data/ui/schema-inspector.html",
+      "sha": "9c02984bbf134f295019904a2a86e495857403de",
+      "mode": "100644",
+      "size": 547
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/mcp/builtin/data/ui/schema-inspector.js",
+      "sha": "18a1863c5b950e5e8e30076823d982b14f639cb2",
+      "mode": "100644",
+      "size": 3841
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/mcp/builtin/data/ui/shared/host-bridge.js",
+      "sha": "ca3de37bb8e3fe9447a02a121c33b47e8ae8132b",
+      "mode": "100644",
+      "size": 3696
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/mcp/builtin/data/ui/shared/styles.css",
+      "sha": "d4aa46ce05e8731aed7048e0e8d186bebd437c47",
+      "mode": "100644",
+      "size": 1764
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/mcp/builtin/data/ui/table-inspector.html",
+      "sha": "fde74ea85ce2a6ea8666cf6310f4419465729aa2",
+      "mode": "100644",
+      "size": 798
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/mcp/builtin/data/ui/table-inspector.js",
+      "sha": "7caeca0cabc12ad3a1c10795f9e426080eca5976",
+      "mode": "100644",
+      "size": 4373
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/mcp/builtin/index.ts",
+      "sha": "942a39c3ba6c88e1b2b95abccb5a2707d4b6270a",
+      "mode": "100644",
+      "size": 952
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/mcp/cache-warmer.ts",
+      "sha": "04c311638de4b30fc5ea326185c39e10f400fe5b",
+      "mode": "100644",
+      "size": 27134
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/mcp/client.ts",
+      "sha": "407ab30f8d50d1c1a069d4037ff1440997b726b4",
+      "mode": "100644",
+      "size": 2981
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/mcp/connector-manager.ts",
+      "sha": "b48a05d1eed18c46922d423cdd99ddd22930e1aa",
+      "mode": "100644",
+      "size": 19686
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/mcp/discovery.ts",
+      "sha": "8a26a33c9db7e3ef7f64cbcbb8b4cc3a4fccb86b",
+      "mode": "100644",
+      "size": 17652
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/mcp/generated-image-persist.ts",
+      "sha": "07db60c873f330cd5c3b7038e44abffebec62ab9",
+      "mode": "100644",
+      "size": 4330
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/mcp/index.ts",
+      "sha": "081048a0baaa88f1115af81d6ce0088116be6abc",
+      "mode": "100644",
+      "size": 195
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/mcp/infographic-persist.ts",
+      "sha": "0b9289790bc338ec0f9f07b8c542e553c52a387d",
+      "mode": "100644",
+      "size": 5086
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/mcp/oauth.ts",
+      "sha": "3e70942998d72fc6d0733f7e4cec3be345a75de0",
+      "mode": "100644",
+      "size": 11782
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/mcp/presets/index.ts",
+      "sha": "fd8b1784c9dc86db5e13eefd2f5c7c307cb56cf4",
+      "mode": "100644",
+      "size": 3162
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/mcp/presets/supabase.ts",
+      "sha": "d69b423824f4b5b5c7c34a44b7208b8d9eba64fe",
+      "mode": "100644",
+      "size": 9994
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/mcp/ssrf-guard.ts",
+      "sha": "9e904416bf12b3587be77b03f5aa745b09af1a57",
+      "mode": "100644",
+      "size": 2665
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/mcp/tool-bridge.ts",
+      "sha": "6cf6ddbc88bc77656aed2fd445f7cf2dd08c4a50",
+      "mode": "100644",
+      "size": 21033
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/mcp/transport-http.ts",
+      "sha": "197ca4d9ebe462b6eac3a9ed15c4a69f2a1097ae",
+      "mode": "100644",
+      "size": 9338
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/mcp/transport-stdio.ts",
+      "sha": "f266b3059856aecb6ed2a5ec3b31764e0f48b10c",
+      "mode": "100644",
+      "size": 11025
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/mcp/transport.ts",
+      "sha": "7d1a78cc6d60f06d067d57a5bad496da9e9384f4",
+      "mode": "100644",
+      "size": 2066
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/mcp/types.ts",
+      "sha": "186908ebc47448ce770923725e96cef17e15b233",
+      "mode": "100644",
+      "size": 3193
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/auth/platform-ai-bootstrap.ts",
+      "sha": "f318372e194b6f1104cb45c2f74ade5337094fe2",
+      "mode": "100644",
+      "size": 11341
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/chat/artifact-stash.ts",
+      "sha": "5354a2a9e51611738ead3d58231913029b67d0d2",
+      "mode": "100644",
+      "size": 1891
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/chat/event-processor.ts",
+      "sha": "c2009f2adedb7759ac8047d74cc7314b0ed550cb",
+      "mode": "100644",
+      "size": 22805
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/chat/fix-error.ts",
+      "sha": "a1cc4e4b79db1f50ede8eeb63fdf6190351728ef",
+      "mode": "100644",
+      "size": 9890
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/chat/index.ts",
+      "sha": "254fe7ffcce6c4fc9e2d6a57fecf277c464e1360",
+      "mode": "100644",
+      "size": 7629
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/chat/mcp-call.ts",
+      "sha": "952fc555594093f9e3b3db866dd64e4bbbfb8f29",
+      "mode": "100644",
+      "size": 6794
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/chat/message-persistence.ts",
+      "sha": "b6e788413ba91bb6def49221d5559235927e5eaa",
+      "mode": "100644",
+      "size": 5719
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/chat/misc-routes.ts",
+      "sha": "7db168e4d907bac3267e0e2fec4ece17a2cda5df",
+      "mode": "100644",
+      "size": 16490
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/chat/post-processing.ts",
+      "sha": "1146a2451515eb69b8e9824abf37d9dcc5af1c6f",
+      "mode": "100644",
+      "size": 10825
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/chat/queue.ts",
+      "sha": "44ad0d62a69244fee4213277b906829c77732cb3",
+      "mode": "100644",
+      "size": 3796
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/chat/send-handler.ts",
+      "sha": "13067c7d10df1337ba7bee9f8afe56b76a8787d4",
+      "mode": "100644",
+      "size": 52078
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/chat/send-helpers.ts",
+      "sha": "de5a5abebbfc059a4511cd6caa21ba1e0a0aa372",
+      "mode": "100644",
+      "size": 12120
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/chat/session-manager.ts",
+      "sha": "b69856d3f8622718647a7a12d015e82f80a5cf80",
+      "mode": "100644",
+      "size": 13748
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/chat/session-state.ts",
+      "sha": "e176f71f8753a02e8969503d0594c0d53f240a66",
+      "mode": "100644",
+      "size": 3118
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/chat/stream-buffer.ts",
+      "sha": "0d9eba1e11a97b3213832f25d611b67bb86c043c",
+      "mode": "100644",
+      "size": 2452
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/chat/stream-recovery.supabase-gate.test.ts",
+      "sha": "f02fdebe6b97da3b697d7ee038f56c7f728f3bbe",
+      "mode": "100644",
+      "size": 4771
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/chat/stream-recovery.ts",
+      "sha": "33555178de98674a92e2c67bf5024b667afc5cd8",
+      "mode": "100644",
+      "size": 20908
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/chat/suggestions.ts",
+      "sha": "816b6d3c1f3d20224a8f2a5648bc1897a9e014b7",
+      "mode": "100644",
+      "size": 10365
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/chat/system-prompts.ts",
+      "sha": "1c3abd535350ee1bef0c230c52c50079c02d54f6",
+      "mode": "100644",
+      "size": 35226
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/chat/tool-callbacks.test.ts",
+      "sha": "a3b710a4e4a4b5ab9808556bd480cfd35910b320",
+      "mode": "100644",
+      "size": 7267
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/chat/tool-callbacks.ts",
+      "sha": "736e97bcf8735993ba049426d8aaf708cd50d17c",
+      "mode": "100644",
+      "size": 38044
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/chat/tool-event-bookkeeping.ts",
+      "sha": "f8b13f4b927aea44525dcace56a809276c813f16",
+      "mode": "100644",
+      "size": 3502
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/chat/traces.ts",
+      "sha": "1335de0b657ba1048e7d7ef9ba57ad063109d9d7",
+      "mode": "100644",
+      "size": 3902
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/chat/types.ts",
+      "sha": "8c76d00d120e091817d0cbdf3bef221c6de278b0",
+      "mode": "100644",
+      "size": 5113
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/chat/user-input-registry.ts",
+      "sha": "6f4109347ac30e1357a22427040ca7b11080e312",
+      "mode": "100644",
+      "size": 7760
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/compat-proxy.ts",
+      "sha": "751590170921d9eb2fe83b4497c7b1a6ef23f427",
+      "mode": "100644",
+      "size": 8897
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/context.ts",
+      "sha": "552ef7c4251d1cb464cb61730097159fe4ed349b",
+      "mode": "100644",
+      "size": 8668
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/integrations-admin.ts",
+      "sha": "82538892891afd1cd45368e51abb5f871dab8614",
+      "mode": "100644",
+      "size": 27316
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/integrations-catalog.ts",
+      "sha": "ce092eae3e0f2ac96a3725f32a6b83893d9136d9",
+      "mode": "100644",
+      "size": 6657
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/integrations-connections.ts",
+      "sha": "748fe5d8afef2e4d2531ae93adba8747f129218a",
+      "mode": "100644",
+      "size": 13313
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/integrations-oauth.ts",
+      "sha": "c158bb799e86e658a9cff553db9c8519b02fdb7b",
+      "mode": "100644",
+      "size": 8809
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/integrations.ts",
+      "sha": "eb1e5297a630b80aef98c10cbae9bf55b3cff040",
+      "mode": "100644",
+      "size": 800
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/mcp-apps-data.ts",
+      "sha": "f01b197f66b9520eeb8b5417c4ca1cb1d88e0a3f",
+      "mode": "100644",
+      "size": 2440
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/plan.ts",
+      "sha": "85ffcc681be6f19b61c32a8c480d4651c7624b26",
+      "mode": "100644",
+      "size": 8237
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/provider-bridge.ts",
+      "sha": "0906f6c10213c6224969ac45d10b06785e64d6e7",
+      "mode": "100644",
+      "size": 6027
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/provider-catalog.ts",
+      "sha": "ae7f2cc8e456627226466495a348261453c12713",
+      "mode": "100644",
+      "size": 4079
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/sandbox-rules.ts",
+      "sha": "267324003df3131c5d76da36d260f5acd9cd7d8d",
+      "mode": "100644",
+      "size": 6472
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/security.ts",
+      "sha": "33ed8a258e21b434309a9b352ca0042ee4c36c0c",
+      "mode": "100644",
+      "size": 4637
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/skills.ts",
+      "sha": "6f93fedd37dc3a8b079c96d9ed57581c9de3baba",
+      "mode": "100644",
+      "size": 13754
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/routes/workspaces/sandbox.ts",
+      "sha": "51b2515a0c931b02e1ce9caea3aceccbd15f9644",
+      "mode": "100644",
+      "size": 7175
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/sandbox/__tests__/orchestrator.test.ts",
+      "sha": "48e4e02199e03b82014a8b538806c67d94ed7bcf",
+      "mode": "100644",
+      "size": 7332
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/sandbox/__tests__/profile-shapes.test.ts",
+      "sha": "e97468d150625ca733f0c92be45e56d0e15aa76b",
+      "mode": "100644",
+      "size": 4512
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/sandbox/audit.ts",
+      "sha": "b4c5335944ffb8cd2d10e65ee33800eefdcaa977",
+      "mode": "100644",
+      "size": 2697
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/sandbox/backend-resolver.ts",
+      "sha": "1e4b79f2405231f9114175abbdf22ba6e43a70ea",
+      "mode": "100644",
+      "size": 2603
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/sandbox/boot-probe.ts",
+      "sha": "7e177bb5709344a4e783e73b1ba277f33161a030",
+      "mode": "100644",
+      "size": 2465
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/sandbox/orchestrator.ts",
+      "sha": "8579b6e0aaf48c7508589d4af3f24bd3a831949f",
+      "mode": "100644",
+      "size": 10549
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/sandbox/profile-resolver.ts",
+      "sha": "e5057478daa60c2fe374646daee295b2f650071a",
+      "mode": "100644",
+      "size": 2908
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/sandbox/profiles/ai-bash.ts",
+      "sha": "e0c800bfc38726209d82ce1a4ee125ed53e9176c",
+      "mode": "100644",
+      "size": 3466
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/sandbox/profiles/build.ts",
+      "sha": "ab3d6f7d16ce46a04f706671db0e7d97a950d293",
+      "mode": "100644",
+      "size": 5487
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/sandbox/profiles/constants.ts",
+      "sha": "898fc663fc2a9e73d484972a92f1f046d4f62894",
+      "mode": "100644",
+      "size": 534
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/sandbox/profiles/index.ts",
+      "sha": "68fd29390dfd46797400f8edf6c426e2080461a9",
+      "mode": "100644",
+      "size": 1222
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/sandbox/profiles/install.ts",
+      "sha": "4a9b3320b0750c9158c5faa731174324c1b33859",
+      "mode": "100644",
+      "size": 3182
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/sandbox/profiles/vite-preview.ts",
+      "sha": "71412ca684aa8e1d2124d8008f6d8b1564df17b5",
+      "mode": "100644",
+      "size": 4346
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/sandbox/queries.ts",
+      "sha": "cbc409bf300c9dd4f6366ae20eb0d7967ae9d5ab",
+      "mode": "100644",
+      "size": 4779
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/sandbox/rule-matcher.ts",
+      "sha": "84abfbebbc18698a2301bb06e66f9eaaa6467c5b",
+      "mode": "100644",
+      "size": 3856
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/sandbox/system-rules.ts",
+      "sha": "ea532809a73ec59644a00597d7984a8a1dc2b55e",
+      "mode": "100644",
+      "size": 6510
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/sandbox/workspace-rules.ts",
+      "sha": "cfadf8006f0cc97b17e03c85b084b02f012b29f0",
+      "mode": "100644",
+      "size": 5386
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/security/scanner-patterns.ts",
+      "sha": "11c01c58b0f51871954b8344ded1a3a6fd418a4d",
+      "mode": "100644",
+      "size": 6773
+    },
+    {
+      "root": "doable-source",
+      "path": "services/api/src/security/scanner.ts",
+      "sha": "3e0068fe2b103c3419e84ea990ba9f78b95bb374",
+      "mode": "100644",
+      "size": 10752
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/visual-edit-bridge-inline.ts",
+      "sourcePath": "services/api/src/visual-edit-bridge-inline.ts",
+      "sha": "020f97a976d086f354af81cdf9e9c585c9ad58e8",
+      "mode": "100644",
+      "path": "services/api/src/visual-edit-bridge-inline.ts"
+    },
+    {
+      "root": "doable-source",
+      "sha": "b52330fde7fee773dc2a40548759ea42516d9ad4",
+      "mode": "100644",
+      "path": "services/ws/package.json"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/ws/package.json",
+      "sourcePath": "services/ws/package.json",
+      "sha": "b52330fde7fee773dc2a40548759ea42516d9ad4",
+      "mode": "100644",
+      "path": "services/ws/package.json"
+    },
+    {
+      "root": "doable-source",
+      "sha": "7ccd92ad63559a755d76a8d30b5a4b46c273408c",
+      "mode": "100644",
+      "path": "services/ws/src/collaboration/yjs-document-manager.ts"
+    },
+    {
+      "root": "doable-source",
+      "sha": "3e15376219113fc28a6aec2c0b8daa382ec4d1a8",
+      "mode": "100644",
+      "path": "services/ws/src/db.ts"
+    },
+    {
+      "root": "doable-source",
+      "sha": "7b4398608b62b6b3ecd55d566609798704451219",
+      "mode": "100644",
+      "path": "services/ws/src/index.ts"
+    },
+    {
+      "root": "doable-source",
+      "sha": "7a4cb637ffad1df8496a49e9b6d713dd4979a5ef",
+      "mode": "100644",
+      "path": "services/ws/src/message-handler.ts"
+    },
+    {
+      "root": "doable-source",
+      "sha": "d0c04be3ab179c8a8a9f1fccc3dd16d58a0385b5",
+      "mode": "100644",
+      "path": "services/ws/src/rooms/room-manager.ts"
+    },
+    {
+      "root": "doable-source",
+      "sha": "90689b01a7e272063c69b13404a24885c1827645",
+      "mode": "100644",
+      "path": "services/ws/src/rooms/room.ts"
+    },
+    {
+      "root": "doable-source",
+      "sha": "5b690698224230c44ac6109199c01e0f05312c81",
+      "mode": "100644",
+      "path": "services/ws/src/tracing/instrumentation.ts"
+    },
+    {
+      "root": "doable-source",
+      "sha": "258875122aff747269a6d119367e31b3cf1408c3",
+      "mode": "100644",
+      "path": "services/ws/src/tracing/pg-exporter.ts"
+    },
+    {
+      "root": "doable-source",
+      "sha": "b98897e6d53ee52cb7d73a6b81d291600e9b3eae",
+      "mode": "100644",
+      "path": "services/ws/tsconfig.json"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/ws/tsconfig.json",
+      "sourcePath": "services/ws/tsconfig.json",
+      "sha": "b98897e6d53ee52cb7d73a6b81d291600e9b3eae",
+      "mode": "100644",
+      "path": "services/ws/tsconfig.json"
+    },
+    {
       "root": "ui-reference",
       "path": "apps/web/src/app/(dashboard)/ai-settings/callback/page.tsx",
       "sha": "15ec3485bb93f8225e2bff65d23078f464e39b6d",
@@ -6179,331 +6519,13 @@
       "sha": "bc60f4b1d9a492d851c45ec7af0182ebdab8f313",
       "mode": "100644",
       "size": 4025
-    },
-    {
-      "root": "doable-source",
-      "sha": "ee29c2021fe047645e2b24f6d1f4785321cd3290",
-      "mode": "100644",
-      "path": "packages/marketplace-bundle/package.json"
-    },
-    {
-      "root": "doable-source",
-      "sha": "2362ca39701e1acf9d7e8dcbc5b55d06c7b2d57d",
-      "mode": "100644",
-      "path": "packages/marketplace-bundle/src/index.ts"
-    },
-    {
-      "root": "doable-source",
-      "sha": "63457ad811616b013f7e351c7f12cdf5cc809b13",
-      "mode": "100644",
-      "path": "packages/marketplace-bundle/src/manifest.ts"
-    },
-    {
-      "root": "doable-source",
-      "sha": "8e3c3b14cda120890d8df9d1aa6b1ee96f4f992a",
-      "mode": "100644",
-      "path": "packages/marketplace-bundle/src/permissions.ts"
-    },
-    {
-      "root": "doable-source",
-      "sha": "ffa4b4610a15377b88cea14e1de1e40923ba149a",
-      "mode": "100644",
-      "path": "packages/marketplace-bundle/src/codecs/json-v1.ts"
-    },
-    {
-      "root": "doable-source",
-      "sha": "11afe38109e66061b579d34862d624d60673b12d",
-      "mode": "100644",
-      "path": "packages/marketplace-bundle/src/codecs/standards-zip.ts"
-    },
-    {
-      "root": "doable-source",
-      "sha": "459cb509af15ba92ff4719f0866d6f686954c963",
-      "mode": "100644",
-      "path": "mcp-servers/notebooklm/server/package.json"
-    },
-    {
-      "root": "doable-source",
-      "sha": "b7f1238e06b628ff15da6747e2ccc533482f7d89",
-      "mode": "100644",
-      "path": "mcp-servers/notebooklm/server/src/server.ts"
-    },
-    {
-      "root": "doable-source",
-      "sha": "8bd32b188323b53cc9e42ec35566ad32bee7210e",
-      "mode": "100644",
-      "path": "mcp-servers/notebooklm/server/src/notebooklm_client.ts"
-    },
-    {
-      "root": "doable-source",
-      "sha": "3db96ec8cd054f1b1952e22ac5031635359fb243",
-      "mode": "100644",
-      "path": "mcp-servers/notebooklm/server/src/native_fetch_client.ts"
-    },
-    {
-      "root": "doable-source",
-      "sha": "723be75908b666b1a2562de876b3cc3b63357ae1",
-      "mode": "100644",
-      "path": "mcp-servers/notebooklm/server/src/playwright_transport.ts"
-    },
-    {
-      "root": "doable-source",
-      "sha": "b13480401f5ba24b68fa658dc55302ebf9ad5830",
-      "mode": "100644",
-      "path": "mcp-servers/notebooklm/server/src/user-manager.ts"
-    },
-    {
-      "root": "doable-source",
-      "sha": "2dfd8e884c018abcc9666affa87a6e719a5469a3",
-      "mode": "100644",
-      "path": "mcp-servers/notebooklm/server/src/setup_auth.ts"
-    },
-    {
-      "root": "doable-source",
-      "sha": "993a78ca85934d9b462538e01d737b495c625746",
-      "mode": "100644",
-      "path": "mcp-servers/notebooklm/server/src/test_summary.ts"
-    },
-    {
-      "root": "doable-source",
-      "sha": "939f1d5b06dd7b879baa7f12f90aa74465ee65ec",
-      "mode": "100644",
-      "path": "mcp-servers/notebooklm/server/src/mcp-app.html"
-    },
-    {
-      "root": "doable-source",
-      "sha": "18317b38ffb87a780f2d7530ea88e658dceb04ba",
-      "mode": "100644",
-      "path": "mcp-servers/notebooklm/server/src/mcp-app.ts"
-    },
-    {
-      "root": "doable-source",
-      "sha": "acdefda47ec88a117891f4fea0ac5eed1ce6a988",
-      "mode": "100644",
-      "path": "mcp-servers/notebooklm/server/vite.config.ts"
-    },
-    {
-      "root": "doable-source",
-      "sha": "28d57cc8f93d1dc954f77315ded61db2e44ada79",
-      "mode": "100644",
-      "path": "mcp-servers/notebooklm/server/tsconfig.json"
-    },
-    {
-      "root": "doable-source",
-      "sha": "b52330fde7fee773dc2a40548759ea42516d9ad4",
-      "mode": "100644",
-      "path": "services/ws/package.json"
-    },
-    {
-      "root": "doable-source",
-      "sha": "b98897e6d53ee52cb7d73a6b81d291600e9b3eae",
-      "mode": "100644",
-      "path": "services/ws/tsconfig.json"
-    },
-    {
-      "root": "doable-source",
-      "sha": "7b4398608b62b6b3ecd55d566609798704451219",
-      "mode": "100644",
-      "path": "services/ws/src/index.ts"
-    },
-    {
-      "root": "doable-source",
-      "sha": "7a4cb637ffad1df8496a49e9b6d713dd4979a5ef",
-      "mode": "100644",
-      "path": "services/ws/src/message-handler.ts"
-    },
-    {
-      "root": "doable-source",
-      "sha": "3e15376219113fc28a6aec2c0b8daa382ec4d1a8",
-      "mode": "100644",
-      "path": "services/ws/src/db.ts"
-    },
-    {
-      "root": "doable-source",
-      "sha": "90689b01a7e272063c69b13404a24885c1827645",
-      "mode": "100644",
-      "path": "services/ws/src/rooms/room.ts"
-    },
-    {
-      "root": "doable-source",
-      "sha": "d0c04be3ab179c8a8a9f1fccc3dd16d58a0385b5",
-      "mode": "100644",
-      "path": "services/ws/src/rooms/room-manager.ts"
-    },
-    {
-      "root": "doable-source",
-      "sha": "7ccd92ad63559a755d76a8d30b5a4b46c273408c",
-      "mode": "100644",
-      "path": "services/ws/src/collaboration/yjs-document-manager.ts"
-    },
-    {
-      "root": "doable-source",
-      "sha": "5b690698224230c44ac6109199c01e0f05312c81",
-      "mode": "100644",
-      "path": "services/ws/src/tracing/instrumentation.ts"
-    },
-    {
-      "root": "doable-source",
-      "sha": "258875122aff747269a6d119367e31b3cf1408c3",
-      "mode": "100644",
-      "path": "services/ws/src/tracing/pg-exporter.ts"
-    },
-    {
-      "root": "doable-source",
-      "sha": "b0d5840984b166bac567e3bf303a6bf946b41ebc",
-      "mode": "100644",
-      "path": "mcp-servers/_shared/ui.mjs"
-    },
-    {
-      "root": "doable-source",
-      "sha": "cbdd53dd794c6f869ca8bbafaa7ca3ec4b25093c",
-      "mode": "100644",
-      "path": "mcp-servers/pdf-builder/package.json"
-    },
-    {
-      "root": "doable-source",
-      "sha": "8ea5b98eae281b50d55d3d9fcd6c10203656ed49",
-      "mode": "100644",
-      "path": "mcp-servers/pdf-builder/index.mjs"
-    },
-    {
-      "root": "doable-source",
-      "sha": "305bc101db4ed7331525ed6f08a918d2935f8920",
-      "mode": "100644",
-      "path": "mcp-servers/pdf-builder/README.md"
-    },
-    {
-      "root": "doable-source",
-      "sha": "bc97c73a0d723d73862e881a8d390d4fa71f676a",
-      "mode": "100644",
-      "path": "mcp-servers/pdf-builder/skills/SKILL.md"
-    },
-    {
-      "root": "doable-source",
-      "sha": "a621c030769fcc67c9dfe9defed2e45fd4562d75",
-      "mode": "100644",
-      "path": "mcp-servers/presentation-builder/package.json"
-    },
-    {
-      "root": "doable-source",
-      "sha": "3671503c24af1a7c97544dd34c23d91ae5a03f03",
-      "mode": "100644",
-      "path": "mcp-servers/presentation-builder/index.mjs"
-    },
-    {
-      "root": "doable-source",
-      "sha": "fb340e2891dc8d311fed1bf8996bf7f52a1126e9",
-      "mode": "100644",
-      "path": "mcp-servers/presentation-builder/README.md"
-    },
-    {
-      "root": "doable-source",
-      "sha": "fb6f5996bd39db4fb6bf0d38dac7d90272a7f5f1",
-      "mode": "100644",
-      "path": "mcp-servers/presentation-builder/presentation-engine.mjs"
-    },
-    {
-      "root": "doable-source",
-      "sha": "36fe726719b90c5bf4d628f1ee7a7218a18b33c1",
-      "mode": "100644",
-      "path": "mcp-servers/spreadsheet-builder/package.json"
-    },
-    {
-      "root": "doable-source",
-      "sha": "d17823b14d6b0eb3a7b17417d889e9b285dac863",
-      "mode": "100644",
-      "path": "mcp-servers/spreadsheet-builder/index.mjs"
-    },
-    {
-      "root": "doable-source",
-      "sha": "6347c239cdf9ebf49ca64f147acd83421202c643",
-      "mode": "100644",
-      "path": "mcp-servers/spreadsheet-builder/README.md"
-    },
-    {
-      "root": "doable-source",
-      "sha": "8a0b0374cd1b63375bd44b74356077892f4b128a",
-      "mode": "100644",
-      "path": "mcp-servers/spreadsheet-builder/skills/SKILL.md"
-    },
-    {
-      "root": "doable-source",
-      "sha": "7fb9a096961bfa795694bfcc2f967798a2a137da",
-      "mode": "100644",
-      "path": "mcp-servers/markdown-builder/package.json"
-    },
-    {
-      "root": "doable-source",
-      "sha": "6edd9c34f9df4cc2d6e437f5c410bee96af5c745",
-      "mode": "100644",
-      "path": "mcp-servers/markdown-builder/index.mjs"
-    },
-    {
-      "root": "doable-source",
-      "sha": "9fd4f6ba6ce4d69ff3347b1f3f7c2ec45faf1585",
-      "mode": "100644",
-      "path": "mcp-servers/markdown-builder/README.md"
-    },
-    {
-      "root": "doable-source",
-      "sha": "bf4d0e3262906bb5b8443663a05273b8ee3c57e1",
-      "mode": "100644",
-      "path": "mcp-servers/markdown-builder/skills/SKILL.md"
-    },
-    {
-      "root": "doable-source",
-      "sha": "587bbad309e6211dedd880b56f65a020a6df4cb4",
-      "mode": "100644",
-      "path": "mcp-servers/notebooklm/server/src/ws_transport.ts"
-    },
-    {
-      "root": "doable-source",
-      "sha": "29c487704e3d39c222baa2a78f566470047617af",
-      "mode": "100644",
-      "path": "mcp-servers/notebooklm/server/public/infographic-viewer.html"
-    },
-    {
-      "root": "doable-source",
-      "sha": "19fd0131012e6c35d203a87dd6cd3520f5072c37",
-      "mode": "100644",
-      "path": "packages/marketplace-bundle/tsconfig.json"
-    },
-    {
-      "root": "doable-source-extensions",
-      "path": "security/api-route.ts",
-      "sha": "33ed8a258e21b434309a9b352ca0042ee4c36c0c",
-      "mode": "100644"
-    },
-    {
-      "root": "doable-source",
-      "destinationPath": "doable-source/services/ws/package.json",
-      "sourcePath": "services/ws/package.json",
-      "sha": "b52330fde7fee773dc2a40548759ea42516d9ad4",
-      "mode": "100644",
-      "path": "services/ws/package.json"
-    },
-    {
-      "root": "doable-source",
-      "destinationPath": "doable-source/services/ws/tsconfig.json",
-      "sourcePath": "services/ws/tsconfig.json",
-      "sha": "b98897e6d53ee52cb7d73a6b81d291600e9b3eae",
-      "mode": "100644",
-      "path": "services/ws/tsconfig.json"
-    },
-    {
-      "root": "doable-source",
-      "destinationPath": "doable-source/services/api/src/visual-edit-bridge-inline.ts",
-      "sourcePath": "services/api/src/visual-edit-bridge-inline.ts",
-      "sha": "020f97a976d086f354af81cdf9e9c585c9ad58e8",
-      "mode": "100644",
-      "path": "services/api/src/visual-edit-bridge-inline.ts"
     }
   ],
   "counts": {
-    "files": 799,
+    "files": 802,
     "directoryTrees": 121,
-    "capturedRootTrees": 92,
-    "totalTrees": 213
+    "capturedRootTrees": 93,
+    "totalTrees": 214
   },
   "metadata": {
     "platformExtensions": "Second-pass reusable platform source families preserved under doable-source-extensions/."
