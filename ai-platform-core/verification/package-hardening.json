@@ -35,7 +35,8 @@
     "visual-ai-editing",
     "platform-extensions",
     "visual-editing",
-    "ai-media-builders"
+    "ai-media-builders",
+    "platform-foundation"
   ],
   "externalDependencies": {
     "manifest": "external-dependencies/external-dependencies.json",
