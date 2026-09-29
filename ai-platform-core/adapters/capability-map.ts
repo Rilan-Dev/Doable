@@ -15,6 +15,5 @@ export const CAPABILITY_BINDINGS: readonly CapabilityBinding[] = [
 {capability:"rag",contract:"RAGAdapter",doableSources:["services/api/src/ai","services/api/src/context"],uiReferencePaths:["apps/web/src/app/(dashboard)/workspace-settings/workspace-knowledge.tsx"],hostSpecific:true},
 {capability:"chat",contract:"ChatTransportAdapter",doableSources:["services/api/src/routes/chat"],uiReferencePaths:["apps/web/src/modules/ai-settings"],hostSpecific:true},
 {capability:"voice-realtime",contract:"VoiceRealtimeAdapter",doableSources:[],uiReferencePaths:[],hostSpecific:true}
-];
-
 {capability:"platform-foundation",contract:"PlatformFoundationAdapters",doableSources:["services/api/src/auth","services/api/src/runtime","services/api/src/sandbox","services/api/src/deploy","services/api/src/version-control","services/api/src/github","services/api/src/tracing","services/api/src/routes"],uiReferencePaths:["apps/web/src/modules/billing","apps/web/src/modules/marketplace","apps/web/src/modules/editor"],hostSpecific:true},
+];
