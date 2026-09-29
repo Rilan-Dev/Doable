@@ -264,3 +264,15 @@ Host-specific infrastructure remains preserved where useful but explicitly marke
 All requested platform capabilities are now explicitly indexed in SOURCE_COVERAGE_MATRIX.md and promoted under capabilities/platform-foundation/MANIFEST.md where they cross the AI/runtime boundary. This includes authentication/tenant/RBAC, PostgreSQL schema, secrets/KEK, OS/container infrastructure, Activepieces, billing/subscriptions, notifications/email, analytics, GitHub/versioning, deployment/domains and realtime collaboration in addition to the previously extracted AI capabilities.
 
 The source remains additive: existing immutable Doable trees are not rewritten or deduplicated. Reusable platform source is referenced from the canonical capability manifests so downstream projects copy the complete implementation closure without losing source provenance.
+
+
+## AI security scanner
+
+The reusable source now includes Doable's project security scanner and route closure:
+
+- `doable-source/services/api/src/security/scanner.ts`
+- `doable-source/services/api/src/security/scanner-patterns.ts`
+- `doable-source/services/api/src/routes/security.ts`
+- security DB query/migration closure under `dependency-closure/packages/db/`
+
+This capability is intended for AI-generated code/project workflows: scan generated changes for dependency vulnerabilities, hardcoded secrets and common security anti-patterns before publication/deployment. The host must provide the project-path, process, database and authorization boundaries.
