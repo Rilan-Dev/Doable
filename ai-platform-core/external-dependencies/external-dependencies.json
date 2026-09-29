@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-28T22:57:39.578Z",
+  "generatedAt": "2026-09-29",
   "manifests": [
     {
       "path": "ai-platform-core/dependency-closure/packages/db/package.json",
@@ -61,6 +61,10 @@
     {
       "path": "ai-platform-core/external-dependencies/source-manifests/markdown-builder.package.json",
       "packageName": "markdown-builder-mcp"
+    },
+    {
+      "path": "ai-platform-core/external-dependencies/source-manifests/image-generator.package.json",
+      "packageName": "image-generator-mcp"
     }
   ],
   "workspacePackages": {
@@ -650,7 +654,8 @@
     "tsc-alias": "^1.8.10",
     "@mcp-ui/server": "^6.1.0",
     "exceljs": "^4.4.0",
-    "marked": "^15.0.0"
+    "marked": "^15.0.0",
+    "@doable/shared": "workspace:*"
   },
   "peerDependencies": {
     "react": ">=18.0.0"
