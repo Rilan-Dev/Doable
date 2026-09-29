@@ -205,3 +205,9 @@ It is now preserved under `doable-source/mcp-servers/notebooklm/server/` and reg
 
 This is intentionally optional: it should be reused when a host needs NotebookLM-specific research/knowledge tooling, while the generic MCP runtime remains the platform abstraction.
 
+## Realtime AI collaboration extension
+
+The second-pass audit identified `services/ws/` as a separate reusable capability rather than generic infrastructure. The preserved source now includes the complete WS service closure: rooms, presence, team chat, Yjs CRDT synchronization, AI stream/tool events, AI-originated CRDT file writes, visual editing, design comments, internal API bridges, and WS tracing.
+
+See `capabilities/realtime-collaboration/MANIFEST.md`. This extension is intentionally kept outside the generic AI runtime because it transports AI execution into a multi-user collaborative workspace.
+
