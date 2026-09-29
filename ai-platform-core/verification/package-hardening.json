@@ -7,14 +7,14 @@
     "commit": "a6036d1fd6dca83c08ee5affa141e5c85e45f5af"
   },
   "immutable": {
-    "sourceRoots": 26,
+    "sourceRoots": 27,
     "dependencyClosureRoots": 9,
     "uiReferenceRoots": 8,
     "capturedDirectoryTrees": 121,
-    "immutableFiles": 799,
+    "immutableFiles": 802,
     "rule": "Doable source, dependency-closure source, and captured UI reference source are immutable copies. Host adapters must not modify them.",
-    "capturedRootTrees": 92,
-    "capturedTrees": 213
+    "capturedRootTrees": 93,
+    "capturedTrees": 214
   },
   "capabilities": [
     "multi-provider",
@@ -36,7 +36,8 @@
     "platform-extensions",
     "visual-editing",
     "ai-media-builders",
-    "platform-foundation"
+    "platform-foundation",
+    "ai-security"
   ],
   "externalDependencies": {
     "manifest": "external-dependencies/external-dependencies.json",
