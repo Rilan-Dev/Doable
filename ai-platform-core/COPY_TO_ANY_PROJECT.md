@@ -62,6 +62,7 @@ Available capability manifests:
 - `capabilities/context-memory/MANIFEST.md`
 - `capabilities/workspace-sandbox/MANIFEST.md`
 - `capabilities/ui/MANIFEST.md`
+- `capabilities/platform-foundation/MANIFEST.md` — authentication/RBAC, PostgreSQL schema, secrets/KEK, billing/plans/credits, usage, audit/observability, analytics, notifications/email, GitHub/versioning, deployment/domains, collaboration persistence, templates and Activepieces ecosystem boundary.
 
 Use the smallest capability manifest that satisfies the requested feature, then follow its shared dependency references.
 
@@ -114,3 +115,8 @@ The corresponding source is immutable under `doable-source/`. Reuse the source a
 For platform capabilities beyond the AI runtime, inspect `capabilities/platform-extensions/MANIFEST.md`. It maps the immutable `doable-source-extensions/` trees for collaboration/Yjs, visual AI editing, observability, audit, analytics, billing/usage, identity/RBAC, GitHub/version control, deployment/domains, marketplace, notifications/email and reusable product UI.
 
 Do not cherry-pick individual files without following the manifest and dependency closure. Preserve the Doable implementation and interaction/state model; adapt only host-specific identity, tenancy, persistence, secrets, providers, infrastructure and theme.
+
+
+### Full requested reusable-platform coverage
+
+Use SOURCE_COVERAGE_MATRIX.md as the canonical checklist. It maps every requested AI, editor, collaboration, platform, persistence and infrastructure capability to the exact preserved source boundary and identifies what the host must adapt.
