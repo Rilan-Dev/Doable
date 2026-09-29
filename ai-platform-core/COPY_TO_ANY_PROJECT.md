@@ -99,3 +99,13 @@ For projects that need AI-generated business artifacts, use `capabilities/docume
 
 For products that need collaborative AI editing, use `capabilities/realtime-collaboration/MANIFEST.md`. Reuse both the immutable `doable-source/services/ws/` service and the corresponding `ui-reference/apps/web/src/modules/collaboration/` and `ui-reference/apps/web/src/modules/editor/visual-edit/` sources. Preserve the AI event protocol, Yjs synchronization, room lifecycle, presence, visual-edit interaction model, and design-comment states while adapting identity, persistence, deployment, and visual theme to the host.
 
+## Additional reusable AI extensions
+
+When implementing an AI product, inspect these capability manifests before rebuilding functionality:
+
+- `capabilities/mcp-tool-servers/MANIFEST.md` — complete concrete MCP tool servers.
+- `capabilities/realtime-collaboration/MANIFEST.md` — realtime AI/Yjs collaboration.
+- `capabilities/visual-ai-editing/MANIFEST.md` — visual editing, runtime sandbox, context-file and build UX.
+
+The corresponding source is immutable under `doable-source/`. Reuse the source and adapt only host boundaries such as auth, tenancy, persistence, provider credentials, routing and deployment.
+
