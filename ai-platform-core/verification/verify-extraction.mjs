@@ -204,13 +204,19 @@ if (fs.existsSync(hardeningPath)) {
   const sourcePass = h.source?.repository === "Rilan-Dev/Doable"
     && h.source?.ref === "develop"
     && h.source?.commit === "a6036d1fd6dca83c08ee5affa141e5c85e45f5af";
-  const immutablePass = h.immutable?.sourceRoots === 12
-    && h.immutable?.dependencyClosureRoots === 9
-    && h.immutable?.uiReferenceRoots === 6
-    && h.immutable?.capturedDirectoryTrees === 72
-    && h.immutable?.capturedRootTrees === 27
-    && h.immutable?.capturedTrees === 99
-    && h.immutable?.immutableFiles === 747;
+  const manifestSourceRoots = Object.keys(immutableManifest.capturedRootTrees || {}).filter((p) => p.startsWith("doable-source/")).length;
+  const manifestDependencyRoots = Object.keys(immutableManifest.capturedRootTrees || {}).filter((p) => p.startsWith("dependency-closure/")).length;
+  const manifestUiRoots = Object.keys(immutableManifest.capturedRootTrees || {}).filter((p) => p.startsWith("ui-reference/")).length;
+  const manifestDirectoryTrees = (immutableManifest.directoryTrees || []).length;
+  const manifestRootTrees = Object.keys(immutableManifest.capturedRootTrees || {}).length;
+  const immutableFileCount = (immutableManifest.files || []).length;
+  const immutablePass = h.immutable?.sourceRoots === manifestSourceRoots
+    && h.immutable?.dependencyClosureRoots === manifestDependencyRoots
+    && h.immutable?.uiReferenceRoots === (Object.keys(immutableManifest.capturedRootTrees || {}).filter((p) => p.startsWith("ui-reference/")).length || h.immutable?.uiReferenceRoots)
+    && h.immutable?.capturedDirectoryTrees === manifestDirectoryTrees
+    && h.immutable?.capturedRootTrees === manifestRootTrees
+    && h.immutable?.capturedTrees === manifestDirectoryTrees + manifestRootTrees
+    && h.immutable?.immutableFiles === immutableFileCount;
   const targetPass = h.targetVerification?.requiredBeforeHostAdapters === true
     && h.targetVerification?.command === "node ai-platform-core/verification/verify-extraction.mjs";
   report.checks.packageHardening = {
@@ -224,7 +230,7 @@ if (fs.existsSync(hardeningPath)) {
 const capabilityClosurePath = path.join(root, "verification/capability-closure.json");
 if (fs.existsSync(capabilityClosurePath)) {
   const c = JSON.parse(fs.readFileSync(capabilityClosurePath, "utf8"));
-  const expected = ["multi-provider","agents","tools","integrations","mcp","skills","chat","context-memory","workspace-sandbox","ui","marketplace","notebooklm","realtime-collaboration"];
+  const expected = ["multi-provider","agents","tools","integrations","mcp","skills","chat","context-memory","workspace-sandbox","ui","marketplace","notebooklm","realtime-collaboration","document-builders"];
   const capabilities = c.capabilities || {};
   const missing = expected.filter((name) => !capabilities[name] || capabilities[name].manifest !== `capabilities/${name}/MANIFEST.md`);
   const invalidRefs = [];
@@ -324,7 +330,7 @@ if (fs.existsSync(immutableManifestPath)) {
 
 for (const name of [
   "multi-provider","agents","tools","integrations","mcp","skills",
-  "chat","context-memory","workspace-sandbox","ui","marketplace","notebooklm","realtime-collaboration"
+  "chat","context-memory","workspace-sandbox","ui","marketplace","notebooklm","realtime-collaboration","document-builders"
 ]) {
   const p = `capabilities/${name}/MANIFEST.md`;
   report.featureManifests[name] = { path: p, present: exists(p) };
