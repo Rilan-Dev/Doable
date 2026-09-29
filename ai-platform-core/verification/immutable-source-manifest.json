@@ -687,7 +687,7 @@
       "root": "doable-source",
       "destinationPath": "doable-source/mcp-servers/presentation-builder",
       "sourcePath": "mcp-servers/presentation-builder",
-      "sha": "0bc2bcdc6b75cfba6c102e7bd3d2c1d3db1210f6",
+      "sha": "c51d5e561faf0b86f15f849c86c24848b28b1e2e",
       "mode": "040000"
     },
     {
@@ -6479,28 +6479,31 @@
       "destinationPath": "doable-source/services/ws/package.json",
       "sourcePath": "services/ws/package.json",
       "sha": "b52330fde7fee773dc2a40548759ea42516d9ad4",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "services/ws/package.json"
     },
     {
       "root": "doable-source",
       "destinationPath": "doable-source/services/ws/tsconfig.json",
       "sourcePath": "services/ws/tsconfig.json",
       "sha": "b98897e6d53ee52cb7d73a6b81d291600e9b3eae",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "services/ws/tsconfig.json"
     },
     {
       "root": "doable-source",
       "destinationPath": "doable-source/services/api/src/visual-edit-bridge-inline.ts",
       "sourcePath": "services/api/src/visual-edit-bridge-inline.ts",
       "sha": "020f97a976d086f354af81cdf9e9c585c9ad58e8",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "services/api/src/visual-edit-bridge-inline.ts"
     }
   ],
   "counts": {
-    "files": 747,
-    "directoryTrees": 72,
-    "capturedRootTrees": 27,
-    "totalTrees": 99
+    "files": 799,
+    "directoryTrees": 121,
+    "capturedRootTrees": 92,
+    "totalTrees": 213
   },
   "metadata": {
     "platformExtensions": "Second-pass reusable platform source families preserved under doable-source-extensions/."
