@@ -13,7 +13,7 @@
     "immutableTreesExpected": 121,
     "immutableRootTreesExpected": 92,
     "dependencyManifestCount": 16,
-    "capabilityCount": 19
+    "capabilityCount": 20
   },
   "treeFingerprints": {
     "services/api/src/ai": "13edcc7bd9726c38ea9bd4aab0d7825b2b8387d0",
