@@ -98,7 +98,8 @@
     "doable-source-extensions/ui-platform/usage-page": "c4da6a46fa27e6863e8546cdcec3dbe582f05b07",
     "doable-source-extensions/usage/api": "ab0e6176553895df479320d6c654a5e3a0346656",
     "doable-source-extensions/version-control/api": "bc226a466ddcaf9e3b6e3d10d4f392c554a78ab3",
-    "doable-source-extensions/workspace-settings/web": "75043d2045f565cf8909121b4c13ffd34e15e542"
+    "doable-source-extensions/workspace-settings/web": "75043d2045f565cf8909121b4c13ffd34e15e542",
+    "doable-source-extensions/security": "32964d46ad17027ff6264fa52404751b853f42f9"
   },
   "directoryTrees": [
     {
@@ -6373,6 +6374,12 @@
       "destinationPath": "doable-source/packages/marketplace-bundle/tsconfig.json",
       "sourcePath": "packages/marketplace-bundle/tsconfig.json",
       "sha": "19fd0131012e6c35d203a87dd6cd3520f5072c37",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source-extensions",
+      "path": "security/api-route.ts",
+      "sha": "33ed8a258e21b434309a9b352ca0042ee4c36c0c",
       "mode": "100644"
     }
   ],
