@@ -7661,3 +7661,33 @@ The platform foundation source remains under doable-source-extensions/ where it 
 
 ### Remaining gate
 Run the fixed extraction verifier and external dependency verifier locally, then perform target-project build/import/runtime smoke tests.
+
+
+## Verification checkpoint — 2026-09-29
+
+The fixed local extraction verifier now passes end-to-end.
+
+### Verified
+- required directories: 92/92
+- required files: 46/46
+- Git tree provenance: pass
+- key Git blob provenance: pass
+- immutable source inventory: 799/799 files
+- captured trees: 213 expected, no tree failures
+- package hardening: pass
+- capability closure: 20/20
+- UI reference files: 6/6
+- external dependency inventory: pass
+- external npm packages: 573
+- Activepieces packages: 526
+- workspace packages: 6
+- peer dependencies: 1
+- external package manifest records: 25
+
+### Current classification
+
+**Source extraction: verified.**
+
+**Target runtime/build/import/integration verification: still required.**
+
+The next work should focus on host portability rather than further source discovery: wire identity/tenant/RBAC, PostgreSQL/persistence, secrets/KEK, filesystem/runtime/sandbox, provider registry, transport, RAG/vector retrieval, and validate the reusable platform extensions in a real target project. Voice/STT/TTS remains a separate host capability because no dedicated Doable voice runtime exists in the captured source.
