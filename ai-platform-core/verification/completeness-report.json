@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T08:09:15.413Z",
+  "generatedAt": "2026-09-29T16:29:35.518Z",
   "source": {
     "repository": "Rilan-Dev/Doable",
     "ref": "develop",
@@ -7,12 +7,12 @@
   },
   "extractionBranch": "ai-platform-core-extraction",
   "currentVerification": {
-    "status": "REMOTE_AUDIT_COMPLETE_LOCAL_VERIFIER_PENDING",
-    "note": "Remote GitHub source audit completed on 2026-09-29. Provenance counts and the presentation-builder fingerprint are synchronized, and the local verifier's destinationPath/inventory/capability checks are hardened. Run the fixed verifier locally; target runtime/build compatibility remains unverified.",
+    "status": "LOCAL_VERIFIER_PASS_TARGET_RUNTIME_PENDING",
+    "note": "Remote GitHub source audit is complete and the fixed local extraction verifier passed on 2026-09-29. Required directories/files, Git tree and blob provenance, immutable inventory, package hardening, 20-capability closure, UI references, and external dependency inventory all pass. Target-project runtime/build/import/integration verification remains unverified.",
     "immutableFilesExpected": 799,
     "immutableTreesExpected": 121,
     "immutableRootTreesExpected": 92,
-    "dependencyManifestCount": 16,
+    "dependencyManifestCount": 25,
     "capabilityCount": 20
   },
   "treeFingerprints": {
@@ -53,7 +53,7 @@
     "externalDependencyInventory": "external-dependencies/external-dependencies.json",
     "verificationCommand": "node ai-platform-core/verification/verify-extraction.mjs",
     "immutableProvenanceManifest": "verification/immutable-source-manifest.json",
-    "status": "REMOTE_AUDIT_COMPLETE_LOCAL_VERIFIER_PENDING"
+    "status": "LOCAL_VERIFIER_PASS_TARGET_RUNTIME_PENDING"
   },
-  "status": "REMOTE_SOURCE_AUDIT_COMPLETE; FIXED_LOCAL_VERIFIER PENDING; TARGET_RUNTIME_VERIFICATION REQUIRED"
+  "status": "SOURCE_EXTRACTION_VERIFIED; TARGET_RUNTIME_VERIFICATION REQUIRED"
 }
