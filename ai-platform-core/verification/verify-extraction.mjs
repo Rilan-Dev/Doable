@@ -363,9 +363,6 @@ if (fs.existsSync(immutableManifestPath)) {
 }
 
 for (const name of REQUIRED_CAPABILITIES) {
-  "multi-provider","agents","tools","integrations","mcp","skills",
-  "chat","context-memory","workspace-sandbox","ui","marketplace","notebooklm","realtime-collaboration","document-builders"
-]) {
   const p = `capabilities/${name}/MANIFEST.md`;
   report.featureManifests[name] = { path: p, present: exists(p) };
   report.pass &&= report.featureManifests[name].present;
