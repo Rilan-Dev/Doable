@@ -69,6 +69,7 @@ const requiredFiles = [
   "external-dependencies/source-manifests/presentation-builder.package.json",
   "external-dependencies/source-manifests/spreadsheet-builder.package.json",
   "external-dependencies/source-manifests/markdown-builder.package.json",
+  "external-dependencies/source-manifests/image-generator.package.json",
   "capabilities/multi-provider/MANIFEST.md",
   "capabilities/agents/MANIFEST.md",
   "capabilities/tools/MANIFEST.md",
