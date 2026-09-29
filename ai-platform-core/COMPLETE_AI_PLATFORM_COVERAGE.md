@@ -197,3 +197,11 @@ This is important for downstream AI projects because reusable AI behavior is not
 
 See `capabilities/marketplace/MANIFEST.md`.
 
+## Newly identified standalone AI capability: NotebookLM
+
+A second-pass audit found a separate AI product integration outside the previously captured `services/api/src/mcp` runtime: `mcp-servers/notebooklm/server/`.
+
+It is now preserved under `doable-source/mcp-servers/notebooklm/server/` and registered as `capabilities/notebooklm/MANIFEST.md`. This includes the actual NotebookLM client, native browser transport, Playwright transport, multi-user cookie manager, MCP server, MCP App UI, async infographic jobs, reauthentication and human-input/disambiguation behavior.
+
+This is intentionally optional: it should be reused when a host needs NotebookLM-specific research/knowledge tooling, while the generic MCP runtime remains the platform abstraction.
+
