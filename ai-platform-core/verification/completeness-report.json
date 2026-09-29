@@ -8,7 +8,7 @@
   "extractionBranch": "ai-platform-core-extraction",
   "currentVerification": {
     "status": "REMOTE_AUDIT_COMPLETE_LOCAL_VERIFIER_PENDING",
-    "note": "A GitHub tree/blob audit was performed on 2026-09-29. The extraction is structurally present, but the machine verifier was stale: it mishandled destinationPath-only provenance entries, treated partial per-file manifests as complete inventories, and checked an outdated capability list/tree fingerprint. Those verifier/manifest defects are corrected in this continuation. Run the fixed verifier locally before host adapters or runtime/build claims.",
+    "note": "Remote GitHub source audit completed on 2026-09-29. Provenance counts and the presentation-builder fingerprint are synchronized, and the local verifier's destinationPath/inventory/capability checks are hardened. Run the fixed verifier locally; target runtime/build compatibility remains unverified.",
     "immutableFilesExpected": 799,
     "immutableTreesExpected": 121,
     "immutableRootTreesExpected": 92,
@@ -42,7 +42,7 @@
     "services/ws": "819d4f518e66745a03846cf54ee5d580d8880164",
     "mcp-servers/_shared": "033542e0c4099a118c8a84db22558f9bb65af625",
     "mcp-servers/pdf-builder": "5465b6ad78f92b037683a3e96964a714293c4956",
-    "mcp-servers/presentation-builder": "0bc2bcdc6b75cfba6c102e7bd3d2c1d3db1210f6",
+    "mcp-servers/presentation-builder": "c51d5e561faf0b86f15f849c86c24848b28b1e2e",
     "mcp-servers/spreadsheet-builder": "4742c8bc17d5193ba81e3e2dc9fcdb6297b2390d",
     "mcp-servers/markdown-builder": "f96178af8162a7e12c0f8bdf15af5da695d4e65d"
   },
