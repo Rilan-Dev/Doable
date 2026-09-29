@@ -37,7 +37,12 @@
     "ui-reference/apps/web/src/app/(dashboard)/ai-settings": "1e879c7e3c8a04d8a903f836c3e5b4c1bc12346e",
     "doable-source/packages/marketplace-bundle": "7383f3b96be79584041d35313ad1c60105b2f2e8",
     "doable-source/services/ws": "819d4f518e66745a03846cf54ee5d580d8880164",
-    "doable-source/mcp-servers/notebooklm/server": "bc9b4f6eb7bb71fe144ce4afe984b302112ed8cb"
+    "doable-source/mcp-servers/notebooklm/server": "bc9b4f6eb7bb71fe144ce4afe984b302112ed8cb",
+    "doable-source/mcp-servers/_shared": "033542e0c4099a118c8a84db22558f9bb65af625",
+    "doable-source/mcp-servers/pdf-builder": "5465b6ad78f92b037683a3e96964a714293c4956",
+    "doable-source/mcp-servers/presentation-builder": "0bc2bcdc6b75cfba6c102e7bd3d2c1d3db1210f6",
+    "doable-source/mcp-servers/spreadsheet-builder": "4742c8bc17d5193ba81e3e2dc9fcdb6297b2390d",
+    "doable-source/mcp-servers/markdown-builder": "f96178af8162a7e12c0f8bdf15af5da695d4e65d"
   },
   "directoryTrees": [
     {
@@ -598,6 +603,62 @@
       "destinationPath": "doable-source/mcp-servers/notebooklm/server/src",
       "sourcePath": "mcp-servers/notebooklm/server/src",
       "sha": "c5c84a98b01ec8f2f54eff48d9463d2152640278",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/_shared",
+      "sourcePath": "mcp-servers/_shared",
+      "sha": "033542e0c4099a118c8a84db22558f9bb65af625",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/pdf-builder",
+      "sourcePath": "mcp-servers/pdf-builder",
+      "sha": "5465b6ad78f92b037683a3e96964a714293c4956",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/pdf-builder/skills",
+      "sourcePath": "mcp-servers/pdf-builder/skills",
+      "sha": "35dd9a4fd1c2bc5585479045009b243c5e8dcabd",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/presentation-builder",
+      "sourcePath": "mcp-servers/presentation-builder",
+      "sha": "0bc2bcdc6b75cfba6c102e7bd3d2c1d3db1210f6",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/spreadsheet-builder",
+      "sourcePath": "mcp-servers/spreadsheet-builder",
+      "sha": "4742c8bc17d5193ba81e3e2dc9fcdb6297b2390d",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/spreadsheet-builder/skills",
+      "sourcePath": "mcp-servers/spreadsheet-builder/skills",
+      "sha": "b7346e39cbd193f3e3800f993a46f309e13ddcc6",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/markdown-builder",
+      "sourcePath": "mcp-servers/markdown-builder",
+      "sha": "f96178af8162a7e12c0f8bdf15af5da695d4e65d",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/markdown-builder/skills",
+      "sourcePath": "mcp-servers/markdown-builder/skills",
+      "sha": "d86cfe6e401e4ebbff9ad9b62b874c931576604d",
       "mode": "040000"
     }
   ],
@@ -6025,6 +6086,125 @@
       "destinationPath": "doable-source/services/ws/src/tracing/pg-exporter.ts",
       "sourcePath": "services/ws/src/tracing/pg-exporter.ts",
       "sha": "258875122aff747269a6d119367e31b3cf1408c3",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/_shared/ui.mjs",
+      "sourcePath": "mcp-servers/_shared/ui.mjs",
+      "sha": "b0d5840984b166bac567e3bf303a6bf946b41ebc",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/pdf-builder/package.json",
+      "sourcePath": "mcp-servers/pdf-builder/package.json",
+      "sha": "cbdd53dd794c6f869ca8bbafaa7ca3ec4b25093c",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/pdf-builder/index.mjs",
+      "sourcePath": "mcp-servers/pdf-builder/index.mjs",
+      "sha": "8ea5b98eae281b50d55d3d9fcd6c10203656ed49",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/pdf-builder/README.md",
+      "sourcePath": "mcp-servers/pdf-builder/README.md",
+      "sha": "305bc101db4ed7331525ed6f08a918d2935f8920",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/pdf-builder/skills/SKILL.md",
+      "sourcePath": "mcp-servers/pdf-builder/skills/SKILL.md",
+      "sha": "bc97c73a0d723d73862e881a8d390d4fa71f676a",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/presentation-builder/package.json",
+      "sourcePath": "mcp-servers/presentation-builder/package.json",
+      "sha": "a621c030769fcc67c9dfe9defed2e45fd4562d75",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/presentation-builder/index.mjs",
+      "sourcePath": "mcp-servers/presentation-builder/index.mjs",
+      "sha": "3671503c24af1a7c97544dd34c23d91ae5a03f03",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/presentation-builder/README.md",
+      "sourcePath": "mcp-servers/presentation-builder/README.md",
+      "sha": "fb340e2891dc8d311fed1bf8996bf7f52a1126e9",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/presentation-builder/presentation-engine.mjs",
+      "sourcePath": "mcp-servers/presentation-builder/presentation-engine.mjs",
+      "sha": "fb6f5996bd39db4fb6bf0d38dac7d90272a7f5f1",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/spreadsheet-builder/package.json",
+      "sourcePath": "mcp-servers/spreadsheet-builder/package.json",
+      "sha": "36fe726719b90c5bf4d628f1ee7a7218a18b33c1",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/spreadsheet-builder/index.mjs",
+      "sourcePath": "mcp-servers/spreadsheet-builder/index.mjs",
+      "sha": "d17823b14d6b0eb3a7b17417d889e9b285dac863",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/spreadsheet-builder/README.md",
+      "sourcePath": "mcp-servers/spreadsheet-builder/README.md",
+      "sha": "6347c239cdf9ebf49ca64f147acd83421202c643",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/spreadsheet-builder/skills/SKILL.md",
+      "sourcePath": "mcp-servers/spreadsheet-builder/skills/SKILL.md",
+      "sha": "8a0b0374cd1b63375bd44b74356077892f4b128a",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/markdown-builder/package.json",
+      "sourcePath": "mcp-servers/markdown-builder/package.json",
+      "sha": "7fb9a096961bfa795694bfcc2f967798a2a137da",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/markdown-builder/index.mjs",
+      "sourcePath": "mcp-servers/markdown-builder/index.mjs",
+      "sha": "6edd9c34f9df4cc2d6e437f5c410bee96af5c745",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/markdown-builder/README.md",
+      "sourcePath": "mcp-servers/markdown-builder/README.md",
+      "sha": "9fd4f6ba6ce4d69ff3347b1f3f7c2ec45faf1585",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/markdown-builder/skills/SKILL.md",
+      "sourcePath": "mcp-servers/markdown-builder/skills/SKILL.md",
+      "sha": "bf4d0e3262906bb5b8443663a05273b8ee3c57e1",
       "mode": "100644"
     }
   ],
