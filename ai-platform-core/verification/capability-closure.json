@@ -189,19 +189,19 @@
         "doable-source/services/ws/"
       ],
       "dependencies": [
-        "doable-source/packages/shared/",
-        "doable-source/packages/db/"
+        "doable-source/services/api/src/context/",
+        "dependency-closure/packages/db/"
       ],
       "uiReference": [
         "ui-reference/apps/web/src/modules/collaboration/",
-        "ui-reference/apps/web/src/modules/editor/visual-edit/"
+        "doable-source/apps/web/src/modules/editor/visual-edit/"
       ],
       "hostBoundaries": [
-        "identity/tenant authorization",
-        "websocket deployment",
-        "postgres persistence",
-        "Yjs persistence",
-        "editor/preview client"
+        "identity",
+        "tenant authorization",
+        "room persistence",
+        "WebSocket deployment",
+        "artifact storage"
       ]
     },
     "document-builders": {
@@ -224,6 +224,55 @@
         "artifact download",
         "MCP App host UI/theme",
         "sandbox policy"
+      ]
+    },
+    "mcp-tool-servers": {
+      "manifest": "capabilities/mcp-tool-servers/MANIFEST.md",
+      "runtime": [
+        "doable-source/mcp-servers/_shared/",
+        "doable-source/mcp-servers/image-generator/",
+        "doable-source/mcp-servers/markdown-builder/",
+        "doable-source/mcp-servers/notebooklm/",
+        "doable-source/mcp-servers/pdf-builder/",
+        "doable-source/mcp-servers/presentation-builder/",
+        "doable-source/mcp-servers/spreadsheet-builder/"
+      ],
+      "dependencies": [],
+      "uiReference": [
+        "doable-source/mcp-servers/_shared/"
+      ],
+      "hostBoundaries": [
+        "provider credentials",
+        "Google authentication",
+        "browser runtime",
+        "artifact storage",
+        "MCP registration",
+        "process execution",
+        "public URLs"
+      ]
+    },
+    "visual-ai-editing": {
+      "manifest": "capabilities/visual-ai-editing/MANIFEST.md",
+      "runtime": [
+        "doable-source/apps/web/src/modules/editor/visual-edit/",
+        "doable-source/apps/web/src/modules/editor/runtime-render/",
+        "doable-source/apps/web/src/modules/editor/context-files/",
+        "doable-source/apps/web/src/modules/editor/build/"
+      ],
+      "dependencies": [
+        "dependency-closure/services/api/src/projects/",
+        "dependency-closure/services/api/src/runtime/",
+        "dependency-closure/services/api/src/frameworks/"
+      ],
+      "uiReference": [
+        "doable-source/apps/web/src/modules/editor/visual-edit/",
+        "doable-source/apps/web/src/modules/editor/runtime-render/"
+      ],
+      "hostBoundaries": [
+        "project/files API",
+        "preview runtime",
+        "editor state/routing",
+        "theme"
       ]
     }
   },
