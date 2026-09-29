@@ -65,6 +65,10 @@ const requiredFiles = [
   "external-dependencies/source-manifests/marketplace-bundle.package.json",
   "external-dependencies/source-manifests/notebooklm-mcp-server.package.json",
   "external-dependencies/source-manifests/doable-ws.package.json",
+  "external-dependencies/source-manifests/pdf-builder.package.json",
+  "external-dependencies/source-manifests/presentation-builder.package.json",
+  "external-dependencies/source-manifests/spreadsheet-builder.package.json",
+  "external-dependencies/source-manifests/markdown-builder.package.json",
   "capabilities/multi-provider/MANIFEST.md",
   "capabilities/agents/MANIFEST.md",
   "capabilities/tools/MANIFEST.md",
@@ -77,7 +81,8 @@ const requiredFiles = [
   "capabilities/ui/MANIFEST.md",
   "capabilities/marketplace/MANIFEST.md",
   "capabilities/notebooklm/MANIFEST.md",
-  "capabilities/realtime-collaboration/MANIFEST.md"
+  "capabilities/realtime-collaboration/MANIFEST.md",
+  "capabilities/document-builders/MANIFEST.md"
 ];
 
 function exists(rel) { return fs.existsSync(path.join(root, rel)); }
@@ -194,7 +199,7 @@ if (gitAvailable()) {
 const hardeningPath = path.join(root, "verification/package-hardening.json");
 if (fs.existsSync(hardeningPath)) {
   const h = JSON.parse(fs.readFileSync(hardeningPath, "utf8"));
-  const expectedCapabilities = ["multi-provider","agents","tools","integrations","mcp","skills","chat","context-memory","workspace-sandbox","ui","marketplace","notebooklm","realtime-collaboration"];
+  const expectedCapabilities = ["multi-provider","agents","tools","integrations","mcp","skills","chat","context-memory","workspace-sandbox","ui","marketplace","notebooklm","realtime-collaboration","document-builders"];
   const capabilityPass = expectedCapabilities.every((name) => (h.capabilities || []).includes(name));
   const sourcePass = h.source?.repository === "Rilan-Dev/Doable"
     && h.source?.ref === "develop"
