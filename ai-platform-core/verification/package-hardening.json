@@ -7,14 +7,14 @@
     "commit": "a6036d1fd6dca83c08ee5affa141e5c85e45f5af"
   },
   "immutable": {
-    "sourceRoots": 12,
+    "sourceRoots": 14,
     "dependencyClosureRoots": 9,
     "uiReferenceRoots": 6,
-    "capturedDirectoryTrees": 72,
-    "immutableFiles": 747,
+    "capturedDirectoryTrees": 79,
+    "immutableFiles": 775,
     "rule": "Doable source, dependency-closure source, and captured UI reference source are immutable copies. Host adapters must not modify them.",
-    "capturedRootTrees": 27,
-    "capturedTrees": 99
+    "capturedRootTrees": 29,
+    "capturedTrees": 108
   },
   "capabilities": [
     "multi-provider",
@@ -26,7 +26,10 @@
     "chat",
     "context-memory",
     "workspace-sandbox",
-    "ui"
+    "ui",
+    "marketplace",
+    "notebooklm",
+    "realtime-collaboration"
   ],
   "externalDependencies": {
     "manifest": "external-dependencies/external-dependencies.json",
@@ -35,7 +38,9 @@
       "external-dependencies/source-manifests/root.package.json",
       "external-dependencies/source-manifests/pnpm-workspace.yaml",
       "external-dependencies/source-manifests/tsconfig.base.json",
-      "external-dependencies/source-manifests/marketplace-bundle.package.json"
+      "external-dependencies/source-manifests/marketplace-bundle.package.json",
+      "external-dependencies/source-manifests/notebooklm-mcp-server.package.json",
+      "external-dependencies/source-manifests/doable-ws.package.json"
     ],
     "rule": "Source-present packages are not equivalent to installed target runtime dependencies. The target project must explicitly bind runtime, execution, security, host-adapter, and optional requirements."
   },
