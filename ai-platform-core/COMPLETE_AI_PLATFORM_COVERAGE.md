@@ -257,3 +257,10 @@ The extraction now also preserves these complete Doable-derived reusable extensi
 
 Host-specific infrastructure remains preserved where useful but explicitly marked as adapter boundaries rather than silently removed.
 
+
+
+## Requested checklist closure
+
+All requested platform capabilities are now explicitly indexed in SOURCE_COVERAGE_MATRIX.md and promoted under capabilities/platform-foundation/MANIFEST.md where they cross the AI/runtime boundary. This includes authentication/tenant/RBAC, PostgreSQL schema, secrets/KEK, OS/container infrastructure, Activepieces, billing/subscriptions, notifications/email, analytics, GitHub/versioning, deployment/domains and realtime collaboration in addition to the previously extracted AI capabilities.
+
+The source remains additive: existing immutable Doable trees are not rewritten or deduplicated. Reusable platform source is referenced from the canonical capability manifests so downstream projects copy the complete implementation closure without losing source provenance.
