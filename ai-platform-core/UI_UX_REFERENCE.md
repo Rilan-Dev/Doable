@@ -45,3 +45,19 @@ Only the host's theme, navigation, spacing, typography, color, component library
 ## Backlog
 
 Before declaring the reusable platform complete, perform a screen-by-screen inventory of these reference areas and map each screen/dialog to its corresponding host-neutral capability contract. Do not modify these captured reference sources.
+## Second-pass reusable product UI reference
+
+Additional immutable UI source is preserved under `doable-source-extensions/ui-platform/` and related editor/collaboration trees. It covers:
+
+- realtime collaboration: presence, cursors, activity, team chat, AI chat sync, preview/file sync and visual-edit collaboration;
+- visual AI editing: selection, property panels, inline edits and design comments;
+- planning/clarification cards and progress states;
+- build/runtime/version/restore/diff editor surfaces;
+- admin audit and trace investigation surfaces;
+- billing, credits, usage and plan surfaces;
+- marketplace discovery/listing/install/report/moderation surfaces;
+- authentication/settings/workspace configuration;
+- GitHub connect/import/sync/deployment toolbar flows;
+- analytics, security and deployment-related editor panels.
+
+These are source-level interaction references, not merely screenshots. Future projects should reuse the state transitions and workflow structure while adapting the visual theme and host navigation.
