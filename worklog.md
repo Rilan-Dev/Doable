@@ -7642,3 +7642,22 @@ After restoration:
 - The presentation-builder stale fingerprint has been corrected.
 
 The remaining gate is intentionally unchanged: run the fixed verifier locally, then run dependency/import/build smoke tests and wire the host adapters/RAG backend. No runtime compatibility is being claimed until those checks execute in the target project.
+
+
+## Response:
+9/29/2026, 9:35:00 PM · gpt-5-6
+
+The requested AI + platform checklist is now explicitly promoted into the reusable source layer.
+
+### Completed
+- Added capabilities/platform-foundation/MANIFEST.md covering authentication/tenant/RBAC, billing/subscriptions/credits/plans, PostgreSQL schema, secrets/KEK, OS/container/runtime infrastructure, analytics, audit/observability, notifications/email, GitHub/versioning, deployment/domains, realtime collaboration persistence, templates/scaffolding, marketplace, and the Activepieces ecosystem boundary.
+- Added contracts/platform-foundation.ts with host-neutral persistence, usage/quota, audit, analytics, billing, notification, email, version-control, deployment, domain, template/scaffold, and realtime-collaboration adapters.
+- Added SOURCE_COVERAGE_MATRIX.md mapping every requested item to preserved source and identifying host/external boundaries.
+- Promoted platform-foundation into the capability map, capability closure, hardening manifest and copy-to-any-project workflow.
+- Kept existing immutable source trees additive; no source was deleted or collapsed, so provenance is preserved.
+
+### Important reuse boundary
+The platform foundation source remains under doable-source-extensions/ where it is naturally host-bound. This is still part of the reusable ai-platform-core source bundle; it is intentionally not duplicated into doable-source/ because duplication would create two competing immutable copies and weaken provenance.
+
+### Remaining gate
+Run the fixed extraction verifier and external dependency verifier locally, then perform target-project build/import/runtime smoke tests.
