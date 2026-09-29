@@ -899,6 +899,13 @@
       "sourcePath": "apps/web/src/modules/marketplace",
       "sha": "57013142e894cac66bcf326a32d7648916a84675",
       "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/routes",
+      "sourcePath": "services/api/src/routes",
+      "sha": "cd5c22d0229e24617a8293b6961c2294418cf3e9",
+      "mode": "040000"
     }
   ],
   "files": [
@@ -6423,6 +6430,27 @@
       "root": "doable-source-extensions",
       "path": "security/api-route.ts",
       "sha": "33ed8a258e21b434309a9b352ca0042ee4c36c0c",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/ws/package.json",
+      "sourcePath": "services/ws/package.json",
+      "sha": "b52330fde7fee773dc2a40548759ea42516d9ad4",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/ws/tsconfig.json",
+      "sourcePath": "services/ws/tsconfig.json",
+      "sha": "b98897e6d53ee52cb7d73a6b81d291600e9b3eae",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/visual-edit-bridge-inline.ts",
+      "sourcePath": "services/api/src/visual-edit-bridge-inline.ts",
+      "sha": "020f97a976d086f354af81cdf9e9c585c9ad58e8",
       "mode": "100644"
     }
   ],
