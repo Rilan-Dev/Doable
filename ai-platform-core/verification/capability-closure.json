@@ -335,6 +335,57 @@
         "MCP registration",
         "UI/theme"
       ]
+    },
+    "platform-foundation": {
+      "manifest": "capabilities/platform-foundation/MANIFEST.md",
+      "runtime": [
+        "doable-source-extensions/auth/",
+        "doable-source-extensions/identity-rbac/",
+        "doable-source-extensions/billing/",
+        "doable-source-extensions/usage/",
+        "doable-source-extensions/analytics/",
+        "doable-source-extensions/audit/",
+        "doable-source-extensions/observability/",
+        "doable-source-extensions/notifications/",
+        "doable-source-extensions/email/",
+        "doable-source-extensions/github/",
+        "doable-source-extensions/version-control/",
+        "doable-source-extensions/deployment/",
+        "doable-source-extensions/domains/",
+        "doable-source-extensions/marketplace/",
+        "doable-source-extensions/realtime-collaboration/",
+        "dependency-closure/packages/db/",
+        "dependency-closure/services/api/src/db/",
+        "dependency-closure/services/api/src/runtime/",
+        "dependency-closure/services/api/src/projects/",
+        "dependency-closure/services/api/src/templates/",
+        "dependency-closure/services/api/src/git/",
+        "dependency-closure/services/api/src/middleware/",
+        "doable-source/services/api/src/sandbox/",
+        "doable-source/packages/docore/",
+        "doable-source/packages/dovault/",
+        "doable-source/services/ws/"
+      ],
+      "uiReference": [
+        "doable-source/apps/web/src/modules/billing/",
+        "doable-source/apps/web/src/modules/marketplace/",
+        "doable-source/apps/web/src/modules/editor/",
+        "doable-source/apps/web/src/modules/collaboration/"
+      ],
+      "hostBoundaries": [
+        "identity/session",
+        "tenant/RBAC",
+        "database connection/schema reconciliation",
+        "KEK/secrets",
+        "billing provider",
+        "email provider",
+        "deployment provider",
+        "domains/DNS",
+        "WebSocket auth/origin",
+        "OS/container/network policy",
+        "Activepieces packages",
+        "object storage"
+      ]
     }
   },
   "acceptance": {
