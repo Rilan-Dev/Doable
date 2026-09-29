@@ -85,7 +85,8 @@ const requiredFiles = [
   "capabilities/realtime-collaboration/MANIFEST.md",
   "capabilities/document-builders/MANIFEST.md",
   "capabilities/mcp-tool-servers/MANIFEST.md",
-  "capabilities/visual-ai-editing/MANIFEST.md"
+  "capabilities/visual-ai-editing/MANIFEST.md",
+  "capabilities/platform-extensions/MANIFEST.md"
 ];
 
 function exists(rel) { return fs.existsSync(path.join(root, rel)); }
@@ -202,7 +203,7 @@ if (gitAvailable()) {
 const hardeningPath = path.join(root, "verification/package-hardening.json");
 if (fs.existsSync(hardeningPath)) {
   const h = JSON.parse(fs.readFileSync(hardeningPath, "utf8"));
-  const expectedCapabilities = ["multi-provider","agents","tools","integrations","mcp","skills","chat","context-memory","workspace-sandbox","ui","marketplace","notebooklm","realtime-collaboration","document-builders","mcp-tool-servers","visual-ai-editing","mcp-tool-servers","visual-ai-editing"];
+  const expectedCapabilities = ["multi-provider","agents","tools","integrations","mcp","skills","chat","context-memory","workspace-sandbox","ui","marketplace","notebooklm","realtime-collaboration","document-builders","mcp-tool-servers","visual-ai-editing","mcp-tool-servers","visual-ai-editing","platform-extensions"];
   const capabilityPass = expectedCapabilities.every((name) => (h.capabilities || []).includes(name));
   const sourcePass = h.source?.repository === "Rilan-Dev/Doable"
     && h.source?.ref === "develop"
@@ -233,7 +234,7 @@ if (fs.existsSync(hardeningPath)) {
 const capabilityClosurePath = path.join(root, "verification/capability-closure.json");
 if (fs.existsSync(capabilityClosurePath)) {
   const c = JSON.parse(fs.readFileSync(capabilityClosurePath, "utf8"));
-  const expected = ["multi-provider","agents","tools","integrations","mcp","skills","chat","context-memory","workspace-sandbox","ui","marketplace","notebooklm","realtime-collaboration","document-builders"];
+  const expected = ["multi-provider","agents","tools","integrations","mcp","skills","chat","context-memory","workspace-sandbox","ui","marketplace","notebooklm","realtime-collaboration","document-builders","platform-extensions"];
   const capabilities = c.capabilities || {};
   const missing = expected.filter((name) => !capabilities[name] || capabilities[name].manifest !== `capabilities/${name}/MANIFEST.md`);
   const invalidRefs = [];
