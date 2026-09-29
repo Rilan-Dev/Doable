@@ -69,3 +69,12 @@ Authentication, RBAC, billing, database schema, email, domains, deployment, and 
 2. Verify external package manifests with `external-dependencies/verify-external-dependencies.mjs`.
 3. Before host implementation, inspect this manifest and every referenced source/dependency/UI closure.
 4. Do not alter immutable Doable source to fit the host.
+
+### Security
+- `doable-source-extensions/security/api-scanner/`
+- `doable-source-extensions/security/shared/`
+- `doable-source-extensions/security/api-route.ts`
+- `doable-source-extensions/security/web-settings/`
+
+These provide reusable project/security scanning, security configuration and settings patterns. Keep the host's threat model and deployment controls authoritative.
+
