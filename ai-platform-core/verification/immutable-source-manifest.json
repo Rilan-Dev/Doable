@@ -6276,6 +6276,27 @@
       "sourcePath": "mcp-servers/markdown-builder/skills/SKILL.md",
       "sha": "bf4d0e3262906bb5b8443663a05273b8ee3c57e1",
       "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/notebooklm/server/src/ws_transport.ts",
+      "sourcePath": "mcp-servers/notebooklm/server/src/ws_transport.ts",
+      "sha": "587bbad309e6211dedd880b56f65a020a6df4cb4",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/notebooklm/server/public/infographic-viewer.html",
+      "sourcePath": "mcp-servers/notebooklm/server/public/infographic-viewer.html",
+      "sha": "29c487704e3d39c222baa2a78f566470047617af",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/packages/marketplace-bundle/tsconfig.json",
+      "sourcePath": "packages/marketplace-bundle/tsconfig.json",
+      "sha": "19fd0131012e6c35d203a87dd6cd3520f5072c37",
+      "mode": "100644"
     }
   ],
   "counts": {
