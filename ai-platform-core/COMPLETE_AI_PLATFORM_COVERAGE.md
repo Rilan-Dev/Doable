@@ -211,3 +211,6 @@ The second-pass audit identified `services/ws/` as a separate reusable capabilit
 
 See `capabilities/realtime-collaboration/MANIFEST.md`. This extension is intentionally kept outside the generic AI runtime because it transports AI execution into a multi-user collaborative workspace.
 
+## AI document-generation extensions
+
+Doable also contains standalone MCP Apps for PDF, presentations, spreadsheets and Markdown. Their complete source is preserved under `doable-source/mcp-servers/{pdf-builder,presentation-builder,spreadsheet-builder,markdown-builder}/` plus `doable-source/mcp-servers/_shared/ui.mjs`. These are separate from the generic MCP runtime because they implement concrete AI content-generation products.
