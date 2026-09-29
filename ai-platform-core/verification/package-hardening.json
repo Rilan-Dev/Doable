@@ -10,11 +10,11 @@
     "sourceRoots": 26,
     "dependencyClosureRoots": 9,
     "uiReferenceRoots": 8,
-    "capturedDirectoryTrees": 101,
-    "immutableFiles": 796,
+    "capturedDirectoryTrees": 121,
+    "immutableFiles": 799,
     "rule": "Doable source, dependency-closure source, and captured UI reference source are immutable copies. Host adapters must not modify them.",
     "capturedRootTrees": 92,
-    "capturedTrees": 193
+    "capturedTrees": 213
   },
   "capabilities": [
     "multi-provider",
@@ -33,7 +33,9 @@
     "document-builders",
     "mcp-tool-servers",
     "visual-ai-editing",
-    "platform-extensions"
+    "platform-extensions",
+    "visual-editing",
+    "ai-media-builders"
   ],
   "externalDependencies": {
     "manifest": "external-dependencies/external-dependencies.json",
