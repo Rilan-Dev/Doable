@@ -34,6 +34,7 @@ The Doable source snapshot and copied UI reference trees are immutable reference
 | AI/provider/settings/integration/MCP/skills/workspace UI | `ui-reference/apps/web/src/modules/*` and setup/workspace pages | captured |
 | Agent/chat/tool-call UI and streaming interaction model | `ui-reference/apps/web/src/modules/editor/chat/*` plus editor state store and dashboard chat input | captured |
 | Voice/realtime UI | Doable has no single native realtime voice UI equivalent; host voice UI remains an adapter concern | intentionally host-bound |
+| AI security scanner | `doable-source/services/api/src/security/` + `doable-source/services/api/src/routes/security.ts` + DB security closure | captured |
 
 ## Important distinction: reusable code vs host bindings
 
@@ -98,11 +99,11 @@ The verifier can run in the original Git checkout for Git tree/blob identity che
 
 The extraction is now pinned by a complete immutable provenance manifest at `verification/immutable-source-manifest.json`.
 
-- **796/796 immutable files** have expected Doable baseline blob SHAs and modes recorded.
-- **92/92 captured immutable tree roots** match their baseline Git tree SHAs.
-- The current extraction contains **101/101 captured directory trees** and **0 blob mismatches** and **0 missing baseline files** against Doable commit `a6036d1fd6dca83c08ee5affa141e5c85e45f5af`.
+- **802/802 immutable files** have expected Doable baseline blob SHAs and modes recorded.
+- **93/93 captured immutable tree roots** match their baseline Git tree SHAs.
+- The current extraction contains **121/121 captured directory trees** and **0 blob mismatches** and **0 missing baseline files** against Doable commit `a6036d1fd6dca83c08ee5affa141e5c85e45f5af`.
 - `verification/verify-extraction.mjs` validates the complete file inventory, every immutable blob, captured tree roots, required manifests, and feature manifests.
-- `external-dependencies/external-dependencies.json` now inventories package dependencies across the captured package manifests, including **559 external npm packages**, **526 Activepieces packages**, **6 workspace packages**, peer dependencies, package overrides, and build-time packages.
+- `external-dependencies/external-dependencies.json` now inventories package dependencies across the captured package manifests, including **573 external npm packages**, **526 Activepieces packages**, **6 workspace packages**, peer dependencies, package overrides, and build-time packages.
 - Runtime installation/build verification remains a target-project responsibility after copying the core into the host repository.
 
 ## Second-pass promoted source families
@@ -147,3 +148,9 @@ The extraction now additionally preserves the requested non-core platform capabi
 - reusable admin/settings/billing/usage/workspace/dashboard UI
 
 These are reusable platform extensions, not replacements for the host-neutral AI contracts. Their persistence, identity, security, payment, email, domain and deployment bindings remain host-specific.
+
+
+## Universal agent implementation guide
+
+- `IMPLEMENTATION_PLAYBOOK.md` — deterministic workflow for Codex/Claude Code/Clodex/other coding agents to inspect a capability, map host boundaries, implement adapters, integrate runtime/API/UI/persistence, and verify the result.
+- `COPY_TO_ANY_PROJECT.md` — copy/integration contract and ready-to-use request patterns.
