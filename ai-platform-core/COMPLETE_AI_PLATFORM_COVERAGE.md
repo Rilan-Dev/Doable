@@ -239,3 +239,21 @@ This includes the complete WS/Yjs collaboration service and collaboration UI; vi
 The extraction deliberately keeps these separate from the host-neutral AI runtime. A target project can copy the complete extension source and selectively bind its host-specific identity, database, secrets, OAuth, billing, email, domain, deployment and realtime infrastructure.
 
 Doable's public architecture also identifies real-time collaboration, AI-powered development, built-in document-builder MCP servers, multi-tenant RBAC, audit logging, quotas, custom domains and self-hosted deployment as first-class product capabilities. citeturn3search0
+
+## Second-pass extension coverage
+
+The extraction now also preserves these complete Doable-derived reusable extensions:
+
+- Realtime AI collaboration: WebSocket rooms, Yjs/CRDT, presence, AI stream/tool synchronization, team chat, preview/file-tab synchronization.
+- AI + visual editing: iframe bridge, property editors, design comments, visual-edit collaboration, editor runtime, code editor, build/preview, clarification/plan UI, version diff/restore, GitHub and deployment UI.
+- AI media/document builders: image generator, Markdown builder, PDF builder, presentation builder, spreadsheet builder, shared MCP UI infrastructure.
+- AI observability and audit-supporting infrastructure: analytics, tracing, redaction, sampling, retention, logging and usage services.
+- AI project lifecycle: project routes, scaffold/file CRUD/dev-server routes, runtime/framework/template dependencies, build-event infrastructure, direct-save transforms.
+- GitHub AI/project workflow: GitHub client/sync/webhooks/project routes and editor UI.
+- Version control/diff/restore: backend version-control source and editor history/diff/restore UX.
+- Platform services: authentication/MFA/OAuth, usage/credits/plans, billing UI, notifications/email administration, custom domains/deployment, marketplace/moderation, environments/workspaces.
+- NotebookLM: standalone NotebookLM MCP source and MCP App.
+- Marketplace bundle: portable skills/rules/instructions/knowledge/MCP connector packaging.
+
+Host-specific infrastructure remains preserved where useful but explicitly marked as adapter boundaries rather than silently removed.
+
