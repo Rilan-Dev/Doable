@@ -7,14 +7,14 @@
     "commit": "a6036d1fd6dca83c08ee5affa141e5c85e45f5af"
   },
   "immutable": {
-    "sourceRoots": 20,
+    "sourceRoots": 26,
     "dependencyClosureRoots": 9,
     "uiReferenceRoots": 8,
-    "capturedDirectoryTrees": 98,
+    "capturedDirectoryTrees": 101,
     "immutableFiles": 795,
     "rule": "Doable source, dependency-closure source, and captured UI reference source are immutable copies. Host adapters must not modify them.",
-    "capturedRootTrees": 37,
-    "capturedTrees": 135
+    "capturedRootTrees": 43,
+    "capturedTrees": 144
   },
   "capabilities": [
     "multi-provider",
@@ -30,7 +30,9 @@
     "marketplace",
     "notebooklm",
     "realtime-collaboration",
-    "document-builders"
+    "document-builders",
+    "mcp-tool-servers",
+    "visual-ai-editing"
   ],
   "externalDependencies": {
     "manifest": "external-dependencies/external-dependencies.json",
@@ -45,7 +47,8 @@
       "external-dependencies/source-manifests/pdf-builder.package.json",
       "external-dependencies/source-manifests/presentation-builder.package.json",
       "external-dependencies/source-manifests/spreadsheet-builder.package.json",
-      "external-dependencies/source-manifests/markdown-builder.package.json"
+      "external-dependencies/source-manifests/markdown-builder.package.json",
+      "external-dependencies/source-manifests/image-generator.package.json"
     ],
     "rule": "Source-present packages are not equivalent to installed target runtime dependencies. The target project must explicitly bind runtime, execution, security, host-adapter, and optional requirements."
   },
