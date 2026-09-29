@@ -126,3 +126,24 @@ The immutable extraction additionally includes:
 
 All are pinned to the original Doable Git tree/blob identities. They are optional extensions around the generic AI core and retain their host-boundary contracts.
 
+### Second-pass platform extension source families
+
+The extraction now additionally preserves the requested non-core platform capabilities under `doable-source-extensions/`, with immutable Git tree identities recorded in `verification/immutable-source-manifest.json`.
+
+- realtime collaboration / Yjs / team chat / presence
+- visual AI editing and editor runtime UX
+- usage, credits, quotas and billing
+- tracing / observability and trace administration
+- audit trail / admin audit UX
+- analytics
+- authentication / MFA / OAuth / RLS / workspace roles
+- GitHub account/OAuth/project synchronization
+- version control / versions / restore
+- deployment / custom domains / Cloudflare/Caddy domain helpers
+- marketplace API, moderation, discovery/listing UI and marketplace data queries
+- notifications
+- email providers, templates, queue and admin email configuration
+- reusable editor panels/components/toolbar
+- reusable admin/settings/billing/usage/workspace/dashboard UI
+
+These are reusable platform extensions, not replacements for the host-neutral AI contracts. Their persistence, identity, security, payment, email, domain and deployment bindings remain host-specific.
