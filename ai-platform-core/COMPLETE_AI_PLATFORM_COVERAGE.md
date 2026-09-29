@@ -224,3 +224,9 @@ The extraction now includes Doable's standalone realtime service and the corresp
 
 This covers AI stream/tool-event propagation over WebSocket, project rooms, presence, Yjs/CRDT synchronization, collaborative AI chat, preview synchronization, visual editing property panels, iframe bridging, and design comments/sticky-note workflows.
 
+## Standalone AI capability extensions
+
+The extracted core now also preserves complete standalone MCP product servers under `doable-source/mcp-servers/`: image generation, Markdown/document building, NotebookLM, PDF generation, presentations and spreadsheets, plus their shared MCP UI helpers.
+
+The extraction also preserves the realtime collaboration service and editor-side visual AI editing/runtime/context/build modules. These are separate extensions because they have additional host boundaries, but they are part of the reusable Doable-derived AI platform source inventory.
+
