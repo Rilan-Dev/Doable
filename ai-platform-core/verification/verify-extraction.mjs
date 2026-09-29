@@ -44,7 +44,7 @@ const REQUIRED_CAPABILITIES = [
   "multi-provider","agents","tools","integrations","mcp","skills","chat",
   "context-memory","workspace-sandbox","ui","marketplace","notebooklm",
   "realtime-collaboration","document-builders","mcp-tool-servers",
-  "visual-ai-editing","platform-extensions","visual-editing","ai-media-builders"
+  "visual-ai-editing","platform-extensions","visual-editing","ai-media-builders","platform-foundation"
 ];
 
 function normalizeManifestFilePath(file) {
@@ -103,7 +103,8 @@ const requiredFiles = [
   "capabilities/document-builders/MANIFEST.md",
   "capabilities/mcp-tool-servers/MANIFEST.md",
   "capabilities/visual-ai-editing/MANIFEST.md",
-  "capabilities/platform-extensions/MANIFEST.md"
+  "capabilities/platform-extensions/MANIFEST.md",
+  "capabilities/platform-foundation/MANIFEST.md"
 ];
 
 function exists(rel) { return fs.existsSync(path.join(root, rel)); }
