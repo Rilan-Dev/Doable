@@ -7,3 +7,5 @@ export * from "./integrations.js";
 export * from "./workspace.js";
 export * from "./rag-context.js";
 export * from "./transport.js";
+
+export * from "./platform-foundation.js";
