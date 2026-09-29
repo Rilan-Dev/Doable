@@ -82,7 +82,9 @@ const requiredFiles = [
   "capabilities/marketplace/MANIFEST.md",
   "capabilities/notebooklm/MANIFEST.md",
   "capabilities/realtime-collaboration/MANIFEST.md",
-  "capabilities/document-builders/MANIFEST.md"
+  "capabilities/document-builders/MANIFEST.md",
+  "capabilities/mcp-tool-servers/MANIFEST.md",
+  "capabilities/visual-ai-editing/MANIFEST.md"
 ];
 
 function exists(rel) { return fs.existsSync(path.join(root, rel)); }
@@ -199,7 +201,7 @@ if (gitAvailable()) {
 const hardeningPath = path.join(root, "verification/package-hardening.json");
 if (fs.existsSync(hardeningPath)) {
   const h = JSON.parse(fs.readFileSync(hardeningPath, "utf8"));
-  const expectedCapabilities = ["multi-provider","agents","tools","integrations","mcp","skills","chat","context-memory","workspace-sandbox","ui","marketplace","notebooklm","realtime-collaboration","document-builders"];
+  const expectedCapabilities = ["multi-provider","agents","tools","integrations","mcp","skills","chat","context-memory","workspace-sandbox","ui","marketplace","notebooklm","realtime-collaboration","document-builders","mcp-tool-servers","visual-ai-editing","mcp-tool-servers","visual-ai-editing"];
   const capabilityPass = expectedCapabilities.every((name) => (h.capabilities || []).includes(name));
   const sourcePass = h.source?.repository === "Rilan-Dev/Doable"
     && h.source?.ref === "develop"
