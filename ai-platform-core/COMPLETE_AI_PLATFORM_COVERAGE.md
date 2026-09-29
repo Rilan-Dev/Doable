@@ -230,3 +230,12 @@ The extracted core now also preserves complete standalone MCP product servers un
 
 The extraction also preserves the realtime collaboration service and editor-side visual AI editing/runtime/context/build modules. These are separate extensions because they have additional host boundaries, but they are part of the reusable Doable-derived AI platform source inventory.
 
+## Second-pass platform extensions
+
+The requested platform-wide AI-enabling and product capabilities are now preserved as immutable optional extensions in `doable-source-extensions/`.
+
+This includes the complete WS/Yjs collaboration service and collaboration UI; visual editing/runtime/build/editor UX; AI usage/credits/quotas; tracing and admin trace UI; audit logs and admin audit UI; analytics; authentication/MFA/OAuth/RLS/workspace roles; GitHub project workflow; version/diff/restore; deployment and custom-domain helpers; marketplace backend/UI/data-query source; notifications; email providers/templates/queue; billing/plans; and reusable admin/settings/dashboard/editor UI.
+
+The extraction deliberately keeps these separate from the host-neutral AI runtime. A target project can copy the complete extension source and selectively bind its host-specific identity, database, secrets, OAuth, billing, email, domain, deployment and realtime infrastructure.
+
+Doable's public architecture also identifies real-time collaboration, AI-powered development, built-in document-builder MCP servers, multi-tenant RBAC, audit logging, quotas, custom domains and self-hosted deployment as first-class product capabilities. citeturn3search0
