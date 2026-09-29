@@ -274,6 +274,54 @@
         "editor state/routing",
         "theme"
       ]
+    },
+    "platform-extensions": {
+      "manifest": "capabilities/platform-extensions/MANIFEST.md",
+      "runtime": [
+        "doable-source-extensions/realtime-collaboration/services-ws/",
+        "doable-source-extensions/realtime-collaboration/web-collaboration/",
+        "doable-source-extensions/observability/api-tracing/",
+        "doable-source-extensions/audit/api-admin/",
+        "doable-source-extensions/analytics/api/",
+        "doable-source-extensions/billing/api/",
+        "doable-source-extensions/usage/api/",
+        "doable-source-extensions/identity-rbac/api-auth/",
+        "doable-source-extensions/github/api/",
+        "doable-source-extensions/version-control/api/",
+        "doable-source-extensions/deployment/api/",
+        "doable-source-extensions/marketplace/api/",
+        "doable-source-extensions/email/api/",
+        "doable-source-extensions/domains/api/"
+      ],
+      "ui": [
+        "doable-source-extensions/ui-platform/admin/",
+        "doable-source-extensions/ui-platform/billing-page/",
+        "doable-source-extensions/ui-platform/usage-page/",
+        "doable-source-extensions/ui-platform/settings-page/",
+        "doable-source-extensions/ui-platform/marketplace-pages/",
+        "doable-source-extensions/ui-platform/billing-module/",
+        "doable-source-extensions/ui-platform/marketplace-module/",
+        "doable-source-extensions/ui-platform/editor-panels/",
+        "doable-source-extensions/ui-platform/editor-components/",
+        "doable-source-extensions/ui-platform/editor-toolbar/"
+      ],
+      "dependencies": [
+        "dependency-closure/packages/db/",
+        "doable-source/packages/docore/",
+        "doable-source/packages/dovault/"
+      ],
+      "hostBoundaries": [
+        "identity/tenant persistence",
+        "database schema",
+        "secrets",
+        "OAuth providers",
+        "Stripe/payment provider",
+        "email provider",
+        "Cloudflare/Caddy/domain infrastructure",
+        "deployment infrastructure",
+        "GitHub credentials",
+        "WebSocket hosting"
+      ]
     }
   },
   "acceptance": {
