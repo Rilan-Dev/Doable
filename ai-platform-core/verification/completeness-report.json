@@ -7,13 +7,13 @@
   },
   "extractionBranch": "ai-platform-core-extraction",
   "currentVerification": {
-    "status": "PENDING_LOCAL_VERIFICATION_AFTER_EXTENSION_EXTRACTION",
-    "note": "Run the machine verifier locally; this report does not claim a fresh pass after the latest extension additions.",
-    "immutableFilesExpected": 792,
-    "immutableTreesExpected": 123,
-    "immutableRootTreesExpected": 35,
-    "dependencyManifestCount": 15,
-    "capabilityCount": 14
+    "status": "REMOTE_AUDIT_COMPLETE_LOCAL_VERIFIER_PENDING",
+    "note": "A GitHub tree/blob audit was performed on 2026-09-29. The extraction is structurally present, but the machine verifier was stale: it mishandled destinationPath-only provenance entries, treated partial per-file manifests as complete inventories, and checked an outdated capability list/tree fingerprint. Those verifier/manifest defects are corrected in this continuation. Run the fixed verifier locally before host adapters or runtime/build claims.",
+    "immutableFilesExpected": 799,
+    "immutableTreesExpected": 121,
+    "immutableRootTreesExpected": 92,
+    "dependencyManifestCount": 16,
+    "capabilityCount": 19
   },
   "treeFingerprints": {
     "services/api/src/ai": "13edcc7bd9726c38ea9bd4aab0d7825b2b8387d0",
@@ -53,7 +53,7 @@
     "externalDependencyInventory": "external-dependencies/external-dependencies.json",
     "verificationCommand": "node ai-platform-core/verification/verify-extraction.mjs",
     "immutableProvenanceManifest": "verification/immutable-source-manifest.json",
-    "status": "PENDING_LOCAL_VERIFICATION_AFTER_EXTENSION_EXTRACTION"
+    "status": "REMOTE_AUDIT_COMPLETE_LOCAL_VERIFIER_PENDING"
   },
-  "status": "PASS_FOR_COMPLETE_IMMUTABLE_FILE_BLOB_AND_CAPTURED_TREE_INTEGRITY; PASS_FOR_COPY-READY_STRUCTURE; RUNTIME BUILD MUST BE VERIFIED AFTER COPYING INTO A TARGET PROJECT"
+  "status": "REMOTE_SOURCE_AUDIT_COMPLETE; FIXED_LOCAL_VERIFIER PENDING; TARGET_RUNTIME_VERIFICATION REQUIRED"
 }
