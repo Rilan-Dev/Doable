@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T08:04:23.783Z",
+  "generatedAt": "2026-09-29T08:09:15.413Z",
   "source": {
     "repository": "Rilan-Dev/Doable",
     "ref": "develop",
@@ -8,12 +8,12 @@
   "extractionBranch": "ai-platform-core-extraction",
   "currentVerification": {
     "status": "PENDING_LOCAL_VERIFICATION_AFTER_EXTENSION_EXTRACTION",
-    "note": "The immutable verifier must be run locally after the Marketplace, NotebookLM, and realtime collaboration extensions were added. This report intentionally does not claim a fresh pass.",
-    "immutableFilesExpected": 775,
-    "immutableTreesExpected": 110,
-    "immutableRootTreesExpected": 29,
-    "dependencyManifestCount": 11,
-    "capabilityCount": 13
+    "note": "Run the machine verifier locally; this report does not claim a fresh pass after the latest extension additions.",
+    "immutableFilesExpected": 792,
+    "immutableTreesExpected": 123,
+    "immutableRootTreesExpected": 35,
+    "dependencyManifestCount": 15,
+    "capabilityCount": 14
   },
   "treeFingerprints": {
     "services/api/src/ai": "13edcc7bd9726c38ea9bd4aab0d7825b2b8387d0",
@@ -39,7 +39,12 @@
     "services/api/src/runtime": "ae8aa7c249b90eaf6dd66ec82d5d47021d2aeb79",
     "packages/marketplace-bundle": "7383f3b96be79584041d35313ad1c60105b2f2e8",
     "mcp-servers/notebooklm/server": "bc9b4f6eb7bb71fe144ce4afe984b302112ed8cb",
-    "services/ws": "819d4f518e66745a03846cf54ee5d580d8880164"
+    "services/ws": "819d4f518e66745a03846cf54ee5d580d8880164",
+    "mcp-servers/_shared": "033542e0c4099a118c8a84db22558f9bb65af625",
+    "mcp-servers/pdf-builder": "5465b6ad78f92b037683a3e96964a714293c4956",
+    "mcp-servers/presentation-builder": "0bc2bcdc6b75cfba6c102e7bd3d2c1d3db1210f6",
+    "mcp-servers/spreadsheet-builder": "4742c8bc17d5193ba81e3e2dc9fcdb6297b2390d",
+    "mcp-servers/markdown-builder": "f96178af8162a7e12c0f8bdf15af5da695d4e65d"
   },
   "copyReady": {
     "completeCoreFolder": "ai-platform-core/",
