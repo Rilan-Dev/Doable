@@ -7691,3 +7691,36 @@ The fixed local extraction verifier now passes end-to-end.
 **Target runtime/build/import/integration verification: still required.**
 
 The next work should focus on host portability rather than further source discovery: wire identity/tenant/RBAC, PostgreSQL/persistence, secrets/KEK, filesystem/runtime/sandbox, provider registry, transport, RAG/vector retrieval, and validate the reusable platform extensions in a real target project. Voice/STT/TTS remains a separate host capability because no dedicated Doable voice runtime exists in the captured source.
+
+
+## Final checkpoint — 2026-09-30 — reusable copy-to-any-project hardening
+
+The AI platform core now contains the previously missing security scanner source closure and a deterministic implementation playbook for other coding agents.
+
+### Reusable source now explicitly covered
+
+- AI provider/runtime/agents/tools/MCP/integrations/skills/chat/context and memory.
+- Planning, clarification, attachments/multimodal input, generated media and artifact persistence.
+- Usage/credits/quotas, tracing/observability, audit, collaboration/Yjs, visual AI editing, project/runtime generation, framework prompts, templates/scaffolding, GitHub/version control.
+- Marketplace/AI asset portability, NotebookLM and concrete document/media MCP servers.
+- Platform foundation: auth/RBAC, persistence/DB, secrets/KEK boundary, billing, analytics, notifications, email, deployment/domains, Activepieces boundary.
+- **AI security scanner**: dependency audit, secret detection and code/security anti-pattern scanning, persisted findings and security API route.
+
+### Agent portability improvements
+
+- Added `IMPLEMENTATION_PLAYBOOK.md` with a target-project inspection → capability selection → host mapping → adapter → persistence/API/UI → testing workflow.
+- Added `contracts/ai-security.ts` and exported it through the contracts index.
+- Added `capabilities/ai-security/MANIFEST.md`.
+- Updated capability closure, source/UI provenance, coverage matrix, extraction manifest, copy-to-any-project instructions and verifier.
+- The verifier now requires 21 capability manifests and the universal implementation playbook.
+
+### Current integrity state
+
+- Immutable source records: 802 files.
+- Captured root trees: 93.
+- Captured trees: 214.
+- Capability closure: 21.
+- Required verifier files: 48.
+- Exact security source blob SHAs are pinned to the Doable baseline.
+
+The extraction was verified green immediately before the security-extension addition. Because the new files and verifier requirements were added after that successful run, the updated branch is intentionally marked **local verifier required** rather than claiming a fresh verifier pass. Target-project runtime/build/import/integration verification remains separate.
