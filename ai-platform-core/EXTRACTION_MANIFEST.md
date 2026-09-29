@@ -105,3 +105,24 @@ The extraction is now pinned by a complete immutable provenance manifest at `ver
 - `external-dependencies/external-dependencies.json` now inventories package dependencies across the captured package manifests, including **559 external npm packages**, **526 Activepieces packages**, **6 workspace packages**, peer dependencies, package overrides, and build-time packages.
 - Runtime installation/build verification remains a target-project responsibility after copying the core into the host repository.
 
+## Second-pass promoted source families
+
+The immutable extraction additionally includes:
+
+- Complete standalone MCP servers under `doable-source/mcp-servers/`:
+  - `_shared`
+  - `image-generator`
+  - `markdown-builder`
+  - `notebooklm`
+  - `pdf-builder`
+  - `presentation-builder`
+  - `spreadsheet-builder`
+- Complete realtime collaboration service under `doable-source/services/ws/`.
+- Complete editor visual-AI/runtime/context/build source under `doable-source/apps/web/src/modules/editor/` for the promoted submodules:
+  - `visual-edit`
+  - `runtime-render`
+  - `context-files`
+  - `build`
+
+All are pinned to the original Doable Git tree/blob identities. They are optional extensions around the generic AI core and retain their host-boundary contracts.
+
