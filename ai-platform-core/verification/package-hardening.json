@@ -9,12 +9,12 @@
   "immutable": {
     "sourceRoots": 20,
     "dependencyClosureRoots": 9,
-    "uiReferenceRoots": 6,
-    "capturedDirectoryTrees": 88,
-    "immutableFiles": 792,
+    "uiReferenceRoots": 8,
+    "capturedDirectoryTrees": 98,
+    "immutableFiles": 795,
     "rule": "Doable source, dependency-closure source, and captured UI reference source are immutable copies. Host adapters must not modify them.",
     "capturedRootTrees": 35,
-    "capturedTrees": 123
+    "capturedTrees": 133
   },
   "capabilities": [
     "multi-provider",
