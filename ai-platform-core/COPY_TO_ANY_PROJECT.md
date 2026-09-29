@@ -109,3 +109,8 @@ When implementing an AI product, inspect these capability manifests before rebui
 
 The corresponding source is immutable under `doable-source/`. Reuse the source and adapt only host boundaries such as auth, tenancy, persistence, provider credentials, routing and deployment.
 
+### Platform extensions
+
+For platform capabilities beyond the AI runtime, inspect `capabilities/platform-extensions/MANIFEST.md`. It maps the immutable `doable-source-extensions/` trees for collaboration/Yjs, visual AI editing, observability, audit, analytics, billing/usage, identity/RBAC, GitHub/version control, deployment/domains, marketplace, notifications/email and reusable product UI.
+
+Do not cherry-pick individual files without following the manifest and dependency closure. Preserve the Doable implementation and interaction/state model; adapt only host-specific identity, tenancy, persistence, secrets, providers, infrastructure and theme.
