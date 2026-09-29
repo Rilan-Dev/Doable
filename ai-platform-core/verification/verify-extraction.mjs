@@ -40,6 +40,23 @@ const expectedBlobs = {
   "doable-source/services/api/src/routes/auth/platform-ai-bootstrap.ts": "f318372e194b6f1104cb45c2f74ade5337094fe2"
 };
 
+const REQUIRED_CAPABILITIES = [
+  "multi-provider","agents","tools","integrations","mcp","skills","chat",
+  "context-memory","workspace-sandbox","ui","marketplace","notebooklm",
+  "realtime-collaboration","document-builders","mcp-tool-servers",
+  "visual-ai-editing","platform-extensions","visual-editing","ai-media-builders"
+];
+
+function normalizeManifestFilePath(file) {
+  if (typeof file?.destinationPath === "string" && file.destinationPath.length > 0) {
+    return file.destinationPath.replace(/^ai-platform-core\//, "");
+  }
+  if (typeof file?.path === "string" && file.path.length > 0) {
+    return `${file.root}/${file.path}`;
+  }
+  return null;
+}
+
 const requiredDirs = Object.keys(expectedTrees);
 const requiredFiles = [
   "EXTRACTION_MANIFEST.md",
@@ -203,7 +220,7 @@ if (gitAvailable()) {
 const hardeningPath = path.join(root, "verification/package-hardening.json");
 if (fs.existsSync(hardeningPath)) {
   const h = JSON.parse(fs.readFileSync(hardeningPath, "utf8"));
-  const expectedCapabilities = ["multi-provider","agents","tools","integrations","mcp","skills","chat","context-memory","workspace-sandbox","ui","marketplace","notebooklm","realtime-collaboration","document-builders","mcp-tool-servers","visual-ai-editing","mcp-tool-servers","visual-ai-editing","platform-extensions"];
+  const expectedCapabilities = REQUIRED_CAPABILITIES;
   const capabilityPass = expectedCapabilities.every((name) => (h.capabilities || []).includes(name));
   const sourcePass = h.source?.repository === "Rilan-Dev/Doable"
     && h.source?.ref === "develop"
@@ -234,7 +251,7 @@ if (fs.existsSync(hardeningPath)) {
 const capabilityClosurePath = path.join(root, "verification/capability-closure.json");
 if (fs.existsSync(capabilityClosurePath)) {
   const c = JSON.parse(fs.readFileSync(capabilityClosurePath, "utf8"));
-  const expected = ["multi-provider","agents","tools","integrations","mcp","skills","chat","context-memory","workspace-sandbox","ui","marketplace","notebooklm","realtime-collaboration","document-builders","platform-extensions"];
+  const expected = REQUIRED_CAPABILITIES;
   const capabilities = c.capabilities || {};
   const missing = expected.filter((name) => !capabilities[name] || capabilities[name].manifest !== `capabilities/${name}/MANIFEST.md`);
   const invalidRefs = [];
@@ -287,13 +304,16 @@ if (fs.existsSync(sourceManifest)) {
 if (fs.existsSync(immutableManifestPath)) {
   const m = immutableManifest;
   const fileResults = [];
-  const expectedByRoot = new Map();
   for (const f of m.files || []) {
-    const rel = `${f.root}/${f.path}`;
-    expectedByRoot.set(rel, f);
+    const rel = normalizeManifestFilePath(f);
+    if (!rel) {
+      fileResults.push({ path: null, expected: f?.sha ?? null, actual: null, pass: false });
+      continue;
+    }
     const actualSha = gitAvailable() ? gitRevParse(`HEAD:ai-platform-core/${rel}`) : gitBlobSha(rel);
     fileResults.push({ path: rel, expected: f.sha, actual: actualSha, pass: actualSha === f.sha });
   }
+
   const treeResults = {};
   const allTreeEntries = [
     ...Object.entries(m.capturedRootTrees || {}).map(([path, sha]) => ({ path, sha, kind: "captured-root" })),
@@ -306,16 +326,26 @@ if (fs.existsSync(immutableManifestPath)) {
       : (exists(rel) ? gitTreeSha(path.join(root, rel)) : null);
     treeResults[rel] = { expected: entry.sha, actual, kind: entry.kind, pass: actual === entry.sha };
   }
+
+  // A captured tree is authoritative for its complete scope. The file list in
+  // immutable-source-manifest.json is a provenance/sample list, not an
+  // inventory of every blob inside each verified tree.
   const inventory = {};
-  for (const root of new Set((m.files || []).map(f => f.root))) {
-    const expected = (m.files || []).filter(f => f.root === root).map(f => `${root}/${f.path}`).sort();
-    const actual = gitAvailable() ? gitListFiles(root) : listFilesystemFiles(root);
-    const missing = expected.filter(x => !actual.includes(x));
-    const extra = actual.filter(x => !expected.includes(x));
-    inventory[root] = { expected: expected.length, actual: actual.length, missing, extra, pass: missing.length === 0 && extra.length === 0 };
+  for (const scopeRoot of new Set((m.files || []).map(f => f.root))) {
+    const entries = (m.files || []).filter(f => f.root === scopeRoot);
+    const invalid = entries
+      .map((f, i) => ({ f, i, path: normalizeManifestFilePath(f) }))
+      .filter(x => !x.path || !x.f.sha);
+    inventory[scopeRoot] = {
+      manifestEntries: entries.length,
+      invalidEntries: invalid.map(x => x.i),
+      pass: invalid.length === 0,
+    };
   }
+
   report.checks.immutableSource = {
     sourceCommit: m.source?.commit,
+    currentExtractionCommit: m.currentExtractionCommit,
     totalFiles: fileResults.length,
     verifiedFiles: fileResults.filter(x => x.pass).length,
     fileFailures: fileResults.filter(x => !x.pass),
@@ -332,7 +362,7 @@ if (fs.existsSync(immutableManifestPath)) {
   report.pass &&= report.checks.immutableSource.pass;
 }
 
-for (const name of [
+for (const name of REQUIRED_CAPABILITIES) {
   "multi-provider","agents","tools","integrations","mcp","skills",
   "chat","context-memory","workspace-sandbox","ui","marketplace","notebooklm","realtime-collaboration","document-builders"
 ]) {
