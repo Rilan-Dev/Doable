@@ -61,6 +61,7 @@ Available capability manifests:
 - `capabilities/chat/MANIFEST.md`
 - `capabilities/context-memory/MANIFEST.md`
 - `capabilities/workspace-sandbox/MANIFEST.md`
+- `capabilities/ai-security/MANIFEST.md` — project security scanner for AI-generated/modified code, dependency audit, secret detection and security anti-pattern detection.
 - `capabilities/ui/MANIFEST.md`
 - `capabilities/platform-foundation/MANIFEST.md` — authentication/RBAC, PostgreSQL schema, secrets/KEK, billing/plans/credits, usage, audit/observability, analytics, notifications/email, GitHub/versioning, deployment/domains, collaboration persistence, templates and Activepieces ecosystem boundary.
 
