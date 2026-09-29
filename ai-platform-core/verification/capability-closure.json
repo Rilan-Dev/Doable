@@ -192,7 +192,10 @@
         "doable-source/packages/shared/",
         "doable-source/packages/db/"
       ],
-      "uiReference": [],
+      "uiReference": [
+        "ui-reference/apps/web/src/modules/collaboration/",
+        "ui-reference/apps/web/src/modules/editor/visual-edit/"
+      ],
       "hostBoundaries": [
         "identity/tenant authorization",
         "websocket deployment",
