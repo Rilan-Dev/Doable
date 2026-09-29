@@ -7628,3 +7628,17 @@ The deeper portability blockers are explicit Doable host coupling in provider re
 7. Add voice/STT/TTS separately when required; dedicated voice runtime code is not present in this Doable source snapshot.
 
 The extraction is best classified as **source-complete, verifier-hardened, adapter-pending**. Local/runtime verification remains a required gate before host integration.
+
+
+## Response:
+9/29/2026, 7:50:00 PM · gpt-5-6
+
+Verification follow-up: the hardened provenance audit exposed one real extraction omission that the previous verifier did not catch: `services/api/src/visual-edit-bridge-inline.ts` was listed in the immutable manifest but was not physically present under `ai-platform-core/doable-source/`. The exact source blob `020f97a976d086f354af81cdf9e9c585c9ad58e8` has now been restored from `develop`.
+
+After restoration:
+- 799/799 provenance file blobs resolve to the extracted tree.
+- 213/213 captured root/directory tree fingerprints resolve correctly.
+- 19/19 current capability manifests are present.
+- The presentation-builder stale fingerprint has been corrected.
+
+The remaining gate is intentionally unchanged: run the fixed verifier locally, then run dependency/import/build smoke tests and wire the host adapters/RAG backend. No runtime compatibility is being claimed until those checks execute in the target project.
