@@ -6042,339 +6042,291 @@
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/packages/marketplace-bundle/package.json",
-      "sourcePath": "packages/marketplace-bundle/package.json",
       "sha": "ee29c2021fe047645e2b24f6d1f4785321cd3290",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "packages/marketplace-bundle/package.json"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/packages/marketplace-bundle/src/index.ts",
-      "sourcePath": "packages/marketplace-bundle/src/index.ts",
       "sha": "2362ca39701e1acf9d7e8dcbc5b55d06c7b2d57d",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "packages/marketplace-bundle/src/index.ts"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/packages/marketplace-bundle/src/manifest.ts",
-      "sourcePath": "packages/marketplace-bundle/src/manifest.ts",
       "sha": "63457ad811616b013f7e351c7f12cdf5cc809b13",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "packages/marketplace-bundle/src/manifest.ts"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/packages/marketplace-bundle/src/permissions.ts",
-      "sourcePath": "packages/marketplace-bundle/src/permissions.ts",
       "sha": "8e3c3b14cda120890d8df9d1aa6b1ee96f4f992a",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "packages/marketplace-bundle/src/permissions.ts"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/packages/marketplace-bundle/src/codecs/json-v1.ts",
-      "sourcePath": "packages/marketplace-bundle/src/codecs/json-v1.ts",
       "sha": "ffa4b4610a15377b88cea14e1de1e40923ba149a",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "packages/marketplace-bundle/src/codecs/json-v1.ts"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/packages/marketplace-bundle/src/codecs/standards-zip.ts",
-      "sourcePath": "packages/marketplace-bundle/src/codecs/standards-zip.ts",
       "sha": "11afe38109e66061b579d34862d624d60673b12d",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "packages/marketplace-bundle/src/codecs/standards-zip.ts"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/mcp-servers/notebooklm/server/package.json",
-      "sourcePath": "mcp-servers/notebooklm/server/package.json",
       "sha": "459cb509af15ba92ff4719f0866d6f686954c963",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "mcp-servers/notebooklm/server/package.json"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/mcp-servers/notebooklm/server/src/server.ts",
-      "sourcePath": "mcp-servers/notebooklm/server/src/server.ts",
       "sha": "b7f1238e06b628ff15da6747e2ccc533482f7d89",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "mcp-servers/notebooklm/server/src/server.ts"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/mcp-servers/notebooklm/server/src/notebooklm_client.ts",
-      "sourcePath": "mcp-servers/notebooklm/server/src/notebooklm_client.ts",
       "sha": "8bd32b188323b53cc9e42ec35566ad32bee7210e",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "mcp-servers/notebooklm/server/src/notebooklm_client.ts"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/mcp-servers/notebooklm/server/src/native_fetch_client.ts",
-      "sourcePath": "mcp-servers/notebooklm/server/src/native_fetch_client.ts",
       "sha": "3db96ec8cd054f1b1952e22ac5031635359fb243",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "mcp-servers/notebooklm/server/src/native_fetch_client.ts"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/mcp-servers/notebooklm/server/src/playwright_transport.ts",
-      "sourcePath": "mcp-servers/notebooklm/server/src/playwright_transport.ts",
       "sha": "723be75908b666b1a2562de876b3cc3b63357ae1",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "mcp-servers/notebooklm/server/src/playwright_transport.ts"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/mcp-servers/notebooklm/server/src/user-manager.ts",
-      "sourcePath": "mcp-servers/notebooklm/server/src/user-manager.ts",
       "sha": "b13480401f5ba24b68fa658dc55302ebf9ad5830",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "mcp-servers/notebooklm/server/src/user-manager.ts"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/mcp-servers/notebooklm/server/src/setup_auth.ts",
-      "sourcePath": "mcp-servers/notebooklm/server/src/setup_auth.ts",
       "sha": "2dfd8e884c018abcc9666affa87a6e719a5469a3",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "mcp-servers/notebooklm/server/src/setup_auth.ts"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/mcp-servers/notebooklm/server/src/test_summary.ts",
-      "sourcePath": "mcp-servers/notebooklm/server/src/test_summary.ts",
       "sha": "993a78ca85934d9b462538e01d737b495c625746",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "mcp-servers/notebooklm/server/src/test_summary.ts"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/mcp-servers/notebooklm/server/src/mcp-app.html",
-      "sourcePath": "mcp-servers/notebooklm/server/src/mcp-app.html",
       "sha": "939f1d5b06dd7b879baa7f12f90aa74465ee65ec",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "mcp-servers/notebooklm/server/src/mcp-app.html"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/mcp-servers/notebooklm/server/src/mcp-app.ts",
-      "sourcePath": "mcp-servers/notebooklm/server/src/mcp-app.ts",
       "sha": "18317b38ffb87a780f2d7530ea88e658dceb04ba",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "mcp-servers/notebooklm/server/src/mcp-app.ts"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/mcp-servers/notebooklm/server/vite.config.ts",
-      "sourcePath": "mcp-servers/notebooklm/server/vite.config.ts",
       "sha": "acdefda47ec88a117891f4fea0ac5eed1ce6a988",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "mcp-servers/notebooklm/server/vite.config.ts"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/mcp-servers/notebooklm/server/tsconfig.json",
-      "sourcePath": "mcp-servers/notebooklm/server/tsconfig.json",
       "sha": "28d57cc8f93d1dc954f77315ded61db2e44ada79",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "mcp-servers/notebooklm/server/tsconfig.json"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/services/ws/package.json",
-      "sourcePath": "services/ws/package.json",
       "sha": "b52330fde7fee773dc2a40548759ea42516d9ad4",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "services/ws/package.json"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/services/ws/tsconfig.json",
-      "sourcePath": "services/ws/tsconfig.json",
       "sha": "b98897e6d53ee52cb7d73a6b81d291600e9b3eae",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "services/ws/tsconfig.json"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/services/ws/src/index.ts",
-      "sourcePath": "services/ws/src/index.ts",
       "sha": "7b4398608b62b6b3ecd55d566609798704451219",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "services/ws/src/index.ts"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/services/ws/src/message-handler.ts",
-      "sourcePath": "services/ws/src/message-handler.ts",
       "sha": "7a4cb637ffad1df8496a49e9b6d713dd4979a5ef",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "services/ws/src/message-handler.ts"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/services/ws/src/db.ts",
-      "sourcePath": "services/ws/src/db.ts",
       "sha": "3e15376219113fc28a6aec2c0b8daa382ec4d1a8",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "services/ws/src/db.ts"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/services/ws/src/rooms/room.ts",
-      "sourcePath": "services/ws/src/rooms/room.ts",
       "sha": "90689b01a7e272063c69b13404a24885c1827645",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "services/ws/src/rooms/room.ts"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/services/ws/src/rooms/room-manager.ts",
-      "sourcePath": "services/ws/src/rooms/room-manager.ts",
       "sha": "d0c04be3ab179c8a8a9f1fccc3dd16d58a0385b5",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "services/ws/src/rooms/room-manager.ts"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/services/ws/src/collaboration/yjs-document-manager.ts",
-      "sourcePath": "services/ws/src/collaboration/yjs-document-manager.ts",
       "sha": "7ccd92ad63559a755d76a8d30b5a4b46c273408c",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "services/ws/src/collaboration/yjs-document-manager.ts"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/services/ws/src/tracing/instrumentation.ts",
-      "sourcePath": "services/ws/src/tracing/instrumentation.ts",
       "sha": "5b690698224230c44ac6109199c01e0f05312c81",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "services/ws/src/tracing/instrumentation.ts"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/services/ws/src/tracing/pg-exporter.ts",
-      "sourcePath": "services/ws/src/tracing/pg-exporter.ts",
       "sha": "258875122aff747269a6d119367e31b3cf1408c3",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "services/ws/src/tracing/pg-exporter.ts"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/mcp-servers/_shared/ui.mjs",
-      "sourcePath": "mcp-servers/_shared/ui.mjs",
       "sha": "b0d5840984b166bac567e3bf303a6bf946b41ebc",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "mcp-servers/_shared/ui.mjs"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/mcp-servers/pdf-builder/package.json",
-      "sourcePath": "mcp-servers/pdf-builder/package.json",
       "sha": "cbdd53dd794c6f869ca8bbafaa7ca3ec4b25093c",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "mcp-servers/pdf-builder/package.json"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/mcp-servers/pdf-builder/index.mjs",
-      "sourcePath": "mcp-servers/pdf-builder/index.mjs",
       "sha": "8ea5b98eae281b50d55d3d9fcd6c10203656ed49",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "mcp-servers/pdf-builder/index.mjs"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/mcp-servers/pdf-builder/README.md",
-      "sourcePath": "mcp-servers/pdf-builder/README.md",
       "sha": "305bc101db4ed7331525ed6f08a918d2935f8920",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "mcp-servers/pdf-builder/README.md"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/mcp-servers/pdf-builder/skills/SKILL.md",
-      "sourcePath": "mcp-servers/pdf-builder/skills/SKILL.md",
       "sha": "bc97c73a0d723d73862e881a8d390d4fa71f676a",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "mcp-servers/pdf-builder/skills/SKILL.md"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/mcp-servers/presentation-builder/package.json",
-      "sourcePath": "mcp-servers/presentation-builder/package.json",
       "sha": "a621c030769fcc67c9dfe9defed2e45fd4562d75",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "mcp-servers/presentation-builder/package.json"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/mcp-servers/presentation-builder/index.mjs",
-      "sourcePath": "mcp-servers/presentation-builder/index.mjs",
       "sha": "3671503c24af1a7c97544dd34c23d91ae5a03f03",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "mcp-servers/presentation-builder/index.mjs"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/mcp-servers/presentation-builder/README.md",
-      "sourcePath": "mcp-servers/presentation-builder/README.md",
       "sha": "fb340e2891dc8d311fed1bf8996bf7f52a1126e9",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "mcp-servers/presentation-builder/README.md"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/mcp-servers/presentation-builder/presentation-engine.mjs",
-      "sourcePath": "mcp-servers/presentation-builder/presentation-engine.mjs",
       "sha": "fb6f5996bd39db4fb6bf0d38dac7d90272a7f5f1",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "mcp-servers/presentation-builder/presentation-engine.mjs"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/mcp-servers/spreadsheet-builder/package.json",
-      "sourcePath": "mcp-servers/spreadsheet-builder/package.json",
       "sha": "36fe726719b90c5bf4d628f1ee7a7218a18b33c1",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "mcp-servers/spreadsheet-builder/package.json"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/mcp-servers/spreadsheet-builder/index.mjs",
-      "sourcePath": "mcp-servers/spreadsheet-builder/index.mjs",
       "sha": "d17823b14d6b0eb3a7b17417d889e9b285dac863",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "mcp-servers/spreadsheet-builder/index.mjs"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/mcp-servers/spreadsheet-builder/README.md",
-      "sourcePath": "mcp-servers/spreadsheet-builder/README.md",
       "sha": "6347c239cdf9ebf49ca64f147acd83421202c643",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "mcp-servers/spreadsheet-builder/README.md"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/mcp-servers/spreadsheet-builder/skills/SKILL.md",
-      "sourcePath": "mcp-servers/spreadsheet-builder/skills/SKILL.md",
       "sha": "8a0b0374cd1b63375bd44b74356077892f4b128a",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "mcp-servers/spreadsheet-builder/skills/SKILL.md"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/mcp-servers/markdown-builder/package.json",
-      "sourcePath": "mcp-servers/markdown-builder/package.json",
       "sha": "7fb9a096961bfa795694bfcc2f967798a2a137da",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "mcp-servers/markdown-builder/package.json"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/mcp-servers/markdown-builder/index.mjs",
-      "sourcePath": "mcp-servers/markdown-builder/index.mjs",
       "sha": "6edd9c34f9df4cc2d6e437f5c410bee96af5c745",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "mcp-servers/markdown-builder/index.mjs"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/mcp-servers/markdown-builder/README.md",
-      "sourcePath": "mcp-servers/markdown-builder/README.md",
       "sha": "9fd4f6ba6ce4d69ff3347b1f3f7c2ec45faf1585",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "mcp-servers/markdown-builder/README.md"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/mcp-servers/markdown-builder/skills/SKILL.md",
-      "sourcePath": "mcp-servers/markdown-builder/skills/SKILL.md",
       "sha": "bf4d0e3262906bb5b8443663a05273b8ee3c57e1",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "mcp-servers/markdown-builder/skills/SKILL.md"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/mcp-servers/notebooklm/server/src/ws_transport.ts",
-      "sourcePath": "mcp-servers/notebooklm/server/src/ws_transport.ts",
       "sha": "587bbad309e6211dedd880b56f65a020a6df4cb4",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "mcp-servers/notebooklm/server/src/ws_transport.ts"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/mcp-servers/notebooklm/server/public/infographic-viewer.html",
-      "sourcePath": "mcp-servers/notebooklm/server/public/infographic-viewer.html",
       "sha": "29c487704e3d39c222baa2a78f566470047617af",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "mcp-servers/notebooklm/server/public/infographic-viewer.html"
     },
     {
       "root": "doable-source",
-      "destinationPath": "doable-source/packages/marketplace-bundle/tsconfig.json",
-      "sourcePath": "packages/marketplace-bundle/tsconfig.json",
       "sha": "19fd0131012e6c35d203a87dd6cd3520f5072c37",
-      "mode": "100644"
+      "mode": "100644",
+      "path": "packages/marketplace-bundle/tsconfig.json"
     },
     {
       "root": "doable-source-extensions",
