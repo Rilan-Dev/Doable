@@ -94,3 +94,8 @@ When a host needs multi-user live AI development, use `capabilities/realtime-col
 ### AI document-generation extensions
 
 For projects that need AI-generated business artifacts, use `capabilities/document-builders/MANIFEST.md`. Copy the complete PDF, presentation, spreadsheet and Markdown builder sources plus the shared MCP-App UI module and authoring skills. Do not reduce them to generic MCP tool definitions.
+
+### Realtime collaboration and visual AI editing
+
+For products that need collaborative AI editing, use `capabilities/realtime-collaboration/MANIFEST.md`. Reuse both the immutable `doable-source/services/ws/` service and the corresponding `ui-reference/apps/web/src/modules/collaboration/` and `ui-reference/apps/web/src/modules/editor/visual-edit/` sources. Preserve the AI event protocol, Yjs synchronization, room lifecycle, presence, visual-edit interaction model, and design-comment states while adapting identity, persistence, deployment, and visual theme to the host.
+
