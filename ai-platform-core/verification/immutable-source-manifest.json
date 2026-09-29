@@ -5828,6 +5828,90 @@
       "sourcePath": "packages/marketplace-bundle/src/codecs/standards-zip.ts",
       "sha": "11afe38109e66061b579d34862d624d60673b12d",
       "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/notebooklm/server/package.json",
+      "sourcePath": "mcp-servers/notebooklm/server/package.json",
+      "sha": "459cb509af15ba92ff4719f0866d6f686954c963",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/notebooklm/server/src/server.ts",
+      "sourcePath": "mcp-servers/notebooklm/server/src/server.ts",
+      "sha": "b7f1238e06b628ff15da6747e2ccc533482f7d89",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/notebooklm/server/src/notebooklm_client.ts",
+      "sourcePath": "mcp-servers/notebooklm/server/src/notebooklm_client.ts",
+      "sha": "8bd32b188323b53cc9e42ec35566ad32bee7210e",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/notebooklm/server/src/native_fetch_client.ts",
+      "sourcePath": "mcp-servers/notebooklm/server/src/native_fetch_client.ts",
+      "sha": "3db96ec8cd054f1b1952e22ac5031635359fb243",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/notebooklm/server/src/playwright_transport.ts",
+      "sourcePath": "mcp-servers/notebooklm/server/src/playwright_transport.ts",
+      "sha": "723be75908b666b1a2562de876b3cc3b63357ae1",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/notebooklm/server/src/user-manager.ts",
+      "sourcePath": "mcp-servers/notebooklm/server/src/user-manager.ts",
+      "sha": "b13480401f5ba24b68fa658dc55302ebf9ad5830",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/notebooklm/server/src/setup_auth.ts",
+      "sourcePath": "mcp-servers/notebooklm/server/src/setup_auth.ts",
+      "sha": "2dfd8e884c018abcc9666affa87a6e719a5469a3",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/notebooklm/server/src/test_summary.ts",
+      "sourcePath": "mcp-servers/notebooklm/server/src/test_summary.ts",
+      "sha": "993a78ca85934d9b462538e01d737b495c625746",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/notebooklm/server/src/mcp-app.html",
+      "sourcePath": "mcp-servers/notebooklm/server/src/mcp-app.html",
+      "sha": "939f1d5b06dd7b879baa7f12f90aa74465ee65ec",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/notebooklm/server/src/mcp-app.ts",
+      "sourcePath": "mcp-servers/notebooklm/server/src/mcp-app.ts",
+      "sha": "18317b38ffb87a780f2d7530ea88e658dceb04ba",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/notebooklm/server/vite.config.ts",
+      "sourcePath": "mcp-servers/notebooklm/server/vite.config.ts",
+      "sha": "acdefda47ec88a117891f4fea0ac5eed1ce6a988",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/notebooklm/server/tsconfig.json",
+      "sourcePath": "mcp-servers/notebooklm/server/tsconfig.json",
+      "sha": "28d57cc8f93d1dc954f77315ded61db2e44ada79",
+      "mode": "100644"
     }
   ],
   "counts": {
