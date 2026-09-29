@@ -1,31 +1,24 @@
 # Realtime AI Collaboration Capability
 
 ## Purpose
-Reusable Doable realtime service for AI-assisted collaborative project work.
+Reusable realtime transport and collaborative state layer for AI-assisted applications.
 
 ## Immutable source
-`doable-source/services/ws/`
+- `doable-source/services/ws/`
+- UI collaboration reference: `ui-reference/apps/web/src/modules/collaboration/`
+- AI visual-edit source: `doable-source/apps/web/src/modules/editor/visual-edit/`
 
-Source commit: `a6036d1fd6dca83c08ee5affa141e5c85e45f5af`.
-
-## Included behavior
-- WebSocket service and room lifecycle.
-- Project-scoped realtime rooms and presence.
-- AI stream chunk/status/error events.
-- AI tool-event propagation.
-- AI queue/typing/message/abort events.
-- Collaborative Yjs document synchronization.
-- Room idle cleanup and persistence.
-- Realtime tracing/instrumentation and PostgreSQL trace export.
-- Shared state required for AI edits to become visible to collaborators.
+## Behavior
+- WebSocket rooms and connection lifecycle.
+- AI stream chunks, status, tool events and queue state.
+- Abort and user-interaction events.
+- Yjs collaborative document synchronization.
+- Presence and cursor state.
+- Realtime editor/preview coordination.
+- Collaboration tracing.
+- Visual editing and design/sticky-note interactions.
 
 ## Host boundaries
-- Authentication and tenant authorization.
-- WebSocket deployment/upgrade endpoint.
-- PostgreSQL connection and schema.
-- Yjs document persistence policy.
-- Client editor/preview implementation.
-- Domain-specific visual-edit and comment UI.
+Authentication/tenant resolution, room authorization, persistence, WebSocket deployment, optional pub/sub, object storage and artifact persistence remain host adapters.
 
-## Reuse rule
-Copy the complete service source and its package manifest when realtime AI collaboration is required. Do not copy isolated event handlers while omitting room, Yjs, persistence, or tracing dependencies.
+Preserve authorization and sandbox assumptions when adapting this service.
