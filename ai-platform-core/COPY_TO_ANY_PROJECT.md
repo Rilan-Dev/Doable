@@ -91,3 +91,6 @@ For projects that need reusable AI assets to be importable/exportable, use `capa
 
 When a host needs multi-user live AI development, use `capabilities/realtime-collaboration/MANIFEST.md` and copy the complete `doable-source/services/ws/` closure. Do not copy only AI event types: the room, message handler, Yjs document manager, persistence bridge, authentication, internal API protection, and tracing are coupled behavior. Adapt JWT/tenant authorization, project storage, internal secrets, telemetry, WebSocket endpoint/origin policy, and editor UI at the host boundary.
 
+### AI document-generation extensions
+
+For projects that need AI-generated business artifacts, use `capabilities/document-builders/MANIFEST.md`. Copy the complete PDF, presentation, spreadsheet and Markdown builder sources plus the shared MCP-App UI module and authoring skills. Do not reduce them to generic MCP tool definitions.
