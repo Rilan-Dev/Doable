@@ -189,17 +189,16 @@
         "doable-source/services/ws/"
       ],
       "dependencies": [
-        "doable-source/packages/shared/"
+        "doable-source/packages/shared/",
+        "doable-source/packages/db/"
       ],
       "uiReference": [],
       "hostBoundaries": [
-        "JWT/tenant authorization",
-        "project filesystem",
-        "PostgreSQL project access",
-        "internal API secrets",
-        "WebSocket endpoint/origin allowlist",
-        "telemetry storage",
-        "editor/preview UI"
+        "identity/tenant authorization",
+        "websocket deployment",
+        "postgres persistence",
+        "Yjs persistence",
+        "editor/preview client"
       ]
     },
     "document-builders": {
