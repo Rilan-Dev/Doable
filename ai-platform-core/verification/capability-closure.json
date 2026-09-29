@@ -182,6 +182,25 @@
         "public URL/tunnel",
         "MCP host registration"
       ]
+    },
+    "realtime-collaboration": {
+      "manifest": "capabilities/realtime-collaboration/MANIFEST.md",
+      "runtime": [
+        "doable-source/services/ws/"
+      ],
+      "dependencies": [
+        "doable-source/packages/shared/"
+      ],
+      "uiReference": [],
+      "hostBoundaries": [
+        "JWT/tenant authorization",
+        "project filesystem",
+        "PostgreSQL project access",
+        "internal API secrets",
+        "WebSocket endpoint/origin allowlist",
+        "telemetry storage",
+        "editor/preview UI"
+      ]
     }
   },
   "acceptance": {
