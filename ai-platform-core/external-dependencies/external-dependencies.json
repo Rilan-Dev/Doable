@@ -75,6 +75,10 @@
       "packageName": "@doable/marketplace-bundle"
     },
     {
+      "path": "ai-platform-core/external-dependencies/source-manifests/notebooklm-mcp-server.package.json",
+      "packageName": "notebooklm-mcp-server"
+    },
+    {
       "path": "ai-platform-core/external-dependencies/source-manifests/pdf-builder.package.json",
       "packageName": "pdf-builder-mcp"
     },
