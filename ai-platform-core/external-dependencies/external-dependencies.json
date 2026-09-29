@@ -45,6 +45,22 @@
     {
       "path": "ai-platform-core/external-dependencies/source-manifests/doable-ws.package.json",
       "packageName": "@doable/ws"
+    },
+    {
+      "path": "ai-platform-core/external-dependencies/source-manifests/pdf-builder.package.json",
+      "packageName": "pdf-builder-mcp"
+    },
+    {
+      "path": "ai-platform-core/external-dependencies/source-manifests/presentation-builder.package.json",
+      "packageName": "presentation-builder-mcp"
+    },
+    {
+      "path": "ai-platform-core/external-dependencies/source-manifests/spreadsheet-builder.package.json",
+      "packageName": "spreadsheet-builder-mcp"
+    },
+    {
+      "path": "ai-platform-core/external-dependencies/source-manifests/markdown-builder.package.json",
+      "packageName": "markdown-builder-mcp"
     }
   ],
   "workspacePackages": {
@@ -616,7 +632,7 @@
     "yjs": "^13.6.30",
     "zod": "^3.22.0",
     "@modelcontextprotocol/ext-apps": "^1.0.1",
-    "@modelcontextprotocol/sdk": "^1.25.3",
+    "@modelcontextprotocol/sdk": "^1.29.0",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/ws": "^8.5.13",
@@ -631,7 +647,10 @@
     "vite": "^7.3.1",
     "vite-plugin-singlefile": "^2.3.0",
     "@types/node": "^22.10.0",
-    "tsc-alias": "^1.8.10"
+    "tsc-alias": "^1.8.10",
+    "@mcp-ui/server": "^6.1.0",
+    "exceljs": "^4.4.0",
+    "marked": "^15.0.0"
   },
   "peerDependencies": {
     "react": ">=18.0.0"
