@@ -201,6 +201,28 @@
         "telemetry storage",
         "editor/preview UI"
       ]
+    },
+    "document-builders": {
+      "manifest": "capabilities/document-builders/MANIFEST.md",
+      "runtime": [
+        "doable-source/mcp-servers/pdf-builder/",
+        "doable-source/mcp-servers/presentation-builder/",
+        "doable-source/mcp-servers/spreadsheet-builder/",
+        "doable-source/mcp-servers/markdown-builder/",
+        "doable-source/mcp-servers/_shared/ui.mjs"
+      ],
+      "dependencies": [],
+      "uiReference": [
+        "doable-source/mcp-servers/_shared/ui.mjs"
+      ],
+      "hostBoundaries": [
+        "MCP server launch",
+        "project/output storage",
+        "Chromium/PDF runtime",
+        "artifact download",
+        "MCP App host UI/theme",
+        "sandbox policy"
+      ]
     }
   },
   "acceptance": {
