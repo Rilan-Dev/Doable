@@ -1,6 +1,6 @@
 # Copy-to-Any-Project AI Core
 
-This directory is designed to be copied into another repository and handed to Codex as a reusable implementation source.
+This directory is designed to be copied into another repository and handed to Codex, Claude Code, Clodex or another coding agent as a reusable implementation source. Read `IMPLEMENTATION_PLAYBOOK.md` before implementing a capability.
 
 ## Contract
 
