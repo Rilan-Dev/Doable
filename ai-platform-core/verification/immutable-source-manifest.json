@@ -553,7 +553,7 @@
       "root": "doable-source",
       "destinationPath": "doable-source/packages/marketplace-bundle/src",
       "sourcePath": "packages/marketplace-bundle/src",
-      "sha": "a940da67267092cc3b76924beb9cdfe9a03f01fb",
+      "sha": "673f7ecde995457763e4db48e9b177c2332864d2",
       "mode": "040000"
     },
     {
@@ -602,7 +602,7 @@
       "root": "doable-source",
       "destinationPath": "doable-source/mcp-servers/notebooklm/server/src",
       "sourcePath": "mcp-servers/notebooklm/server/src",
-      "sha": "c5c84a98b01ec8f2f54eff48d9463d2152640278",
+      "sha": "f1da178e8841dc9562719d2de84e5ee361de2367",
       "mode": "040000"
     },
     {
@@ -659,6 +659,20 @@
       "destinationPath": "doable-source/mcp-servers/markdown-builder/skills",
       "sourcePath": "mcp-servers/markdown-builder/skills",
       "sha": "d86cfe6e401e4ebbff9ad9b62b874c931576604d",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/packages/marketplace-bundle",
+      "sourcePath": "packages/marketplace-bundle",
+      "sha": "1ec662602f29aac2e7f5e60893eae89df62af376",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/notebooklm/server",
+      "sourcePath": "mcp-servers/notebooklm/server",
+      "sha": "f79499f32c0c0a2fda887bc83f948ad8bc62d9e5",
       "mode": "040000"
     }
   ],
