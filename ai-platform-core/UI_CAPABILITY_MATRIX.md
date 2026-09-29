@@ -64,3 +64,19 @@ Every reusable screen should model these states where applicable: initial/loadin
 - Map these surfaces into the host's existing navigation shell; do not create a competing sidebar.
 - Preserve scope, permissions, status, and recovery interactions even when visual components are replaced.
 - Keep backend adapters independent from UI components.
+
+## Second-pass platform UX coverage
+
+| Surface | Immutable source | Capability |
+|---|---|---|
+| Realtime collaboration | `doable-source-extensions/realtime-collaboration/` | collaboration/Yjs/presence/team chat/AI sync |
+| Visual AI editing | `doable-source/apps/web/src/modules/editor/visual-edit/` + extension editor sources | visual editing/direct-save/design comments |
+| Planning/clarification | `doable-source-extensions/editor/plan-ui/` | plan/clarification/user-input UX |
+| Audit/trace | `doable-source-extensions/ui-platform/admin/`, audit/trace UI | audit/observability |
+| Billing/usage | `doable-source-extensions/ui-platform/billing-page/`, usage page/module | billing/credits/usage/quotas |
+| Marketplace | `doable-source-extensions/ui-platform/marketplace-*` | discovery/listing/install/report/moderation |
+| Identity/settings | `doable-source-extensions/identity-rbac/web-auth/`, settings/workspace settings | auth/MFA/RBAC/configuration |
+| GitHub/version/deploy | `doable-source-extensions/github/`, editor components/toolbar | import/sync/version/deploy |
+| Analytics/security | `doable-source-extensions/editor/analytics-panels/`, security extension | product analytics/security controls |
+
+The extension sources preserve the actual Doable interaction/state implementation; visual styling and host navigation remain adapter concerns.
