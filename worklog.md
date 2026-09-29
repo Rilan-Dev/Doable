@@ -7587,3 +7587,44 @@ Continue where you left
 
 ---
 Powered by [ChatGPT Exporter](https://www.chatgptexporter.com)
+
+## Prompt:
+9/29/2026, 7:42:00 PM
+
+Continue the Doable AI-platform extraction analysis, find the real pending work, and continue from the worklog.
+
+## Response:
+9/29/2026, 7:42:00 PM · gpt-5-6
+
+Performed a full second-pass audit of `ai-platform-core-extraction` against the Doable `develop` source commit `a6036d1fd6dca83c08ee5affa141e5c85e45f5af`.
+
+### Already extracted
+
+The branch contains reusable source for multi-provider AI, agent/plan/chat modes, built-in tools, MCP and MCP Apps, integrations/Activepieces bridge, skills/rules, context/memory, attachments and image persistence, planning/clarification, realtime/Yjs collaboration, visual editing, project/runtime/build generation, framework prompts/templates, GitHub/versioning/restore, tracing/audit/analytics, usage/credits/billing/plans, notifications/email, marketplace, deployment/custom domains, NotebookLM, and document/media builder MCP servers.
+
+### Actual blockers found
+
+The main blockers are not missing Doable source trees. The extraction verifier and provenance reports had drifted after second-pass extension work. The verifier also mishandled `destinationPath`-only records and incorrectly treated the partial provenance file list as a complete inventory. One stale presentation-builder tree SHA was found.
+
+The deeper portability blockers are explicit Doable host coupling in provider resolution, chat orchestration, context, embeddings, secrets, project paths and persistence. The contract layer already defines the correct adapter direction, but those adapters are not yet wired through the runtime.
+
+### Work completed in this continuation
+
+- Hardened `verification/verify-extraction.mjs`.
+- Synchronized immutable manifest/report counts and the presentation-builder tree SHA.
+- Expanded verifier capability coverage to the full current capability set.
+- Added `ai-platform-core/AI_RAG_ARCHITECTURE.md` with a Mermaid RAG graph.
+- Added `ai-platform-core/ROOT_CAUSE_ANALYSIS.md`.
+- Added `ai-platform-core/verification/REMOTE_AUDIT_2026-09-29.md`.
+
+### Still pending
+
+1. Run the fixed extraction and external dependency verifiers locally.
+2. Run package/import/build smoke tests.
+3. Wire explicit host adapters for identity, tenant context, DB, secrets, filesystem/runtime, provider registry, transport, and RAG.
+4. Bind a concrete vector store through `RAGAdapter`.
+5. Decompose the large chat orchestration path into independent execution stages.
+6. Verify each copied extension in the target host instead of equating source presence with runtime readiness.
+7. Add voice/STT/TTS separately when required; dedicated voice runtime code is not present in this Doable source snapshot.
+
+The extraction is best classified as **source-complete, verifier-hardened, adapter-pending**. Local/runtime verification remains a required gate before host integration.
