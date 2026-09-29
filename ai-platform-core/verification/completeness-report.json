@@ -7,13 +7,13 @@
   },
   "extractionBranch": "ai-platform-core-extraction",
   "currentVerification": {
-    "status": "LOCAL_VERIFIER_PASS_TARGET_RUNTIME_PENDING",
-    "note": "Remote GitHub source audit is complete and the fixed local extraction verifier passed on 2026-09-29. Required directories/files, Git tree and blob provenance, immutable inventory, package hardening, 20-capability closure, UI references, and external dependency inventory all pass. Target-project runtime/build/import/integration verification remains unverified.",
-    "immutableFilesExpected": 799,
+    "status": "SECURITY_EXTENSION_ADDED_LOCAL_VERIFIER_REQUIRED",
+    "note": "The immutable extraction was locally verified green before this additive AI security extension. The security scanner and route source are now pinned from the Doable baseline; rerun the local verifier before treating the updated extraction as fully verified. Target-project runtime/build/import/integration verification remains unverified.",
+    "immutableFilesExpected": 802,
     "immutableTreesExpected": 121,
-    "immutableRootTreesExpected": 92,
+    "immutableRootTreesExpected": 93,
     "dependencyManifestCount": 25,
-    "capabilityCount": 20
+    "capabilityCount": 21
   },
   "treeFingerprints": {
     "services/api/src/ai": "13edcc7bd9726c38ea9bd4aab0d7825b2b8387d0",
@@ -53,7 +53,7 @@
     "externalDependencyInventory": "external-dependencies/external-dependencies.json",
     "verificationCommand": "node ai-platform-core/verification/verify-extraction.mjs",
     "immutableProvenanceManifest": "verification/immutable-source-manifest.json",
-    "status": "LOCAL_VERIFIER_PASS_TARGET_RUNTIME_PENDING"
+    "status": "SECURITY_EXTENSION_ADDED_LOCAL_VERIFIER_REQUIRED"
   },
-  "status": "SOURCE_EXTRACTION_VERIFIED; TARGET_RUNTIME_VERIFICATION REQUIRED"
+  "status": "SOURCE_EXTRACTION_UPDATED; LOCAL VERIFIER REQUIRED; TARGET RUNTIME VERIFICATION REQUIRED"
 }
