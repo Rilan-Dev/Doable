@@ -1,10 +1,34 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-29",
+  "generatedAt": "2026-09-29T16:05:04.178Z",
   "manifests": [
     {
       "path": "ai-platform-core/dependency-closure/packages/db/package.json",
       "packageName": "@doable/db"
+    },
+    {
+      "path": "ai-platform-core/doable-source/mcp-servers/image-generator/package.json",
+      "packageName": "image-generator-mcp"
+    },
+    {
+      "path": "ai-platform-core/doable-source/mcp-servers/markdown-builder/package.json",
+      "packageName": "markdown-builder-mcp"
+    },
+    {
+      "path": "ai-platform-core/doable-source/mcp-servers/notebooklm/server/package.json",
+      "packageName": "notebooklm-mcp-server"
+    },
+    {
+      "path": "ai-platform-core/doable-source/mcp-servers/pdf-builder/package.json",
+      "packageName": "pdf-builder-mcp"
+    },
+    {
+      "path": "ai-platform-core/doable-source/mcp-servers/presentation-builder/package.json",
+      "packageName": "presentation-builder-mcp"
+    },
+    {
+      "path": "ai-platform-core/doable-source/mcp-servers/spreadsheet-builder/package.json",
+      "packageName": "spreadsheet-builder-mcp"
     },
     {
       "path": "ai-platform-core/doable-source/packages/doable-ai/package.json",
@@ -23,28 +47,32 @@
       "packageName": "dovault"
     },
     {
+      "path": "ai-platform-core/doable-source/packages/marketplace-bundle/package.json",
+      "packageName": "@doable/marketplace-bundle"
+    },
+    {
       "path": "ai-platform-core/doable-source/packages/shared/package.json",
       "packageName": "@doable/shared"
     },
     {
-      "path": "ai-platform-core/external-dependencies/source-manifests/marketplace-bundle.package.json",
-      "packageName": "@doable/marketplace-bundle"
-    },
-    {
-      "path": "ai-platform-core/external-dependencies/source-manifests/root.package.json",
-      "packageName": "doable"
-    },
-    {
-      "path": "ai-platform-core/external-dependencies/source-manifests/services-api.package.json",
-      "packageName": "@doable/api"
-    },
-    {
-      "path": "ai-platform-core/external-dependencies/source-manifests/notebooklm-mcp-server.package.json",
-      "packageName": "notebooklm-mcp-server"
+      "path": "ai-platform-core/doable-source/services/ws/package.json",
+      "packageName": "@doable/ws"
     },
     {
       "path": "ai-platform-core/external-dependencies/source-manifests/doable-ws.package.json",
       "packageName": "@doable/ws"
+    },
+    {
+      "path": "ai-platform-core/external-dependencies/source-manifests/image-generator.package.json",
+      "packageName": "image-generator-mcp"
+    },
+    {
+      "path": "ai-platform-core/external-dependencies/source-manifests/markdown-builder.package.json",
+      "packageName": "markdown-builder-mcp"
+    },
+    {
+      "path": "ai-platform-core/external-dependencies/source-manifests/marketplace-bundle.package.json",
+      "packageName": "@doable/marketplace-bundle"
     },
     {
       "path": "ai-platform-core/external-dependencies/source-manifests/pdf-builder.package.json",
@@ -55,16 +83,20 @@
       "packageName": "presentation-builder-mcp"
     },
     {
+      "path": "ai-platform-core/external-dependencies/source-manifests/root.package.json",
+      "packageName": "doable"
+    },
+    {
+      "path": "ai-platform-core/external-dependencies/source-manifests/services-api.package.json",
+      "packageName": "@doable/api"
+    },
+    {
+      "path": "ai-platform-core/external-dependencies/source-manifests/services-ws.package.json",
+      "packageName": "@doable/ws"
+    },
+    {
       "path": "ai-platform-core/external-dependencies/source-manifests/spreadsheet-builder.package.json",
       "packageName": "spreadsheet-builder-mcp"
-    },
-    {
-      "path": "ai-platform-core/external-dependencies/source-manifests/markdown-builder.package.json",
-      "packageName": "markdown-builder-mcp"
-    },
-    {
-      "path": "ai-platform-core/external-dependencies/source-manifests/image-generator.package.json",
-      "packageName": "image-generator-mcp"
     }
   ],
   "workspacePackages": {
@@ -611,6 +643,9 @@
     "@github/copilot-sdk": "^0.2.0",
     "@hono/node-server": "^1.13.7",
     "@hono/zod-validator": "^0.4.2",
+    "@mcp-ui/server": "^6.1.0",
+    "@modelcontextprotocol/ext-apps": "^1.0.1",
+    "@modelcontextprotocol/sdk": "^1.29.0",
     "@opentelemetry/api": "^1.9.0",
     "@opentelemetry/core": "^1.30.0",
     "@opentelemetry/instrumentation": "^0.57.0",
@@ -620,42 +655,32 @@
     "@opentelemetry/sdk-trace-base": "^1.30.0",
     "@opentelemetry/sdk-trace-node": "^1.30.0",
     "@opentelemetry/semantic-conventions": "^1.28.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/ws": "^8.18.1",
     "argon2": "^0.41.1",
+    "cors": "^2.8.6",
+    "exceljs": "^4.4.0",
+    "express": "^5.2.1",
     "fflate": "^0.8.2",
     "hono": "^4.6.14",
     "jose": "^5.9.6",
     "mammoth": "^1.12.0",
+    "marked": "^15.0.0",
+    "node-fetch": "^3.3.0",
     "nodemailer": "^8.0.3",
     "pdf-parse": "^2.4.5",
     "pino": "^9.5.0",
+    "playwright": "^1.40.0",
     "postgres": "^3.4.5",
     "pptxgenjs": "^4.0.1",
     "puppeteer": "^25.0.4",
+    "sharp": "^0.33.0",
     "stripe": "^20.4.1",
     "ts-morph": "^27.0.2",
-    "yjs": "^13.6.30",
-    "zod": "^3.22.0",
-    "@modelcontextprotocol/ext-apps": "^1.0.1",
-    "@modelcontextprotocol/sdk": "^1.29.0",
-    "@types/cors": "^2.8.19",
-    "@types/express": "^5.0.6",
-    "@types/ws": "^8.5.13",
-    "cors": "^2.8.6",
-    "express": "^5.2.1",
-    "node-fetch": "^3.3.0",
-    "playwright": "^1.40.0",
-    "sharp": "^0.33.0",
     "ws": "^8.18.0",
-    "tsx": "^4.19.2",
-    "typescript": "^5.7.3",
-    "vite": "^7.3.1",
-    "vite-plugin-singlefile": "^2.3.0",
-    "@types/node": "^22.10.0",
-    "tsc-alias": "^1.8.10",
-    "@mcp-ui/server": "^6.1.0",
-    "exceljs": "^4.4.0",
-    "marked": "^15.0.0",
-    "@doable/shared": "workspace:*"
+    "yjs": "^13.6.30",
+    "zod": "^3.24.1"
   },
   "peerDependencies": {
     "react": ">=18.0.0"
