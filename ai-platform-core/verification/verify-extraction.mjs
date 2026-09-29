@@ -63,6 +63,8 @@ const requiredFiles = [
   "external-dependencies/source-manifests/pnpm-workspace.yaml",
   "external-dependencies/source-manifests/tsconfig.base.json",
   "external-dependencies/source-manifests/marketplace-bundle.package.json",
+  "external-dependencies/source-manifests/notebooklm-mcp-server.package.json",
+  "external-dependencies/source-manifests/doable-ws.package.json",
   "capabilities/multi-provider/MANIFEST.md",
   "capabilities/agents/MANIFEST.md",
   "capabilities/tools/MANIFEST.md",
@@ -72,7 +74,10 @@ const requiredFiles = [
   "capabilities/chat/MANIFEST.md",
   "capabilities/context-memory/MANIFEST.md",
   "capabilities/workspace-sandbox/MANIFEST.md",
-  "capabilities/ui/MANIFEST.md"
+  "capabilities/ui/MANIFEST.md",
+  "capabilities/marketplace/MANIFEST.md",
+  "capabilities/notebooklm/MANIFEST.md",
+  "capabilities/realtime-collaboration/MANIFEST.md"
 ];
 
 function exists(rel) { return fs.existsSync(path.join(root, rel)); }
@@ -189,7 +194,7 @@ if (gitAvailable()) {
 const hardeningPath = path.join(root, "verification/package-hardening.json");
 if (fs.existsSync(hardeningPath)) {
   const h = JSON.parse(fs.readFileSync(hardeningPath, "utf8"));
-  const expectedCapabilities = ["multi-provider","agents","tools","integrations","mcp","skills","chat","context-memory","workspace-sandbox","ui"];
+  const expectedCapabilities = ["multi-provider","agents","tools","integrations","mcp","skills","chat","context-memory","workspace-sandbox","ui","marketplace","notebooklm","realtime-collaboration"];
   const capabilityPass = expectedCapabilities.every((name) => (h.capabilities || []).includes(name));
   const sourcePass = h.source?.repository === "Rilan-Dev/Doable"
     && h.source?.ref === "develop"
@@ -214,7 +219,7 @@ if (fs.existsSync(hardeningPath)) {
 const capabilityClosurePath = path.join(root, "verification/capability-closure.json");
 if (fs.existsSync(capabilityClosurePath)) {
   const c = JSON.parse(fs.readFileSync(capabilityClosurePath, "utf8"));
-  const expected = ["multi-provider","agents","tools","integrations","mcp","skills","chat","context-memory","workspace-sandbox","ui"];
+  const expected = ["multi-provider","agents","tools","integrations","mcp","skills","chat","context-memory","workspace-sandbox","ui","marketplace","notebooklm","realtime-collaboration"];
   const capabilities = c.capabilities || {};
   const missing = expected.filter((name) => !capabilities[name] || capabilities[name].manifest !== `capabilities/${name}/MANIFEST.md`);
   const invalidRefs = [];
@@ -314,7 +319,7 @@ if (fs.existsSync(immutableManifestPath)) {
 
 for (const name of [
   "multi-provider","agents","tools","integrations","mcp","skills",
-  "chat","context-memory","workspace-sandbox","ui"
+  "chat","context-memory","workspace-sandbox","ui","marketplace","notebooklm","realtime-collaboration"
 ]) {
   const p = `capabilities/${name}/MANIFEST.md`;
   report.featureManifests[name] = { path: p, present: exists(p) };
