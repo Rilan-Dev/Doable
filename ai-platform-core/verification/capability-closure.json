@@ -186,22 +186,18 @@
     "realtime-collaboration": {
       "manifest": "capabilities/realtime-collaboration/MANIFEST.md",
       "runtime": [
-        "doable-source/services/ws/"
-      ],
-      "dependencies": [
-        "doable-source/services/api/src/context/",
-        "dependency-closure/packages/db/"
+        "doable-source/services/ws/src/"
       ],
       "uiReference": [
-        "ui-reference/apps/web/src/modules/collaboration/",
-        "doable-source/apps/web/src/modules/editor/visual-edit/"
+        "doable-source/apps/web/src/modules/collaboration/"
       ],
       "hostBoundaries": [
         "identity",
-        "tenant authorization",
+        "authorization",
         "room persistence",
-        "WebSocket deployment",
-        "artifact storage"
+        "WebSocket auth/origin",
+        "database",
+        "deployment topology"
       ]
     },
     "document-builders": {
@@ -278,52 +274,66 @@
     "platform-extensions": {
       "manifest": "capabilities/platform-extensions/MANIFEST.md",
       "runtime": [
-        "doable-source-extensions/realtime-collaboration/services-ws/",
-        "doable-source-extensions/realtime-collaboration/web-collaboration/",
-        "doable-source-extensions/observability/api-tracing/",
-        "doable-source-extensions/audit/api-admin/",
-        "doable-source-extensions/analytics/api/",
-        "doable-source-extensions/billing/api/",
-        "doable-source-extensions/usage/api/",
-        "doable-source-extensions/identity-rbac/api-auth/",
-        "doable-source-extensions/github/api/",
-        "doable-source-extensions/version-control/api/",
-        "doable-source-extensions/deployment/api/",
-        "doable-source-extensions/marketplace/api/",
-        "doable-source-extensions/email/api/",
-        "doable-source-extensions/domains/api/",
-        "doable-source-extensions/security/api-scanner/",
-        "doable-source-extensions/security/shared/",
-        "doable-source-extensions/security/api-route.ts"
+        "doable-source/services/api/src/analytics/",
+        "doable-source/services/api/src/tracing/",
+        "doable-source/services/api/src/version-control/",
+        "doable-source/services/api/src/github/",
+        "doable-source/services/api/src/deploy/",
+        "doable-source/services/api/src/auth/",
+        "doable-source/services/api/src/routes/"
       ],
-      "ui": [
-        "doable-source-extensions/ui-platform/admin/",
-        "doable-source-extensions/ui-platform/billing-page/",
-        "doable-source-extensions/ui-platform/usage-page/",
-        "doable-source-extensions/ui-platform/settings-page/",
-        "doable-source-extensions/ui-platform/marketplace-pages/",
-        "doable-source-extensions/ui-platform/billing-module/",
-        "doable-source-extensions/ui-platform/marketplace-module/",
-        "doable-source-extensions/ui-platform/editor-panels/",
-        "doable-source-extensions/ui-platform/editor-components/",
-        "doable-source-extensions/ui-platform/editor-toolbar/"
-      ],
-      "dependencies": [
-        "dependency-closure/packages/db/",
-        "doable-source/packages/docore/",
-        "doable-source/packages/dovault/"
+      "uiReference": [
+        "doable-source/apps/web/src/modules/billing/",
+        "doable-source/apps/web/src/modules/dashboard/",
+        "doable-source/apps/web/src/modules/editor/",
+        "doable-source/apps/web/src/modules/marketplace/"
       ],
       "hostBoundaries": [
-        "identity/tenant persistence",
-        "database schema",
-        "secrets",
-        "OAuth providers",
-        "Stripe/payment provider",
+        "identity",
+        "database",
+        "billing provider",
         "email provider",
-        "Cloudflare/Caddy/domain infrastructure",
-        "deployment infrastructure",
-        "GitHub credentials",
-        "WebSocket hosting"
+        "deployment provider",
+        "domains",
+        "secrets",
+        "infrastructure"
+      ]
+    },
+    "visual-editing": {
+      "manifest": "capabilities/visual-editing/MANIFEST.md",
+      "runtime": [
+        "doable-source/services/api/src/visual-edit-bridge-inline.ts",
+        "doable-source/apps/web/src/modules/editor/"
+      ],
+      "uiReference": [
+        "doable-source/apps/web/src/modules/editor/"
+      ],
+      "hostBoundaries": [
+        "project filesystem",
+        "preview runtime",
+        "identity",
+        "persistence",
+        "deployment provider",
+        "theme"
+      ]
+    },
+    "ai-media-builders": {
+      "manifest": "capabilities/ai-media-builders/MANIFEST.md",
+      "runtime": [
+        "doable-source/mcp-servers/_shared/",
+        "doable-source/mcp-servers/image-generator/",
+        "doable-source/mcp-servers/markdown-builder/",
+        "doable-source/mcp-servers/pdf-builder/",
+        "doable-source/mcp-servers/presentation-builder/",
+        "doable-source/mcp-servers/spreadsheet-builder/"
+      ],
+      "uiReference": [],
+      "hostBoundaries": [
+        "provider credentials",
+        "artifact storage",
+        "execution limits",
+        "MCP registration",
+        "UI/theme"
       ]
     }
   },
