@@ -162,6 +162,26 @@
         "object storage/CDN",
         "marketplace UI/theme"
       ]
+    },
+    "notebooklm": {
+      "manifest": "capabilities/notebooklm/MANIFEST.md",
+      "runtime": [
+        "doable-source/mcp-servers/notebooklm/server/"
+      ],
+      "dependencies": [
+        "doable-source/packages/shared/"
+      ],
+      "uiReference": [
+        "doable-source/mcp-servers/notebooklm/server/src/mcp-app.html",
+        "doable-source/mcp-servers/notebooklm/server/src/mcp-app.ts"
+      ],
+      "hostBoundaries": [
+        "Google authentication/cookies",
+        "Chromium/Playwright",
+        "persistent user data",
+        "public URL/tunnel",
+        "MCP host registration"
+      ]
     }
   },
   "acceptance": {
