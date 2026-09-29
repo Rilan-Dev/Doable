@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "copy-ready-with-target-runtime-verification-required",
+  "status": "security-extension-added-local-verification-required",
   "source": {
     "repository": "Rilan-Dev/Doable",
     "ref": "develop",
