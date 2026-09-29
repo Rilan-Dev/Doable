@@ -404,6 +404,9 @@
         "database/persistence",
         "authentication/authorization",
         "deployment policy"
+      ],
+      "uiReference": [
+        "ui-reference/apps/web/src/modules/settings/components/project-settings-security.tsx"
       ]
     }
   },
