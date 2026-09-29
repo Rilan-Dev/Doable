@@ -7,14 +7,14 @@
     "commit": "a6036d1fd6dca83c08ee5affa141e5c85e45f5af"
   },
   "immutable": {
-    "sourceRoots": 14,
+    "sourceRoots": 20,
     "dependencyClosureRoots": 9,
     "uiReferenceRoots": 6,
-    "capturedDirectoryTrees": 81,
-    "immutableFiles": 775,
+    "capturedDirectoryTrees": 88,
+    "immutableFiles": 792,
     "rule": "Doable source, dependency-closure source, and captured UI reference source are immutable copies. Host adapters must not modify them.",
-    "capturedRootTrees": 29,
-    "capturedTrees": 110
+    "capturedRootTrees": 35,
+    "capturedTrees": 123
   },
   "capabilities": [
     "multi-provider",
@@ -29,7 +29,8 @@
     "ui",
     "marketplace",
     "notebooklm",
-    "realtime-collaboration"
+    "realtime-collaboration",
+    "document-builders"
   ],
   "externalDependencies": {
     "manifest": "external-dependencies/external-dependencies.json",
@@ -40,7 +41,11 @@
       "external-dependencies/source-manifests/tsconfig.base.json",
       "external-dependencies/source-manifests/marketplace-bundle.package.json",
       "external-dependencies/source-manifests/notebooklm-mcp-server.package.json",
-      "external-dependencies/source-manifests/doable-ws.package.json"
+      "external-dependencies/source-manifests/doable-ws.package.json",
+      "external-dependencies/source-manifests/pdf-builder.package.json",
+      "external-dependencies/source-manifests/presentation-builder.package.json",
+      "external-dependencies/source-manifests/spreadsheet-builder.package.json",
+      "external-dependencies/source-manifests/markdown-builder.package.json"
     ],
     "rule": "Source-present packages are not equivalent to installed target runtime dependencies. The target project must explicitly bind runtime, execution, security, host-adapter, and optional requirements."
   },
