@@ -6,7 +6,7 @@
     "ref": "develop",
     "commit": "a6036d1fd6dca83c08ee5affa141e5c85e45f5af"
   },
-  "currentExtractionCommit": "eaa1184d20dd304db0f3614b1bdf29809b55d9e9",
+  "currentExtractionCommit": "7cfd54956ef66f17d5eba6524491b649038ff9f9",
   "capturedRootTrees": {
     "doable-source/services/api/src/ai": "13edcc7bd9726c38ea9bd4aab0d7825b2b8387d0",
     "doable-source/services/api/src/context": "43424593729e9a6d23ce71731c7bf6991b7d6c8b",
@@ -40,11 +40,17 @@
     "doable-source/mcp-servers/notebooklm/server": "f79499f32c0c0a2fda887bc83f948ad8bc62d9e5",
     "doable-source/mcp-servers/_shared": "033542e0c4099a118c8a84db22558f9bb65af625",
     "doable-source/mcp-servers/pdf-builder": "5465b6ad78f92b037683a3e96964a714293c4956",
-    "doable-source/mcp-servers/presentation-builder": "0bc2bcdc6b75cfba6c102e7bd3d2c1d3db1210f6",
+    "doable-source/mcp-servers/presentation-builder": "c51d5e561faf0b86f15f849c86c24848b28b1e2e",
     "doable-source/mcp-servers/spreadsheet-builder": "4742c8bc17d5193ba81e3e2dc9fcdb6297b2390d",
     "doable-source/mcp-servers/markdown-builder": "f96178af8162a7e12c0f8bdf15af5da695d4e65d",
     "ui-reference/apps/web/src/modules/collaboration": "e798ede8b5a50887d605418d64da2fb91bf66eb6",
-    "ui-reference/apps/web/src/modules/editor/visual-edit": "0870f9143fe46ce726f086d46b9f3d19f6282af0"
+    "ui-reference/apps/web/src/modules/editor/visual-edit": "0870f9143fe46ce726f086d46b9f3d19f6282af0",
+    "doable-source/mcp-servers/image-generator": "bb577a0f9aa583bad5709aab90ffa4dcc38ba437",
+    "doable-source/mcp-servers/notebooklm": "f5b1eaa296cab0506cf94e7fff723598be8aa6a5",
+    "doable-source/apps/web/src/modules/editor/visual-edit": "0870f9143fe46ce726f086d46b9f3d19f6282af0",
+    "doable-source/apps/web/src/modules/editor/runtime-render": "17a8fa9b75e59dfdde8d97ea3263ffb277a66c34",
+    "doable-source/apps/web/src/modules/editor/context-files": "bea119d693ded695c578b1cc34031f358057b2fb",
+    "doable-source/apps/web/src/modules/editor/build": "ab2128830f2358c66d8a6ace64500e29904ab536"
   },
   "directoryTrees": [
     {
@@ -731,6 +737,27 @@
       "destinationPath": "ui-reference/apps/web/src/modules/editor/visual-edit/sticky-notes",
       "sourcePath": "apps/web/src/modules/editor/visual-edit/sticky-notes",
       "sha": "9a87effec8c11d9944ef73a2177ca951fec0bba7",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/apps/web/src/modules/editor/runtime-render",
+      "sourcePath": "apps/web/src/modules/editor/runtime-render",
+      "sha": "17a8fa9b75e59dfdde8d97ea3263ffb277a66c34",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/apps/web/src/modules/editor/context-files",
+      "sourcePath": "apps/web/src/modules/editor/context-files",
+      "sha": "bea119d693ded695c578b1cc34031f358057b2fb",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/apps/web/src/modules/editor/build",
+      "sourcePath": "apps/web/src/modules/editor/build",
+      "sha": "ab2128830f2358c66d8a6ace64500e29904ab536",
       "mode": "040000"
     }
   ],
