@@ -16,7 +16,10 @@
     "packages/docore": "2a33159a3b92f653ddf1514027982d454bea2fd4",
     "packages/dovault": "15532f8f7effbe8a7ebd33b57333b113d64e7606",
     "packages/shared": "8dad7fcadfe23fb5e6d3b3d919f0501e59cfae71",
-    "packages/doable-sdk": "32683d5cd4b42353e790000123176bb3b2eb8f2a"
+    "packages/doable-sdk": "32683d5cd4b42353e790000123176bb3b2eb8f2a",
+    "services/ws": "819d4f518e66745a03846cf54ee5d580d8880164",
+    "packages/marketplace-bundle": "1ec662602f29aac2e7f5e60893eae89df62af376",
+    "mcp-servers/notebooklm/server": "f79499f32c0c0a2fda887bc83f948ad8bc62d9e5"
   },
   "dependencyClosureTrees": {
     "packages/db": "1faf731b078d489040e54bfde4bb2d08086354fe",
@@ -35,7 +38,9 @@
     "apps/web/src/modules/skills": "0223ba3433bd135dc4f769c4bd75874ac8ff6035",
     "apps/web/src/modules/settings": "6fd532bc01a61fe79b49b2c2b4e90c80df1cb7db",
     "apps/web/src/app/(dashboard)/workspace-settings": "75043d2045f565cf8909121b4c13ffd34e15e542",
-    "apps/web/src/app/(dashboard)/ai-settings": "1e879c7e3c8a04d8a903f836c3e5b4c1bc12346e"
+    "apps/web/src/app/(dashboard)/ai-settings": "1e879c7e3c8a04d8a903f836c3e5b4c1bc12346e",
+    "apps/web/src/modules/collaboration": "e798ede8b5a50887d605418d64da2fb91bf66eb6",
+    "apps/web/src/modules/editor/visual-edit": "0870f9143fe46ce726f086d46b9f3d19f6282af0"
   },
   "uiReferenceAdditionalFiles": {
     "apps/web/src/modules/editor/chat/chat-panel.tsx": "63b19e87f852b26ea2700bb335ea3be723c2f9f8",
@@ -48,6 +53,7 @@
   "notes": [
     "Copied Doable source is immutable.",
     "Third-party integration pieces and separate MCP server packages are external dependencies, not silently vendored.",
-    "Realtime voice is host-specific because Doable has no equivalent native realtime voice implementation."
+    "Realtime voice is host-specific because Doable has no equivalent native realtime voice implementation.",
+    "Realtime collaboration, Yjs/AI synchronization, and visual editor/design-comment UI are preserved as reusable AI-enabling source/reference layers."
   ]
 }
