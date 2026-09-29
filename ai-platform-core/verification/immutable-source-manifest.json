@@ -35,8 +35,9 @@
     "ui-reference/apps/web/src/modules/settings": "6fd532bc01a61fe79b49b2c2b4e90c80df1cb7db",
     "ui-reference/apps/web/src/app/(dashboard)/workspace-settings": "75043d2045f565cf8909121b4c13ffd34e15e542",
     "ui-reference/apps/web/src/app/(dashboard)/ai-settings": "1e879c7e3c8a04d8a903f836c3e5b4c1bc12346e",
-    "doable-source/packages/marketplace-bundle": "8b89b1727b6a710bec1796bc1d4b9c52522d6638",
-    "doable-source/services/ws": "819d4f518e66745a03846cf54ee5d580d8880164"
+    "doable-source/packages/marketplace-bundle": "7383f3b96be79584041d35313ad1c60105b2f2e8",
+    "doable-source/services/ws": "819d4f518e66745a03846cf54ee5d580d8880164",
+    "doable-source/mcp-servers/notebooklm/server": "bc9b4f6eb7bb71fe144ce4afe984b302112ed8cb"
   },
   "directoryTrees": [
     {
@@ -590,6 +591,13 @@
       "destinationPath": "doable-source/services/ws/src/tracing",
       "sourcePath": "services/ws/src/tracing",
       "sha": "60933fdcb370e0998a0d8ca4832926541eb2b99f",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/notebooklm/server/src",
+      "sourcePath": "mcp-servers/notebooklm/server/src",
+      "sha": "c5c84a98b01ec8f2f54eff48d9463d2152640278",
       "mode": "040000"
     }
   ],
