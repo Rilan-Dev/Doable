@@ -35,7 +35,8 @@
     "ui-reference/apps/web/src/modules/settings": "6fd532bc01a61fe79b49b2c2b4e90c80df1cb7db",
     "ui-reference/apps/web/src/app/(dashboard)/workspace-settings": "75043d2045f565cf8909121b4c13ffd34e15e542",
     "ui-reference/apps/web/src/app/(dashboard)/ai-settings": "1e879c7e3c8a04d8a903f836c3e5b4c1bc12346e",
-    "doable-source/packages/marketplace-bundle": "8b89b1727b6a710bec1796bc1d4b9c52522d6638"
+    "doable-source/packages/marketplace-bundle": "8b89b1727b6a710bec1796bc1d4b9c52522d6638",
+    "doable-source/services/ws": "819d4f518e66745a03846cf54ee5d580d8880164"
   },
   "directoryTrees": [
     {
@@ -554,6 +555,41 @@
       "destinationPath": "doable-source/packages/marketplace-bundle/src/codecs",
       "sourcePath": "packages/marketplace-bundle/src/codecs",
       "sha": "bd509ccaf48d20c10b98ea3609ec6ddab9d21d77",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/ws",
+      "sourcePath": "services/ws",
+      "sha": "819d4f518e66745a03846cf54ee5d580d8880164",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/ws/src",
+      "sourcePath": "services/ws/src",
+      "sha": "624d9d6d277490f10760e4e16d929fd446635a18",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/ws/src/rooms",
+      "sourcePath": "services/ws/src/rooms",
+      "sha": "8918c047a8e2c40339afd27addcc462a159149ab",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/ws/src/collaboration",
+      "sourcePath": "services/ws/src/collaboration",
+      "sha": "6e12ea4d30a280b8ff93b030003207959d05c1f3",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/ws/src/tracing",
+      "sourcePath": "services/ws/src/tracing",
+      "sha": "60933fdcb370e0998a0d8ca4832926541eb2b99f",
       "mode": "040000"
     }
   ],
@@ -5911,6 +5947,76 @@
       "destinationPath": "doable-source/mcp-servers/notebooklm/server/tsconfig.json",
       "sourcePath": "mcp-servers/notebooklm/server/tsconfig.json",
       "sha": "28d57cc8f93d1dc954f77315ded61db2e44ada79",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/ws/package.json",
+      "sourcePath": "services/ws/package.json",
+      "sha": "b52330fde7fee773dc2a40548759ea42516d9ad4",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/ws/tsconfig.json",
+      "sourcePath": "services/ws/tsconfig.json",
+      "sha": "b98897e6d53ee52cb7d73a6b81d291600e9b3eae",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/ws/src/index.ts",
+      "sourcePath": "services/ws/src/index.ts",
+      "sha": "7b4398608b62b6b3ecd55d566609798704451219",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/ws/src/message-handler.ts",
+      "sourcePath": "services/ws/src/message-handler.ts",
+      "sha": "7a4cb637ffad1df8496a49e9b6d713dd4979a5ef",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/ws/src/db.ts",
+      "sourcePath": "services/ws/src/db.ts",
+      "sha": "3e15376219113fc28a6aec2c0b8daa382ec4d1a8",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/ws/src/rooms/room.ts",
+      "sourcePath": "services/ws/src/rooms/room.ts",
+      "sha": "90689b01a7e272063c69b13404a24885c1827645",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/ws/src/rooms/room-manager.ts",
+      "sourcePath": "services/ws/src/rooms/room-manager.ts",
+      "sha": "d0c04be3ab179c8a8a9f1fccc3dd16d58a0385b5",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/ws/src/collaboration/yjs-document-manager.ts",
+      "sourcePath": "services/ws/src/collaboration/yjs-document-manager.ts",
+      "sha": "7ccd92ad63559a755d76a8d30b5a4b46c273408c",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/ws/src/tracing/instrumentation.ts",
+      "sourcePath": "services/ws/src/tracing/instrumentation.ts",
+      "sha": "5b690698224230c44ac6109199c01e0f05312c81",
+      "mode": "100644"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/ws/src/tracing/pg-exporter.ts",
+      "sourcePath": "services/ws/src/tracing/pg-exporter.ts",
+      "sha": "258875122aff747269a6d119367e31b3cf1408c3",
       "mode": "100644"
     }
   ],
