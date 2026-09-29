@@ -87,3 +87,7 @@ The verifier checks required structure, key entrypoints, manifest consistency an
 
 For projects that need reusable AI assets to be importable/exportable, use `capabilities/marketplace/MANIFEST.md` and the immutable `doable-source/packages/marketplace-bundle/` implementation. Implement the host marketplace/install lifecycle around the preserved bundle schema; do not replace it with an ad-hoc skills export format. Credentials must remain outside bundles and be collected/provisioned at install time.
 
+### Realtime AI collaboration
+
+When a host needs multi-user live AI development, use `capabilities/realtime-collaboration/MANIFEST.md` and copy the complete `doable-source/services/ws/` closure. Do not copy only AI event types: the room, message handler, Yjs document manager, persistence bridge, authentication, internal API protection, and tracing are coupled behavior. Adapt JWT/tenant authorization, project storage, internal secrets, telemetry, WebSocket endpoint/origin policy, and editor UI at the host boundary.
+
