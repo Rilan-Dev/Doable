@@ -808,6 +808,97 @@
       "sourcePath": "apps/web/src/modules/editor/build",
       "sha": "ab2128830f2358c66d8a6ace64500e29904ab536",
       "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/image-generator",
+      "sourcePath": "mcp-servers/image-generator",
+      "sha": "bb577a0f9aa583bad5709aab90ffa4dcc38ba437",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/mcp-servers/notebooklm",
+      "sourcePath": "mcp-servers/notebooklm",
+      "sha": "f5b1eaa296cab0506cf94e7fff723598be8aa6a5",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/analytics",
+      "sourcePath": "services/api/src/analytics",
+      "sha": "9a341978a5f7bae928ad3cff3a21afb41d7af111",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/auth",
+      "sourcePath": "services/api/src/auth",
+      "sha": "ba9066280d8bdf237fcb71c3f29ff69875cdd4d0",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/deploy",
+      "sourcePath": "services/api/src/deploy",
+      "sha": "9fbf41c828ce49f4c6c2894d6281c620229820ca",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/github",
+      "sourcePath": "services/api/src/github",
+      "sha": "0ee5186d68cdf50d7b4f286ab27970c85b0064cd",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/tracing",
+      "sourcePath": "services/api/src/tracing",
+      "sha": "b25fc4b830b0ae204ffaf3d8d67398eeef2faad2",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/services/api/src/version-control",
+      "sourcePath": "services/api/src/version-control",
+      "sha": "ae65a2762168abb554395b71fe7196b5bc1db193",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/apps/web/src/modules/collaboration",
+      "sourcePath": "apps/web/src/modules/collaboration",
+      "sha": "e798ede8b5a50887d605418d64da2fb91bf66eb6",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/apps/web/src/modules/billing",
+      "sourcePath": "apps/web/src/modules/billing",
+      "sha": "f62153be879b9f9926589f257474845d8e927dba",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/apps/web/src/modules/dashboard",
+      "sourcePath": "apps/web/src/modules/dashboard",
+      "sha": "fabda466eea473643634804f10b52729474cf514",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/apps/web/src/modules/editor",
+      "sourcePath": "apps/web/src/modules/editor",
+      "sha": "1aa3f73bd180370aae4bdfa43c832b29b28cf078",
+      "mode": "040000"
+    },
+    {
+      "root": "doable-source",
+      "destinationPath": "doable-source/apps/web/src/modules/marketplace",
+      "sourcePath": "apps/web/src/modules/marketplace",
+      "sha": "57013142e894cac66bcf326a32d7648916a84675",
+      "mode": "040000"
     }
   ],
   "files": [
