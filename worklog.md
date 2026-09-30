@@ -7724,3 +7724,37 @@ The AI platform core now contains the previously missing security scanner source
 - Exact security source blob SHAs are pinned to the Doable baseline.
 
 The extraction was verified green immediately before the security-extension addition. Because the new files and verifier requirements were added after that successful run, the updated branch is intentionally marked **local verifier required** rather than claiming a fresh verifier pass. Target-project runtime/build/import/integration verification remains separate.
+
+
+## Checkpoint — 2026-10-01 — n8n complete-platform mechanical inventory
+
+Continued the n8n extraction from pinned commit `31b6649d783ded919757ccd64259ea8a891c0955`.
+
+### Verified from the complete recursive Git tree
+- 36,795 tree entries
+- 29,873 files/blobs
+- 97 `package.json` manifests
+- root tree scan is complete and not truncated
+- TypeScript 21,695; JSON 3,854; Vue 1,338; Markdown 710; SVG 623; Python 69
+
+### Important closure confirmations
+- Python task-runner source exists at `packages/@n8n/task-runner-python/` and must be included with Python lock/config/test source.
+- Instance AI includes agent/runtime/tools/tool-registry/MCP/memory/knowledge/planning/workflow-builder/workflow-loop/skills/workspace/streaming/tracing/debug/storage/prompts.
+- Agents includes evals/integrations/runtime/SDK/skills/storage/vector-stores/workspace.
+- Workflow SDK includes AST/codegen/type-generation/lint/validation/prompts/mock-data/workflow-builder.
+- Engine includes graph/execution/runtime/queue/response/lifecycle/database/auth/testing.
+- MCP browser includes discovery/connection/CDP relay/extension/redaction/sensitivity/server/tools.
+- Computer Use includes gateway/session/configuration/settings/tools.
+- Local Gateway and Insights extension are first-party platform source and remain in the complete inventory.
+- Generated PostgreSQL schema documentation exposes extensive AI/agent/chat/execution/project/workflow persistence surfaces and must not be discarded as irrelevant metadata.
+
+### Artifact added
+`ai-platform-core/n8n-platform-corpus/EXTRACTION_CHECKPOINT.md` records the exact pinned inventory and the boundary rules.
+
+### Status
+Mechanical inventory: COMPLETE for the pinned recursive tree.
+Exact 29,873-file physical capture into the corpus: NOT YET DONE.
+Blob/tree verification of the captured corpus: NOT YET DONE.
+Complete recursive workspace dependency resolution: NOT YET DONE.
+External dependency inventory for all 97 manifests: NOT YET DONE.
+No extraction PASS is claimed.
