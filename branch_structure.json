@@ -1,0 +1,27 @@
+{
+  "default_branch": "develop",
+  "branches": [
+    "ai-platform-core-extraction",
+    "develop",
+    "docs/source-extraction-agent-sync-2026-10-10",
+    "main",
+    "origin",
+    "upstream-main"
+  ],
+  "parent": {
+    "ai-platform-core-extraction": "develop",
+    "develop": null,
+    "docs/source-extraction-agent-sync-2026-10-10": "develop",
+    "main": "develop",
+    "origin": "develop",
+    "upstream-main": "develop"
+  },
+  "order": [
+    "develop",
+    "ai-platform-core-extraction",
+    "docs/source-extraction-agent-sync-2026-10-10",
+    "main",
+    "origin",
+    "upstream-main"
+  ]
+}
