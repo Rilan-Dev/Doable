@@ -3,12 +3,13 @@
 A repository-native operating system for discovering, documenting, copying, and verifying reusable first-party source code from upstream applications without altering the captured source.
 
 ## Start here
-1. Read [AGENTS.md](AGENTS.md), [EXTRACTION_RULES.md](EXTRACTION_RULES.md), and [EXTRACTION_AGENT_SPEC.md](EXTRACTION_AGENT_SPEC.md).
-2. Recover the checkpoint from [project-control/CHAT_CONTINUITY.md](project-control/CHAT_CONTINUITY.md), then read CURRENT_PHASE, NEXT_ACTION, VERIFICATION_STATE, ISSUES, RISKS, DECISIONS, and WORKLOG.
-3. Complete repository onboarding and pin the source commit and root tree before inventory work.
-4. Follow `prompts/00-session-recovery.md` and `prompts/01-repository-onboarding.md`.
-5. Do not copy source until the discovery/closure gate has evidence-backed PASS.
-6. Never claim integrity PASS unless the verifier actually ran against the captured package and pinned upstream Git objects.
+1. Read [USER_GUIDE.md](USER_GUIDE.md) for how to invoke prompts, separate agent roles, and persist memory across chats.
+2. Read [AGENTS.md](AGENTS.md), [EXTRACTION_RULES.md](EXTRACTION_RULES.md), and [EXTRACTION_AGENT_SPEC.md](EXTRACTION_AGENT_SPEC.md).
+3. Recover the checkpoint from [project-control/CHAT_CONTINUITY.md](project-control/CHAT_CONTINUITY.md), then read CURRENT_PHASE, NEXT_ACTION, VERIFICATION_STATE, ISSUES, RISKS, DECISIONS, and WORKLOG.
+4. Complete repository onboarding and pin the source commit and root tree before inventory work.
+5. Follow `prompts/00-session-recovery.md` and `prompts/01-repository-onboarding.md`.
+6. Do not copy source until the discovery/closure gate has evidence-backed PASS.
+7. Never claim integrity PASS unless the verifier actually ran against the captured package and pinned upstream Git objects.
 
 ## Principles
 - Immutable source is evidence, not a workspace for refactoring.
@@ -29,3 +30,7 @@ A repository-native operating system for discovering, documenting, copying, and 
 
 ## Scope
 Designed for application platforms, AI systems, SaaS services, integrations, workflow engines, media pipelines, developer tooling, and other reusable capabilities. It does not assume all upstream code is reusable or that every repository has the same architecture.
+
+
+## Target-specific state
+This copy's `project-control/` is adapted for **Doable**. Read `TARGET_PROJECT_STATE.md`, then the current-phase/next-action/verification/continuity records before resuming. The reusable prompts, 12 skills, schemas, templates, examples, workflows, package scripts, verifier and tests are included. The isolated package-check workflow is at `.github/workflows/source-extraction-agent.yml`; package checks have not been executed in this synchronization session. Run `npm run check` and `npm test` from this directory in a local checkout and record actual results. Installing this agent package does not mean upstream application source has passed extraction verification.
