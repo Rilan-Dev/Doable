@@ -11,3 +11,8 @@ Do not update this status to PASS unless the verifier was actually run against t
 
 ## Agent package checks
 The package scripts, schemas, links, and verifier fixture tests have been mirrored but have **not been executed against this target branch in this session**. Run `npm run check` and `npm test` from this directory in a local checkout and record the actual results. This status is independent of upstream application extraction PASS.
+
+
+## Latest workflow snapshot — 2026-10-10
+- Source Extraction Agent Checks run 38071655236: queued at last observation; no conclusion available.
+Do not treat a queued/missing run as PASS. Continue independent work without repeatedly polling; update this record when a result is intentionally reviewed.
