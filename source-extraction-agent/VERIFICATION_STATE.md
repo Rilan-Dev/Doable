@@ -7,3 +7,7 @@ This commit installs agent guidance only. It does not pin, copy or verify upstre
 Required evidence for extraction PASS: exact upstream URL/ref/commit/root tree; license/provenance; inventory and independent reconciliation; closed static/dynamic/data/runtime dependency graph; immutable copy manifests; actual verifier output for blobs/trees/modes/symlinks and missing/extra paths; capability and dependency manifests; recorded command, environment, exit code and artifact paths.
 
 Do not update this status to PASS unless the verifier was actually run against the current pinned source and captured output. A green documentation workflow is not an extraction PASS.
+
+
+## Agent package checks
+The package scripts, schemas, links, and verifier fixture tests have been mirrored but have **not been executed against this target branch in this session**. Run `npm run check` and `npm test` from this directory in a local checkout and record the actual results. This status is independent of upstream application extraction PASS.
