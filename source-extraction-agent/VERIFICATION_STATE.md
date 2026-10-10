@@ -14,5 +14,5 @@ The package scripts, schemas, links, and verifier fixture tests have been mirror
 
 
 ## Latest workflow snapshot — 2026-10-10
-- Source Extraction Agent Checks run 38071655236: queued at last observation; no conclusion available.
+- Source Extraction Agent Checks run 38071655236: queued when observed on the preceding head 5d7bc66…; the subsequent verification-state update advanced HEAD, so this run is not evidence for the current head.
 Do not treat a queued/missing run as PASS. Continue independent work without repeatedly polling; update this record when a result is intentionally reviewed.
